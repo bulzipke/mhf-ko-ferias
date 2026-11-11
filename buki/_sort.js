@@ -12,18 +12,6 @@ var addEvent = function (elm, type, func) {
 
 	elm./*@if (@_jscript_version < 9) attachEvent ('on' + @else@*/ addEventListener (/*@end@*/ type,func,false);
 
-	//アンロードで削除
-
-	window./*@if (@_jscript_version < 9) attachEvent ('on' + @else@*/ addEventListener (/*@end@*/ "unload",
-
-		function(){
-
-			elm./*@if (@_jscript_version < 9) detachEvent ('on' + @else@*/ removeEventListener (/*@end@*/ type,func,false);
-
-		}
-
-		,false);
-
 };
 
 //リストセット
@@ -2542,11 +2530,11 @@ if (!ckG) {
 
 }
 
-//アンロード退避
+//ページ離脱時に保存
 
 if (treeCK){ //剣士弓
 
-	addEvent(window,"unload",function () {
+	addEvent(window,"pagehide",function () {
 
 	var s = document.getElementsByTagName("thead")[0].getElementsByTagName("select"),cre = document.getElementById("tree").getElementsByTagName("span");
 
@@ -2570,7 +2558,7 @@ if (treeCK){ //剣士弓
 
 } else {
 
-	addEvent(window,"unload",function () {
+	addEvent(window,"pagehide",function () {
 
 	var s = document.getElementsByTagName("thead")[0].getElementsByTagName("select"),cre = document.getElementById("tree").getElementsByTagName("span");
 

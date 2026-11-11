@@ -4,12 +4,6 @@ setTimeout(function (){
 var addEvent = function (elm, type, func) {
 	//追加
 	elm./*@if (@_jscript_version < 9) attachEvent ('on' + @else@*/ addEventListener (/*@end@*/ type,func,false);
-	//アンロードで削除
-	window./*@if (@_jscript_version < 9) attachEvent ('on' + @else@*/ addEventListener (/*@end@*/ "unload",
-		function(){
-			elm./*@if (@_jscript_version < 9) detachEvent ('on' + @else@*/ removeEventListener (/*@end@*/ type,func,false);
-		}
-		,false);
 };
 //リストセット
 var selectSet = function(e,v) {

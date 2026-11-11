@@ -4,12 +4,6 @@
 var addEvent = function (elm, type, func) {
 	//追加
 	elm./*@if (@_jscript_version < 9) attachEvent ('on' + @else@*/ addEventListener (/*@end@*/ type,func,false);
-	//アンロードで削除
-	window./*@if (@_jscript_version < 9) attachEvent ('on' + @else@*/ addEventListener (/*@end@*/ "unload",
-		function(){
-			elm./*@if (@_jscript_version < 9) detachEvent ('on' + @else@*/ removeEventListener (/*@end@*/ type,func,false);
-		}
-		,false);
 };
 //リストセット
 var selectSet = function(e,v) {
@@ -231,8 +225,8 @@ function (evt) {
 	}
 });
 
-//アンロード退避
-addEvent(window,"unload",function () {
+//ページ離脱時に保存
+addEvent(window,"pagehide",function () {
 var s = document.getElementsByTagName("thead")[0].getElementsByTagName("select"),
 	dispflg = "";
 if (document.getElementById("top")) {

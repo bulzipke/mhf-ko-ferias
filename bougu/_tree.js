@@ -4,12 +4,6 @@
 var addEvent = function (elm, type, func) {
 	//追加
 	elm./*@cc_on @if (@_jscript_version < 9) attachEvent ('on' + @else@*/ addEventListener (/*@end@*/ type,func,false);
-	//アンロードで削除
-	window./*@cc_on @if (@_jscript_version < 9) attachEvent ('on' + @else@*/ addEventListener (/*@end@*/ "unload",
-		function(){
-			elm./*@cc_on @if (@_jscript_version < 9) detachEvent ('on' + @else@*/ removeEventListener (/*@end@*/ type,func,false);
-		}
-		,false);
 };
 //線可変
 	var IsMouseDown = false;
@@ -352,8 +346,8 @@ var sozaiHtml = function (recipe) {
 //		location.hash = t.href.substring(t.href.length-6,t.href.length);
 	}
 });
-//アンロード退避
-addEvent(window,"unload",function () {
+//ページ離脱時に保存
+addEvent(window,"pagehide",function () {
 	var cre = document.getElementById("tree").getElementsByTagName("span"),
 		dispflg = "";
 	for (var i=0,m=cre.length; i<m; i++) {

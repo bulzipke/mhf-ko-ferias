@@ -3,9 +3,6 @@
 // Generated/copied by tools/ferias_equipment_search.py.
 var addEvent = function (elm, type, func) {
     elm./*@if (@_jscript_version < 9) attachEvent ('on' + @else@*/ addEventListener (/*@end@*/ type, func, false);
-    window./*@if (@_jscript_version < 9) attachEvent ('on' + @else@*/ addEventListener (/*@end@*/ 'unload', function () {
-        elm./*@if (@_jscript_version < 9) detachEvent ('on' + @else@*/ removeEventListener (/*@end@*/ type, func, false);
-    }, false);
 };
 var input = document.getElementById('equip'), index = null;
 var BouguName = {h:'머리 방어구',b:'몸통 방어구',a:'팔 방어구',w:'허리 방어구',l:'다리 방어구',d:'장식품',p:'장식품',t:'천랑석',f:'장식품',k:'각인',z:'커프',c:'커프',s:'시질',n:'네코',H:'Ｐ머리',B:'Ｐ몸통'},
@@ -148,7 +145,7 @@ function search() {
 }
 addEvent(document.getElementById('b_search'), 'click', search);
 input.focus();
-addEvent(window, 'unload', function () {
+addEvent(window, 'pagehide', function () {
     document.cookie = 'equip=' + [escape(input.value), document.documentElement.scrollTop].join(':');
 });
 var saved = /(?:^|;\s*)equip=([^;]*)/.exec(document.cookie);

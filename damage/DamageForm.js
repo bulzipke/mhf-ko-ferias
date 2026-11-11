@@ -7374,18 +7374,6 @@ var addEvent = function (elm, type, func) {
 
 	elm./*@cc_on @if (true) attachEvent ('on' + @else@*/ addEventListener (/*@end@*/ type,func,false);
 
-	//アンロードで削除
-
-	window./*@cc_on @if (true) attachEvent ('on' + @else@*/ addEventListener (/*@end@*/ "unload",
-
-		function(){
-
-			elm./*@cc_on @if (true) detachEvent ('on' + @else@*/ removeEventListener (/*@end@*/ type,func,false);
-
-		}
-
-		,false);
-
 }
 
 addEvent(window,"load",

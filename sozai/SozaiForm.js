@@ -15,12 +15,6 @@ setItem = setQuest = setSaisyu = setMonster = setOther = null;
 var addEvent = function (elm, type, func) {
 	//追加
 	elm./*@if (@_jscript_version < 9) attachEvent ('on' + @else@*/ addEventListener (/*@end@*/ type,func,false);
-	//アンロード로 削除
-	window./*@if (@_jscript_version < 9) attachEvent ('on' + @else@*/ addEventListener (/*@end@*/ "unload",
-		function(){
-			elm./*@if (@_jscript_version < 9) detachEvent ('on' + @else@*/ removeEventListener (/*@end@*/ type,func,false);
-		}
-		,false);
 };
 //------------------------------------説明----------
 var item = MST_Item[item_id];
@@ -326,8 +320,8 @@ document.getElementsByTagName("table")[0].style.width = "auto";
 document.getElementById("loading").style.display="none";
 document.getElementById("b_yt").disabled = false;
 
-//アンロード退避
-addEvent(window,"unload",function () {
+//ページ離脱時に保存
+addEvent(window,"pagehide",function () {
 document.cookie = "item=" + [item_id,Number(document.getElementById("b_yt").disabled),document.documentElement.scrollTop].join(":");
 });
 //オンロード
