@@ -190,7 +190,6 @@ ul {list-style-type:none;}
 </span>
 </div>
 <div id="f_bougu">
-<form name="f3" id="f3" method="POST" action="download.cgi">
 <div style="width:830px;"><div style="width:160px;" class="td ac">명칭</div><div style="width:35px" class="td">LV</div>　슬롯</div>
 <div style="width:830px;">
 <div>무기 <input id="b_bukiDel" type="button" value="X" disabled><select name="b_buki" id="b_buki" class="name"><option value="0000,1,O,O,O" selected>세트</select>
@@ -273,12 +272,12 @@ ul {list-style-type:none;}
 </div>
 <div class="td ac" style="width:125px;margin-left:5px;">스킬포인트<div id="b_skillP" class="b fs al" style="width:120px; height:150px; overflow:auto;"><br></div></div>
 <div class="td ac" style="width:140px;">발동 스킬<div id="b_skillT" class="b fs al" style="width:135px; height:150px; overflow:auto;"><br></div></div>
-<div class="td"><br><input name="b_skill" id="b_skill" type="hidden" value="">
+<div class="td"><br>
 	<div id="b_effectT" class="b fs al" style="width:265px; height:5.5em; overflow:auto;"><br></div>
 	<a href="../koneta/skill.htm" target="_blank">스킬 설명</a>／<a href="../koneta/skillno.htm" target="_blank">순위</a><br>
 	마이세트<br>
-	<input type="file" name="b_upfile" size=10 id="b_read"><br>
-	<input type="submit" value="　　저 장　　" id="b_save" style="margin-right:1em;"><input type="button" value="텍스트 표시" id="b_text"></div>
+	<input type="file" size=10 id="b_read" disabled><br>
+	<input type="button" value="　　저 장　　" id="b_save" style="margin-right:1em;" disabled><input type="button" value="텍스트 표시" id="b_text"></div>
 <hr style="clear:both;">
 <div class="td">
 명칭:<span id="d_mei">&nbsp;</span><br>
@@ -433,14 +432,6 @@ ul {list-style-type:none;}
 </div>
 <div id="d_sozaiA" class="td b fs" style="width:600px; height:120px; white-space: normal; overflow:auto; word-break:break-all;"><br></div>
 </div>
-<input name="b_cuff_list" id="b_cuff_list" type="hidden" value="">
-<input name="b_buki_list" id="b_buki_list" type="hidden" value="">
-<input name="b_head_list" id="b_head_list" type="hidden" value="">
-<input name="b_body_list" id="b_body_list" type="hidden" value="">
-<input name="b_arm_list" id="b_arm_list" type="hidden" value="">
-<input name="b_wst_list" id="b_wst_list" type="hidden" value="">
-<input name="b_leg_list" id="b_leg_list" type="hidden" value="">
-</form>
 </div>
 <div id="sub_Win" style="position:absolute; width:50%; height:60%; border:solid 2px black; background-color:snow;">
 <input type="button" value="닫기" id="sub_WinClose_B">　　　　<input type="button" value="분리" id="sub_WinRemove_B">　　　　<input type="button" value="부위별 분리" id="sub_WinClear_B">
@@ -450,7 +441,7 @@ ul {list-style-type:none;}
 <div id="loading" style="position:absolute; top:10em; left:20em;width:20em; height:10em; border:solid 2px black; background-color:snow; text-align:center; vertical-align:middle; display:table-cell;">데이터 로드 중<div>
 </body>
 <script type="text/javascript" src="../sozai/item.js?audit2=f86135b6ef12&review4=6eaa4acd6428"></script>
-<script type="text/javascript" src="SkillForm.js?series=5f49135ce84b"></script>
+<script type="text/javascript" src="SkillForm.js?series=5f49135ce84b&myset=1"></script>
 <script type="text/javascript" src="global.js?series=5f49135ce84b&light=5f5b60682988&heavy=3feee7fc1719"></script>
 <script type="text/javascript" src="equip.js?light=9e4694a912ae&audit=700335ba22d0&audit2=f2b7042a7e4f&restore=077b744c9eea&review2=b0d8e0d7297b&mizuki=2e10bb1ed3e6"></script>
 <script type="text/javascript">
@@ -463,8 +454,11 @@ if (navigator.userAgent.indexOf("Opera") !== -1) {
 		if (confirm("이 버전의 Opera에서는 작동하지 않습니다. 원래 페이지로 돌아가시겠습니까?")) history.back();
 	}
 }
-var TimeId = setTimeout(function (){
+setTimeout(function (){
 	SkillForm.setEquipSplit();
+	var data = location.search.substring(1).replace(/%7C|%2C|%2F/gi, decodeURIComponent).split("|");
+	if ((data.length === 6 || data.length === 7) && !SkillForm.getFile(data)) alert("이 파일은 불러올 수 없습니다");
+	document.getElementById("b_read").disabled = document.getElementById("b_save").disabled = false;
 	}, 64);
 document.getElementById("loading").style.display="none";
 // -->

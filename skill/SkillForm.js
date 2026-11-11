@@ -21,6 +21,7 @@ var CK_MAC = navigator.userAgent.toUpperCase().indexOf("MAC") !== -1,
 	I_sID = 0,I_sLV = 1,I_sS1 = 2,I_sS2 = 3,I_sS3 = 4,I_sT1 = 5,I_sT2 = 6,I_sT3 = 7,
 	I_iSozai1 = 0,I_iSozai2 = 1,I_iSozai3 = 2,I_iSozai4 = 3,I_iSozai5 = 4,I_iSozai6 = 5,I_iSozai7 = 6,I_iHR1 = 7,I_iHR2 = 8,I_iHR3 = 9,I_iHR4 = 10,I_iHR5 = 11,I_iHR6 = 12,I_iHR7 = 13,
 	BUINAME = ["head","body","arm","wst","leg","deco"],
+	MY_SET_PARTS = ["buki","head","body","arm","wst","leg","cuff"],
 	MAKENAME = {"":"",1:"",2:"수렵단",3:"카페",4:"과금",5:"특전","-":"",e:"이벤트",es:"이벤트/수위전",s:"수위전",t:"수련도",u:"요격전",m:"헌터축제",c:"파로네",g:"가챠",k:"키트",i:"위타천",p:"패키지"},
 	CLASSTYPE = {"":" ",A:"ＳＰ",B:"강종",C:"천람",D:"패종",E:"ＨＣ",F:"수호",G:"G패종",H:"열종",I:"Ｇ급",J:"G수호",K:"비전",L:"G비전",M:"시종",N:"천랑",O:"천유",P:"천이",Q:"천이수호",
 					SP:"A",HC:"E",Shugo:"FJQ",GClass:"IJPQ",Gosyu:"B",Tenran:"C",Hasyu:"DG",Resyu:"H",Sisyu:"M",Tenro:"N"},
@@ -444,13 +445,6 @@ this.b_body = document.getElementById("b_body");
 this.b_arm = document.getElementById("b_arm");
 this.b_wst = document.getElementById("b_wst");
 this.b_leg = document.getElementById("b_leg");
-this.b_cuff_list = document.getElementById("b_cuff_list");
-this.b_buki_list = document.getElementById("b_buki_list");
-this.b_head_list = document.getElementById("b_head_list");
-this.b_body_list = document.getElementById("b_body_list");
-this.b_arm_list = document.getElementById("b_arm_list");
-this.b_wst_list = document.getElementById("b_wst_list");
-this.b_leg_list = document.getElementById("b_leg_list");
 this.b_cuffDel = document.getElementById("b_cuffDel");
 this.b_bukiDel = document.getElementById("b_bukiDel");
 this.b_headDel = document.getElementById("b_headDel");
@@ -538,7 +532,6 @@ this.b_legDp  = document.getElementById("b_legDp");
 this.b_Dp_Sum   = document.getElementById("b_Dp_Sum");
 this.b_skillP = document.getElementById("b_skillP");
 this.b_skillT = document.getElementById("b_skillT");
-this.b_skill = document.getElementById("b_skill");
 this.b_effectT = document.getElementById("b_effectT");
 
 this.d_mei = document.getElementById("d_mei");
@@ -1486,6 +1479,7 @@ if (this["b_"+bui].length === 1 || this["b_"+bui].options[this["b_"+bui].selecte
 var w = this["b_"+bui].value.split(","),slot_suu = 0;
 switch (bui) {
 case "buki":
+	this.b_bukiLv.value = w[I_sLV];
 	slot_suu = 3;
 	break;
 case "cuff":
@@ -2132,59 +2126,60 @@ if (CK_MAC) {
 }
 return t;
 }
-//------------------------------------ファイル読み込み----------
+//------------------------------------マイセット----------
+,saveFile : function (all){
+var data = MY_SET_PARTS.map(function (part) {
+	var select = this["b_" + part];
+	if (!all) return select.value;
+	var options = Array.prototype.slice.call(select.options);
+	if ((part === "buki" || part === "cuff") && options.length > 1) options.pop();
+	return options.map(function (option) { return option.value; }).join("/");
+}, this);
+var text = "###data 変更しないで###" + data.join("|") + "###\r\n###テキスト###\r\n" + this.creText().replace(/<br>/gi,"\n");
+var url = URL.createObjectURL(new Blob([text], {type: "text/plain;charset=utf-8"}));
+var link = document.createElement("a");
+link.href = url;
+link.download = "ferias-set.txt";
+document.body.appendChild(link);
+link.click();
+link.remove();
+setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+}
 ,getFile : function (data){
-//読み込み
-//実行開始(防具展開を中止し即実行)
-//clearTimeout(TimeId);
-//for (var i = 0; i < 6; i++) for (var eqid in MST_Equip[BUINAME[i]]) if (typeof MST_Equip[BUINAME[i]][eqid] === "string") MST_Equip[BUINAME[i]][eqid] = MST_Equip[BUINAME[i]][eqid].split(",");
-////仕変(先頭１桁をなくした)対応
-//for (var s = 0; s < 6; s++) {
-//	for (var i = 0,w = data[s].split(","),m = w.length; i < m; i++) w[i] = (w[i].length === 5) ? w[i].substring(1,5) : w[i];
-//	data[s] = w.join(",");
-//}
-//
-
-var select_name = ["buki","head","body","arm","wst","leg","cuff"];
-
-//this.b_buki.value = data[0];
-//for (var i = 1,w = data[0].split(",");i < 4;this.cngSlot(w[1+i],"b_bukiS"+i), i++);
-
-//if (data[6]){
-//	this.b_cuff.value = data[6];
-//	for (var i = 1,w = data[6].split(",");i < 4;this.cngSlot(w[1+i],"b_cuffS"+i), i++);
-//}
-for (var i = 0,m = data.length; i < m; i++) {
-	var list = data[i].split("/");
-	this["b_" + select_name[i]].length = 0;
-	for (var j = 0,n = list.length; j < n; j++) {
-		var wk = list[j].split(",");
-		if (wk[0].length !== 4 ||
-			wk[1].length !== 1 ||
-			wk[2].length > 4 ||
-			wk[3].length > 4 ||
-			wk[4].length > 4 ) {
-			alert("이 파일은 불러올 수 없습니다");
-			location.href = "skillsimu.htm";
+if (data.length !== 6 && data.length !== 7) return false;
+var groups = data.map(function (list) { return list.split("/"); });
+if (groups.length === 6) groups.push(["0000,1,O,O,"]);
+var resetRank = false;
+for (var i = 0; i < groups.length; i++) {
+	var part = MY_SET_PARTS[i], armor = MST_Equip[part];
+	for (var j = 0; j < groups[i].length; j++) {
+		var fields = groups[i][j].split(",");
+		if (fields.length < 5 || fields.length > 8 || !/^[1-7]$/.test(fields[I_sLV])) return false;
+		var eq = armor && armor[fields[I_sID]];
+		if (armor ? !Array.isArray(eq) || +fields[I_sLV] > +eq[I_bLVMAX] :
+			fields[I_sID] !== "0000" || +fields[I_sLV] > (part === "buki" ? 3 : 1)) return false;
+		if (fields.slice(I_sS1).some(function (slot) { return !Array.isArray(MST_Equip.deco[slot]); })) return false;
+		if (eq && +getSozai(eq)[I_iHR1 + +fields[I_sLV] - 1] > +this.c_hr.value) resetRank = true;
+		if (eq && eq[I_bCLASS] === "N") {
+			while (fields.length < I_sT1 + +eq[I_bTrSLOT]) fields.push("O");
+			groups[i][j] = fields.join(",");
 		}
-		var eqid = wk[0];
-		//if (eqid === "0000") continue;
-
-		var o = document.createElement("option");
-		o.setAttribute("value", list[j]);
-		if (i >= 1 && i <= 5) {
-			o.appendChild(document.createTextNode(MST_Equip[select_name[i]][eqid][I_bNAME]));
-		} else{
-			if (j > 0) this["b_" + select_name[i]].options[this["b_" + select_name[i]].length-1] = null;
-			o.appendChild(document.createTextNode("세트"));
-		}
-		this["b_" + select_name[i]].appendChild(o);
-		
-		this["b_" + select_name[i]].selectedIndex = j;
-		this.cngData(select_name[i]);
 	}
 }
+if (resetRank) this.c_hr.selectedIndex = 0;
+for (var i = 0; i < groups.length; i++) {
+	var part = MY_SET_PARTS[i], armor = MST_Equip[part], select = this["b_" + part];
+	select.length = 0;
+	groups[i].forEach(function (value) {
+		if (!armor && select.length > 1) select.remove(select.length - 1);
+		var name = armor ? armor[value.split(",",1)[0]][I_bNAME] : "세트";
+		select.add(new Option(name, value));
+		select.selectedIndex = select.length - 1;
+		this.cngData(part);
+	}, this);
+}
 this.calc();
+return true;
 }
 
 }//グローバル
@@ -2215,12 +2210,6 @@ function () {
 //		this.onresize();
 	document.getElementById("f_search").style.height = document.getElementById("f_bougu").style.height = (Number(window.innerHeight) || document.documentElement.clientHeight || document.body.clientHeight) - 85 + "px";
 
-	var w = location.search.substring(1).split("|");
-	if (w.length !== 6 && w.length !== 7) return;
-//	SkillForm.getFile(w);
-	setTimeout(function (){
-		SkillForm.getFile(w);
-		}, 64);
 });
 addEvent(document,"dblclick",
 function (evt) {
@@ -2334,27 +2323,7 @@ function (evt) {
 		SkillForm.dispData(SkillForm[t.id.substring(0,t.id.length-2)].value.substring(0,4),SkillForm[t.id.substring(0,t.id.length-2)].id.substring(2),SkillForm[t.id.substring(0,t.id.length-2)].value.substring(5,6));
 		break;
 	case "b_save":
-		SkillForm.b_skill.value = SkillForm.creText().replace(/<br>/g,"\n");
-
-		var select_name = ["buki","head","body","arm","wst","leg","cuff"];
-		if(window.confirm("모두 저장하시겠습니까?\nOK: 전체 취소: 표시된 부분만")){
-			for (var i = 0,m = select_name.length; i < m; i++) {
-				var wk = "";
-				//武器カフの最後の行は要らない(セットのみだったらいる)
-				for (var j = 0,n = SkillForm["b_" + select_name[i]].length - ((i===0 || i===6) && SkillForm["b_" + select_name[i]].length !== 1 ? 1 : 0); j < n; j++) {
-					wk += "/" + SkillForm["b_" + select_name[i]].options[j].value;
-				}
-				SkillForm["b_" + select_name[i] + "_list"].value = wk.substring(1);
-			}
-		} else {
-			for (var i = 0,m = select_name.length; i < m; i++) {
-				SkillForm["b_" + select_name[i] + "_list"].value = SkillForm["b_" + select_name[i]].value;
-			}
-		}
-		var tg = document.getElementById("f3");
-		tg.action = "download.cgi";
-		tg.encoding = "application/x-www-form-urlencoded";
-		tg=null;
+		SkillForm.saveFile(window.confirm("모두 저장하시겠습니까?\nOK: 전체 취소: 표시된 부분만"));
 		break;
 	case "b_text":
 		var f4=window.open("","");
@@ -2447,11 +2416,18 @@ var change_event = function (evt) {
 		SkillForm.calc();
 		break;
 	case "b_read":
-		var tg = document.getElementById("f3");
-		tg.action = "upload.cgi";
-		tg.encoding = "multipart/form-data";
-		tg.submit();
-		tg=null;
+		var file = t.files[0];
+		if (!file) break;
+		t.disabled = true;
+		file.text().then(function (text) {
+			var match = /^###data[^#\r\n]*###([^#\r\n]+)###(?:\r?\n|$)/.exec(text);
+			if (!match || !SkillForm.getFile(match[1].split("|"))) throw new Error("invalid set file");
+		}).catch(function () {
+			alert("이 파일은 불러올 수 없습니다");
+		}).finally(function () {
+			t.value = "";
+			t.disabled = false;
+		});
 		break;
 	case "c_G_Que":
 		SkillForm.cngFueExe();
