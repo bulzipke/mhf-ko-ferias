@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+th {white-space:nowrap;font-weight:normal;background-color:silver;}
+tr.top td {vertical-align:top}
+td.n {text-align:right}
+td.c {text-align:center}
+td.y {background-color:lemonchiffon}
+td.b {background-color:lightskyblue}
+td.r {background-color:darksalmon}
+table,p {font-size:85%}
+h4 {clear:both;margin-top:1em;background-color:silver;}
+.hosoku {float:left;margin-right:3em;}
+.l {border-left: 2px solid #191970;}
+.ex {font-size:70%}
+caption {white-space:nowrap;text-align:left}
+ul.ttop {margin:0;padding:1px 0;width:60em;list-style-type:none;}
+ul.ttop li {font-size:100%;float:left;padding:2px 5px 2px 5px;border:1px solid silver;}
+-->
+</style>
+<title>몬스터에 대한 공격　【보우건 편】</title>
+</head>
+<body>
+<ul class=ttop>
+<li>몬스터로의 공격　<a href="doc-sword.htm">【근접무기 편】</a>
+／<a href="doc-gun.htm">【보우건 편】</a>
+／<a href="doc-yumi.htm">【활 편】</a>
+<li><a href="doc-spec.htm">무기성능</a>
+<li><a href="doc-kensyo.htm">검정스킬</a>
+<li><a href="doc-buki.htm">무기의 종류</a>
+<li><a href="doc-bougu.htm">방어구의 종류</a>
+<li><a href="doc-feature.htm">피처</a>
+</ul>
+<hr style="clear:both">
+<h3>몬스터에 대한 공격　【보우건 편】</h3>
+
+<h4>●　무기 배율</h4>
+<table border=1 cellspacing=0 cellpadding=2 class=hosoku id>
+<tr><th>무기의 종류</th><th>배율</th></tr>
+<tr><td>대검/태도</td><td class=c>4.8</td></tr>
+<tr><td>한손검/쌍검</td><td class=c>1.4</td></tr>
+<tr><td>해머/수렵피리</td><td class=c>5.2</td></tr>
+<tr><td>랜스/건랜스</td><td class=c>2.3</td></tr>
+<tr><td>보우건/활</td><td class=c>1.2</td></tr>
+</table>
+<p>무기 배율은 무기가 본래 가지고 있는 세기를 나타내는 수치로, 공격에 의한 몬스터에게의 데미지 계산의 기본이 됩니다.
+<br>현재 상태에 표시되고 있는 공격력은, 이 무기 배율에 일정 배율을 곱한 값이 표시되고 있습니다.
+<br>각 무기의 배율은 왼쪽 표와 같습니다.
+<br><small>※현재 상태에 표시되고 있는 공격력을 왼쪽에 기재된 배율로 나누면, 무기 배율을 구할 수 있습니다</small>
+<br>
+<br>식사 효과나 아이템 사용 등에 의한 공격력 업은, 모두 이 무기 배율에 일정 수치가 가산됩니다.
+<br>따라서 현재 상태에서는 무기의 종류에 따라 공격력 상승량이 다릅니다.
+</p>
+<p style="clear:both" class=ex>예: 그레네이드 보우건(무기 배율: 90)의 경우는 90×1.2＝108이 공격력이 된다 108÷1.2＝90
+</p>
+<h4>●　탄의위력</h4>
+<table border=1 cellspacing=0 cellpadding=2 class=hosoku>
+<tr><th colspan=8>통상</th><th colspan=4 class=l>헤비보우건[압축 리로드]</th><th colspan=4 class=l>헤비보우건[퍼펙트 압축 리로드]</th></tr>
+<tr><th>탄 이름</th><th>위력</th><th>속성</th><th>히트수</th><th>소지 개수</th><th>리로드치</th><th>반동치</th><th>보충</th><th class=l>위력</th><th>속성</th><th>기절</th><th>착탄</th><th class=l>위력</th><th>속성</th><th>기절</th><th>착탄</th></tr>
+<tr><td>LV1 일반탄</td><td class=c>6</td><td><br></td><td class=c>1</td><td class=c>∞</td><td class=c>5</td><td class=c>8</td><td><br></td><td class="c l">1.9</td><td><br></td><td class=c>0.3</td><td class=c>5</td><td class="c l">3.1</td><td><br></td><td class=c>0.3</td><td class=c>10</td></tr>
+<tr><td>LV2 일반탄</td><td class=c>12</td><td><br></td><td class=c>1</td><td class=c>99</td><td class=c>6</td><td class=c>9</td><td><br></td><td class="c l">4.8</td><td><br></td><td class=c>0.5</td><td class=c>20</td><td class="c l">7.3</td><td><br></td><td class=c>0.5</td><td class=c>20</td></tr>
+<tr><td>LV3 일반탄</td><td class=c>12</td><td><br></td><td class=c>도탄</td><td class=c>99</td><td class=c>7</td><td class=c>10</td><td><br></td><td class="c l">4.8</td><td><br></td><td class=c>0.7</td><td class=c>10</td><td class="c l">7.2</td><td><br></td><td class=c>0.7</td><td class=c>10</td></tr>
+<tr><td>LV1 관통탄</td><td class=c>10</td><td><br></td><td class=c>3</td><td class=c>60</td><td class=c>6</td><td class=c>10</td><td><br></td><td class="c l">5</td><td><br></td><td class=c>0.7</td><td class=c>20</td><td class="c l">7</td><td><br></td><td class=c>0.7</td><td class=c>20</td></tr>
+<tr><td>LV2 관통탄</td><td class=c>9</td><td><br></td><td class=c>4</td><td class=c>50</td><td class=c>7</td><td class=c>10</td><td><br></td><td class="c l">4.5</td><td><br></td><td class=c>0.7</td><td class=c>20</td><td class="c l">6.2</td><td><br></td><td class=c>0.7</td><td class=c>20</td></tr>
+<tr><td>LV3 관통탄</td><td class=c>7</td><td><br></td><td class=c>6</td><td class=c>40</td><td class=c>8</td><td class=c>11</td><td><br></td><td class="c l">3.5</td><td><br></td><td class=c>1.4</td><td class=c>20</td><td class="c l">4.9</td><td><br></td><td class=c>1.4</td><td class=c>20</td></tr>
+<tr><td>LV1 산탄</td><td class=c>5</td><td>수속성：5</td><td class=c>3</td><td class=c>60</td><td class=c>5</td><td class=c>10</td><td><br></td><td class="c l">3</td><td>수속성：2.5</td><td class=c>0.6</td><td class=c>5</td><td class="c l">4</td><td>수속성：3.5</td><td class=c>0.6</td><td class=c>5</td></tr>
+<tr><td>LV2 산탄</td><td class=c>5</td><td>수속성：4</td><td class=c>4</td><td class=c>60</td><td class=c>6</td><td class=c>10</td><td><br></td><td class="c l">3</td><td>수속성：2</td><td class=c>0.6</td><td class=c>5</td><td class="c l">4</td><td>수속성：2.5</td><td class=c>0.6</td><td class=c>5</td></tr>
+<tr><td>LV3 산탄</td><td class=c>5</td><td>수속성：4</td><td class=c>5</td><td class=c>60</td><td class=c>7</td><td class=c>11</td><td><br></td><td class="c l">3</td><td>수속성：2</td><td class=c>0.6</td><td class=c>5</td><td class="c l">4</td><td>수속성：2.5</td><td class=c>0.6</td><td class=c>5</td></tr>
+<tr><td>LV1 철갑유탄</td><td class=c>3</td><td>착탄 후<br>폭발：30화속성：40</td><td class=c>1</td><td class=c>9</td><td class=c>7</td><td class=c>11</td><td rowspan=3>라이트보우건은<br>기절치： 5<br>헤비보우건은<br>기절치：10</td><td class="c l">2</td><td>착탄 후<br>폭발：24화속성：20</td><td class=c>2.5</td><td class=c>20</td><td class="c l">2</td><td>착탄 후<br>폭발：30화속성：20</td><td class=c>2.5</td><td class=c>20</td></tr>
+<tr><td>LV2 철갑유탄</td><td class=c>3</td><td>착탄 후<br>폭발：40화속성：60</td><td class=c>1</td><td class=c>9</td><td class=c>8</td><td class=c>12</td><td class="c l">2</td><td>착탄 후<br>폭발：32화속성：30</td><td class=c>2.5</td><td class=c>20</td><td class="c l">2</td><td>착탄 후<br>폭발：40화속성：30</td><td class=c>2.5</td><td class=c>20</td></tr>
+<tr><td>LV3 철갑유탄</td><td class=c>3</td><td>착탄 후<br>폭발：50화속성：80</td><td class=c>1</td><td class=c>9</td><td class=c>9</td><td class=c>13</td><td class="c l">2</td><td>착탄 후<br>폭발：40화속성：40</td><td class=c>2.5</td><td class=c>20</td><td class="c l">2</td><td>착탄 후<br>폭발：50화속성：40</td><td class=c>2.5</td><td class=c>20</td></tr>
+<tr><td>LV1 확산탄</td><td class=c>6</td><td>착탄 후<br>폭발：32화속성：2×3</td><td class=c>1</td><td class=c>3</td><td class=c>8</td><td class=c>13</td><td><br></td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
+<tr><td>LV2 확산탄</td><td class=c>6</td><td>착탄 후<br>폭발：32화속성：2×4</td><td class=c>1</td><td class=c>3</td><td class=c>9</td><td class=c>14</td><td><br></td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
+<tr><td>LV3 확산탄</td><td class=c>6</td><td>착탄 후<br>폭발：32화속성：2×5</td><td class=c>1</td><td class=c>3</td><td class=c>10</td><td class=c>14</td><td><br></td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
+<tr><td>화염탄</td><td class=c>1</td><td>화속성<br>라이트보우건：무기 배율×0.4<br>헤비보우건：무기 배율×0.5</td><td class=c>1</td><td class=c>60</td><td class=c>6</td><td class=c>10</td><td><br></td><td class="c l">0.5</td><td>무기 배율×0.3</td><td class=c>2</td><td class=c>20</td><td class="c l">0.8</td><td>무기 배율×0.4</td><td class=c>2</td><td class=c>20</td></tr>
+<tr><td>수냉탄</td><td class=c>1</td><td>수속성<br>라이트보우건：무기 배율×0.2<br>헤비보우건：무기 배율×0.25</td><td class=c>3</td><td class=c>60</td><td class=c>6</td><td class=c>10</td><td><br></td><td class="c l">0.5</td><td>무기 배율×0.15</td><td class=c>1.7</td><td class=c>20</td><td class="c l">0.8</td><td>무기 배율×0.2</td><td class=c>1.7</td><td class=c>20</td></tr>
+<tr><td>전격탄</td><td class=c>1</td><td>뇌속성<br>라이트보우건：무기 배율×0.2<br>헤비보우건：무기 배율×0.27</td><td class=c>3</td><td class=c>60</td><td class=c>6</td><td class=c>10</td><td><br></td><td class="c l">0.5</td><td>무기 배율×0.17</td><td class=c>1.7</td><td class=c>20</td><td class="c l">0.8</td><td>무기 배율×0.215</td><td class=c>1.7</td><td class=c>20</td></tr>
+<tr><td>빙결탄</td><td class=c>1</td><td>빙속성<br>라이트보우건：무기 배율×0.2<br>헤비보우건：무기 배율×0.25</td><td class=c>3</td><td class=c>60</td><td class=c>6</td><td class=c>10</td><td><br></td><td class="c l">0.5</td><td>무기 배율×0.15</td><td class=c>1.7</td><td class=c>20</td><td class="c l">0.8</td><td>무기 배율×0.2</td><td class=c>1.7</td><td class=c>20</td></tr>
+<tr><td>멸룡탄</td><td class=c>1</td><td>용속성<br>라이트보우건：75<br>헤비보우건：90</td><td class=c>6</td><td class=c>20</td><td class=c>9</td><td class=c>13</td><td><br></td><td class="c l">0.5</td><td>72</td><td class=c>10</td><td class=c>20</td><td class="c l">0.5</td><td>90</td><td class=c>10</td><td class=c>20</td></tr>
+<tr><td>LV1 회복탄</td><td class=c>0</td><td><br></td><td class=c>-</td><td class=c>12</td><td class=c>7</td><td class=c>11</td><td>회복량：30</td><td class="c l">0</td><td><br></td><td class=c>-</td><td class=c>-</td><td class="c l">0</td><td><br></td><td class=c>-</td><td class=c>-</td></tr>
+<tr><td>LV2 회복탄</td><td class=c>0</td><td><br></td><td class=c>-</td><td class=c>12</td><td class=c>9</td><td class=c>13</td><td>회복량：50</td><td class="c l">0</td><td><br></td><td class=c>-</td><td class=c>-</td><td class="c l">0</td><td><br></td><td class=c>-</td><td class=c>-</td></tr>
+<tr><td>LV1 독탄</td><td class=c>10</td><td>독 축적량：25</td><td class=c>1</td><td class=c>12</td><td class=c>7</td><td class=c>11</td><td><br></td><td class="c l">6</td><td>독축적량：20</td><td class=c>2.5</td><td class=c>-</td><td class="c l">8</td><td>독 축적량：25</td><td class=c>2.5</td><td class=c>-</td></tr>
+<tr><td>LV2 독탄</td><td class=c>15</td><td>독 축적량：50</td><td class=c>1</td><td class=c>8</td><td class=c>9</td><td class=c>13</td><td><br></td><td class="c l">9</td><td>독축적량：40</td><td class=c>2.5</td><td class=c>-</td><td class="c l">11</td><td>독 축적량：50</td><td class=c>2.5</td><td class=c>-</td></tr>
+<tr><td>LV1 마비탄</td><td class=c>10</td><td>마비 축적량：25</td><td class=c>1</td><td class=c>12</td><td class=c>7</td><td class=c>11</td><td><br></td><td class="c l">6</td><td>마비축적량：20</td><td class=c>2.5</td><td class=c>-</td><td class="c l">8</td><td>마비 축적량：25</td><td class=c>2.5</td><td class=c>-</td></tr>
+<tr><td>LV2 마비탄</td><td class=c>15</td><td>마비 축적량：50</td><td class=c>1</td><td class=c>8</td><td class=c>9</td><td class=c>13</td><td><br></td><td class="c l">9</td><td>마비축적량：40</td><td class=c>2.5</td><td class=c>-</td><td class="c l">11</td><td>마비 축적량：50</td><td class=c>2.5</td><td class=c>-</td></tr>
+<tr><td>LV1 수면탄</td><td class=c>0</td><td>수면 축적량：25</td><td class=c>1</td><td class=c>12</td><td class=c>7</td><td class=c>11</td><td><br></td><td class="c l">0</td><td>수면축적량：20</td><td class=c>2.5</td><td class=c>-</td><td class="c l">0</td><td>수면 축적량：25</td><td class=c>2.5</td><td class=c>-</td></tr>
+<tr><td>LV2 수면탄</td><td class=c>0</td><td>수면 축적량：50</td><td class=c>1</td><td class=c>8</td><td class=c>9</td><td class=c>13</td><td><br></td><td class="c l">0</td><td>수면축적량：40</td><td class=c>2.5</td><td class=c>-</td><td class="c l">0</td><td>수면 축적량：50</td><td class=c>2.5</td><td class=c>-</td></tr>
+<tr><td>포획용 마취탄</td><td class=c>0</td><td>마취 축적량: 80</td><td class=c>1</td><td class=c>8</td><td class=c>8</td><td class=c>11</td><td><br></td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
+<tr><td>페인트탄</td><td class=c>0</td><td><br></td><td class=c>1</td><td class=c>99</td><td class=c>7</td><td class=c>11</td><td>페인트효과</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
+<tr><td>귀인탄</td><td class=c>0</td><td><br></td><td class=c>-</td><td class=c>5</td><td class=c>7</td><td class=c>11</td><td>무기 배율＋3</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
+<tr><td>경화탄</td><td class=c>0</td><td><br></td><td class=c>-</td><td class=c>5</td><td class=c>7</td><td class=c>11</td><td>방어력＋6</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
+<tr><td>배열탄</td><td class=c>-</td><td>변경 불가22＋화10</td><td class=c>-</td><td class=c>∞</td><td class=c>10</td><td class=c>15</td><td>장전 속도<br>반동경감<br>은 무효</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
+<tr><td>강산탄</td><td class=c>1</td><td><br></td><td class=c>1</td><td class=c>5</td><td class=c>12</td><td class=c>15</td><td>참타탄-10</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
+<tr><td>빙산탄</td><td class=c>1</td><td><br></td><td class=c>1</td><td class=c>5</td><td class=c>12</td><td class=c>15</td><td>빙-10</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
+<tr><td>용산탄</td><td class=c>1</td><td><br></td><td class=c>1</td><td class=c>5</td><td class=c>12</td><td class=c>15</td><td>용-10</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
+<tr><td>폭격탄[초기]</td><td class=c>0</td><td>변경 불가(30＋LV/2)+<br>(15+LV/4)×15</td><td class=c>-</td><td class=c>5</td><td class=c>12</td><td class=c>30</td><td>1초1히트</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
+<tr><td>폭격탄[파생 후]</td><td class=c>0</td><td>변경 불가(36＋LV/2)+<br>(18+LV/4)×15</td><td class=c>-</td><td class=c>5</td><td class=c>12</td><td class=c>30</td><td>1초1히트</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
+<tr><td>용폭격탄</td><td class=c>0</td><td>변경 불가20용(60+LV)+<br>용(120+LV/4)×15</td><td class=c>-</td><td class=c>5</td><td class=c>12</td><td class=c>30</td><td>〃</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
+</table>
+<p>보우건의 경우, 탄에 따라 위력이 다릅니다.
+<br>무기 배율에, 탄의 위력을 %로 곱한 것이, 기본위력이 됩니다.
+<br>철갑유탄은 착탄 후에 폭발, 확산탄은 자탄이 흩어집니다.
+<br>착탄 후에 일어나는 폭발은 변경 불가 데미지로 육질에 의해 경감되지 않지만, 화속성 부분은 육질로 경감됩니다.
+<br>회복탄이 몬스터에 맞아도 회복은 하지 않습니다. (데미지 1이 들어갑니다)
+<br>
+<br>헤비보우건..의 압축 리로드에 의한 위력 등은 장전한 탄수에 따라 달라집니다
+<br>　※착탄 데미지는 무속성으로 변경 불가입니다만, 철갑유탄의 착탄 후의 폭파 데미지는 탄수에 따라 달라진다
+</p>
+<p style="clear:both" class=ex>예: 그레네이드 보우건에서 LV2 일반탄을 쐈을 경우 90×12%＝10.8＝10이 기본위력이 된다
+</p>
+<h4>●　탄의 리로드 속도</h4>
+<table border=1 cellspacing=0 cellpadding=2 class=hosoku>
+<tr><th>리로드 속도치</th><th>모션</th></tr>
+<tr><td class=c>４ 이하</td><td class=c>빠름 （62）</td></tr>
+<tr><td class=c>５ ～ ７</td><td class=c>보통 （78）</td></tr>
+<tr><td class=c>８ 이상</td><td class=c>느림 （103）</td></tr>
+</table>
+<p>보우건에 탄을 리로드하는 속도는, 다음 계산식의 결과에 따라, 왼쪽 표에서 나타내는 것처럼 3단계로 나뉩니다.
+<br>
+<br>　　　리로드 속도치 ＝ 탄의리로드치 － （보우건의 리로드 수정치 ＋ 장전속도 스킬에 의한 수정치
+<br>
+<br>모션란의 () 안의 수치는, 리로드에 필요한 프레임 수입니다. (30프레임=1초)
+</p>
+<table border=1 cellspacing=0 cellpadding=2 class=hosoku>
+<caption>보우건의 리로드 수정치</caption>
+<tr><th>리로드</th><th>수정치</th></tr>
+<tr><td class=c>느림</td><td class=c>0</td></tr>
+<tr><td class=c>조금 느림</td><td class=c>1</td></tr>
+<tr><td class=c>보통</td><td class=c>2</td></tr>
+<tr><td class=c>조금 빠름</td><td class=c>3</td></tr>
+<tr><td class=c>빠름</td><td class=c>4</td></tr>
+</table>
+<table border=1 cellspacing=0 cellpadding=2 class=hosoku>
+<caption>장전속도 스킬에 의한 수정치</caption>
+<tr><th>스킬</th><th>수정치</th></tr>
+<tr><td class=c>장전속도-1</td><td class=c>-1</td></tr>
+<tr><td class=c>스킬없음</td><td class=c>0</td></tr>
+<tr><td class=c>장전속도+1</td><td class=c>1</td></tr>
+<tr><td class=c>장전속도+2</td><td class=c>2</td></tr>
+<tr><td class=c>장전속도+3</td><td class=c>3</td></tr>
+</table>
+<div style="clear:both" class=ex>예:
+<div class=hosoku>초얀쿡크포 (리로드: 느림)에서
+<br>LV2 확산탄을 리로드하는 경우
+<br>　　장전 속도 스킬 없음
+<br>　　　　9－（0＋0）＝9　⇒　느림
+<br>　　장전속도+2스킬있음
+<br>　　　　9－（0＋2）＝7　⇒　보통
+</div>
+<div>요란의 대노 (리로드: 조금 빠름)에서
+<br>LV2 확산탄을 리로드하는 경우
+<br>　　장전 속도 스킬 없음
+<br>　　　　9－（3＋0）＝6　⇒　보통
+<br>　　장전속도+2스킬있음
+<br>　　　　9－（3＋2）＝4　⇒　빠름
+</div>
+</div>
+<h4>●　발사 시의 반동</h4>
+<table border=1 cellspacing=0 cellpadding=2 class=hosoku>
+<tr><th>발사반동치</th><th>모션</th></tr>
+<tr><td class=c>０ ～ ８</td><td class=c>반동소 （26）</td></tr>
+<tr><td class=c>９ ～ １０</td><td class=c>반동중 （56）</td></tr>
+<tr><td class=c>１１ ～ １４</td><td class=c>반동대 （72）</td></tr>
+</table>
+<p>탄을 발사했을 때 생기는 반동은, 다음 계산식의 결과에 따라, 왼쪽 표에서 나타내는 것처럼 3단계로 나뉩니다.
+<br>
+<br>　　　반동치 ＝ 탄의 반동치 － （보우건의 반동 수정치 ＋ 반동경감 스킬에 의한 수정치）
+<br>
+<br>모션란의 () 안의 수치는, 반동이 가라앉을 때까지 필요한 프레임 수입니다. (30프레임=1초)
+<br>
+<br>또한, 연사스킬이 발동하고 있는 경우, 두 수정치는 0이 되어, 탄의 반동치가 그대로 발사반동치가 됩니다.
+<br>따라서, 대부분의 탄은 스킬이 없는 경우에는 반동이 커지고 맙니다.
+</p>
+<table border=1 cellspacing=0 cellpadding=2 class=hosoku>
+<caption>보우건의 반동 수정치</caption>
+<tr><th>반동</th><th>수정치</th></tr>
+<tr><td class=c>최대</td><td class=c>0</td></tr>
+<tr><td class=c>약간 대</td><td class=c>1</td></tr>
+<tr><td class=c>중</td><td class=c>2</td></tr>
+<tr><td class=c>중간</td><td class=c>3</td></tr>
+</table>
+<table border=1 cellspacing=0 cellpadding=2 class=hosoku>
+<caption>반동경감스킬에 의한 수정치</caption>
+<tr><th>스킬</th><th>수정치</th></tr>
+<tr><td class=c>스킬없음</td><td class=c>0</td></tr>
+<tr><td class=c>반동경감+1</td><td class=c>2</td></tr>
+<tr><td class=c>반동경감+2</td><td class=c>4</td></tr>
+</table>
+<div style="clear:both" class=ex>예:
+<div class=hosoku>초얀쿡크포 (반동: 중)에서
+<br>LV2 독탄을 발사한 경우
+<br>　　반동경감스킬없음
+<br>　　　　13－（2＋0）＝11　⇒　반동대
+<br>　　반동경감+1스킬있음
+<br>　　　　13－（2＋2）＝ 9　⇒　반동중
+</div>
+<div>노산룡포·패 (반동: 중간)에서
+<br>LV2 독탄을 발사한 경우
+<br>　　반동경감스킬없음
+<br>　　　　13－（3＋0）＝10　⇒　반동중
+<br>　　반동경감+1스킬있음
+<br>　　　　13－（3＋2）＝ 8　⇒　반동소
+</div>
+</div>
+<h4>리로드속도/반동 목록</h4>
+<table border=1 cellspacing=0 cellpadding=2>
+<tr><th rowspan=2>탄 이름</th><th rowspan=2>탄의<br>리로드치</th><th colspan=8>보우건의 리로드 수정치＋장전속도 스킬에 의한 수정치</th><th rowspan=2>탄의<br>반동치</th><th colspan=7>보우건의 반동 수정치＋반동경감스킬에 의한 수정치</th></tr>
+<tr><th>-1</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr>
+<tr><th>LV1 일반탄</th><td class=c>5</td><td class="c y">보통</td><td class="c y"></td><td class="c b">빠름</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>8</td><td class="c b">소</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>LV2 일반탄</th><td class=c>6</td><td class="c y">보통</td><td class="c y"></td><td class="c y"></td><td class="c b">빠름</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>9</td><td class="c y">중</td><td class="c b">소</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>LV3 일반탄</th><td class=c>7</td><td class="c r">느림</td><td class="c y">보통</td><td class="c y"></td><td class="c y"></td><td class="c b">빠름</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>10</td><td class="c y">중</td><td class="c y"></td><td class="c b">소</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>LV1 관통탄</th><td class=c>6</td><td class="c y">보통</td><td class="c y"></td><td class="c y"></td><td class="c b">빠름</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>10</td><td class="c y">중</td><td class="c y"></td><td class="c b">소</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>LV2 관통탄</th><td class=c>7</td><td class="c r">느림</td><td class="c y">보통</td><td class="c y"></td><td class="c y"></td><td class="c b">빠름</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>10</td><td class="c y">중</td><td class="c y"></td><td class="c b">소</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>LV3 관통탄</th><td class=c>8</td><td class="c r">느림</td><td class="c r"></td><td class="c y">보통</td><td class="c y"></td><td class="c y"></td><td class="c b">빠름</td><td class="c b"></td><td class="c b"></td><td class=c>11</td><td class="c r">대</td><td class="c y">중</td><td class="c y"></td><td class="c b">소</td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>LV1 산탄</th><td class=c>5</td><td class="c y">보통</td><td class="c y"></td><td class="c b">빠름</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>10</td><td class="c y">중</td><td class="c y"></td><td class="c b">소</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>LV2 산탄</th><td class=c>6</td><td class="c y">보통</td><td class="c y"></td><td class="c y"></td><td class="c b">빠름</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>10</td><td class="c y">중</td><td class="c y"></td><td class="c b">소</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>LV3 산탄</th><td class=c>7</td><td class="c r">느림</td><td class="c y">보통</td><td class="c y"></td><td class="c y"></td><td class="c b">빠름</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>11</td><td class="c r">대</td><td class="c y">중</td><td class="c y"></td><td class="c b">소</td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>LV1 철갑유탄</th><td class=c>7</td><td class="c r">느림</td><td class="c y">보통</td><td class="c y"></td><td class="c y"></td><td class="c b">빠름</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>11</td><td class="c r">대</td><td class="c y">중</td><td class="c y"></td><td class="c b">소</td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>LV2 철갑유탄</th><td class=c>8</td><td class="c r">느림</td><td class="c r"></td><td class="c y">보통</td><td class="c y"></td><td class="c y"></td><td class="c b">빠름</td><td class="c b"></td><td class="c b"></td><td class=c>12</td><td class="c r">대</td><td class="c r"></td><td class="c y">중</td><td class="c y"></td><td class="c b">소</td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>LV3 철갑유탄</th><td class=c>9</td><td class="c r">느림</td><td class="c r"></td><td class="c r"></td><td class="c y">보통</td><td class="c y"></td><td class="c y"></td><td class="c b">빠름</td><td class="c b"></td><td class=c>13</td><td class="c r">대</td><td class="c r"></td><td class="c r"></td><td class="c y">중</td><td class="c y"></td><td class="c b">소</td><td class="c b"></td></tr>
+<tr><th>LV1 확산탄</th><td class=c>8</td><td class="c r">느림</td><td class="c r"></td><td class="c y">보통</td><td class="c y"></td><td class="c y"></td><td class="c b">빠름</td><td class="c b"></td><td class="c b"></td><td class=c>13</td><td class="c r">대</td><td class="c r"></td><td class="c r"></td><td class="c y">중</td><td class="c y"></td><td class="c b">소</td><td class="c b"></td></tr>
+<tr><th>LV2 확산탄</th><td class=c>9</td><td class="c r">느림</td><td class="c r"></td><td class="c r"></td><td class="c y">보통</td><td class="c y"></td><td class="c y"></td><td class="c b">빠름</td><td class="c b"></td><td class=c>14</td><td class="c r">대</td><td class="c r"></td><td class="c r"></td><td class="c r"></td><td class="c y">중</td><td class="c y"></td><td class="c b">소</td></tr>
+<tr><th>LV3 확산탄</th><td class=c>10</td><td class="c r">느림</td><td class="c r"></td><td class="c r"></td><td class="c r"></td><td class="c y">보통</td><td class="c y"></td><td class="c y"></td><td class="c b">빠름</td><td class=c>14</td><td class="c r">대</td><td class="c r"></td><td class="c r"></td><td class="c r"></td><td class="c y">중</td><td class="c y"></td><td class="c b">소</td></tr>
+<tr><th>화염탄</th><td class=c>6</td><td class="c y">보통</td><td class="c y"></td><td class="c y"></td><td class="c b">빠름</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>10</td><td class="c y">중</td><td class="c y"></td><td class="c b">소</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>수냉탄</th><td class=c>6</td><td class="c y">보통</td><td class="c y"></td><td class="c y"></td><td class="c b">빠름</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>10</td><td class="c y">중</td><td class="c y"></td><td class="c b">소</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>전격탄</th><td class=c>6</td><td class="c y">보통</td><td class="c y"></td><td class="c y"></td><td class="c b">빠름</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>10</td><td class="c y">중</td><td class="c y"></td><td class="c b">소</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>빙결탄</th><td class=c>6</td><td class="c y">보통</td><td class="c y"></td><td class="c y"></td><td class="c b">빠름</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>10</td><td class="c y">중</td><td class="c y"></td><td class="c b">소</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>멸룡탄</th><td class=c>9</td><td class="c r">느림</td><td class="c r"></td><td class="c r"></td><td class="c y">보통</td><td class="c y"></td><td class="c y"></td><td class="c b">빠름</td><td class="c b"></td><td class=c>13</td><td class="c r">대</td><td class="c r"></td><td class="c r"></td><td class="c y">중</td><td class="c y"></td><td class="c b">소</td><td class="c b"></td></tr>
+<tr><th>LV1 회복탄</th><td class=c>7</td><td class="c r">느림</td><td class="c y">보통</td><td class="c y"></td><td class="c y"></td><td class="c b">빠름</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>11</td><td class="c r">대</td><td class="c y">중</td><td class="c y"></td><td class="c b">소</td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>LV2 회복탄</th><td class=c>9</td><td class="c r">느림</td><td class="c r"></td><td class="c r"></td><td class="c y">보통</td><td class="c y"></td><td class="c y"></td><td class="c b">빠름</td><td class="c b"></td><td class=c>13</td><td class="c r">대</td><td class="c r"></td><td class="c r"></td><td class="c y">중</td><td class="c y"></td><td class="c b">소</td><td class="c b"></td></tr>
+<tr><th>LV1 독탄</th><td class=c>7</td><td class="c r">느림</td><td class="c y">보통</td><td class="c y"></td><td class="c y"></td><td class="c b">빠름</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>11</td><td class="c r">대</td><td class="c y">중</td><td class="c y"></td><td class="c b">소</td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>LV2 독탄</th><td class=c>9</td><td class="c r">느림</td><td class="c r"></td><td class="c r"></td><td class="c y">보통</td><td class="c y"></td><td class="c y"></td><td class="c b">빠름</td><td class="c b"></td><td class=c>13</td><td class="c r">대</td><td class="c r"></td><td class="c r"></td><td class="c y">중</td><td class="c y"></td><td class="c b">소</td><td class="c b"></td></tr>
+<tr><th>LV1 마비탄</th><td class=c>7</td><td class="c r">느림</td><td class="c y">보통</td><td class="c y"></td><td class="c y"></td><td class="c b">빠름</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>11</td><td class="c r">대</td><td class="c y">중</td><td class="c y"></td><td class="c b">소</td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>LV2 마비탄</th><td class=c>9</td><td class="c r">느림</td><td class="c r"></td><td class="c r"></td><td class="c y">보통</td><td class="c y"></td><td class="c y"></td><td class="c b">빠름</td><td class="c b"></td><td class=c>13</td><td class="c r">대</td><td class="c r"></td><td class="c r"></td><td class="c y">중</td><td class="c y"></td><td class="c b">소</td><td class="c b"></td></tr>
+<tr><th>LV1 수면탄</th><td class=c>7</td><td class="c r">느림</td><td class="c y">보통</td><td class="c y"></td><td class="c y"></td><td class="c b">빠름</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>11</td><td class="c r">대</td><td class="c y">중</td><td class="c y"></td><td class="c b">소</td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>LV2 수면탄</th><td class=c>9</td><td class="c r">느림</td><td class="c r"></td><td class="c r"></td><td class="c y">보통</td><td class="c y"></td><td class="c y"></td><td class="c b">빠름</td><td class="c b"></td><td class=c>13</td><td class="c r">대</td><td class="c r"></td><td class="c r"></td><td class="c y">중</td><td class="c y"></td><td class="c b">소</td><td class="c b"></td></tr>
+<tr><th>포획용 마취탄</th><td class=c>8</td><td class="c r">느림</td><td class="c r"></td><td class="c y">보통</td><td class="c y"></td><td class="c y"></td><td class="c b">빠름</td><td class="c b"></td><td class="c b"></td><td class=c>11</td><td class="c r">대</td><td class="c y">중</td><td class="c y"></td><td class="c b">소</td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>페인트탄</th><td class=c>7</td><td class="c r">느림</td><td class="c y">보통</td><td class="c y"></td><td class="c y"></td><td class="c b">빠름</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>11</td><td class="c r">대</td><td class="c y">중</td><td class="c y"></td><td class="c b">소</td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>귀인탄</th><td class=c>7</td><td class="c r">느림</td><td class="c y">보통</td><td class="c y"></td><td class="c y"></td><td class="c b">빠름</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>11</td><td class="c r">대</td><td class="c y">중</td><td class="c y"></td><td class="c b">소</td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>경화탄</th><td class=c>7</td><td class="c r">느림</td><td class="c y">보통</td><td class="c y"></td><td class="c y"></td><td class="c b">빠름</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>11</td><td class="c r">대</td><td class="c y">중</td><td class="c y"></td><td class="c b">소</td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+</table>
+<h4>● 비행거리에 따른 기본위력 수정</h4>
+
+<p>일반탄·관통탄·철갑유탄의 3종은, 발사 후의 비거리에 따라 기본위력이 변화합니다.
+<br>
+<br>　　일반탄은, 발사 후 1.5배 ⇒ 1.0배 ⇒ 0.8배 ⇒ 0.5배 로 변화
+<br>　　관통탄과 철갑유탄은, 발사 후 1.0배 ⇒ 1.5배 ⇒ 1.0배 ⇒ 0.8배 ⇒ 0.5배 로 변화
+<br>　　　※헤비보우건..의 경우 1.5배가 아니라 1.7배
+<br>
+<br>아래 그래프는, 시간 경과에 따른 위력의 변화를 나타낸 것입니다. 보우건이나 가공 레벨 등에 따라
+<br>탄의 속도에는 차이가 있으므로, 아래 그래프는 탄의 속도에 따라 보정이 걸립니다.
+<br>탄의 속도가 빠를수록 그래프가 가로 방향으로 압축되고, 느릴수록 늘어나는 식입니다.
+<br>참고로, 헤비보우건..은 라이트보우건보다 탄의 속도가 빠른 것이 많습니다.
+<br>
+<br>보정에 따라, 시간적으로 봤을 경우는, 탄의 속도가 빠를수록 고위력을 발휘하는 시간대가 짧아집니다만,
+<br>거리적으로 봤을 경우는, 어떤 보우건이나 어떤 가공 레벨이라도, 고위력을 발휘하는 거리는 거의 같아집니다.
+<br>따라서, 그 거리만 파악해두면, 어떤 보우건이라도 같은 거리에서 고위력을 발휘시킬 수 있습니다.
+<br>
+<br>위 3종류의 탄 이외는, 비행거리에 따라 기본위력이 변화하는 일은 없습니다.
+<br>산탄은 비행거리에 따라 위력이 변하는 일은 없습니다만, 히트수가 변화합니다.
+<br>각종 속성탄도, 비행거리에 따라 속성값이 변화하는 일은 없습니다.
+</p>
+<div><img src="../img/doc-bowgun.gif" alt="감쇠"></div>
+
+<h4>●　스킬에 의한 기본 위력·속성값 수정</h4>
+<table border=1 cellspacing=0 cellpadding=2 class=hosoku>
+<tr><th>스킬</th><th>효과</th></tr>
+<tr><td>일반탄공격력상승</td><td>일반탄의위력가 1.1배</td></tr>
+<tr><td>관통탄공격력상승</td><td>관통탄의위력가 1.1배</td></tr>
+<tr><td>산탄공격력상승</td><td>산탄의위력가 1.3배</td></tr>
+<tr><td>노려쏘기</td><td>특정 조건에서, 탄육질+5</td></tr>
+<tr><td>○속성 공격력 강화</td><td>각 속성탄의 위력 업</td></tr>
+<tr><td>상태이상공격 강화</td><td>상태이상탄의속성값가 1.125배</td></tr>
+</table>
+<p>왼쪽 표에서 나타내는 스킬이 발동하고 있으면, 탄의 위력이나 속성값이 증가합니다.
+</p>
+<h4>●　회심률</h4>
+
+<p>회심률이란, 공격했을 때 크리티컬 히트가 발생할 확률입니다.
+<br>크리티컬 히트 시, 회심률이 0%보다 큰 경우는 기본위력이 1.25배, 마이너스 수치인 경우는 기본위력이 0.75배가 됩니다.
+</p>
+<h4>●　히트 이펙트</h4>
+
+<p>보우건의 히트 이펙트는, 발사 후 위력 변화에 따라 다릅니다.
+<br>이펙트는 1.5배 ⇒ 1.0배 ⇒ 0.8배 ⇒ 0.5배 순으로 작은 이펙트가 됩니다.
+<br>　　※헤비보우건..의 경우 1.5배가 아니라 1.7배
+<br><small>(주는 데미지에는 영향받지 않지만, 데미지가 거의 통하지 않는 부위에서도 큰 이펙트가 나오는 경우도 있습니다)</small>
+</p>
+<h4>●　주는 대미지의 증가</h4>
+<table border=1 cellspacing=0 cellpadding=2 class=hosoku>
+<tr><th>상태</th><th>배율</th></tr>
+<tr><td>마비상태중</td><td class=n>1.1배</td></tr>
+<tr><td>바위로 의태 중　（바살모스）</td><td class=n>1.1배</td></tr>
+<tr><td>구멍 함정　（떨어진 후<br>발버둥치기 시작할 때까지만）</td><td class=n>1.1배</td></tr>
+<tr><td>수면 중　（첫 타격만）</td><td class=n>3.0배</td></tr>
+</table>
+<p>몬스터가 특정 상태일 때 공격하면, 왼쪽 표처럼 주는 대미지가 증가합니다.
+<br><small>(증가하는 것은 무속성 대미지뿐이며, 속성 대미지는 변화하지 않습니다)</small>
+<br>마비 함정에 걸려 있을 때는 마비 상태가 아니라 저림 상태이므로 증가하지 않습니다.
+<br>미발각 상태에서 함정에 빠뜨리면, 효과 시간이 약 1.7배로 늘어납니다. 또한, 분노 시에는 약 0.7배가 됩니다. (미발각이 우선)
+<br><small>(라잔은, 재워서 떨어뜨려도 6초 그대로)</small>
+<br>몬스터가 약해져 자고 있는 경우도 수면 중과 동일. 단, 몬스터의 체력은 서서히 회복하고 있다.
+<br><small>(에스피나스의 퀘스트 개시 시 상태는 제외)</small>
+</p>
+<h4>●　육질과 전체방어율에 의한 대미지 경감</h4>
+
+<p>몬스터에는 육질이 설정되어 있어, 대미지를 경감시킵니다.
+<br>통상 대미지, 속성 대미지 각각이 육질에 의해 경감됩니다.
+<br>또한, 몬스터에게는 육질과는 별도로 전체 방어율이 설정되어 있어, 총 데미지 수치를 경감시켜 버립니다.
+<br>게다가 분노 상태가 되면 전체방어율에 보정이 걸리는 몬스터도 있습니다.
+</p>
+<p style="clear:both" class=ex>예: 그레네이드 보우건으로 리오레이아(전체방어율: 0.9)의 머리에 일반탄LV2를 크리티컬 거리에서 맞췄을 경우
+<br>　　 90×6%×1.5×50%＝4.05＝4
+<br>　　 4×90%＝3.6＝3 데미지
+</p>
+<h4>●　플레이어의 공격력 업</h4>
+
+<p>플레이어의 공격력을 올리는 수단은 여러 가지 있습니다만, 크게 나누어 3개의 그룹으로 나뉩니다.
+<br>　　1: 공격력 업 스킬 발동, 공격력을 올리는 아이템 소지 (힘의 부적·힘의 발톱)
+<br>　　2: 식사 효과에 의한 상승, 귀인약·귀인약 그레이트 사용
+<br>　　3: 괴력의 씨·괴력의 환약·귀인 피리 사용
+<br>
+<br>그룹1은, 퀘스트 중에 힘이 다해도 효력이 사라지지 않습니다.
+<br>그룹2는, 퀘스트 중에는 계속 유효하지만, 힘이 다하면 효력이 사라집니다.
+<br>그룹3은, 일정 시간이 지나면 효력이 사라집니다.
+<br>
+<br>그룹 2와 3은 그룹 내 각 효과가 중복되지 않습니다. 중복된 경우에는 순서에 관계없이 효과가 큰 쪽이 우선됩니다.
+</body></html>

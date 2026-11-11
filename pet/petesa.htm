@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>미끼/공격 방법</title>
+<style type="text/css">
+<!--
+th {white-space:nowrap;font-weight:normal;background-color:gray;}
+td.no {background-color:silver;width:3em}
+td.esa {width:8em}
+td.fue {width:3em;background-color:silver}
+table.top td {color:blue;cursor:pointer;}
+-->
+</style>
+<script type="text/javascript">
+<!--
+document./*@cc_on @if (true) attachEvent ('on' + @else@*/ addEventListener (/*@end@*/
+	'click',
+	function (evt) {
+		/*@if (true)
+		var t = evt.srcElement;
+		@else@*/
+		var t = evt.target;
+		/*@end@*/
+		if (!t.id) return;
+		if (t.id.charAt(4) != "c") return;
+
+		var trs = document.getElementsByTagName("table");
+		for(var i=2; i<trs.length; i++){
+			trs[i].style.display = trs[i].id  == t.id.substring(0,4) ? "":"none";
+		}
+	},
+	false
+	);
+-->
+</script>
+</head>
+<body>
+<table border=1 cellspacing=0 cellpadding=2 class=top><tr>
+<td id="m027c">도스람포스</td>
+<td id="m028c">도스게네포스</td>
+<td id="m031c">도스이오스</td>
+<td id="m068c">도스팽고</td>
+<td id="m006c">얀쿡크</td>
+<td id="m038c">얀쿡크 아종</td>
+</tr><tr><td id="m020c">게리오스</td>
+<td id="m039c">게리오스 아종</td>
+<td id="m001c">리오레이아</td>
+<td id="m037c">리오레이아【벚꽃】</td>
+<td id="m011c">리오레우스</td>
+<td id="m049c">리오레우스【창】</td>
+</tr><tr><td id="m015c">푸루푸루</td>
+<td id="m045c">푸루푸루 아종</td>
+<td id="m014c">디아블로스</td>
+<td id="m043c">디아블로스 아종</td>
+<td id="m017c">그라비모스</td>
+<td id="m047c">그라비모스 아종</td>
+</tr><tr><td id="m053c">라잔</td>
+<td id="m048c">다이묘자자미</td>
+<td id="m067c">쇼군기자미</td>
+<td id="m052c">바바콩가</td>
+<td id="m051c">도도블랑고</td>
+<td id="m040c">얀가루루가</td>
+</tr></table>
+<table border=1 cellspacing=0 cellpadding=2 class=all>
+<tr><td class=no>공통</td><td class=esa>거리의 짬밥</td><td>체-10% 방-10%</td></tr>
+<tr><td class=no>공통</td><td class=esa>용 푸드</td><td>체-10%방어-3%</td></tr>
+<tr><td class=no>공통</td><td class=esa>거룡 푸드</td><td>1~10% 사이즈 업(최대 사이즈 이상이 되지 않음)</td></tr>
+<tr><td class=no>공통</td><td class=esa>강룡 푸드</td><td>투기LV1 업</td></tr>
+<tr><td class=no>공통</td><td class=esa>극상 용 푸드</td><td>친밀도 1 상승</td></tr>
+<tr><td class=no>공통</td><td class=esa>붉은 용 푸드</td><td>마비무효공+10%</td></tr>
+<tr><td class=no>공통</td><td class=esa>푸른 용 푸드</td><td>수면무효공+10%</td></tr>
+<tr><td class=no>공통</td><td class=esa>비취색 용 푸드</td><td>독무효공+10%</td></tr>
+<tr><td class=no>공통</td><td class=esa>기상천외 푸드</td><td>랜덤으로 효과가 바뀜<br>(1~10% 사이즈 다운/체+15%공+25%/투기LV1 업)</td></tr>
+</table>
+<table id="m006" border=1 cellspacing=0 cellpadding=2 style="display:none"><tr><th colspan=5>얀쿡크</th></tr>
+<tr><td colspan=2>펫확률</td><td>26/32</td><td class=fue>분노의 피리</td><td>분노 상태로 만들다</td></tr>
+<tr><td class=no>먹이:No.1</td><td class=esa>낚시용 지렁이</td><td>체+5%공+5%</td><td class=fue>탄격 피리</td><td>화염액</td></tr>
+<tr><td class=no>먹이:No.2</td><td class=esa>낚시용 메뚜기</td><td>체+5% 공+10%</td><td class=fue>돌격 피리</td><td>연속 쪼기</td></tr>
+<tr><td class=no>먹이:No.3</td><td class=esa>쌀벌레</td><td>체+15%공+10%</td><td class=fue>미격 피리</td><td>회전꼬리</td></tr>
+<tr><td class=no>먹이:No.4</td><td class=esa>꿀 잠자리</td><td>체+15% 공+20%</td><td class=fue>필살 피리</td><td>활공 기습</td></tr>
+<tr><td class=no>먹이:No.5</td><td class=esa>희귀 풍뎅이</td><td>체+25% 공+25% 방+10%</td><td class=fue>특격 피리</td><td>연속 화염액</td></tr>
+<tr><td class=no></td><td class=esa></td><td></td><td class=fue>역린 피리</td><td>활공 기습→회전꼬리→연속 쪼기</td></tr>
+</table><table id="m020" border=1 cellspacing=0 cellpadding=2 style="display:none"><tr><th colspan=5>게리오스</th></tr>
+<tr><td colspan=2>펫확률</td><td>26/32</td><td class=fue>분노의 피리</td><td>분노 상태로 만들다</td></tr>
+<tr><td class=no>먹이:No.1</td><td class=esa>독 광대버섯</td><td>공+5%</td><td class=fue>탄격 피리</td><td>독액</td></tr>
+<tr><td class=no>먹이:No.2</td><td class=esa>스파이스 웜</td><td>체+5%공+5%</td><td class=fue>돌격 피리</td><td>연속 쪼기</td></tr>
+<tr><td class=no>먹이:No.3</td><td class=esa>격렬 독버섯</td><td>체+10%공+10%</td><td class=fue>미격 피리</td><td>회전꼬리</td></tr>
+<tr><td class=no>먹이:No.4</td><td class=esa>키라 비틀</td><td>체+15%공+10%</td><td class=fue>필살 피리</td><td>섬광</td></tr>
+<tr><td class=no>먹이:No.5</td><td class=esa>라이트 크리스털</td><td>체+25% 공+20% 방+8%</td><td class=fue>특격 피리</td><td>죽은 척 기상</td></tr>
+<tr><td class=no></td><td class=esa></td><td></td><td class=fue>역린 피리</td><td>섬광→연속 쪼기→섬광→독액</td></tr>
+</table><table id="m011" border=1 cellspacing=0 cellpadding=2 style="display:none"><tr><th colspan=5>리오레우스</th></tr>
+<tr><td colspan=2>펫확률</td><td>5/32</td><td class=fue>분노의 피리</td><td>분노 상태로 만들다</td></tr>
+<tr><td class=no>먹이:No.1</td><td class=esa>생고기</td><td>체+5%방-3%</td><td class=fue>탄격 피리</td><td>공중 3연 브레스</td></tr>
+<tr><td class=no>먹이:No.2</td><td class=esa>화이트 리버</td><td>공+5%</td><td class=fue>돌격 피리</td><td>맹대시</td></tr>
+<tr><td class=no>먹이:No.3</td><td class=esa>가브리브 로스</td><td>체+5%공+5%방+5%</td><td class=fue>미격 피리</td><td>회전꼬리</td></tr>
+<tr><td class=no>먹이:No.4</td><td class=esa>용의 꼬리</td><td>체력+10% 공격+15%</td><td class=fue>필살 피리</td><td>공중 다리 휘두르기</td></tr>
+<tr><td class=no>먹이:No.5</td><td class=esa>모스 머리</td><td>체력+15% 공격+15% 방어+5%</td><td class=fue>특격 피리</td><td>백점프브레스</td></tr>
+<tr><td class=no></td><td class=esa></td><td></td><td class=fue>역린 피리</td><td>맹대시→백점프 브레스→공중 브레스</td></tr>
+</table><table id="m001" border=1 cellspacing=0 cellpadding=2 style="display:none"><tr><th colspan=5>리오레이아</th></tr>
+<tr><td colspan=2>펫확률</td><td>19/32</td><td class=fue>분노의 피리</td><td>분노 상태로 만들다</td></tr>
+<tr><td class=no>먹이:No.1</td><td class=esa>생고기</td><td>체+5%방-3%</td><td class=fue>탄격 피리</td><td>지상 3연속 브레스</td></tr>
+<tr><td class=no>먹이:No.2</td><td class=esa>화이트 리버</td><td>공+5%</td><td class=fue>돌격 피리</td><td>맹대시</td></tr>
+<tr><td class=no>먹이:No.3</td><td class=esa>가브리브 로스</td><td>체+5%공+5%방+5%</td><td class=fue>미격 피리</td><td>회전꼬리</td></tr>
+<tr><td class=no>먹이:No.4</td><td class=esa>용의 꼬리</td><td>체력+10% 공격+15%</td><td class=fue>필살 피리</td><td>연속 맹대시</td></tr>
+<tr><td class=no>먹이:No.5</td><td class=esa>모스 머리</td><td>체력+15% 공격+15% 방어+5%</td><td class=fue>특격 피리</td><td>서머솔트</td></tr>
+<tr><td class=no></td><td class=esa></td><td></td><td class=fue>역린 피리</td><td>연속 맹대시→연속 서머솔트</td></tr>
+</table><table id="m015" border=1 cellspacing=0 cellpadding=2 style="display:none"><tr><th colspan=5>푸루푸루</th></tr>
+<tr><td colspan=2>펫확률</td><td>16/32</td><td class=fue>분노의 피리</td><td>분노 상태로 만들다</td></tr>
+<tr><td class=no>먹이:No.1</td><td class=esa>생고기</td><td>체+5%방-3%</td><td class=fue>탄격 피리</td><td>뇌브레스</td></tr>
+<tr><td class=no>먹이:No.2</td><td class=esa>화이트 리버</td><td>공+5%</td><td class=fue>돌격 피리</td><td>달려들기</td></tr>
+<tr><td class=no>먹이:No.3</td><td class=esa>가브리브 로스</td><td>체+5%공+5%방+5%</td><td class=fue>미격 피리</td><td>회전꼬리</td></tr>
+<tr><td class=no>먹이:No.4</td><td class=esa>용의 꼬리</td><td>체력+10% 공격+15%</td><td class=fue>필살 피리</td><td>체내 발전</td></tr>
+<tr><td class=no>먹이:No.5</td><td class=esa>모스 머리</td><td>체력+15% 공격+15% 방어+5%</td><td class=fue>특격 피리</td><td>목 늘이기</td></tr>
+<tr><td class=no></td><td class=esa></td><td></td><td class=fue>역린 피리</td><td>바인드보이스→뇌브레스→체내 발전</td></tr>
+</table><table id="m017" border=1 cellspacing=0 cellpadding=2 style="display:none"><tr><th colspan=5>그라비모스</th></tr>
+<tr><td colspan=2>펫확률</td><td>10/32</td><td class=fue>분노의 피리</td><td>분노 상태로 만들다</td></tr>
+<tr><td class=no>먹이:No.1</td><td class=esa>양광석</td><td>방어-3%</td><td class=fue>탄격 피리</td><td>열선 브레스</td></tr>
+<tr><td class=no>먹이:No.2</td><td class=esa>대지의 결정</td><td>공격+5% 방어-3%</td><td class=fue>돌격 피리</td><td>맹대시</td></tr>
+<tr><td class=no>먹이:No.3</td><td class=esa>홍련석</td><td>체+5%공+5%</td><td class=fue>미격 피리</td><td>회전꼬리</td></tr>
+<tr><td class=no>먹이:No.4</td><td class=esa>카브레라이트 광석</td><td>체+5%공+5%방+5%</td><td class=fue>필살 피리</td><td>화염가스</td></tr>
+<tr><td class=no>먹이:No.5</td><td class=esa>유니온 광석</td><td>체+10%공+10%</td><td class=fue>특격 피리</td><td>체당</td></tr>
+<tr><td class=no></td><td class=esa></td><td></td><td class=fue>역린 피리</td><td>수평 베기 열선→맹대시→화염 가스</td></tr>
+</table><table id="m052" border=1 cellspacing=0 cellpadding=2 style="display:none"><tr><th colspan=5>바바콩가</th></tr>
+<tr><td colspan=2>펫확률</td><td>22/32</td><td class=fue>분노의 피리</td><td>분노 상태로 만들다</td></tr>
+<tr><td class=no>먹이:No.1</td><td class=esa>독 광대버섯</td><td>호흡독+체+5%</td><td class=fue>탄격 피리</td><td>방귀</td></tr>
+<tr><td class=no>먹이:No.2</td><td class=esa>마비 버섯</td><td>브레스마비+체+5%</td><td class=fue>돌격 피리</td><td>맹대시</td></tr>
+<tr><td class=no>먹이:No.3</td><td class=esa>수면초</td><td>브레스수면+체+5%</td><td class=fue>미격 피리</td><td>바디 브레스</td></tr>
+<tr><td class=no>먹이:No.4</td><td class=esa>두근두근 버섯</td><td>체+10%공+10%</td><td class=fue>필살 피리</td><td>각종 브레스</td></tr>
+<tr><td class=no>먹이:No.5</td><td class=esa>송이 귀신 버섯</td><td>호흡독+체+15%공+10%</td><td class=fue>특격 피리</td><td>연속 라리아트</td></tr>
+<tr><td class=no></td><td class=esa></td><td></td><td class=fue>역린 피리</td><td>파인드 보이스→맹대시→연속 라리아트</td></tr>
+</table><table id="m051" border=1 cellspacing=0 cellpadding=2 style="display:none"><tr><th colspan=5>도도블랑고</th></tr>
+<tr><td colspan=2>펫확률</td><td>13/32</td><td class=fue>분노의 피리</td><td>분노 상태로 만들다</td></tr>
+<tr><td class=no>먹이:No.1</td><td class=esa>빙결정</td><td>체+5%방-3%</td><td class=fue>탄격 피리</td><td>냉동 브레스</td></tr>
+<tr><td class=no>먹이:No.2</td><td class=esa>포포의 혀</td><td>체+5%공+5%</td><td class=fue>돌격 피리</td><td>돌진/차기 물기</td></tr>
+<tr><td class=no>먹이:No.3</td><td class=esa>쿨러 미트</td><td>체+10% 공+5%</td><td class=fue>미격 피리</td><td>백 스텝</td></tr>
+<tr><td class=no>먹이:No.4</td><td class=esa>쿨러 미트Ｇ</td><td>체+5%공+10%방+5%</td><td class=fue>필살 피리</td><td>좌우 병타</td></tr>
+<tr><td class=no>먹이:No.5</td><td class=esa>호박 광석</td><td>체+10%공+15% 방+10%</td><td class=fue>특격 피리</td><td>눈알</td></tr>
+<tr><td class=no></td><td class=esa></td><td></td><td class=fue>역린 피리</td><td>바인드보이스→백 스텝→좌우 병타→냉동 브레스</td></tr>
+</table><table id="m014" border=1 cellspacing=0 cellpadding=2 style="display:none"><tr><th colspan=5>디아블로스</th></tr>
+<tr><td colspan=2>펫확률</td><td>10/32</td><td class=fue>분노의 피리</td><td>분노 상태로 만들다</td></tr>
+<tr><td class=no>먹이:No.1</td><td class=esa>선인장꽃</td><td>방어-3%</td><td class=fue>탄격 피리</td><td>뿔 찌르기 들어올리기</td></tr>
+<tr><td class=no>먹이:No.2</td><td class=esa>슬라이스 선인장</td><td>공격+5% 방어-3%</td><td class=fue>돌격 피리</td><td>맹대시</td></tr>
+<tr><td class=no>먹이:No.3</td><td class=esa>맹우 버터</td><td>체+5%공+5%</td><td class=fue>미격 피리</td><td>회전꼬리</td></tr>
+<tr><td class=no>먹이:No.4</td><td class=esa>도스비스커스</td><td>체+5%공+10%방+5%</td><td class=fue>필살 피리</td><td>바인드보이스</td></tr>
+<tr><td class=no>먹이:No.5</td><td class=esa>엘너트</td><td>체+10%공+10%</td><td class=fue>특격 피리</td><td>지상 급습</td></tr>
+<tr><td class=no></td><td class=esa></td><td></td><td class=fue>역린 피리</td><td>바인드보이스→뿔 찌르기 들어올리기→꼬리 휘두르기→맹대시</td></tr>
+</table><table id="m048" border=1 cellspacing=0 cellpadding=2 style="display:none"><tr><th colspan=5>다이묘자자미</th></tr>
+<tr><td colspan=2>펫확률</td><td>22/32</td><td class=fue>분노의 피리</td><td>분노 상태로 만들다</td></tr>
+<tr><td class=no>먹이:No.1</td><td class=esa>횟감용 생선</td><td>체+5%</td><td class=fue>탄격 피리</td><td>거품 브레스</td></tr>
+<tr><td class=no>먹이:No.2</td><td class=esa>예리어</td><td>공+10%</td><td class=fue>돌격 피리</td><td>양쪽 발톱 공격</td></tr>
+<tr><td class=no>먹이:No.3</td><td class=esa>도스 예리어</td><td>공+15%</td><td class=fue>미격 피리</td><td>바디 프레스</td></tr>
+<tr><td class=no>먹이:No.4</td><td class=esa>잘 익은 생선도스</td><td>공+5% 방+10%</td><td class=fue>필살 피리</td><td>지상 급습</td></tr>
+<tr><td class=no>먹이:No.5</td><td class=esa>청새치</td><td>공+15% 방+10%</td><td class=fue>특격 피리</td><td>특수 가드</td></tr>
+<tr><td class=no></td><td class=esa></td><td></td><td class=fue>역린 피리</td><td>왼쪽오른쪽 발톱공격→지상 급습→야도돌진/차기</td></tr>
+</table><table id="m067" border=1 cellspacing=0 cellpadding=2 style="display:none"><tr><th colspan=5>쇼군기자미</th></tr>
+<tr><td colspan=2>펫확률</td><td>13/32</td><td class=fue>분노의 피리</td><td>분노 상태로 만들다</td></tr>
+<tr><td class=no>먹이:No.1</td><td class=esa>횟감용 생선</td><td>체+5%</td><td class=fue>탄격 피리</td><td>왼쪽오른쪽 발톱공격</td></tr>
+<tr><td class=no>먹이:No.2</td><td class=esa>예리어</td><td>공+10%</td><td class=fue>돌격 피리</td><td>내리치는 발톱공격</td></tr>
+<tr><td class=no>먹이:No.3</td><td class=esa>도스 예리어</td><td>공+15%</td><td class=fue>미격 피리</td><td>회전 발톱공격</td></tr>
+<tr><td class=no>먹이:No.4</td><td class=esa>잘 익은 생선도스</td><td>공+5% 방+10%</td><td class=fue>필살 피리</td><td>지상 연속급습</td></tr>
+<tr><td class=no>먹이:No.5</td><td class=esa>청새치</td><td>공+15% 방+10%</td><td class=fue>특격 피리</td><td>이동공격</td></tr>
+<tr><td class=no></td><td class=esa></td><td></td><td class=fue>역린 피리</td><td>내리치는 발톱공격→왼쪽오른쪽 발톱공격→왼쪽오른쪽 발톱공격→이완중연속급습</td></tr>
+</table><table id="m053" border=1 cellspacing=0 cellpadding=2 style="display:none"><tr><th colspan=5>라잔</th></tr>
+<tr><td colspan=2>펫확률</td><td>1/32 '비스트 마스터' 칭호가 필요</td><td class=fue>분노의 피리</td><td>분노 상태로 만들다</td></tr>
+<tr><td class=no>먹이:No.1</td><td class=esa>소금어</td><td>방어-3%</td><td class=fue>탄격 피리</td><td>뎀시롤</td></tr>
+<tr><td class=no>먹이:No.2</td><td class=esa>백금어</td><td>공격+5% 방어-3%</td><td class=fue>돌격 피리</td><td>사행 맹대시</td></tr>
+<tr><td class=no>먹이:No.3</td><td class=esa>은 달걀</td><td>체+5%공+5%</td><td class=fue>미격 피리</td><td>회전공격</td></tr>
+<tr><td class=no>먹이:No.4</td><td class=esa>금 달걀</td><td>체+5%공+5%방+5%</td><td class=fue>필살 피리</td><td>빔</td></tr>
+<tr><td class=no>먹이:No.5</td><td class=esa>키린 푸른 뿔</td><td>체+20%공+10%</td><td class=fue>특격 피리</td><td>점프 기합탄</td></tr>
+<tr><td class=no></td><td class=esa></td><td></td><td class=fue>역린 피리</td><td>빔→회전공격→사행 맹대시→뎀시롤</td></tr>
+</table><table id="m040" border=1 cellspacing=0 cellpadding=2 style="display:none"><tr><th colspan=5>얀가루루가</th></tr>
+<tr><td colspan=2>펫확률</td><td>16/32</td><td class=fue>분노의 피리</td><td>분노 상태로 만들다</td></tr>
+<tr><td class=no>먹이:No.1</td><td class=esa>생고기</td><td>체+5%방-3%</td><td class=fue>탄격 피리</td><td>지상 3연속 브레스</td></tr>
+<tr><td class=no>먹이:No.2</td><td class=esa>화이트 리버</td><td>공+5%</td><td class=fue>돌격 피리</td><td>브레스달리기→물기</td></tr>
+<tr><td class=no>먹이:No.3</td><td class=esa>가브리브 로스</td><td>체+5%공+5%방+5%</td><td class=fue>미격 피리</td><td>회전꼬리</td></tr>
+<tr><td class=no>먹이:No.4</td><td class=esa>용의 꼬리</td><td>체력+10% 공격+15%</td><td class=fue>필살 피리</td><td>바인드보이스</td></tr>
+<tr><td class=no>먹이:No.5</td><td class=esa>모스 머리</td><td>체력+15% 공격+15% 방어+5%</td><td class=fue>특격 피리</td><td>서머솔트</td></tr>
+<tr><td class=no></td><td class=esa></td><td></td><td class=fue>역린 피리</td><td>바인드보이스→브레스→물기→지상브레스→서머솔트</td></tr>
+</table><table id="m027" border=1 cellspacing=0 cellpadding=2 style="display:none"><tr><th colspan=5>도스람포스</th></tr>
+<tr><td colspan=2>펫확률</td><td>29/32</td><td class=fue>분노의 피리</td><td>분노 상태로 만들다</td></tr>
+<tr><td class=no>먹이:No.1</td><td class=esa>탄 고기</td><td>체+10%</td><td class=fue>탄격 피리</td><td>물기</td></tr>
+<tr><td class=no>먹이:No.2</td><td class=esa>생고기</td><td>체+10%공+10%</td><td class=fue>돌격 피리</td><td>달려들기</td></tr>
+<tr><td class=no>먹이:No.3</td><td class=esa>덜 익은 고기</td><td>체+15%방+8%</td><td class=fue>미격 피리</td><td>물기</td></tr>
+<tr><td class=no>먹이:No.4</td><td class=esa>잘 익은 고기</td><td>체+20%공+20%</td><td class=fue>필살 피리</td><td>달려들기</td></tr>
+<tr><td class=no>먹이:No.5</td><td class=esa>잘 익은 고기G</td><td>체+25%공+25%</td><td class=fue>특격 피리</td><td>백 스텝</td></tr>
+<tr><td class=no></td><td class=esa></td><td></td><td class=fue>역린 피리</td><td>덮치기→물어뜯기→덮치기→백 스텝</td></tr>
+</table><table id="m028" border=1 cellspacing=0 cellpadding=2 style="display:none"><tr><th colspan=5>도스게네포스</th></tr>
+<tr><td colspan=2>펫확률</td><td>29/32</td><td class=fue>분노의 피리</td><td>분노 상태로 만들다</td></tr>
+<tr><td class=no>먹이:No.1</td><td class=esa>탄 고기</td><td>체+10%</td><td class=fue>탄격 피리</td><td>물기</td></tr>
+<tr><td class=no>먹이:No.2</td><td class=esa>생고기</td><td>체+10%공+10%</td><td class=fue>돌격 피리</td><td>달려들기</td></tr>
+<tr><td class=no>먹이:No.3</td><td class=esa>덜 익은 고기</td><td>체+15%방+8%</td><td class=fue>미격 피리</td><td>물기</td></tr>
+<tr><td class=no>먹이:No.4</td><td class=esa>잘 익은 고기</td><td>체+20%공+20%</td><td class=fue>필살 피리</td><td>달려들기</td></tr>
+<tr><td class=no>먹이:No.5</td><td class=esa>잘 익은 고기G</td><td>체+25%공+25%</td><td class=fue>특격 피리</td><td>백 스텝</td></tr>
+<tr><td class=no></td><td class=esa></td><td></td><td class=fue>역린 피리</td><td>덮치기→물어뜯기→덮치기→백 스텝</td></tr>
+</table><table id="m031" border=1 cellspacing=0 cellpadding=2 style="display:none"><tr><th colspan=5>도스이오스</th></tr>
+<tr><td colspan=2>펫확률</td><td>29/32</td><td class=fue>분노의 피리</td><td>분노 상태로 만들다</td></tr>
+<tr><td class=no>먹이:No.1</td><td class=esa>탄 고기</td><td>체+10%</td><td class=fue>탄격 피리</td><td>독 토하기</td></tr>
+<tr><td class=no>먹이:No.2</td><td class=esa>생고기</td><td>체+10%공+10%</td><td class=fue>돌격 피리</td><td>달려들기</td></tr>
+<tr><td class=no>먹이:No.3</td><td class=esa>덜 익은 고기</td><td>체+15%방+8%</td><td class=fue>미격 피리</td><td>물기</td></tr>
+<tr><td class=no>먹이:No.4</td><td class=esa>잘 익은 고기</td><td>체+20%공+20%</td><td class=fue>필살 피리</td><td>달려들기</td></tr>
+<tr><td class=no>먹이:No.5</td><td class=esa>잘 익은 고기G</td><td>체+25%공+25%</td><td class=fue>특격 피리</td><td>백 스텝</td></tr>
+<tr><td class=no></td><td class=esa></td><td></td><td class=fue>역린 피리</td><td>독 토하기→달려들기→물기→독 토하기</td></tr>
+</table><table id="m068" border=1 cellspacing=0 cellpadding=2 style="display:none"><tr><th colspan=5>도스팽고</th></tr>
+<tr><td colspan=2>펫확률</td><td>29/32</td><td class=fue>분노의 피리</td><td>분노 상태로 만들다</td></tr>
+<tr><td class=no>먹이:No.1</td><td class=esa>돼지 전병</td><td>체+10%</td><td class=fue>탄격 피리</td><td>장거리 돌진/차기</td></tr>
+<tr><td class=no>먹이:No.2</td><td class=esa>참마 벌레</td><td>체+10% 공+5%</td><td class=fue>돌격 피리</td><td>단거리 돌진/차기</td></tr>
+<tr><td class=no>먹이:No.3</td><td class=esa>워밀 보리</td><td>체+5% 방+10%</td><td class=fue>미격 피리</td><td>장거리 돌진/차기</td></tr>
+<tr><td class=no>먹이:No.4</td><td class=esa>배벌 유충</td><td>체+15%공+15%</td><td class=fue>필살 피리</td><td>단거리 돌진/차기</td></tr>
+<tr><td class=no>먹이:No.5</td><td class=esa>은 쌀알초</td><td>체+20%공+20%</td><td class=fue>특격 피리</td><td>회전 송곳니공격</td></tr>
+<tr><td class=no></td><td class=esa></td><td></td><td class=fue>역린 피리</td><td>단거리 돌진/차기→회전 송곳니공격→장거리 돌진/차기</td></tr>
+</table><table id="m037" border=1 cellspacing=0 cellpadding=2 style="display:none"><tr><th colspan=5>리오레이아 아종</th></tr>
+<tr><td colspan=2>펫확률</td><td>10/32</td><td class=fue>분노의 피리</td><td>분노 상태로 만들다</td></tr>
+<tr><td class=no>먹이:No.1</td><td class=esa>생고기</td><td>체+5%방-3%</td><td class=fue>탄격 피리</td><td>지상 3연속 브레스</td></tr>
+<tr><td class=no>먹이:No.2</td><td class=esa>화이트 리버</td><td>공+5%</td><td class=fue>돌격 피리</td><td>맹대시</td></tr>
+<tr><td class=no>먹이:No.3</td><td class=esa>가브리브 로스</td><td>체+5%공+5%방+5%</td><td class=fue>미격 피리</td><td>회전꼬리</td></tr>
+<tr><td class=no>먹이:No.4</td><td class=esa>용의 꼬리</td><td>체력+10% 공격+15%</td><td class=fue>필살 피리</td><td>연속 맹대시</td></tr>
+<tr><td class=no>먹이:No.5</td><td class=esa>모스 머리</td><td>체력+15% 공격+15% 방어+5%</td><td class=fue>특격 피리</td><td>서머솔트</td></tr>
+<tr><td class=no></td><td class=esa></td><td></td><td class=fue>역린 피리</td><td>연속 맹대시→연속 서머솔트</td></tr>
+</table><table id="m038" border=1 cellspacing=0 cellpadding=2 style="display:none"><tr><th colspan=5>얀쿡크 아종</th></tr>
+<tr><td colspan=2>펫확률</td><td>13/32</td><td class=fue>분노의 피리</td><td>분노 상태로 만들다</td></tr>
+<tr><td class=no>먹이:No.1</td><td class=esa>낚시용 지렁이</td><td>체+5%공+5%</td><td class=fue>탄격 피리</td><td>화염액</td></tr>
+<tr><td class=no>먹이:No.2</td><td class=esa>낚시용 메뚜기</td><td>체+5% 공+10%</td><td class=fue>돌격 피리</td><td>연속 쪼기</td></tr>
+<tr><td class=no>먹이:No.3</td><td class=esa>쌀벌레</td><td>체+15%공+10%</td><td class=fue>미격 피리</td><td>회전꼬리</td></tr>
+<tr><td class=no>먹이:No.4</td><td class=esa>꿀 잠자리</td><td>체+15% 공+20%</td><td class=fue>필살 피리</td><td>활공 기습</td></tr>
+<tr><td class=no>먹이:No.5</td><td class=esa>희귀 풍뎅이</td><td>체+25% 공+25% 방+10%</td><td class=fue>특격 피리</td><td>연속 화염액</td></tr>
+<tr><td class=no></td><td class=esa></td><td></td><td class=fue>역린 피리</td><td>활공 기습→회전꼬리→연속 쪼기</td></tr>
+</table><table id="m039" border=1 cellspacing=0 cellpadding=2 style="display:none"><tr><th colspan=5>게리오스 아종</th></tr>
+<tr><td colspan=2>펫확률</td><td>13/32</td><td class=fue>분노의 피리</td><td>분노 상태로 만들다</td></tr>
+<tr><td class=no>먹이:No.1</td><td class=esa>독 광대버섯</td><td>공+5%</td><td class=fue>탄격 피리</td><td>독액</td></tr>
+<tr><td class=no>먹이:No.2</td><td class=esa>스파이스 웜</td><td>체+5%공+5%</td><td class=fue>돌격 피리</td><td>연속 쪼기</td></tr>
+<tr><td class=no>먹이:No.3</td><td class=esa>격렬 독버섯</td><td>체+10%공+10%</td><td class=fue>미격 피리</td><td>회전꼬리</td></tr>
+<tr><td class=no>먹이:No.4</td><td class=esa>키라 비틀</td><td>체+15%공+10%</td><td class=fue>필살 피리</td><td>섬광</td></tr>
+<tr><td class=no>먹이:No.5</td><td class=esa>라이트 크리스털</td><td>체+25% 공+20% 방+8%</td><td class=fue>특격 피리</td><td>죽은 척 기상</td></tr>
+<tr><td class=no></td><td class=esa></td><td></td><td class=fue>역린 피리</td><td>섬광→연속 쪼기→섬광→독액</td></tr>
+</table><table id="m049" border=1 cellspacing=0 cellpadding=2 style="display:none"><tr><th colspan=5>리오레우스 아종</th></tr>
+<tr><td colspan=2>펫확률</td><td>3/32</td><td class=fue>분노의 피리</td><td>분노 상태로 만들다</td></tr>
+<tr><td class=no>먹이:No.1</td><td class=esa>생고기</td><td>체+5%방-3%</td><td class=fue>탄격 피리</td><td>공중 3연 브레스</td></tr>
+<tr><td class=no>먹이:No.2</td><td class=esa>화이트 리버</td><td>공+5%</td><td class=fue>돌격 피리</td><td>맹대시</td></tr>
+<tr><td class=no>먹이:No.3</td><td class=esa>가브리브 로스</td><td>체+5%공+5%방+5%</td><td class=fue>미격 피리</td><td>회전꼬리</td></tr>
+<tr><td class=no>먹이:No.4</td><td class=esa>용의 꼬리</td><td>체력+10% 공격+15%</td><td class=fue>필살 피리</td><td>공중 다리 휘두르기</td></tr>
+<tr><td class=no>먹이:No.5</td><td class=esa>모스 머리</td><td>체력+15% 공격+15% 방어+5%</td><td class=fue>특격 피리</td><td>백점프브레스</td></tr>
+<tr><td class=no></td><td class=esa></td><td></td><td class=fue>역린 피리</td><td>맹대시→백점프 브레스→공중 브레스</td></tr>
+</table><table id="m042" border=1 cellspacing=0 cellpadding=2 style="display:none"><tr><th colspan=5>리오레이아 희소종</th></tr>
+<tr><td colspan=2>펫확률</td><td> (불가)</td><td class=fue>분노의 피리</td><td>분노 상태로 만들다</td></tr>
+<tr><td class=no>먹이:No.1</td><td class=esa>생고기</td><td>체+5%방-3%</td><td class=fue>탄격 피리</td><td>지상 3연속 브레스</td></tr>
+<tr><td class=no>먹이:No.2</td><td class=esa>화이트 리버</td><td>공+5%</td><td class=fue>돌격 피리</td><td>맹대시</td></tr>
+<tr><td class=no>먹이:No.3</td><td class=esa>가브리브 로스</td><td>체+5%공+5%방+5%</td><td class=fue>미격 피리</td><td>회전꼬리</td></tr>
+<tr><td class=no>먹이:No.4</td><td class=esa>용의 꼬리</td><td>체력+10% 공격+15%</td><td class=fue>필살 피리</td><td>연속 맹대시</td></tr>
+<tr><td class=no>먹이:No.5</td><td class=esa>모스 머리</td><td>체력+15% 공격+15% 방어+5%</td><td class=fue>특격 피리</td><td>서머솔트</td></tr>
+<tr><td class=no></td><td class=esa></td><td></td><td class=fue>역린 피리</td><td>연속 맹대시→연속 서머솔트</td></tr>
+</table><table id="m043" border=1 cellspacing=0 cellpadding=2 style="display:none"><tr><th colspan=5>디아블로스 아종</th></tr>
+<tr><td colspan=2>펫확률</td><td>5/32</td><td class=fue>분노의 피리</td><td>분노 상태로 만들다</td></tr>
+<tr><td class=no>먹이:No.1</td><td class=esa>선인장꽃</td><td>방어-3%</td><td class=fue>탄격 피리</td><td>뿔 찌르기 들어올리기</td></tr>
+<tr><td class=no>먹이:No.2</td><td class=esa>슬라이스 선인장</td><td>공격+5% 방어-3%</td><td class=fue>돌격 피리</td><td>맹대시</td></tr>
+<tr><td class=no>먹이:No.3</td><td class=esa>맹우 버터</td><td>체+5%공+5%</td><td class=fue>미격 피리</td><td>회전꼬리</td></tr>
+<tr><td class=no>먹이:No.4</td><td class=esa>도스비스커스</td><td>체+5%공+10%방+5%</td><td class=fue>필살 피리</td><td>바인드보이스</td></tr>
+<tr><td class=no>먹이:No.5</td><td class=esa>엘너트</td><td>체+10%공+10%</td><td class=fue>특격 피리</td><td>지상 급습</td></tr>
+<tr><td class=no></td><td class=esa></td><td></td><td class=fue>역린 피리</td><td>바인드보이스→뿔 찌르기 들어올리기→꼬리 휘두르기→맹대시</td></tr>
+</table><table id="m045" border=1 cellspacing=0 cellpadding=2 style="display:none"><tr><th colspan=5>푸루푸루 아종</th></tr>
+<tr><td colspan=2>펫확률</td><td>10/32</td><td class=fue>분노의 피리</td><td>분노 상태로 만들다</td></tr>
+<tr><td class=no>먹이:No.1</td><td class=esa>생고기</td><td>체+5%방-3%</td><td class=fue>탄격 피리</td><td>뇌브레스</td></tr>
+<tr><td class=no>먹이:No.2</td><td class=esa>화이트 리버</td><td>공+5%</td><td class=fue>돌격 피리</td><td>달려들기</td></tr>
+<tr><td class=no>먹이:No.3</td><td class=esa>가브리브 로스</td><td>체+5%공+5%방+5%</td><td class=fue>미격 피리</td><td>회전꼬리</td></tr>
+<tr><td class=no>먹이:No.4</td><td class=esa>용의 꼬리</td><td>체력+10% 공격+15%</td><td class=fue>필살 피리</td><td>체내 발전</td></tr>
+<tr><td class=no>먹이:No.5</td><td class=esa>모스 머리</td><td>체력+15% 공격+15% 방어+5%</td><td class=fue>특격 피리</td><td>목 늘이기</td></tr>
+<tr><td class=no></td><td class=esa></td><td></td><td class=fue>역린 피리</td><td>바인드보이스→뇌브레스→체내 발전</td></tr>
+</table><table id="m047" border=1 cellspacing=0 cellpadding=2 style="display:none"><tr><th colspan=5>그라비모스 아종</th></tr>
+<tr><td colspan=2>펫확률</td><td>5/32</td><td class=fue>분노의 피리</td><td>분노 상태로 만들다</td></tr>
+<tr><td class=no>먹이:No.1</td><td class=esa>양광석</td><td>방어-3%</td><td class=fue>탄격 피리</td><td>열선 브레스</td></tr>
+<tr><td class=no>먹이:No.2</td><td class=esa>대지의 결정</td><td>공격+5% 방어-3%</td><td class=fue>돌격 피리</td><td>맹대시</td></tr>
+<tr><td class=no>먹이:No.3</td><td class=esa>홍련석</td><td>체+5%공+5%</td><td class=fue>미격 피리</td><td>회전꼬리</td></tr>
+<tr><td class=no>먹이:No.4</td><td class=esa>카브레라이트 광석</td><td>체+5%공+5%방+5%</td><td class=fue>필살 피리</td><td>화염가스</td></tr>
+<tr><td class=no>먹이:No.5</td><td class=esa>유니온 광석</td><td>체+10%공+10%</td><td class=fue>특격 피리</td><td>체당</td></tr>
+<tr><td class=no></td><td class=esa></td><td></td><td class=fue>역린 피리</td><td>수평 베기 열선→맹대시→화염 가스</td></tr>
+</table><table id="m041" border=1 cellspacing=0 cellpadding=2 style="display:none"><tr><th colspan=5>리오레우스 희소종</th></tr>
+<tr><td colspan=2>펫확률</td><td> (불가)</td><td class=fue>분노의 피리</td><td>분노 상태로 만들다</td></tr>
+<tr><td class=no>먹이:No.1</td><td class=esa>생고기</td><td>체+5%방-3%</td><td class=fue>탄격 피리</td><td>공중 3연 브레스</td></tr>
+<tr><td class=no>먹이:No.2</td><td class=esa>화이트 리버</td><td>공+5%</td><td class=fue>돌격 피리</td><td>맹대시</td></tr>
+<tr><td class=no>먹이:No.3</td><td class=esa>가브리브 로스</td><td>체+5%공+5%방+5%</td><td class=fue>미격 피리</td><td>회전꼬리</td></tr>
+<tr><td class=no>먹이:No.4</td><td class=esa>용의 꼬리</td><td>체력+10% 공격+15%</td><td class=fue>필살 피리</td><td>공중 다리 휘두르기</td></tr>
+<tr><td class=no>먹이:No.5</td><td class=esa>모스 머리</td><td>체력+15% 공격+15% 방어+5%</td><td class=fue>특격 피리</td><td>백점프브레스</td></tr>
+<tr><td class=no></td><td class=esa></td><td></td><td class=fue>역린 피리</td><td>맹대시→백점프 브레스→공중 브레스</td></tr>
+</table>
+</body>
+</html>

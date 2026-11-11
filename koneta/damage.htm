@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+th {white-space:nowrap;font-weight:normal;background-color:silver;}
+input#bou,input#tai {text-align:right}
+td {text-align:center}
+td.n {text-align:right;}
+-->
+</style>
+<title>플레이어의 대미지</title>
+</head><body>
+<div>받는 대미지(dos의 정보)</div>
+<p>
+·플레이어가 받는 대미지 계산식<br>
+　경감률 = 1 - (방어력의 절반 ÷ (방어력의 절반 + 80))<br>
+　데미지 ＝ 몬스터의공격력 × 경감률
+　　<small>※몬스터의 공격력은 개체별 공격력배율·분노 배율로 증가한다</small>
+</p><p>
+·공격이 속성이 붙은 공격이었을 경우, 추가로 내성에서 증감<br>
+　데미지 ＝ 데미지 × (1 － (내성치 ÷ 100))
+　　<small>※내성이 마이너스인 경우는 대미지가 늘어난다<br><br>
+　　이론상 내성치가 100이면 속성이 붙은 대미지의 경우 0이 된다</small>
+</p>
+<table>
+<tr><td>
+방어력：<input id=bou type=text onfocus="this.select()" maxlength=4 size=4 value=0>
+내성：<input id=tai type=text onfocus="this.select()" maxlength=3 size=3 value=0>
+<input type=button value="계산" OnClick="document.getElementById('mu').innerHTML = (10000 - Math.floor(document.getElementById('bou').value / 2 / (document.getElementById('bou').value / 2 + 80) * 10000)) / 100;document.getElementById('zo').innerHTML = Math.floor((10000 - Math.floor(document.getElementById('bou').value / 2 / (document.getElementById('bou').value / 2 + 80) * 10000)) * (100 - document.getElementById('tai').value) / 100) / 100;"></td>
+<td>무속성 대미지는 약</td><td class=n><span id=mu>100</span>%로 경감된다</td></tr>
+<tr><td></td><td>속성이 붙은 대미지는 약</td><td class=n><span id=zo>100</span>%로 경감된다</td></tr>
+</table>
+<div>방어력에 따른 대미지 경감률을 그래프로 나타내면 아래와 같다.</div>
+<table border=1 cellspacing=0 cellpadding=2>
+<tr><th>방어력</th><th>경감률<br>(%)</th><th rowspan=22><img src="../img/damage.gif" alt="데미지표"></th></tr>
+<tr><td>1</td><td>99.3</td></tr>
+<tr><td>50</td><td>76.1</td></tr>
+<tr><td>100</td><td>61.5</td></tr>
+<tr><td>150</td><td>51.6</td></tr>
+<tr><td>200</td><td>44.4</td></tr>
+<tr><td>250</td><td>39</td></tr>
+<tr><td>300</td><td>34.7</td></tr>
+<tr><td>350</td><td>31.3</td></tr>
+<tr><td>400</td><td>28.5</td></tr>
+<tr><td>450</td><td>26.2</td></tr>
+<tr><td>500</td><td>24.2</td></tr>
+<tr><td>550</td><td>22.5</td></tr>
+<tr><td>600</td><td>21</td></tr>
+<tr><td>650</td><td>19.7</td></tr>
+<tr><td>700</td><td>18.6</td></tr>
+<tr><td>750</td><td>17.5</td></tr>
+<tr><td>800</td><td>16.6</td></tr>
+<tr><td>850</td><td>15.8</td></tr>
+<tr><td>900</td><td>15</td></tr>
+<tr><td>950</td><td>14.4</td></tr>
+<tr><td>1000</td><td>13.7</td></tr>
+</table>
+</body>
+</html>

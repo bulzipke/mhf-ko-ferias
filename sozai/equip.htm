@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<style type="text/css">
+<!--
+table {border-collapse:collapse;}
+.en {color:gray;margin-left:.4em;}
+th {text-align:center;font-weight:normal;background-color:silver;}
+th,td {vertical-align:top;white-space:nowrap;padding:2px;border:2px ridge #ffffff;}
+
+th,td {font-size:95%;}
+.l {text-align:center;background-color:silver;}
+-->
+</style>
+<title>장비검색</title>
+</head>
+<body>
+<form name="ls" action="" onsubmit="document.getElementById('b_search').click();return false;" style="margin-bottom:1em;">
+검색：<input type="text" value="" name="equip" id="equip" autocomplete=off placeholder="한글·일본어·영어 이름" style="ime-mode: active;">
+<input type="button" name="b_search" id="b_search" value="검색">
+</form>
+<table>
+ <tr><td style="padding:0px; vertical-align:top;" id="tblBuki">
+		<table>
+		<th style="width:7em;">무기 종류</th><th style="width:10em;">무기명</th>
+		</tr></table></td>
+	<td style="padding:0px; vertical-align:top;" id="tblBougu">
+		<table>
+		<th style="width:4em;">부위</th><th style="width:10em;">방어구명</th>
+		</tr></table></td>
+	<td style="padding:0px; vertical-align:top;" id="tblDec">
+		<table>
+		<th style="width:4em;">장식품</th><th style="width:10em;">장식명</th>
+		</tr></table></td>
+ </tr>
+</table>
+<script type="text/javascript" src="bougu_sozai.js?light=c35d40f9dcda&audit2=a8935bf4b1f8"></script>
+<script type="text/javascript" src="buki_sozai.js"></script>
+<script type="text/javascript" src="equip_en.js?kr=71e147ef3060"></script>
+<script type="text/javascript" src="equipForm.js?kr=e2d662dea305"></script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+#tree {height:99%;width:20%;overflow:scroll;float:left;white-space:nowrap;line-height:100%;}
+#data {height:99%;width:78%;overflow: scroll;}
+
+html,body {height:100%;overflow:hidden;}
+body {margin:5px; padding:0;}
+td {white-space:normal;text-align:center;}
+#buki td {text-align:left;}
+span {white-space:nowrap;}
+table.fue td {cursor:pointer;}
+table.fue span {color:black;}
+.s{background-color: silver; color: silver;}
+input {font-size:80%;}
+.r {color:red;}
+.b {color:blue;}
+.w {color:white;}
+.y {color:yellow;}
+.g {color:lime;}
+.a {color:aqua;}
+.p {color:fuchsia;}
+.c {color:pink;}
+.C {color:green;} /*HC*/
+.B {color:blue;} /*親方*/
+.D,.E,.G,.H,.I,.J {color:red;} /*剛種系*/
+.K,.L,.M {color:goldenrod;} /*G級*/
+.l1i {background-color:lavenderblush;}
+.l3- {background-color:lightgreen;}
+.l4k,l5p {background-color:lavender;}
+.l4g {background-color:aqua;}
+.l5- {background-color:khaki;}
+.w,.y,.r,.b,.a,.g,.p,.c{background-color: silver;}
+td {border-color:#c0c0c0;} /*FF,Operaの罫線対応*/
+-->
+</style>
+<title>악보</title>
+</head>
+<body>
+<div id=tree>
+<table border=1 cellspacing=0 cellpadding=2 class=fue style="width:9em; margin-left:0.5em">
+<thead><tr><th colspan=3>소리부</th><th>효과</th></tr></thead><tbody>
+<tr onClick="DamageForm.creGakufu('341')"><td class=w>♪</td><td class=b>♪</td><td class=r>♪</td><td>공주풍</td></tr>
+<tr onClick="DamageForm.creGakufu('321')"><td class=w>♪</td><td class=y>♪</td><td class=r>♪</td><td>공방내</td></tr>
+<tr onClick="DamageForm.creGakufu('351')"><td class=w>♪</td><td class=g>♪</td><td class=r>♪</td><td>공방회</td></tr>
+<tr onClick="DamageForm.creGakufu('371')"><td class=w>♪</td><td class=a>♪</td><td class=r>♪</td><td>공청</td></tr>
+<tr onClick="DamageForm.creGakufu('352')"><td class=w>♪</td><td class=g>♪</td><td class=y>♪</td><td>회복내</td></tr>
+<tr onClick="DamageForm.creGakufu('342')"><td class=w>♪</td><td class=b>♪</td><td class=y>♪</td><td>주속성내성</td></tr>
+<tr onClick="DamageForm.creGakufu('357')"><td class=w>♪</td><td class=g>♪</td><td class=a>♪</td><td>회서</td></tr>
+<tr onClick="DamageForm.creGakufu('354')"><td class=w>♪</td><td class=g>♪</td><td class=b>♪</td><td>주회풍</td></tr>
+<tr onClick="DamageForm.creGakufu('327')"><td class=w>♪</td><td class=y>♪</td><td class=a>♪</td><td>한진내</td></tr>
+<tr onClick="DamageForm.creGakufu('374')"><td class=w>♪</td><td class=a>♪</td><td class=b>♪</td><td>주풍</td></tr>
+<tr onClick="DamageForm.creGakufu('641')"><td class=p>♪</td><td class=b>♪</td><td class=r>♪</td><td>공주풍</td></tr>
+<tr onClick="DamageForm.creGakufu('621')"><td class=p>♪</td><td class=y>♪</td><td class=r>♪</td><td>공방내</td></tr>
+<tr onClick="DamageForm.creGakufu('651')"><td class=p>♪</td><td class=g>♪</td><td class=r>♪</td><td>공방회</td></tr>
+<tr onClick="DamageForm.creGakufu('671')"><td class=p>♪</td><td class=a>♪</td><td class=r>♪</td><td>공방청</td></tr>
+<tr onClick="DamageForm.creGakufu('652')"><td class=p>♪</td><td class=g>♪</td><td class=y>♪</td><td>회복내</td></tr>
+<tr onClick="DamageForm.creGakufu('642')"><td class=p>♪</td><td class=b>♪</td><td class=y>♪</td><td>주풍내</td></tr>
+<tr onClick="DamageForm.creGakufu('654')"><td class=p>♪</td><td class=g>♪</td><td class=b>♪</td><td>주회풍</td></tr>
+<tr onClick="DamageForm.creGakufu('657')"><td class=p>♪</td><td class=g>♪</td><td class=a>♪</td><td>회서청</td></tr>
+<tr onClick="DamageForm.creGakufu('627')"><td class=p>♪</td><td class=y>♪</td><td class=a>♪</td><td>한진내</td></tr>
+<tr onClick="DamageForm.creGakufu('674')"><td class=p>♪</td><td class=a>♪</td><td class=b>♪</td><td>주풍참</td></tr>
+</tbody></table>
+</div>
+<div id=data>
+<p><input type="button" value="돌아가기" onclick="history.back();">　　　<span class=K>G급무기</span>／<span class=D>강|천|패종무기</span>／<span class=B>대장장이 인장</span>／<span class=C>ＨＣ무기</span>／<span class=l1i>이벤트</span>／<span class=l4k>키트·패키지</span>／<span class=l4g>가챠</span>／<span class=l3->카페</span>／<span class=l5->특전</span></p>
+<table id=gakufu border=1 cellspacing=0 cellpadding=2 style="font-size:90%;">
+<col span=4 style="width:1em;"><col style="width:11em;"><col style="width:4em;"><col style="width:11em;"><col style="width:5em;"><col style="width:7em;">
+<thead><tr><th colspan=4>악보</th><th colspan=2>효과</th><th colspan=2>겹치기 걸기</th><th>최대</th></tr></thead><tbody>
+</tbody></table>
+<table id=buki border=1 cellspacing=0 cellpadding=2 style="font-size:90%; overflow: scroll;margin-top:2em;">
+<col style="width:3em;">
+<tbody></tbody></table>
+</div>
+<script type="text/javascript">
+<!--
+/*@cc_on if (@_jscript_version < 9) {_d=document;eval('var document=_d');}@*/
+var DamageForm = (function (){
+var I_aNAME = 0,I_aAT = 1,I_aZOKU = 2,I_aZOKUAT = 3,I_aZYOU = 4,I_aZYOUAT = 5,I_aCRI = 6,I_aRARE = 7,I_aGR = 8,I_aSLOT = 9,I_aDEF = 10,I_aHR = 11,I_aCRE = 12,I_aCLASS = 13,I_aSINKAGR = 14,I_aDOC = 15,I_aGAUGE = 16,I_aREACH = 17,I_aKYOKUSYA = 5,I_aYA = 16,I_aBIN = 17,I_aSPEED = 4,I_aSOKUSYA = 16,I_aKICK = 17,I_aRELO = 18,I_aGUN = 19;
+var MST_Equip = {};
+var ZOKUNAME = ["무","화","수","뇌","용","빙","염","광","뇌극","천상","치동","흑염","주","암","홍마","풍","향"];
+var IZYONAME = ["","독","마비","수면"];
+var SENRITU = {
+"ww":	"자신의 이동속도 강화,10분,공격 튕기지 않음,4분 가산,최대 10분간",
+"pp":	"자신의 이동속도 강화,10분,공격 튕기지 않음,4분 가산,최대 10분간",
+"bba":	"천리안,30초",
+"wr":	"공격력 강화【소】[1.15배]\nＧ급[1.10배],120초,추가로 공격력 강화[1.2배]\nＧ급[1.15배],90초 가산,최대 120초간",
+"prr":	"공격력 강화【대】[1.2배]\nＧ급[1.15배],90초,추가로 공격력 강화[1.3배]\nＧ급[1.2배],60초 가산,최대 90초간",
+"ry":	"방어력 강화[대]【소】[1.15배]\nＧ급+120,120초,추가로 방어력 강화[대][1.2배]\nＧ급+160,90초 가산,최대 120초간",
+"rgr":	"방어력 강화[대]【대】[1.2배]\nＧ급+160,90초,추가로 방어력 강화[대][1.3배]\nＧ급+240,60초 가산,최대 90초간",
+"raap":	"방어력 강화[대]【대】[1.2배]\nＧ급+160,90초,추가로 방어력 강화[대][1.3배]\nＧ급+240,60초 가산,최대 90초간",
+"wb":	"스태미나감소무효【소】,90초,스태미나감소무효,60초 가산,최대 150초간",
+"pbb":	"스태미나감소무효【대】,150초,스태미나감소무효,60초 가산,최대 150초간",
+"ybyw":	"속성공격강화[10%UP],90초,-,60초 가산,최대 150초간",
+"gypy":	"여신의 용서,60초,-,30초 가산,최대 90초간",
+"rbw":	"체력증가【소】[+20],180초,-,120초 가산,최대 180초간",
+"rra":	"체력증가【중】[+30],180초,-,120초 가산,최대 180초간",
+"rbrp":	"체력증가【대】[+50],180초,-,120초 가산,최대 180초간",
+"pg":	"체력회복【소】(1/3%) or 체력회복【미】(2/3%)",
+"gpy":	"체력회복【중】(1/3%) or 체력회복【미】(2/3%)",
+"ggpa":	"체력회복【대】(1/3%) or 체력회복【소】(2/3%)",
+"wg":	"체력회복【소】＆해독(1/3%) or 체력회복【미】＆해독(2/3%)",
+"gbpb":	"체력회복【중】＆해독(1/3%) or 체력회복【미】＆해독(2/3%)",
+"gwa":	"체력회복【중】＆소취(1/3%) or 체력회복【미】＆소취(2/3%)",
+"ggy":	"회복속도【소】,120초,-,60초 가산,최대 180초간",
+"grgp":	"회복속도【대】,120초,-,60초 가산,최대 180초간",
+"bbr":	"풍압을 경감\n(풍압【소】무효),180초,풍압을 무효\n(풍압【대】무효),120초,효과에 따름",
+"bbg":	"풍압을 무효\n(풍압【대】무효),180초,풍압을 완전 무효\n(용풍압 무효),120초,효과에 따름",
+"bab":	"풍압을 무효\n(풍압【대】무효),180초,풍압을 완전 무효\n(용풍압 무효),120초,효과에 따름",
+"bbyp":	"풍압을 완전 무효\n(용풍압 무효),180초,-,180초,최대 180초간",
+"aar":	"청각보호【소】,180초,청각보호【대】,120초,효과에 따름",
+"aagp":	"청각보호【대】,180초,-,120초,효과에 따름",
+"aay":	"추위무효,240초,-,240초 가산,최대 480초간",
+"aga":	"더위무효,240초,-,240초 가산,최대 480초간",
+"abp":	"기절무효,180초,-,120초 가산,최대 300초간",
+"ayy":	"마비무효,180초,-,120초 가산,최대 300초간",
+"I_aYA":	"내진,180초,-,120초 가산,최대 300초간",
+"yr":	"화내성강화【소】[+10],60초,추가로 화내성강화[+15],60초,최대 60초간",
+"ybw":	"화내성강화【대】[+15],60초,추가로 화내성강화[+20],60초,최대 60초간",
+"ybp":	"수내성강화【소】[+10],60초,추가로 수내성강화[+15],60초,최대 60초간",
+"ybbw":	"수내성강화【대】[+15],60초,추가로 수내성강화[+20],60초,최대 60초간",
+"yap":	"뇌내성강화【소】[+10],60초,추가로 뇌내성강화[+15],60초,최대 60초간",
+"yyb":	"뇌내성강화【대】[+15],60초,추가로 뇌내성강화[+20],60초,최대 60초간",
+"ywa":	"빙내성강화【소】[+10],60초,추가로 빙내성강화[+15],60초,최대 60초간",
+"ygw":	"빙내성강화【소】[+10],60초,추가로 빙내성강화[+15],60초,최대 60초간",
+"ypa":	"빙내성강화【대】[+15],60초,추가로 빙내성강화[+20],60초,최대 60초간",
+"ygp":	"빙내성강화【대】[+15],60초,추가로 빙내성강화[+20],60초,최대 60초간",
+"wy":	"용내성강화【소】[+10],60초,추가로 용내성강화[+15],60초,최대 60초간",
+"pyy":	"용내성강화【대】[+15],60초,추가로 용내성강화[+20],60초,최대 60초간",
+"bpyb":	"경직무효,60초,-,60초 가산,최대 90초간",
+"bgbp":	"경직무효,60초,-,60초 가산,최대 90초간",
+"abw":	"예리도회복【소】,75회복,-,-,",
+"agg":	"예리도회복【소】,75회복,-,-,",
+"apba":	"예리도회복【대】,150회복,-,-,"};
+
+var senritu_arasi = {
+"wcg":	"추위무효,240초,-,240초 가산,최대 480초간",
+"bwc":	"더위무효,240초,-,240초 가산,최대 480초간",
+"ycw":	"기절무효,180초,-,120초 가산,최대 300초간",
+"rpc":	"마비무효,180초,-,120초 가산,최대 300초간",
+"ycp":	"기절무효,180초,-,120초 가산,최대 300초간",
+"rcw":	"내진,180초,-,120초 가산,최대 300초간",
+"pcg":	"화내성강화【소】[+10],60초,추가로 화내성강화[+15],60초,최대 60초간",
+"bpc":	"빙내성강화【소】[+10],60초,추가로 빙내성강화[+15],60초,최대 60초간",
+"acw":	"방어력강화【소】[1.15배],120초,추가로 방어력강화[1.2배],90초 가산,최대 120초간",
+"acp":	"속성공격강화[10%UP],90초,-,60초 가산,최대 150초간"};
+
+var onpu = function (w) {
+	switch (w) {
+	case "1": //赤
+		return "r";
+	case "2": //黄
+		return "y";
+	case "3": //白
+		return "w";
+	case "4": //青
+		return "b";
+	case "5": //緑
+		return "g";
+	case "6": //紫
+		return "p";
+	case "7": //空
+		return "a";
+	}
+}
+var global = {
+//------------------------------------初期化----------
+init : function(){
+}
+//------------------------------------データセット----------
+,setEquip : function (name,data){
+if (name === "horn") MST_Equip[name]=data;
+}
+,setSinka : function (name,data){
+}
+,setSozai : function (data){
+}
+//------------------------------------譜面セット----------
+,creGakufu : function (fumen){
+var cstr = new RegExp("[" + onpu(fumen.charAt(0)) + onpu(fumen.charAt(1)) + onpu(fumen.charAt(2)) + "]","g");
+var tB=document.getElementsByTagName("tbody")[1],tBCre = document.createElement("tbody");
+for (var e in SENRITU) {
+	if (e.replace(cstr,"") === "") {
+		var insTR = document.createElement("tr"),insTD = document.createElement("td");
+		var o = e + "sssss";
+		for (var i = 0; i < 4; i++) {
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "♪";
+			insTD.className = o.charAt(i);
+			insTR.appendChild(insTD.cloneNode(true));
+		}
+		insTD.className = "";
+		var s = SENRITU[e].split(",");
+		for (var i = 0,m = s.length; i < m; i++) {
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = s[i];
+			insTR.appendChild(insTD.cloneNode(true));
+		}
+		if (s.length === 1) {
+			insTR.lastChild.colSpan = 5;
+		}
+		tBCre.appendChild(insTR.cloneNode(true));
+	}
+}
+var insHeader = document.createElement("th");
+insHeader.colSpan = 4;
+insHeader./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "람의 형";
+tBCre.appendChild(insHeader.cloneNode(true));
+//桜
+for (var e in senritu_arasi) {
+	if (e.replace(cstr,"") === "c") {
+		var insTR = document.createElement("tr"),insTD = document.createElement("td");
+		var o = e + "sssss";
+		for (var i = 0; i < 4; i++) {
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "♪";
+			insTD.className = o.charAt(i);
+			insTR.appendChild(insTD.cloneNode(true));
+		}
+		insTD.className = "";
+		var s = senritu_arasi[e].split(",");
+		for (var i = 0,m = s.length; i < m; i++) {
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = s[i];
+			insTR.appendChild(insTD.cloneNode(true));
+		}
+		if (s.length === 1) {
+			insTR.lastChild.colSpan = 5;
+		}
+		tBCre.appendChild(insTR.cloneNode(true));
+	}
+}
+tB.parentNode.replaceChild( tBCre,tB );
+
+//武器一覧
+var lt_zoku = ["","","","","","","","","","","","","","",""];
+var lt_izyo = ["","","","","","","","","","","","","","",""];
+var tB=document.getElementsByTagName("tbody")[2],tBCre = document.createElement("tbody");
+for (var i in MST_Equip.horn) {
+	var eq = MST_Equip.horn[i].split(",");
+	if (eq[I_aREACH] === fumen &&
+	  (eq[I_aNAME].lastIndexOf("SP") < 0 ||
+	  eq[I_aNAME].lastIndexOf("Ⅶ") > 0)) {
+		if (!eq[I_aZOKUAT] && !eq[I_aZYOUAT]){
+			lt_zoku[0] += "／<span class=" + (eq[I_aCLASS] || "l"+eq[I_aCRE]) + ">" + eq[I_aNAME]+"</span>";
+		} else {
+			if (eq[I_aZOKUAT]) lt_zoku[eq[I_aZOKU]] += "／<span class=\"" + eq[I_aCLASS] + " l"+eq[I_aCRE] + "\">" + eq[I_aNAME] + "</span>";
+			if (eq[I_aZYOUAT]) lt_izyo[eq[I_aZYOU]] += "／<span class=\"" + eq[I_aCLASS] + " l"+eq[I_aCRE] + "\">" + eq[I_aNAME] + "</span>";
+		}
+	}
+}
+for (var i=0; i<=10; i++) {
+	if (lt_zoku[i]) {
+		var insTR = document.createElement("tr"),insTD = document.createElement("td");
+		insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = ZOKUNAME[i];
+		insTR.appendChild(insTD.cloneNode(true));
+
+		insTD.innerHTML = lt_zoku[i].substring(1)
+		insTR.appendChild(insTD.cloneNode(true));
+
+		tBCre.appendChild(insTR.cloneNode(true));
+	}
+}
+for (var i=1; i<=3; i++) {
+	if (lt_izyo[i]) {
+		var insTR = document.createElement("tr"),insTD = document.createElement("td");
+		insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = IZYONAME[i];
+		insTR.appendChild(insTD.cloneNode(true));
+
+		insTD.innerHTML = lt_izyo[i].substring(1)
+		insTR.appendChild(insTD.cloneNode(true));
+
+		tBCre.appendChild(insTR.cloneNode(true));
+	}
+}
+tB.parentNode.replaceChild( tBCre,tB );
+
+}
+}//グローバル
+return global;
+})();
+
+(function(){
+//------------------------------------イベント貼り付け----------
+//イベントセット
+var addEvent = function (elm, type, func) {
+	//追加
+	elm./*@cc_on @if (true) attachEvent ('on' + @else@*/ addEventListener (/*@end@*/ type,func,false);
+	//アンロードで削除
+	window./*@cc_on @if (true) attachEvent ('on' + @else@*/ addEventListener (/*@end@*/ "unload",
+		function(){
+			elm./*@cc_on @if (true) detachEvent ('on' + @else@*/ removeEventListener (/*@end@*/ type,func,false);
+		}
+		,false);
+};
+addEvent(window,"load",
+function () {
+	if (location.search.length) DamageForm.creGakufu(location.search.substring(1,4));
+});
+})();
+-->
+</script>
+<script type="text/javascript" src="equip.js?audit=785fed0acd7f&audit2=b064ae8890d3&restore=ef70d6f6998d&review2=b6d7412fa2d1"></script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+th {white-space:nowrap;font-weight:normal;background-color:silver;}
+tr.top td {vertical-align:top}
+td.n {text-align:right}
+td.c {text-align:center}
+table,p {font-size:85%}
+h4 {clear:both;margin-top:1em;background-color:silver;}
+.hosoku {float:left;margin-right:3em;}
+.ex {font-size:70%}
+ul.ttop {margin:0;padding:1px 0;width:60em;list-style-type:none;}
+ul.ttop li {font-size:100%;float:left;padding:2px 5px 2px 5px;border:1px solid silver;}
+-->
+</style>
+<title>몬스터에 대한 공격　【활 편】</title>
+</head>
+<body>
+<ul class=ttop>
+<li>몬스터로의 공격　<a href="doc-sword.htm">【근접무기 편】</a>
+／<a href="doc-gun.htm">【보우건 편】</a>
+／<a href="doc-yumi.htm">【활 편】</a>
+<li><a href="doc-spec.htm">무기성능</a>
+<li><a href="doc-kensyo.htm">검정스킬</a>
+<li><a href="doc-buki.htm">무기의 종류</a>
+<li><a href="doc-bougu.htm">방어구의 종류</a>
+<li><a href="doc-feature.htm">피처</a>
+</ul>
+<hr style="clear:both">
+<h3>몬스터에 대한 공격　【활 편】</h3>
+
+<h4>●　무기 배율</h4>
+<table border=1 cellspacing=0 cellpadding=2 class=hosoku>
+<tr><th>무기의 종류</th><th>배율</th></tr>
+<tr><td>대검/태도</td><td class=c>4.8</td></tr>
+<tr><td>한손검/쌍검</td><td class=c>1.4</td></tr>
+<tr><td>해머/수렵피리</td><td class=c>5.2</td></tr>
+<tr><td>랜스/건랜스</td><td class=c>2.3</td></tr>
+<tr><td>천룡곤</td><td class=c>1.8</td></tr>
+<tr><td>슬래시액스</td><td class=c>5.4</td></tr>
+<tr><td>보우건/활</td><td class=c>1.2</td></tr>
+</table>
+<p>무기 배율은 무기가 본래 가지고 있는 세기를 나타내는 수치로, 공격에 의한 몬스터에게의 데미지 계산의 기본이 됩니다.
+<br>현재 상태에 표시되고 있는 공격력은, 이 무기 배율에 일정 배율을 곱한 값이 표시되고 있습니다.
+<br>각 무기의 배율은 왼쪽 표와 같습니다.
+<br><small>※현재 상태에 표시되고 있는 공격력을 왼쪽에 기재된 배율로 나누면, 무기 배율을 구할 수 있습니다</small>
+<br>
+<br>식사 효과나 아이템 사용 등에 의한 공격력 업은, 모두 이 무기 배율에 일정 수치가 가산됩니다.
+<br>따라서 현재 상태에서는 무기의 종류에 따라 공격력 상승량이 다릅니다.
+</p>
+<h4>● 화살의 위력</h4>
+<table border=1 cellspacing=0 cellpadding=2 class=hosoku>
+<tr><th>타입</th><th>위력</th><th>곡사</th><th>위력</th><th>속성</th><th>기절</th></tr>
+<tr><td>연사LV1</td><td class=c>12</td><td>방산형</td><td class=c>18×7히트</td><td class=c>0.7배</td><td class=c>3</td></tr>
+<tr><td>연사LV2</td><td class=c>12·5</td><td>집중형</td><td class=c>16×5히트</td><td class=c>0.7배</td><td class=c>2</td></tr>
+<tr><td>연사LV3</td><td class=c>12·5·4</td><td>폭렬형</td><td class=c>15·무19</td><td class=c>0.2배</td><td class=c>30</td></tr>
+<tr><td>연사LV4</td><td class=c>12·5·4·2</td><td>절단형</td><td class=c>12×7히트</td><td class=c>0.7배</td><td class=c>-</td></tr>
+<tr><td>확산LV1</td><td class=c>4·5·4</td></tr>
+<tr><td>확산LV2</td><td class=c>5·6·5</td></tr>
+<tr><td>확산LV3</td><td class=c>4·5·5·5·4</td></tr>
+<tr><td>확산LV4</td><td class=c>4·5·6·5·4</td></tr>
+<tr><td>관통LV1</td><td class=c>6×3히트</td></tr>
+<tr><td>관통LV2</td><td class=c>6×4히트</td></tr>
+<tr><td>관통LV3</td><td class=c>6×5히트</td></tr>
+<tr><td>관통LV4</td><td class=c>6×6히트</td></tr>
+<tr><td>오라 애로우</td><td class=c>12×5배</td></tr>
+</table>
+<p>활의 화살은, 연사, 확산, 관통의 3종류의 타입이 있으며, 각각 LV1~LV4까지 있습니다.
+<br>　　연사: 핀포인트에 1~4개의 화살을 동시에 내뿜는다. 연사 레벨이 높을수록 화살 개수가 늘어난다
+<br>　　확산: 방사상으로 복수의 화살을 내뿜는다. 확산레벨이 높을수록 화살의 수가 늘어난다
+<br>　　관통: 관통하는 화살을 내뿜는다. 관통레벨이 높을수록 히트수가 늘어난다
+<br>곡사는, 방산, 집중, 폭렬, 절단의 4종류의 타입이 있습니다.
+<br>　　방산: 화살의 공격력이 통상보다 높다
+<br>　　집중: 상태이상의 축적치가 통상보다 높다
+<br>　　폭렬: 기절치가 높고, 육질무시 대미지가 있다
+<br>　　절단: 탄육질로 계산하지만, 절단속성의 공격을 한다
+<br>활의 종류에 따라, 어느 타입/레벨을 사용할 수 있는지는 정해져 있습니다.
+<br>타입마다의 화살의 위력은, 왼쪽 표대로입니다.
+<br>무기 배율에, 화살의 위력을 %로 곱한 것이 기본위력이 됩니다.
+<br>
+<br>화살에 강격병을 장착하면, 위력이 1.5배가 됩니다.
+<br>(궁기[궁귀] 발동 시 또는 강종무기는 1.6배, 궁기[궁귀] 발동 시로 강종무기의 경우는 1.7배,
+<br>　강종/패종 퀘스트로 천람방어구 2부위 이상 그리고 패종무기의 경우, 1.7배)
+<br>화살에 타격병을 장착하면, 타육질로 계산하고, 기절치가 축적됩니다.
+</p>
+<h4>● 차지단계에 따른 배율</h4>
+<table border=1 cellspacing=0 cellpadding=2 class=hosoku>
+<tr><th>차지 단계</th><th>기본위력배율</th><th>속성배율</th><th>상태이상배율</th></tr>
+<tr><td class=c>1</td><td class=c>0.4 배</td><td class=c>0.5 배</td><td class=c>0.5 배</td></tr>
+<tr><td class=c>2</td><td class=c>1.0 배</td><td class=c>0.75 배</td><td class=c>1.0 배</td></tr>
+<tr><td class=c>3</td><td class=c>1.5 배</td><td class=c>1.0 배</td><td class=c>1.0 배</td></tr>
+<tr><td class=c>4</td><td class=c>1.8 배</td><td class=c>1.125 배</td><td class=c>1.0 배</td></tr>
+<tr><td class=c>오라4</td><td class=c>1.0 배</td><td class=c>1.0 배</td><td class=c>1.0 배</td></tr>
+<tr><td class=c>오라5</td><td class=c>1.125 배</td><td class=c>1.1 배</td><td class=c>1.1 배</td></tr>
+</table>
+<p>같은 타입/레벨의 화살이라도, 차지단계에 따라 기본위력이 변화합니다.
+<br>왼쪽 표는, 차지단계마다의 기본위력배율입니다.
+<br>　(차지 단계4는, 장전 수 업 스킬이 발동하고 있는 경우만 사용 가능합니다)
+</p>
+<h4>● 시간경과에 따른 기본위력 수정</h4>
+
+<p>화살은, 발사 후의 시간경과에 따라, 아래 그림처럼 위력이 변화합니다.
+</p>
+<div><img src="../img/doc-yumi.gif" alt="감쇠"></div>
+
+<h4>●　스킬에 의한 기본 위력·속성값 수정</h4>
+<table border=1 cellspacing=0 cellpadding=2 class=hosoku>
+<tr><th>스킬</th><th>효과</th></tr>
+<tr><td>연사화살위력UP</td><td>연사화살의 위력이 1.1배</td></tr>
+<tr><td>관통화살위력UP</td><td>관통화살의 위력이 1.1배</td></tr>
+<tr><td>확산시위력UP</td><td>확산 시의 위력이 1.3배</td></tr>
+<tr><td>○속성 공격력 강화</td><td>각속성의 위력 업</td></tr>
+<tr><td>상태이상공격 강화</td><td>각병의 속성값이 1.125배</td></tr>
+</table>
+<p>왼쪽 표에 나타난 스킬이 발동하고 있으면, 화살의 위력이나 속성값이 증가합니다.
+</p>
+<h4>●　회심률</h4>
+
+<p>회심률이란, 공격했을 때 크리티컬 히트가 발생할 확률입니다.
+<br>크리티컬 히트 시, 회심률이 0%보다 큰 경우는 기본위력이 1.25배, 마이너스 수치인 경우는 기본위력이 0.75배가 됩니다.
+</p>
+
+<h4>●　속성에 의한 추가 대미지</h4>
+
+<p>일반 속성(화/수/뇌/용/빙)이 붙은 무기로 공격하면, 통상 데미지에 더해 속성 데미지가 추가됩니다.
+<br>복합 속성은 복수의 속성이 하나의 무기에 포함됩니다. ○속성강화 스킬은 각각에 적용됩니다.
+<table border=1 cellspacing=0 cellpadding=2 class=hosoku>
+<tr><th>복합속성</th><th>화</th><th>수</th><th>뇌</th><th>용</th><th>빙</th></tr>
+<tr><td>화염</td><td class=c>70%</td><td class=c>-</td><td class=c>-</td><td class=c>70%</td><td class=c>-</td></tr>
+<tr><td>빛</td><td class=c>70%</td><td class=c>-</td><td class=c>70%</td><td class=c>-</td><td class=c>-</td></tr>
+<tr><td>뇌극</td><td class=c>-</td><td class=c>-</td><td class=c>70%</td><td class=c>70%</td><td class=c>-</td></tr>
+<tr><td>천상</td><td class=c>30%</td><td class=c>100%</td><td class=c>70%</td><td class=c>-</td><td class=c>-</td></tr>
+<tr><td>치동</td><td class=c>80%</td><td class=c>-</td><td class=c>-</td><td class=c>40%</td><td class=c>80%</td></tr>
+<tr><td>흑염</td><td class=c>50%</td><td class=c>-</td><td class=c>-</td><td class=c>150%</td><td class=c>-</td></tr>
+<tr><td>선율</td><td class=c>-</td><td class=c>100%</td><td class=c>-</td><td class=c>-</td><td class=c>100%</td></tr>
+<tr><td>어둠</td><td class=c>-</td><td class=c>-</td><td class=c>-</td><td class=c>80%</td><td class=c>80%</td></tr>
+<tr><td>홍마</td><td class=c>150%</td><td class=c>-</td><td class=c>-</td><td class=c>50%</td><td class=c>-</td></tr>
+<tr><td>바람</td><td class=c>-</td><td class=c>-</td><td class=c>80%</td><td class=c>-</td><td class=c>80%</td></tr>
+<tr><td>울림</td><td class=c>-</td><td class=c>100%</td><td class=c>-</td><td class=c>100%</td><td class=c>-</td></tr>
+</table>
+<p>현재 상태에 표시되고 있는 속성값은, 실제 속성값을 10배 한 것이며, 데미지 계산 시에는 1/10 수치로 계산됩니다
+<br>따라서, 속성데미지량은 표시속성값÷10×차지배율 이 됩니다.
+</p>
+<h4>●　병 장착</h4>
+<table border=1 cellspacing=0 cellpadding=2 class=hosoku>
+<tr><th>타입</th><th>상태이상병</th><th>＋１</th><th>＋２</th><th>＋３</th><th>폭격병</th><th>타격병<br>기절치</th></tr>
+<tr><td>연사LV1</td><td class=c>13</td><td class=c>14</td><td class=c>17</td><td class=c>19</td><td class=c>70</td><td class=c>3-4</td></tr>
+<tr><td>연사LV2</td><td class=c>7×2발</td><td class=c>8</td><td class=c>9</td><td class=c>10</td><td class=c>40×2발</td><td class=c>3-4</td></tr>
+<tr><td>연사LV3</td><td class=c>5×3발</td><td class=c>5</td><td class=c>6</td><td class=c>7</td><td class=c>32×3발</td><td class=c>3-4</td></tr>
+<tr><td>연사LV4</td><td class=c>4×4발</td><td class=c>4</td><td class=c>5</td><td class=c>6</td><td class=c>28×4발</td><td class=c>3-4</td></tr>
+<tr><td>확산LV1</td><td class=c>5×3발</td><td class=c>5</td><td class=c>6</td><td class=c>7</td><td class=c>26×3발</td><td class=c>3-4</td></tr>
+<tr><td>확산LV2</td><td class=c>6×3발</td><td class=c>6</td><td class=c>7</td><td class=c>9</td><td class=c>32×3발</td><td class=c>3-4</td></tr>
+<tr><td>확산LV3</td><td class=c>5×5발</td><td class=c>5</td><td class=c>6</td><td class=c>7</td><td class=c>22×5발</td><td class=c>3-4</td></tr>
+<tr><td>확산LV4</td><td class=c>5×5발</td><td class=c>5</td><td class=c>6</td><td class=c>7</td><td class=c>24×5발</td><td class=c>3-4</td></tr>
+<tr><td>관통LV1</td><td class=c>5×3히트</td><td class=c>5</td><td class=c>6</td><td class=c>7</td><td class=c>28×3히트</td><td class=c>3-4</td></tr>
+<tr><td>관통LV2</td><td class=c>4×4히트</td><td class=c>4</td><td class=c>5</td><td class=c>6</td><td class=c>28×4히트</td><td class=c>3-4</td></tr>
+<tr><td>관통LV3</td><td class=c>4×5히트</td><td class=c>4</td><td class=c>5</td><td class=c>6</td><td class=c>28×5히트</td><td class=c>3-4</td></tr>
+<tr><td>관통LV4</td><td class=c>4×6히트</td><td class=c>4</td><td class=c>5</td><td class=c>6</td><td class=c>28×6히트</td><td class=c>3-4</td></tr>
+<tr><td>오라 애로우</td><td class=c>25</td><td class=c></td><td class=c></td><td class=c></td><td class=c>37×5배<br>55×5배(화재현장)</td><td class=c>20</td></tr>
+<tr><td>방산형</td><td class=c>2×7히트</td><td class=c>3</td><td class=c>4</td><td class=c>5</td><td class=c>26×7히트</td><td class=c></td></tr>
+<tr><td>집중형</td><td class=c>6×5히트</td><td class=c>7</td><td class=c>8</td><td class=c>9</td><td class=c>28×5히트</td><td class=c></td></tr>
+<tr><td>폭렬형</td><td class=c>-</td><td class=c>-</td><td class=c>-</td><td class=c>-</td><td class=c>50·100</td><td class=c></td></tr>
+<tr><td>절단형</td><td class=c>2×7히트</td><td class=c>3</td><td class=c>4</td><td class=c>5</td><td class=c>24×7히트</td><td class=c></td></tr>
+</table>
+<p>화살에 상태이상 속성(독·마비·수면) 병을 장착하면, 상태이상 속성이 부가된 화살을 쏠 수 있습니다.
+<br>상태이상 속성병을 장착하면, 활에 부가되어 있는 일반 속성은 무효가 됩니다.
+<br>속성값은, 왼쪽 표대로입니다. 여러 개의 화살을 쐈을 경우는, 1개마다 속성값이 부가됩니다.
+<br>근접무기와는 달리, 반드시 발동합니다.
+<br>
+<br>상태이상병은 상태이상공격 강화 스킬이 발동하고 있으면, 속성값이 1.125배가 됩니다.
+<br>또한, 차지 단계1일 때만 속성값이 절반이 됩니다. 독병의 경우, 차지 단계3 이상에서 1.5배가 됩니다.
+<br>
+<br>폭격병의 경우, 무속성의 대미지가 되고 변경 불가치의 대미지를 줍니다.
+<br>
+<br>타격병의 경우, 차지1의 경우 기절치는 절반이 됩니다.
+<br>거리에 따라, 0.7배, 1.0배, 0.8배와 기절치는 변화합니다.
+</p>
+<h4>● 활의 근접 공격</h4>
+
+<p>근접에 기재하고 있습니다.
+</p>
+<h4>●　히트 이펙트</h4>
+
+<p>활의 히트 이펙트는, 발사 후의 위력변화에 따라 다릅니다.
+<br>이펙트는 1.5배 ⇒ 1.0배 ⇒ 0.8배 ⇒ 0.5배 순으로 작은 이펙트가 됩니다.
+<br><small>(주는 데미지에는 영향받지 않지만, 데미지가 거의 통하지 않는 부위에서도 큰 이펙트가 나오는 경우도 있습니다)</small>
+</p>
+<h4>●　주는 대미지의 증가</h4>
+<table border=1 cellspacing=0 cellpadding=2 class=hosoku>
+<tr><th>상태</th><th>배율</th></tr>
+<tr><td>마비상태중</td><td class=n>1.1배</td></tr>
+<tr><td>바위로 의태 중　（바살모스）</td><td class=n>1.1배</td></tr>
+<tr><td>구멍 함정　（떨어진 후<br>발버둥치기 시작할 때까지만）</td><td class=n>1.1배</td></tr>
+<tr><td>수면 중　（첫 타격만）</td><td class=n>3.0배</td></tr>
+</table>
+<p>몬스터가 특정 상태일 때 공격하면, 왼쪽 표처럼 주는 대미지가 증가합니다.
+<br><small>(증가하는 것은 무속성 대미지뿐이며, 속성 대미지는 변화하지 않습니다)</small>
+<br>마비 함정에 걸려 있을 때는 마비 상태가 아니라 저림 상태이므로 증가하지 않습니다.
+<br>미발각 상태에서 함정에 빠뜨리면, 효과 시간이 약 1.7배로 늘어납니다. 또한, 분노 시에는 약 0.7배가 됩니다. (미발각이 우선)
+<br><small>(라잔은, 재워서 떨어뜨려도 6초 그대로)</small>
+<br>몬스터가 약해져 자고 있는 경우도 수면 중과 동일. 단, 몬스터의 체력은 서서히 회복하고 있다.
+<br><small>(에스피나스의 퀘스트 개시 시 상태는 제외)</small>
+</p>
+<h4>●　육질과 전체방어율에 의한 대미지 경감</h4>
+
+<p>몬스터에는 육질이 설정되어 있어, 대미지를 경감시킵니다.
+<br>통상 대미지, 속성 대미지 각각이 육질에 의해 경감됩니다.
+<br>또한, 몬스터에게는 육질과는 별도로 전체 방어율이 설정되어 있어, 총 데미지 수치를 경감시켜 버립니다.
+<br>게다가 분노 상태가 되면 전체방어율에 보정이 걸리는 몬스터도 있습니다.
+</p>
+<h4>●　플레이어의 공격력 업</h4>
+
+<p>플레이어의 공격력을 올리는 수단은 여러 가지 있습니다만, 크게 나누어 3개의 그룹으로 나뉩니다.
+<br>　　1: 공격력 업 스킬 발동, 공격력을 올리는 아이템 소지 (힘의 부적·힘의 발톱)
+<br>　　2: 식사 효과에 의한 상승, 귀인약·귀인약 그레이트 사용
+<br>　　3: 괴력의 씨·괴력의 환약·귀인 피리 사용
+<br>
+<br>그룹1은, 퀘스트 중에 힘이 다해도 효력이 사라지지 않습니다.
+<br>그룹2는, 퀘스트 중에는 계속 유효하지만, 힘이 다하면 효력이 사라집니다.
+<br>그룹3은, 일정 시간이 지나면 효력이 사라집니다.
+<br>
+<br>그룹 2와 3은 그룹 내 각 효과가 중복되지 않습니다. 중복된 경우에는 순서에 관계없이 효과가 큰 쪽이 우선됩니다.
+</p>
+</body></html>

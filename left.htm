@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="robots" content="NOINDEX,NOFOLLOW">
+<base target="bdy">
+<style type="text/css">
+<!--
+select{font-size: 70%;}
+p {margin-bottom:0;margin-top:0.5em;}
+p.bk {margin-top:0.9em;}
+.c{color: blue; cursor:pointer;}
+-->
+</style>
+<script type="text/javascript">
+<!--
+var link = function (e) {
+	var w = document.getElementById("DS");
+	w.href = "damage/_damageK.htm?"+e;
+	top.bdy.location.href = "damage/_damageK.htm?"+e;
+	return false;
+}
+var mclick = function (no){
+var i = document.getElementById("m"+no);
+var w = document.getElementById("m"+no+"l");
+	if (w.style.display == "none"){
+		i.src = "img/close.gif";
+		w.style.display = "";
+	} else {
+		i.src = "img/open.gif";
+		w.style.display = "none";
+	}
+}
+//-->
+</script>
+<title>메뉴</title>
+</head>
+<body style="margin-right: 0px;">
+<div><a href="right.htm">TOP페이지</a></div>
+<p><a href="skill/skillsimu.htm">스킬 시뮬레이터</a><br>
+└<a href="koneta/skill.htm">스킬 설명</a>/<a href="koneta/skillno.htm">순위</a><br>└<!-- KR-ZENITH-LINK --><a href="koneta/skill_zenith.htm">천이 스킬 설명</a></p>
+
+<p><a href="damage/damageT.htm">데미지 시뮬</a><small>(정보 오래됨)</small><br>
+├<a href="damage/_damageK.htm" id="DS">대미지 비교</a><select name=suu onchange="link(this.value)"><option value=2 selected>2<option value=3>3<option value=4>4</select><br>
+└<a href="damage/bowgun.htm">보우건 관련</a></p>
+
+<p><a href="buki/_bukiF.htm">무기목록</a>／<a href="damage/gakufu.htm">악보</a></p>
+<p><a href="bougu/_tree.htm">방어구목록</a>／<a href="bougu/_bouguF.htm">장식 외</a></p>
+
+<p>몬스터 정보<br>
+<a href="mons/_monsF_h.htm">갈무리</a>／
+<a href="mons/_monsF_n.htm">육질</a>
+
+<p>퀘스트 정보<br>
+<a href="quest/_hrF.htm">하위/상위/고수</a>
+/<a href="quest/_grF.htm">Ｇ</a></p>
+<p>2019년 공지 복원<br>
+<a href="events/mizuki-skilled-hunter/index.html">미즈키와 숙련된 헌터</a></p>
+<p>채집정보<br>
+<a href="saisyu/_kaiF.htm">하위</a>
+/<a href="saisyu/_zyouiF.htm">상위</a>
+/<a href="saisyu/_sugoF.htm">고수</a>
+/<a href="saisyu/_gF.htm">Ｇ</a>
+/<a href="saisyu/_enF.htm">연습</a></p>
+
+<p class=bk><a href="sozai/itemlist.htm">소재검색</a>：<a href="sozai/equip.htm">장비</a></p>
+<p><a href="mesi/syokuji.htm">식사목록</a>（<a href="mesi/mesion.htm">추천</a>）</p>
+
+<p><img id="m21" src="img/open.gif" Onclick="mclick(21)">
+<span Onclick="mclick(21)" class=c>뽑기/특별보수</span><br>
+<span id="m21l" style="display: none;">
+├<a href="quest/lot_l.htm">부채 고양이뽑기</a><br>
+├<a href="koneta/pay_quest.htm">기타 보수</a><br>
+└<a href="koneta/pay_special.htm">특별보수</a><br>
+</span>
+
+<p><img id="m20" src="img/open.gif" Onclick="mclick(20)">
+<span Onclick="mclick(20)" class=c>마이 가든</span><br>
+<span id="m20l" style="display: none;">
+├<a href="mygarden/mygarden.htm">설명</a><br>
+├<a href="mygarden/mizumaki.htm">물뿌리기</a><br>
+├<a href="mygarden/souji.htm">청소</a><br>
+├<a href="mygarden/nikuyaki.htm">고기굽기</a><br>
+├<a href="mygarden/saikutu.htm">채굴</a><br>
+├<a href="mygarden/musi.htm">벌레 돌보기</a><br>
+├<a href="mygarden/tubo.htm">먀옹절임단지</a><br>
+├<a href="mygarden/horidasi.htm">진귀한 물건</a><br>
+├<a href="mygarden/otosimono.htm">덜렁꾼 고양이</a><br>
+└<img id="m23" src="img/open.gif" Onclick="mclick(23)">
+	<span Onclick="mclick(23)" class=c>구쿠</span><br>
+	<span id="m23l" style="display: none;">
+	　├<a href="mygarden/gook-doc.htm">설명</a><br>
+	　├<a href="mygarden/gook-food.htm">먹이</a><br>
+	　├<a href="mygarden/gook-rusu.htm">부재중</a><br>
+	　├<a href="mygarden/gook-nabe.htm">냄비</a><br>
+	　└<a href="mygarden/gook-saisyu.htm">채집</a><br>
+	</span>
+</span>
+<img id="m15" src="img/open.gif" Onclick="mclick(15)">
+<span Onclick="mclick(15)" class=c>마이 파크</span><br>
+<span id="m15l" style="display: none;">
+├<a href="mytre/mytre.htm">설명</a><br>
+├<a href="mytre/kanri.htm">관리인</a><br>
+├<a href="mytre/mytrebuta.htm">푸기</a><br>
+├<a href="mytre/mytreneko.htm">아이루</a><br>
+├<a href="shop/mytre.htm">잡화점</a><br>
+├<a href="mytre/cyougou.htm">조합상점</a><br>
+├<a href="mytre/bouken.htm">모험상</a><br>
+├<a href="mytre/fuku.htm">옷가게</a><br>
+└<a href="mytre/nomi.htm">주점</a><br>
+</span>
+
+<img id="m13" src="img/open.gif" Onclick="mclick(13)">
+<span Onclick="mclick(13)" class=c>마이 갤러리</span><br>
+<span id="m13l" style="display: none;">
+├<a href="mygallery/galleryS.htm">갤러리 시뮬</a><br>
+├<a href="mygallery/kihon.htm">대회의 지식</a><br>
+├<a href="mygallery/syouhin.htm">대회상품</a><br>
+├<a href="mygallery/kagu.htm">가구목록</a><br>
+└<a href="mygallery/60000.htm">조합</a><br>
+</span>
+
+<a href="koneta/myhouse.htm" style="text-decoration:none;margin-left:0.8em">마이 하우스</a><br>
+
+<img id="m22" src="img/open.gif" Onclick="mclick(22)">
+<span Onclick="mclick(22)" class=c>마이 서포트</span><br>
+<span id="m22l" style="display: none;">
+	　<img id="m221" src="img/open.gif" Onclick="mclick(221)">
+	<span Onclick="mclick(221)" class=c>마이 호르크</span><br>
+	<span id="m221l" style="display: none;">
+	　├<a href="npc/myholk_doc.htm">설명</a><br>
+	　├<a href="npc/myholk_book.htm">배움의 책</a><br>
+	　└<a href="npc/myholk_food.htm">먹이</a><br>
+	</span>
+	　<img id="m222" src="img/open.gif" Onclick="mclick(222)">
+	<span Onclick="mclick(222)" class=c>파트냥</span><br>
+	<span id="m222l" style="display: none;">
+	　├<a href="npc/partnya_doc.htm">설명</a><br>
+	　├<a href="npc/partnya_skill.htm">스킬</a>/<a href="npc/partnya_skillno.htm">순위</a><br>
+	　├<a href="buki/_buki_partnyaF.htm">무기목록</a><br>
+	　└<a href="bougu/_bougu_partnyaF.htm">방어구목록</a><br>
+	</span>
+</span>
+
+<a href="koneta/mymission.htm" style="text-decoration:none;margin-left:0.8em">마이 미션</a>
+
+<p><img id="m11" src="img/open.gif" Onclick="mclick(11)">
+<span Onclick="mclick(11)" class=c>마카/교환/조합</span><br>
+<span id="m11l" style="display: none;">
+├<a href="koneta/maka.htm">마카 절임 단지</a><br>
+├<a href="koneta/koukan.htm">산나물 할아버지 교환</a><br>
+└<a href="koneta/mix.htm">조합</a><br>
+</span></p>
+
+<p><img id="m12" src="img/open.gif" Onclick="mclick(12)">
+<span Onclick="mclick(12)" class=c>상점</span><br>
+<span id="m12l" style="display: none;">
+├<a href="shop/tougou.htm">종합</a><br>
+├<a href="shop/syokuzai.htm">식료품점</a><br>
+├조합상점<br>
+｜├<a href="koneta/mix.htm">조합의뢰</a><br>
+｜├<a href="shop/mix-gp.htm">공헌P 조합</a><br>
+｜├<a href="shop/mix-cp.htm">CP조합</a><br>
+｜├<a href="shop/mix-pr.htm">특별 조합</a><br>
+｜├<a href="shop/mix-gofu.htm">부적교환</a><br>
+｜├<a href="shop/mix-hiden.htm">비전주 교환</a><br>
+｜├<a href="shop/mix-thk.htm">혼수훈교환</a><br>
+｜└<a href="shop/cyougou.htm">사기</a><br>
+├<a href="shop/harisen.htm">공방</a><br>
+├<a href="shop/koukan.htm">교환</a><br>
+├<a href="shop/utahime.htm">가희수위전</a><br>
+├<a href="shop/ryoudan.htm">수렵단</a>(<a href="shop/ryoudan_geigeki.htm">요격전</a>)<br>
+├<a href="shop/mytre.htm">마이 파크</a><br>
+├<a href="shop/caravan.htm">캐러밴</a><br>
+├<a href="shop/tenro.htm">수련도</a>(<a href="shop/tenromedal.htm">교환</a>)<br>
+└<a href="shop/mezefes.htm">메제페스</a>
+</span></p>
+
+<p><img id="m16" src="img/open.gif" Onclick="mclick(16)">
+<span Onclick="mclick(16)" class=c>수렵단</span><br>
+<span id="m16l" style="display: none;">
+├<a href="ryodan/ryodan.htm">설명</a><br>
+├<a href="ryodan/buta.htm">푸기</a><br>
+├<a href="ryodan/butaesa.htm">푸기먹이</a><br>
+├<a href="shop/ryoudan.htm">잡화점</a><br>
+├<a href="ryodan/addquest.htm">추가 의뢰</a><br>
+├<a href="ryodan/carnival.htm">헌터축제</a><br>
+├<a href="ryodan/cooking.htm">요리</a><br>
+├<a href="ryodan/bouken.htm">모험 고양이</a><br>
+└<a href="ryodan/treasure.htm">트레저</a>
+</span></p>
+
+<p><img id="m18" src="img/open.gif" Onclick="mclick(18)">
+<span Onclick="mclick(18)" class=c>캐러밴</span><br>
+<span id="m18l" style="display: none;">
+├<a href="caravan/caravan.htm">설명</a><br>
+├<a href="caravan/hunterdec.htm">수인주</a><br>
+├<a href="caravan/quest.htm">항로</a><br>
+├<a href="caravan/questg.htm">Ｇ급항로</a><br>
+├<a href="caravan/daikousai.htm">대항제</a>(폐지)<br>
+├<a href="caravan/daitoubatu.htm">대토벌</a><br>
+├<a href="caravan/kaitaku.htm">개척 플레이</a><br>
+├<a href="shop/caravan.htm">상점</a><br>
+├<a href="caravan/lounge.htm">라운지</a><br>
+└<a href="shop/mix-cp.htm">CP조합</a>
+</span></p>
+
+<p><img id="m19" src="img/open.gif" Onclick="mclick(19)">
+<span Onclick="mclick(19)" class=c>라스터/파트너</span><br>
+<span id="m19l" style="display: none;">
+├<a href="npc/partner_doc.htm">파트너설명</a><br>
+├<a href="npc/partner_skill.htm">파트너스킬</a><br>
+├<a href="npc/partner_skill_tree.htm">　파생트리</a><br>
+├<a href="npc/rasta_doc.htm">라스터설명</a><br>
+├<a href="npc/rasta_lvup.htm">라스터 강화</a><br>
+├<a href="npc/rasta_skill.htm">라스터스킬</a><br>
+├<a href="npc/rasta_quest.htm">퀘스트 중의 행동</a><br>
+├<a href="npc/rasta_item.htm">아이템 대출</a><br>
+└<a href="shop/mix-gp.htm">공헌도P 조합</a>
+</span></p>
+
+<p><img id="m14" src="img/open.gif" Onclick="mclick(14)">
+<span Onclick="mclick(14)" class=c>대투기장</span><br>
+<span id="m14l" style="display: none;">
+├<a href="pet/readme.htm">대회의 지식</a><br>
+├<a href="pet/lv.htm">세기</a><br>
+├<a href="pet/yukou.htm">친밀도</a><br>
+└<a href="pet/petesa.htm">미끼/공격 방법</a>
+</span></p>
+
+<p><img id="m17" src="img/open.gif" Onclick="mclick(17)">
+<span Onclick="mclick(17)" class=c>소소한 정보 등</span><br>
+<span id="m17l" style="display: none;">
+├<a href="koneta/doc-sword.htm">무기 성능 등</a><br>
+├<a href="koneta/item_bomb.htm">아이템의 위력</a><br>
+├<a href="koneta/item_kouka.htm">아이템의 효과</a><br>
+├<a href="koneta/item_kireaji.htm">예리도의 증감</a><br>
+├<a href="koneta/rp_h.htm">ＨＲ</a>/<a href="koneta/rp_s.htm">ＳＲ</a>/<a href="koneta/rp_g.htm">ＧＲ</a><br>
+├<a href="koneta/tourina.htm">별명/칭호/색</a><br>
+<!--├<a href="koneta/idou.htm">이동속도의 차이</a><br>-->
+├<a href="koneta/fish.htm">물고기 그림자</a><br>
+├<a href="koneta/mons-lv.htm">몬스터의세기</a><br>
+├<a href="koneta/mons-size.htm">몬스터의사이즈</a><br>
+├<a href="koneta/damage.htm">받는 대미지</a><br>
+├<a href="koneta/houshu.htm">퀘스트보수</a><br>
+└<a href="koneta/dailybonus.htm">매일 특전</a>
+</span></p>
+<div style="font-size:80%;">Since：2007/07/06</div>
+</body>
+</html>

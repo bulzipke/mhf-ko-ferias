@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="style.css" type="text/css">
+<title>대미지 시뮬레이터</title>
+</head>
+<body>
+<table border=2 style="width:55em"><tr>
+ <td style="width:4em;" class=t>대전 상대</td>
+ <td>
+	<select id="m_class">
+	<option value="0" selected>통상
+	<option value="1">고수
+	<option value="2">Ｇ급
+	<option value="3">천랑
+	<option value="4">천이
+	</select>
+	<select id="m_enemy" style="width:13em;"></select>
+	<select id="m_status">
+	<option value="0" selected>통상
+	</select>
+	분노<select id="m_ang">
+	<option value="100" selected>통상:1.00
+	</select>
+	HC<select id="m_hc">
+	<option value="100,100" selected>없음
+	</select>
+	방어율<select id="m_def">
+	<option value="100" selected>없음:1.00
+	</select>
+	<span class=box>방어율</span> <span id="d_def">&nbsp;</span>
+ </td>
+</tr></table>
+<table border=2 style="width:50.5em;">
+<tr>
+ <td style="width:4em;" class=t>무기조건</td>
+ <td colspan=9>
+	<select id="s_rui">
+	<option value="" selected>종류
+	<option value="0">대검
+	<option value="7">태도
+	<option value="4">한손검
+	<option value="6">쌍검
+	<option value="2">해머
+	<option value="8">수렵피리
+	<option value="3">랜스
+	<option value="9">건랜스
+	<option value="11">천룡곤
+	<option value="12">슬래시액스
+	<option value="13">마그넷스파이크
+	<option value="5">라이트보우건
+	<option value="1">헤비보우건..
+	<option value="10">활
+	</select>
+	<select id="s_srt">
+	<option value="0" selected>이름
+	<option value="1">공격
+	<option value="2">회심
+	<option value="3">속성
+	<option value="4">상태
+	<option value="5">탄수
+	</select><small>순</small>
+	레어：<select id="s_rare">
+	<option value="99" selected>-
+	<option value="12">12
+	<option value="11">11
+	<option value="10">10
+	<option value="9">9
+	<option value="8">8
+	<option value="7">7
+	<option value="6">6
+	<option value="5">5
+	<option value="4">4
+	<option value="3">3
+	<option value="2">2
+	<option value="1">1
+	</select><small>까지</small>
+	슬롯：<select id="s_slot">
+	<option value="" selected>-
+	<option value="1">1
+	<option value="2">2
+	<option value="3">3
+	</select><small>이상</small>
+	랭크：<select id="s_hr">
+	<option value="5000" selected>-
+	<option value="3001">SGR1
+	<option value="2002">GR1
+	<option value="1300">SR300
+	<option value="1000">SR100
+	<option value="100">HR100
+	<option value="91">HR91
+	<option value="81">HR81
+	<option value="71">HR71
+	<option value="61">HR61
+	<option value="51">HR51
+	<option value="48">HR48
+	<option value="41">HR41
+	<option value="38">HR38
+	<option value="31">HR31
+	<option value="22">HR22
+	<option value="17">HR17
+	<option value="15">HR15
+	<option value="11">HR11
+	<option value="8">HR8
+	<option value="5">HR5
+	<option value="3">HR3
+	</select><small>이하</small><br>
+	<div style="float:left"><span id="s_ken_G"><select id="s_zoku_ken">
+	<option value="-" selected>속성
+	<option value="0">무
+	<option value="1">화
+	<option value="2">수
+	<option value="3">뇌
+	<option value="4">용
+	<option value="5">빙
+	<option value="6">화염
+	<option value="7">빛
+	<option value="8">뇌극
+	<option value="9">천상
+	<option value="10">치동
+	<option value="11">흑염
+	<option value="12">선율
+	<option value="13">어둠
+	<option value="14">홍마
+	<option value="15">바람
+	<option value="16">울림
+	</select>
+	<select id="s_zyoutai">
+	<option value="-" selected>상태
+	<option value="0">무
+	<option value="1">독
+	<option value="2">마비
+	<option value="3">수면
+	<option value="4">폭파
+	</select>
+	<span id="s_reach">
+	<small>리치</small><input type="button" id="c_reach0" class=chkB value="특수"><input type="button" id="c_reach1" class=chkB value="초단"><input type="button" id="c_reach2" class=chkB value="단"><input type="button" id="c_reach3" class=chkB value="중"><input type="button" id="c_reach4" class=chkB value="장"><input type="button" id="c_reach5" class=chkB value="초장">
+	</span><select id="s_guns">
+	<option value="" selected>포격
+	<option value="통상형">통상형
+	<option value="방사형">방사형
+	<option value="확산형">확산형
+	</select><select id="s_fue">
+	<option value="" selected>선율
+	<option value="621">자·황·적
+	<option value="627">보라노랑하늘
+	<option value="641">자·청·적
+	<option value="642">자·청·황
+	<option value="651">자·녹·적
+	<option value="652">자·녹·황
+	<option value="654">자·녹·청
+	<option value="657">보라초록하늘
+	<option value="671">보라하늘적
+	<option value="674">보라하늘청
+	<option value="321">백·황·적
+	<option value="327">백·황·하늘
+	<option value="341">백·청·적
+	<option value="342">백·청·황
+	<option value="351">백·녹·적
+	<option value="352">백·녹·황
+	<option value="354">백·녹·청
+	<option value="357">백·녹·하늘
+	<option value="371">백하늘적
+	<option value="374">백하늘청
+	</select></span><span id="s_yumi_G"><select id="s_zoku_yumi">
+	<option value="-" selected>속성
+	<option value="0">무
+	<option value="1">화
+	<option value="2">수
+	<option value="3">뇌
+	<option value="4">용
+	<option value="5">빙
+	<option value="6">화염
+	<option value="7">빛
+	<option value="8">뇌극
+	<option value="9">천상
+	<option value="10">치동
+	<option value="11">흑염
+	<option value="12">선율
+	<option value="13">어둠
+	<option value="14">홍마
+	<option value="15">바람
+	<option value="16">울림
+	</select>
+	<select id="s_tame">
+	<option value="1">차지１
+	<option value="2">차지２
+	<option value="3" selected>차지３
+	<option value="4">차지4
+	</select><select id="s_ya">
+	<option value="" selected>화살
+	<option value="연사">연사
+	<option value="확산">확산
+	<option value="관통">관통
+	</select>
+	<select id="s_kyoku">
+	<option value="" selected>곡사
+	<option value="0">방산
+	<option value="1">집중
+	<option value="2">폭렬
+	<option value="3">절단
+	</select>
+	<select id="s_bin">
+	<option value="" selected>병
+	<option value="강">강격
+	<option value="독">독
+	<option value="마비">마비
+	<option value="수면">수면
+	<option value="폭발">폭격
+	<option value="타격">타격
+	</select></span><span id="s_gun_G"><select id="s_tama1">
+	<option value="" selected>탄
+	<option value=0>통상1
+	<option value=1>통상2
+	<option value=2>통상3
+	<option value=3>관통1
+	<option value=4>관통2
+	<option value=5>관통3
+	<option value=6>산1
+	<option value=7>산2
+	<option value=8>산3
+	<option value=9>철갑탄1
+	<option value=10>철갑탄2
+	<option value=11>철갑탄3
+	<option value=12>확산1
+	<option value=13>확산2
+	<option value=14>확산3
+	<option value=17>독1
+	<option value=18>독2
+	<option value=19>마비1
+	<option value=20>마비2
+	<option value=21>수면1
+	<option value=22>수면2
+	<option value=23>화염
+	<option value=24>수랭
+	<option value=25>전격
+	<option value=26>빙결
+	<option value=27>멸룡
+	</select><select id="s_tama2">
+	<option value="" selected>탄
+	<option value=0>통상1
+	<option value=1>통상2
+	<option value=2>통상3
+	<option value=3>관통1
+	<option value=4>관통2
+	<option value=5>관통3
+	<option value=6>산1
+	<option value=7>산2
+	<option value=8>산3
+	<option value=9>철갑탄1
+	<option value=10>철갑탄2
+	<option value=11>철갑탄3
+	<option value=12>확산1
+	<option value=13>확산2
+	<option value=14>확산3
+	<option value=17>독1
+	<option value=18>독2
+	<option value=19>마비1
+	<option value=20>마비2
+	<option value=21>수면1
+	<option value=22>수면2
+	<option value=23>화염
+	<option value=24>수랭
+	<option value=25>전격
+	<option value=26>빙결
+	<option value=27>멸룡
+	</select>
+	<select id="s_reload">
+	<option value="" selected>장전
+	<option value="">느림
+	<option value=1>조금 느림
+	<option value=2>보통
+	<option value=3>조금 빠름
+	<option value=4>빠름
+	</select>
+	<select id="s_kick">
+	<option value="" selected>반동
+	<option value="">최대
+	<option value=2>중
+	<option value=3>중간
+	<option value=4>소
+	</select>
+	<select id="s_speed">
+	<option value="" selected>탄속
+	<option value=0>느림
+	<option value=1>조금 느림
+	<option value=2>조금 빠름
+	<option value=3>빠름
+	</select></span></div>
+	<div style="text-align:right;"><input type="button" id="c_rep2" class=chkB value="수렵단"><input type="button" id="c_repm" class=chkB value="축제"><input type="button" id="c_reps" class=chkB value="수위전"><input type="button" id="c_repc" class=chkB value="팔로네"><input type="button" id="c_repi" class=chkB value="위타천"><input type="button" id="c_repe" class=chkB value="이벤트"><input type="button" id="c_rep3" class=chkB value="카페"><input type="button" id="c_repg" class=chkB value="가챠"><input type="button" id="c_repk" class=chkB value="키트"><input type="button" id="c_repp" class=chkB value="패키지"><input type="button" id="c_rep5" class=chkB value="특전"></div>
+	</td>
+</tr>
+<tr>
+ <td style="width:4em;" class=t rowspan=3>무기선택<br><input type="button" id="d_sozai" value="소재" title="강화소재 표시"></td>
+ <td style="width:11em;">
+	<select id="s_wp">
+	<option value="" selected>－－무기－－
+	</select>
+ </td>
+ <td style="width:2em;" class=t>공격</td>
+ <td style="width:2.5em;" id="d_att">&nbsp;</td>
+ <td style="width:1em;" class=t rowspan=2>속<br>성</td>
+ <td style="width:4em;" id="d_zoku" rowspan=2>&nbsp;</td>
+ <td style="width:2em;" class=t>슬롯</td>
+ <td style="width:2em;" id="d_slot">&nbsp;</td>
+ <td style="width:1em;" class=t rowspan=2>제<br>원</td>
+ <td style="width:19em;font-size:80%;" rowspan=2><span id="d_spec">&nbsp;</span><select id="c_sinkaLv"></select><select id="c_GclassLv"></select></td>
+</tr><tr>
+ <td style="font-size:80%;" id="d_hr">&nbsp;</td>
+ <td class=t>회심</td>
+ <td id="d_cri">&nbsp;</td>
+ <td class=t>종류</td>
+ <td style="font-size:80%;" id="d_class">&nbsp;</td>
+</tr><tr>
+ <td colspan=9 id="d_doc">&nbsp;</td>
+</tr>
+</table>
+<table border=2 style="width:55em"><tr>
+ <td style="width:4em;" class=t>조건설정</td>
+ <td style="width:4.5em;">
+	<select id="c_style">
+	<option value="지" selected>지의 형
+	<option value="천">천의 형
+	<option value="폭풍">람의 형
+	</select>
+ <td style="width:27.5em;"><span id="c_ken_G">
+	예리도： <select id="c_sharp">
+	<option value=7>하늘|1.8배
+	<option value=6>보라|1.7배
+	<option value=5>백|1.6배
+	<option value=4>청|1.45배
+	<option value=3 selected>초록|1.325배
+	<option value=2>황|1.1배
+	<option value=1>등|0.85배
+	<option value=0>적|0.6배
+	</select>
+	베는 방식 : <select id="c_kiri">
+	<option value=30>시작|0.3배
+	<option value=100 selected>중간|1.0배
+	<option value=50>끝|0.5배
+	</select>
+	검정： <select id="c_kensyo">
+	<option value="" selected>없음
+	<option value=BA1>폭격+1
+	<option value=BA2>폭격+2
+	<option value=BA3>폭격+3
+	<option value=011>화염+1
+	<option value=012>화염+2
+	<option value=013>화염+3
+	<option value=014>업염+1
+	<option value=015>업염+2
+	<option value=016>업염+3
+	<option value=021>수격+1
+	<option value=022>수격+2
+	<option value=023>수격+3
+	<option value=024>수옥+1
+	<option value=025>수옥+2
+	<option value=026>수옥+3
+	<option value=031>뇌신+1
+	<option value=032>뇌신+2
+	<option value=033>뇌신+3
+	<option value=034>뇌정+1
+	<option value=035>뇌정+2
+	<option value=036>뇌정+3
+	<option value=051>빙결+1
+	<option value=052>빙결+2
+	<option value=053>빙결+3
+	<option value=054>빙인+1
+	<option value=055>빙인+2
+	<option value=056>빙인+3
+	<option value=041>용왕+1
+	<option value=042>용왕+2
+	<option value=043>용왕+3
+	<option value=044>용제+1
+	<option value=045>용제+2
+	<option value=046>용제+3
+	<option value=111>맹독+1
+	<option value=112>맹독+2
+	<option value=113>맹독+3
+	<option value=121>마비+1
+	<option value=122>마비+2
+	<option value=123>마비+3
+	<option value=131>수면+1
+	<option value=132>수면+2
+	<option value=133>수면+3
+	<option value=KG>강격
+	</select></span><span id="c_gun_G">
+	탄： <select id="c_tama" style="width:12em;">
+	<option value="" selected>---------------
+	</select>
+	<label for="c_tamaAdd"><input type=checkbox name="c_tamaAdd" id="c_tamaAdd" value=1>수UP</label>
+	<select id="c_shot">
+	</select></span><span  id="c_yumi_G">
+	차지 : <select id="c_tame" style="width:12em;">
+	<option value="근접" selected>근접
+	</select>
+	<select id="c_ya"></select>
+	<select id="c_bin">
+	<option value="" selected>병없음
+	</select></span>
+ </td><td style="width:16.5em;">
+	<span id="c_kobetumei1">&nbsp;</span>
+	<select id="c_kobetu1">
+	<option value=0 selected>없음
+	</select>
+	<span id="c_kobetumei2">&nbsp;</span>
+	<select id="c_kobetu2">
+	<option value=0 selected>없음
+	</select>
+ </td>
+</tr></table>
+<table border=2 style="width:55em;"><tr>
+ <td style="width:1em;" class=t rowspan=5>보정</td> 
+ <td style="width:2.5em;" class=t>소지</td>
+ <td>
+	<label for="c_gohu"><input type=checkbox name="c_gohu" id="c_gohu" value=6>힘의 부적[+6]</label>
+	<label for="c_tume"><input type=checkbox name="c_tume" id="c_tume" value=9>힘의 발톱[+9]</label>
+	<span class=box>사망까지</span>
+	<select id="c_mesi">
+	<option value=0 selected>밥/약
+	<option value=3>밥 소/귀인약·탄|+3
+	<option value=5>밥 대/귀인약G |+5
+	<option value=10>SR밥 중 |+10
+	<option value=15>SR밥 대 |+15
+	</select>
+	<span class=box>그 외</span>
+	<label for="c_fw"><input type=checkbox name="c_fw" id="c_fw">피처</label>
+ </td>
+</tr><tr>
+ <td class=t>시한</td>
+ <td>
+	<select id="c_tane">
+	<option value=0 selected>씨앗/피리/환약
+	<option value=10>괴력의 씨/귀인 피리|+10
+	<option value=25>괴력의 환약　　 |+25
+	</select>
+	<select id="c_honki">
+	<option value=0 selected>진심음료
+	<option value=1>진심[속성]1.1배
+	<option value=2>진심[회심]+30
+	</select>
+	<span class=box>선율</span>
+	<select id="c_fueAtUp">
+	<option value=100 selected>공격선율
+	<option value=115>공격 소 |1.15배
+	<option value=120>공격 추가 소|1.2배
+	<option value=120>공격 대 |1.2배
+	<option value=130>공격 추가 대|1.3배
+	</select>
+	<label for="c_fueZK"><input type=checkbox name="c_fueZK" id="c_fueZK" value=1>속성선율[1.1배]</label>
+ </td>
+</tr><tr>
+ <td class=t>스킬</td>
+ <td>
+	<select id="c_attUp">
+	<option value=0 selected>공격력
+	<option value=5>공격소|+ 5
+	<option value=10>공격중|+10
+	<option value=20>공격대|+20
+	<option value=30>공격 특|+30
+	<option value=50>공격 절|+50
+	<option value=20>강격+1|+20
+	<option value=35>강격+2|+35
+	<option value=50>강격+3|+50
+	<option value=80>강격+4|+80
+	<option value=150>강격+5|+150
+	</select>
+	<select id="c_criUp">
+	<option value=0 selected>달인
+	<option value=10>간파+1|+10%
+	<option value=20>간파+2|+20%
+	<option value=30>간파+3|+30%
+	<option value=40>간파+4|+40%
+	<option value=50>간파+5|+50%
+	</select>
+	<select id="c_sen">
+	<option value=0 selected>일섬
+	<option value=1>일섬+1|+5%
+	<option value=2>일섬+2|+10%
+	<option value=3>일섬+3|+20%
+	</select>
+	<select id="c_garou">
+	<option value=0 selected>아랑
+	<option value=1>아랑+1
+	<option value=2>아랑+2
+	</select>
+	<select id="c_soko">
+	<option value=10 selected>저력/혈기
+	<option value=11>혈기활성|1.1배
+	<option value=15>화재현장+2|1.5배
+	<option value=7>소심함　|0.7배
+	</select>
+	<select id="c_hit">
+	<option value=0 selected>통격
+	<option value=5>약점특효
+	<option value=-5>약점미숙
+	</select>
+	<select id="c_adjust">
+	<option value=0 selected>적응격
+	<option value=1>적응격+1
+	<option value=2>적응격+2
+	</select>
+	<select id="c_kenzyutu">
+	<option value=0 selected>검술
+	<option value=2>검술+2
+	</select><label for="c_sien"><input type=checkbox name="c_sien" id="c_sien" value=1>지원[+20]</label><br>
+	<select id="c_zkUp1">
+	<option value=10 selected>화속성 강화
+	<option value=11>화속성소|1.1배
+	<option value=12>화속성대|1.2배
+	</select>
+	<select id="c_zkUp2">
+	<option value=10 selected>수속성 강화
+	<option value=11>수속성소|1.1배
+	<option value=12>수속성대|1.2배
+	</select>
+	<select id="c_zkUp3">
+	<option value=10 selected>뇌속성 강화
+	<option value=11>뇌속성소|1.1배
+	<option value=12>뇌속성대|1.2배
+	</select>
+	<select id="c_zkUp4">
+	<option value=10 selected>용속성 강화
+	<option value=11>용속성소|1.1배
+	<option value=12>용속성대|1.2배
+	</select>
+	<select id="c_zkUp5">
+	<option value=10 selected>빙속성 강화
+	<option value=11>빙속성소|1.1배
+	<option value=12>빙속성대|1.2배
+	</select>
+	<select id="c_zkAtUp">
+	<option value=10 selected>속성 공격력
+	<option value=11>속성강화|1.1배
+	<option value=9>속성약화|0.9배
+	</select>
+	<select id="c_zkhit">
+	<option value=0 selected>속격
+	<option value=5>속성특효
+	<option value=-5>속성미숙
+	</select><br>
+	<select id="c_houzyutu">
+	<option value=0 selected>포술-
+	<option value=1>포술사
+	<option value=2>포술왕
+	<option value=3>포술신
+	</select>
+	<select id="c_tameAtUp">
+	<option value=0 selected>차지위력
+	<option value=1>위력+1
+	<option value=2>위력+2
+	</select>
+	<select id="c_sensya">
+	<option value=0 selected>백발백중/저격
+	<option value=4>노려쏘기
+	<option value=1>백발백중+1
+	<option value=2>백발백중+2
+	<option value=3>백발백중+3
+	</select>
+	<select id="c_taizyutu">
+	<option value=0 selected>체술－
+	<option value=1>체술
+	<option value=2>격투왕
+	</select>
+	<label for="c_tamaAtUp"><input type=checkbox name="c_tamaAtUp" id="c_tamaAtUp" value=1>탄강화</label>
+	<label for="c_kizuna"><input type=checkbox name="c_kizuna" id="c_kizuna" value=1>인연<small>남</small>[+5]</label>
+	<label for="c_wolf"><input type=checkbox name="c_wolf" id="c_wolf" value=1>고독한 늑대[+100]</label>
+	<select id="c_reflect">
+	<option value=0 selected>반사
+	<option value=24>반사+1
+	<option value=36>반사+2
+	<option value=48>반사+3
+	</select>
+	<select id="c_katsu">
+	<option value=0 selected>갈!
+	<option value=15>자기고무[+15]
+	<option value=30>타인고무[+30]
+	</select>
+	<label for="c_izyou"><input type=checkbox name="c_izyou" id="c_izyou" value=1>상태강화</label>
+	<label for="c_geki"><input type=checkbox name="c_geki" id="c_geki" value=1>극물</label><br>
+	<select id="c_karyudo">
+	<option value=1000 selected>수인주
+	<option value=1010>술 소|1.01배
+	<option value=1025>술 중|1.025배
+	<option value=1050>술 대|1.05배
+	<option value=1100>난사|1.1배
+	</select>
+	<select id="c_hiden">
+	<option value=10 selected>비전
+	<option value=8>미숙|0.8배
+	<option value=11>개전|1.1배
+	<option value=12>검성|1.2배
+	<option value=12>대　|1.2배
+	</select>
+	<label for="c_toha"><input type=checkbox name="c_toha" id="c_toha" value=1>투혼</label><br>
+ </td>
+</tr><tr>
+ <td class=t>그 외</td><td>
+	<span class=box>장비</span>
+	<select id="c_tenran">
+	<option value=0 selected>천람
+	<option value=15>천1
+	<option value=30>천2
+	<option value=45>천3
+	<option value=60>천4
+	<option value=80>천5
+	</select>
+	<select id="c_hasyu">
+	<option value=0 selected>패종
+	<option value=2>패1
+	<option value=4>패2
+	<option value=6>패3
+	<option value=8>패4
+	<option value=10>패5
+	</select>
+	<select id="c_sisyu">
+	<option value=0 selected>시종
+	<option value=3>시1
+	<option value=6>시2
+	<option value=9>시3
+	<option value=12>시4
+	<option value=15>시5
+	</select>
+	<select id="c_Gkyu">
+	<option value=0 selected>G급
+	<option value=0>G1
+	<option value=0>G2
+	<option value=30>G3
+	<option value=30>G4
+	<option value=30>G5
+	</select>
+	<span class=box>SR</span>
+	<select id="c_srcri">
+	<option value=0 selected>SR회심
+	<option value=5>회심+5%
+	<option value=6>회심+6%
+	<option value=7>회심+7%
+	<option value=8>회심+8%
+	<option value=9>회심+9%
+	<option value=10>회심+10%
+	<option value=11>회심+11%
+	<option value=12>회심+12%
+	<option value=13>회심+13%
+	<option value=14>회심+14%
+	<option value=15>회심+15%
+	<option value=16>회심+16%
+	<option value=20>회심+20%
+	<option value=22>회심+22%
+	</select>
+	<select id="c_srup">
+	<option value=0 selected>SR공격
+<option value=1>LV1
+<option value=2>LV2
+<option value=3>LV3
+<option value=4>LV4
+<option value=5>LV5
+<option value=6>LV6
+<option value=7>LV7
+<option value=8>LV8
+<option value=9>LV9
+<option value=10>LV10
+<option value=11>LV11
+<option value=12>LV12
+<option value=13>LV13
+<option value=14>LV14
+<option value=15>LV15
+<option value=16>LV16
+<option value=17>LV17
+<option value=18>LV18
+<option value=19>LV19
+<option value=20>LV20
+<option value=21>LV21
+<option value=22>LV22
+<option value=23>LV23
+<option value=24>LV24
+<option value=25>LV25
+<option value=26>LV26
+<option value=27>LV27
+<option value=28>LV28
+<option value=29>LV29
+<option value=30>LV30
+<option value=31>LV31
+<option value=32>LV32
+<option value=33>LV33
+<option value=34>LV34
+<option value=35>LV35
+<option value=36>LV36
+<option value=37>LV37
+<option value=38>LV38
+<option value=39>LV39
+<option value=40>LV40
+<option value=41>LV41
+<option value=42>LV42
+<option value=43>LV43
+<option value=44>LV44
+<option value=45>LV45
+<option value=50>LV50
+<option value=51>LV51
+<option value=52>LV52
+<option value=53>LV53
+<option value=54>LV54
+<option value=55>LV55
+<option value=56>LV56
+<option value=57>LV57
+<option value=58>LV58
+<option value=59>LV59
+<option value=60>LV60
+<option value=61>LV61
+<option value=62>LV62
+<option value=63>LV63
+<option value=64>LV64
+<option value=65>LV65
+<option value=66>LV66
+<option value=67>LV67
+<option value=68>LV68
+<option value=69>LV69
+<option value=70>LV70
+<option value=71>LV71
+<option value=72>LV72
+<option value=73>LV73
+<option value=74>LV74
+<option value=75>LV75
+<option value=76>LV76
+<option value=77>LV77
+<option value=78>LV78
+<option value=79>LV79
+<option value=80>LV80
+<option value=81>LV81
+<option value=82>LV82
+<option value=83>LV83
+<option value=84>LV84
+<option value=85>LV85
+<option value=86>LV86
+<option value=87>LV87
+<option value=88>LV88
+<option value=89>LV89
+<option value=90>LV90
+<option value=91>LV91
+<option value=92>LV92
+<option value=93>LV93
+<option value=94>LV94
+<option value=95>LV95
+<option value=100>LV100
+	</select>
+	<span class=box>극정</span>
+	<select id="c_kyokuAtAdd">
+	<option value=0 selected>공격
+<option value=2>+2
+<option value=4>+4
+<option value=6>+6
+<option value=8>+8
+<option value=10>+10
+<option value=12>+12
+<option value=14>+14
+<option value=16>+16
+<option value=18>+18
+<option value=20>+20
+<option value=22>+22
+<option value=24>+24
+<option value=26>+26
+<option value=28>+28
+<option value=30>+30
+<option value=34>+34
+<option value=38>+38
+<option value=42>+42
+<option value=46>+46
+<option value=50>+50
+<option value=60>+60
+<option value=100>+100
+	</select>
+	<label for="c_kyokuat"><input type=checkbox name="c_kyokuat" id="c_kyokuat" value=100>공격의 약[+100]</label>
+	<span class=box>MM</span>
+	<select id="c_mission">
+	<option value=0 selected>상한 개방
+<option value=1>LV1
+<option value=2>LV2
+<option value=3>LV3
+<option value=4>LV4
+<option value=5>LV5
+<option value=6>LV6
+<option value=7>LV7
+<option value=8>LV8
+<option value=9>LV9
+<option value=10>LV10
+<option value=11>LV11
+<option value=12>LV12
+<option value=13>LV13
+<option value=14>LV14
+<option value=15>LV15
+<option value=16>LV16
+<option value=17>LV17
+<option value=18>LV18
+<option value=19>LV19
+<option value=20>LV20
+<option value=21>LV21
+<option value=22>LV22
+<option value=23>LV23
+<option value=24>LV24
+<option value=25>LV25
+<option value=26>LV26
+<option value=27>LV27
+<option value=28>LV28
+<option value=29>LV29
+<option value=30>LV30
+<option value=31>LV31
+<option value=32>LV32
+<option value=33>LV33
+<option value=34>LV34
+<option value=35>LV35
+<option value=36>LV36
+<option value=37>LV37
+<option value=38>LV38
+<option value=39>LV39
+<option value=40>LV40
+<option value=41>LV41
+<option value=42>LV42
+<option value=43>LV43
+<option value=44>LV44
+<option value=45>LV45
+<option value=46>LV46
+<option value=47>LV47
+<option value=48>LV48
+<option value=49>LV49
+<option value=50>LV50
+<option value=51>LV51
+<option value=52>LV52
+<option value=53>LV53
+<option value=54>LV54
+<option value=55>LV55
+<option value=56>LV56
+<option value=57>LV57
+<option value=58>LV58
+<option value=59>LV59
+<option value=60>LV60
+<option value=61>LV61
+<option value=62>LV62
+<option value=63>LV63
+<option value=64>LV64
+<option value=65>LV65
+<option value=66>LV66
+<option value=67>LV67
+<option value=68>LV68
+<option value=69>LV69
+<option value=70>LV70
+<option value=71>LV71
+<option value=72>LV72
+<option value=73>LV73
+<option value=74>LV74
+<option value=75>LV75
+<option value=76>LV76
+<option value=77>LV77
+<option value=78>LV78
+<option value=79>LV79
+<option value=80>LV80
+<option value=81>LV81
+<option value=82>LV82
+<option value=83>LV83
+<option value=84>LV84
+<option value=85>LV85
+<option value=86>LV86
+<option value=87>LV87
+<option value=88>LV88
+<option value=89>LV89
+<option value=90>LV90
+<option value=91>LV91
+<option value=92>LV92
+<option value=93>LV93
+<option value=94>LV94
+<option value=95>LV95
+<option value=96>LV96
+<option value=97>LV97
+<option value=98>LV98
+<option value=99>LV99
+<option value=100>LV100
+<option value=101>LV101
+<option value=102>LV102
+<option value=103>LV103
+<option value=104>LV104
+<option value=105>LV105
+<option value=106>LV106
+<option value=107>LV107
+<option value=108>LV108
+<option value=109>LV109
+<option value=110>LV110
+<option value=110>LV110
+<option value=111>LV111
+<option value=112>LV112
+<option value=113>LV113
+<option value=114>LV114
+<option value=115>LV115
+<option value=116>LV116
+<option value=117>LV117
+<option value=118>LV118
+<option value=119>LV119
+<option value=120>LV120
+<option value=121>LV121
+<option value=122>LV122
+<option value=123>LV123
+<option value=124>LV124
+<option value=125>LV125
+<option value=126>LV126
+<option value=127>LV127
+<option value=128>LV128
+<option value=129>LV129
+<option value=130>LV130
+<option value=131>LV131
+<option value=132>LV132
+<option value=133>LV133
+<option value=134>LV134
+<option value=135>LV135
+<option value=136>LV136
+<option value=137>LV137
+<option value=138>LV138
+<option value=139>LV139
+<option value=140>LV140
+<option value=141>LV141
+<option value=142>LV142
+<option value=143>LV143
+<option value=144>LV144
+<option value=145>LV145
+<option value=146>LV146
+<option value=147>LV147
+<option value=148>LV148
+<option value=149>LV149
+<option value=150>LV150
+<option value=151>LV151
+<option value=152>LV152
+<option value=153>LV153
+<option value=154>LV154
+<option value=155>LV155
+<option value=156>LV156
+<option value=157>LV157
+<option value=158>LV158
+<option value=159>LV159
+<option value=160>LV160
+<option value=161>LV161
+<option value=162>LV162
+<option value=163>LV163
+<option value=164>LV164
+<option value=165>LV165
+<option value=166>LV166
+<option value=167>LV167
+<option value=168>LV168
+<option value=169>LV169
+<option value=170>LV170
+<option value=171>LV171
+<option value=172>LV172
+<option value=173>LV173
+<option value=174>LV174
+<option value=175>LV175
+<option value=176>LV176
+<option value=177>LV177
+<option value=178>LV178
+<option value=179>LV179
+<option value=180>LV180
+	</select>
+</tr><tr>
+ <td class=t id="d_bukibetu">개별</td><td><span id="g_sizil"><span class=box>시질</span>
+	공격보정:<input id="i_sizilatt" style="width:2.5em;" value=0>
+	속성보정:<input id="i_sizilzoku" style="width:1.6em;" value=0>
+	회심보정:<input id="i_sizilcri" style="width:2em;" value=0>
+	<label for="c_sizilMuUp"><input type=checkbox name="c_sizilMuUp" id="c_sizilMuUp" value=1>무속성강화</label>
+	<label for="c_sizilMotUp"><input type=checkbox name="c_sizilMotUp" id="c_sizilMotUp" value=1>기술강화</label>
+	<label for="c_sizilMotCng"><input type=checkbox name="c_sizilMotCng" id="c_sizilMotCng" value=1>기술변화</label>
+	<label for="c_sizilReachUp"><input type=checkbox name="c_sizilReachUp" id="c_sizilReachUp" value=1>리치UP</label>
+	<select id="c_sizilgunscng">
+	<option value="" selected>포변
+	<option value="통상형">통상
+	<option value="방사형">방사
+	<option value="확산형">확산
+	</select>
+	<select id="c_sizilgunsup">
+	<option value="" selected>포강
+	<option value=1>1개
+	<option value=2>2개
+	<option value=3>3개
+	</select><select id="c_sizilkyoku">
+	<option value="" selected>곡사
+	<option value="0">방산
+	<option value="1">집중
+	<option value="2">폭렬
+	<option value="3">절단
+	</select></span>
+	<span id="g_Neko" style="display:none;">
+	공격:<input id="i_att" style="width:2.5em;" value=0>　<span id="i_zoku_disp">무</span>:<input id="i_zoku" style="width:1.6em;" value=0>　회심<input id="i_cri" style="width:2em;" value=0>
+	<input type="button" value="세트" id="i_set_B" style="height:1.5em;">
+		<span id="i_yumi">
+		차지1<select id="i_ya1"><option value="연사">연사<option value="확산">확산<option value="관통">관통</select><select id="i_yaLv1"><option value=1>1<option value=2>2<option value=3>3<option value=4>4</select>
+		차지2<select id="i_ya2"><option value="연사">연사<option value="확산">확산<option value="관통">관통</select><select id="i_yaLv2"><option value=1>1<option value=2>2<option value=3>3<option value=4>4</select>
+		차지3<select id="i_ya3"><option value="연사">연사<option value="확산">확산<option value="관통">관통</select><select id="i_yaLv3"><option value=1>1<option value=2>2<option value=3>3<option value=4>4</select>
+		차지4<select id="i_ya4"><option value="연사">연사<option value="확산">확산<option value="관통">관통</select><select id="i_yaLv4"><option value=1>1<option value=2>2<option value=3>3<option value=4>4</select>
+		</span>
+	</span>
+	<span id="g_tenrou" style="display:none;">
+	공격강화<select id="c_tenrouAtt">
+	</select>
+	회심강화<select id="c_tenrouCri">
+	</select>
+	<span id="c_tenrouZoku_G">속성강화<select id="c_tenrouZoku">
+	<option value="0" selected>무
+	<option value="1">화
+	<option value="2">수
+	<option value="3">뇌
+	<option value="4">용
+	<option value="5">빙
+	</select>
+	</select><select id="c_tenrouZokuAtt">
+	</select></span>
+	<span id="c_tenrouGauge_G">예리도강화<select id="c_tenrouGauge">
+	</select></span>
+	<span id="c_tenrouGuns_G">포격<select id="c_tenrouGuns">
+	<option value="통상형" selected>통상형
+	<option value="방사형">방사형
+	<option value="확산형">확산형
+	</select>
+	<select id="c_tenrouGunsLv">
+	<option value="LV1" selected>LV1
+	<option value="LV2">LV2
+	<option value="LV3">LV3
+	<option value="LV4">LV4
+	<option value="LV5">LV5
+	<option value="LV6">LV6
+	<option value="LV7">LV7
+	<option value="LV8">LV8
+	<option value="LV9">LV9
+	</select></span>
+	<span id="c_tenrouYumi">
+		차지1<select id="c_tenrouYumiya1"><option value="연사" selected>연사<option value="확산">확산<option value="관통">관통</select><select id="c_tenrouYumiyaLv1"><option value=1 selected>1<option value=2>2<option value=3>3<option value=4>4</select>
+		차지2<select id="c_tenrouYumiya2"><option value="연사" selected>연사<option value="확산">확산<option value="관통">관통</select><select id="c_tenrouYumiyaLv2"><option value=1 selected>1<option value=2>2<option value=3>3<option value=4>4</select>
+		차지3<select id="c_tenrouYumiya3"><option value="연사" selected>연사<option value="확산">확산<option value="관통">관통</select><select id="c_tenrouYumiyaLv3"><option value=1 selected>1<option value=2>2<option value=3>3<option value=4>4</select>
+		차지4<select id="c_tenrouYumiya4"><option value="연사" selected>연사<option value="확산">확산<option value="관통">관통</select><select id="c_tenrouYumiyaLv4"><option value=1 selected>1<option value=2>2<option value=3>3<option value=4>4</select>
+		곡사<select id="c_tenrouYumiKyoku">
+		<option value="0" selected>방산
+		<option value="1">집중
+		<option value="2">폭렬
+		<option value="3">절단
+		</select>
+	</span>
+	</span>
+</td>
+</tr></table>
+<table border=1 style="width:55em;"><tr class=ac>
+ <td style="width:5em;" class=t>표시공격력<br>(무기 배율)</td><td style="width:3em;"><div id="g_att">&nbsp;</div><div id="g_attB">&nbsp;</div></td>
+ <td style="width:2em;" class=t>표시<br>속성</td><td style="width:4em;" id="g_zoku">&nbsp;</td>
+ <td style="width:2em;" class=t>표시<br>회심<td style="width:2em;" id="g_cri">&nbsp;</td>
+ <td style="width:4em;" class=fss>공격치<br>(내부)</td><td style="width:4em;" class=fss id="g_attN">&nbsp;</td>
+ <td style="width:4em;" class=fss>속성값<br>(내부)</td><td style="width:4em;" class=fss id="g_zokuN">&nbsp;</td>
+ <td style="width:2em;" class=t>회심</td>
+ <td><select id="k_cri"><option value="">없음<option value=1>있음<option value=2 selected>평균</select></td>
+ <td style="width:3em;" class=t>모션</td>
+ <td><select id="k_motion"><option value="1" selected>합계<option value="">분리</select></td>
+ <td style="width:2em;" class=t>속성</td>
+ <td><select id="k_gou"><option value="" selected>합계<option value="1">분리</select></td>
+</tr></table>
+<table width1="100%" border=2 cellspacing=1 id="damage">
+<col style="width:5em;" class=dai><col span=25 style="width:5em;">
+<thead>
+<tr><th colspan=21>데미지(<span class="fs"><i>복수회 히트</i>의 공격은 단발분</span>)</th></tr>
+<tr style="height:30px;"><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th></tr>
+</thead><tbody>
+<tr style="height:1.5em;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr style="height:1.5em;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr style="height:1.5em;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr style="height:1.5em;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr style="height:1.5em;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr style="height:1.5em;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr style="height:1.5em;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+</tbody></table>
+<table cellspacing=0 cellpadding=0><tr><td style="vertical-align:top;">
+<table border=1 cellspacing=0 id="niku" style="width:20em;table-layout:fixed;">
+<col style="width:5em;" class=dai><col span=8 class=suu>
+<thead>
+<tr><th colspan=9>육질</th></tr>
+<tr><th>부위</th><th>참</th><th>타</th><th>탄</th><th>화</th><th>수</th><th>뇌</th><th>용</th><th>빙</th></tr>
+</thead><tbody>
+<tr><td id=m00 style="height:1em;">&nbsp;</td><td id=m10>&nbsp;</td><td id=m20>&nbsp;</td><td id=m30>&nbsp;</td><td id=m40>&nbsp;</td><td id=m50>&nbsp;</td><td id=m60>&nbsp;</td><td id=m70>&nbsp;</td><td id=m80>&nbsp;</td></tr>
+<tr><td id=m01 style="height:1em;">&nbsp;</td><td id=m11>&nbsp;</td><td id=m21>&nbsp;</td><td id=m31>&nbsp;</td><td id=m41>&nbsp;</td><td id=m51>&nbsp;</td><td id=m61>&nbsp;</td><td id=m71>&nbsp;</td><td id=m81>&nbsp;</td></tr>
+<tr><td id=m02 style="height:1em;">&nbsp;</td><td id=m12>&nbsp;</td><td id=m22>&nbsp;</td><td id=m32>&nbsp;</td><td id=m42>&nbsp;</td><td id=m52>&nbsp;</td><td id=m62>&nbsp;</td><td id=m72>&nbsp;</td><td id=m82>&nbsp;</td></tr>
+<tr><td id=m03 style="height:1em;">&nbsp;</td><td id=m13>&nbsp;</td><td id=m23>&nbsp;</td><td id=m33>&nbsp;</td><td id=m43>&nbsp;</td><td id=m53>&nbsp;</td><td id=m63>&nbsp;</td><td id=m73>&nbsp;</td><td id=m83>&nbsp;</td></tr>
+<tr><td id=m04 style="height:1em;">&nbsp;</td><td id=m14>&nbsp;</td><td id=m24>&nbsp;</td><td id=m34>&nbsp;</td><td id=m44>&nbsp;</td><td id=m54>&nbsp;</td><td id=m64>&nbsp;</td><td id=m74>&nbsp;</td><td id=m84>&nbsp;</td></tr>
+<tr><td id=m05 style="height:1em;">&nbsp;</td><td id=m15>&nbsp;</td><td id=m25>&nbsp;</td><td id=m35>&nbsp;</td><td id=m45>&nbsp;</td><td id=m55>&nbsp;</td><td id=m65>&nbsp;</td><td id=m75>&nbsp;</td><td id=m85>&nbsp;</td></tr>
+<tr><td id=m06 style="height:1em;">&nbsp;</td><td id=m16>&nbsp;</td><td id=m26>&nbsp;</td><td id=m36>&nbsp;</td><td id=m46>&nbsp;</td><td id=m56>&nbsp;</td><td id=m66>&nbsp;</td><td id=m76>&nbsp;</td><td id=m86>&nbsp;</td></tr>
+</tbody></table>Version:<span id="version">20190401</span>
+</td><td style="font-size:65%">
+<pre>
+<strong>계산식:</strong>기본무기 배율＝공격력÷（대검/태도：4.8　한손검/쌍검：1.4　해머/수렵피리：5.2　랜스/건랜스：2.3　보우건/활：1.2） 　　　　무기 배율＝[[[（[기본무기 배율×무기술]＋힘의 부적＋힘의 발톱＋식사·귀인약＋귀인 피리·괴력종＋공격력상승스킬＋SR보정＋시질＋SP보정） 　　　　　　　　　×선율효과]×저력]×비전]＋인연＋천람/패종/G급방어구보정 　　　　속성값＝[（무기속성값＋시질）×○속성강화×속성 공격력×패종방어구보정]×진심음료 　　　　상태이상치＝무기상태이상치×상태이상강화×패종방어구보정 　　　　회심률＝（무기회심＋회심UP스킬＋SR보정＋시질）<small>※여기까지 합산해서 플러스라면</small>＋예리도보너스
+　　　　　　　　　＋SP보정＋HC건보정＋아랑＋진심＋회심숫돌
+<strong>①참·타</strong>
+　　　　물리 데미지 ＝ 무기 배율×모션치×예리도배율×베기방식×무기보정×육질×회심보정
+　　　　속성데미지 ＝ 속성값×예리도배율×육질×속성선율
+<strong>②탄</strong>
+　　　　물리 데미지 ＝ 무기 배율×탄×거리수정×위력UP스킬×무기보정×육질×회심보정
+　　　　속성데미지 ＝ 속성값×육질×속성선율
+　　　　　활의 위력에는 차지 단계 보정도 들어갑니다
+<strong>합계</strong>
+　　　　최종 데미지 ＝（물리 데미지＋속성데미지）×전체방어율×분노배율×HC보정×HC분노 보정
+　　　　　　　　　　　　※물리 대미지는 최소 1은 들어갑니다
+　　　　표기 회색:튕김 초록색:히트스톱 소 파란색:히트스톱 대
+</pre></td>
+</tr></table>
+<div id="sub_Win" style="position:absolute; top:7.2em; left:5em; width:50%; border:solid 2px black; background-color:snow; display:none;">
+<input type="button" value="닫기" id="sub_WinClose_B" style="height:1.5em;">
+<hr>
+<div id="sub_WinBody" style="height:99%; overflow:scroll; white-space:normal;padding-bottom:1em;"></div>
+</div>
+<div id="debug" style="display:none"></div><input type=button onclick="document.getElementById('debug').innerText=''" style="display:none">
+<div id="loading" style="position:absolute; top:10em; left:20em; width:20em; height:10em; border:solid 2px black; background-color:snow; text-align:center; vertical-align:middle; display:table-cell;">데이터 로드 중<div>
+<script type="text/javascript" src="../sozai/item.js?audit2=f86135b6ef12&review4=6eaa4acd6428"></script>
+<script type="text/javascript" src="DamageForm.js"></script>
+<script type="text/javascript" src="monster.js"></script>
+<script type="text/javascript" src="equip.js?audit=785fed0acd7f&audit2=b064ae8890d3&restore=ef70d6f6998d&review2=b6d7412fa2d1"></script>
+<script type="text/javascript">
+<!--
+document.getElementById("loading").style.display="none";
+// -->
+</script>
+</body>
+</html>

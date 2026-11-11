@@ -1,0 +1,33 @@
+name: 화면·기능 문제
+description: 줄이 어긋나거나 칸을 넘치는 글자, 동작하지 않는 버튼, 잘못 계산되는 값을 알려 주세요.
+title: "[화면] "
+labels: ["버그"]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: 페이지 주소
+      placeholder: https://ferias.bulzipke.com/damage/damageT.htm
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: 어떤 문제인가요?
+      description: 무엇을 눌렀을 때 어떻게 되었는지 적어 주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 원래 기대한 결과
+  - type: input
+    id: env
+    attributes:
+      label: 브라우저 / 기기
+      placeholder: 예) Windows 11 Chrome, 아이폰 Safari
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: 스크린샷
+      description: 이미지를 끌어다 놓으면 첨부됩니다.

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>천이 스킬 설명</title>
+<style>body{font:16px/1.6 Arial,"Malgun Gothic",sans-serif;margin:12px;color:#111;background:#fff}
+h1{font-size:1.4em;margin:0 0 .4em}p{margin:.5em 0}a{color:#0000c0}
+nav{margin:.7em 0}nav a{display:inline-block;margin-right:1em}
+.intro{max-width:82em}.search{margin:1em 0;padding:.6em;background:#f1f1f1;border:1px solid #bbb}
+input{font:inherit;max-width:55%;padding:.2em .35em}button{font:inherit;margin-left:.3em}
+#count{display:inline-block;margin-left:.6em;color:#444}
+table{border-collapse:collapse;width:100%;table-layout:fixed}col.name{width:12em}col.rank{width:4em}
+th,td{border:1px solid #777;padding:.5em;vertical-align:top;overflow-wrap:anywhere}
+thead th{background:#ffed72;font-weight:normal}.category th{background:#fff9bb;text-align:left}
+th.skill{background:#e8e8e8;text-align:left;font-weight:normal}.rank{text-align:center;background:#f7f7f7}
+ul{margin:0;padding-left:1.3em}li+li{margin-top:.25em}.notes{margin-top:.5em;color:#333}
+.notes p{margin:.25em 0}.top{float:right;font-size:.8em;font-weight:normal}
+#empty{padding:1em;border:1px solid #aaa}footer{margin-top:1.2em}
+@media(max-width:600px){body{font-size:14px;margin:8px}col.name{width:8em}col.rank{width:3em}th,td{padding:.35em}input{max-width:48%}}
+</style>
+</head><body id="top">
+<h1>천이 스킬 설명</h1>
+<div class="intro">
+<p>천이무기·천이방어구·천이 스킬 커프 등의 장비 효과로 발동하며, 일반 스킬 발동 슬롯을 소비하지 않는다.</p>
+<p><strong>스킬 슬롯 확장을 제외한 강화 스킬은 대상 일반 스킬이 발동하고 있어야 효과가 있다.</strong> 같은 천이 스킬의 값은 합산되며, 아래에 적힌 최대 단계까지만 적용된다.</p>
+<p>복합 스킬에 포함된 효과나 장비 자체의 자동 발동 스킬도 강화할 수 있다. 다른 헌터의 지원처럼 일시적으로 부여받은 효과에는 적용되지 않는다.</p>
+<p>표의 공격력 증가는 별도 설명이 없으면 무기 배율 기준이다. 무기 종류에 따라 달라지는 장비 화면의 표시 공격력과는 구분한다.</p>
+</div>
+<nav aria-label="스킬 설명 이동"><a href="skill.htm">일반 스킬 설명</a><a href="#common">공통</a><a href="#support">생존·지원</a><a href="#offense">공격·특수</a></nav>
+<div class="search"><label for="skill-search">스킬 찾기 </label><input id="skill-search" type="search" placeholder="예: 난타, 돌진, 가드" autocomplete="off"><button id="reset-search" type="button">초기화</button><span id="count" role="status" aria-live="polite">26 / 26개</span></div>
+<p id="empty" style="display:none">일치하는 스킬이 없습니다.</p>
+<table><colgroup><col class="name"><col class="rank"><col></colgroup>
+<thead><tr><th scope="col">천이 스킬</th><th scope="col">최대<br>단계</th><th scope="col">효과·적용 조건</th></tr></thead><tbody>
+<tr class="category" data-category="common" id="common"><th colspan="3">공통<a class="top" href="#top">맨 위로</a></th></tr>
+<tr id="zenith-1" data-skill="common" data-jp="スキル枠拡張"><th scope="row" class="skill">스킬 슬롯 확장</th><td class="rank">+7</td><td>
+<ul>
+<li><strong>스킬 슬롯 확장+1</strong>: 일반 스킬 발동 슬롯을 1개 늘린다.</li>
+<li><strong>스킬 슬롯 확장+2</strong>: 일반 스킬 발동 슬롯을 2개 늘린다.</li>
+<li><strong>스킬 슬롯 확장+3</strong>: 일반 스킬 발동 슬롯을 3개 늘린다.</li>
+<li><strong>스킬 슬롯 확장+4</strong>: 일반 스킬 발동 슬롯을 4개 늘린다.</li>
+<li><strong>스킬 슬롯 확장+5</strong>: 일반 스킬 발동 슬롯을 5개 늘린다.</li>
+<li><strong>스킬 슬롯 확장+6</strong>: 일반 스킬 발동 슬롯을 6개 늘린다.</li>
+<li><strong>스킬 슬롯 확장+7</strong>: 일반 스킬 발동 슬롯을 7개 늘린다.</li>
+</ul><div class="notes">
+<p>G급·천이 방어구 등으로 늘어난 슬롯에 추가로 적용된다.</p>
+</div></td></tr>
+<tr class="category" data-category="support" id="support"><th colspan="3">생존·지원<a class="top" href="#top">맨 위로</a></th></tr>
+<tr id="zenith-2" data-skill="support" data-jp="耳栓強化"><th scope="row" class="skill">귀마개 강화</th><td class="rank">+3</td><td>
+<ul>
+<li><strong>귀마개 강화+1</strong>: 발동 중인 청각보호 스킬을 1단계 높인다.</li>
+<li><strong>귀마개 강화+2</strong>: 발동 중인 청각보호 스킬을 2단계 높인다.</li>
+<li><strong>귀마개 강화+3</strong>: 발동 중인 청각보호 스킬을 3단계 높인다.</li>
+</ul><div class="notes">
+<p>최고급 귀마개보다 높은 단계가 되면 초포효를 무효화한다.</p>
+</div></td></tr>
+<tr id="zenith-3" data-skill="support" data-jp="風圧強化"><th scope="row" class="skill">풍압 강화</th><td class="rank">+4</td><td>
+<ul>
+<li><strong>풍압 강화+1</strong>: 발동 중인 풍압 스킬을 1단계 높인다.</li>
+<li><strong>풍압 강화+2</strong>: 발동 중인 풍압 스킬을 2단계 높인다.</li>
+<li><strong>풍압 강화+3</strong>: 발동 중인 풍압 스킬을 3단계 높인다.</li>
+<li><strong>풍압 강화+4</strong>: 발동 중인 풍압 스킬을 4단계 높인다.</li>
+</ul><div class="notes">
+<p>폭풍압무효보다 높은 단계가 되면 초풍압을 무효화한다.</p>
+</div></td></tr>
+<tr id="zenith-4" data-skill="support" data-jp="耐震強化"><th scope="row" class="skill">흔들림방지 강화</th><td class="rank">+2</td><td>
+<ul>
+<li><strong>흔들림방지 강화+1</strong>: 발동 중인 흔들림방지 스킬을 1단계 높인다.</li>
+<li><strong>흔들림방지 강화+2</strong>: 발동 중인 흔들림방지 스킬을 2단계 높인다.</li>
+</ul><div class="notes">
+<p>흔들림방지+2보다 높은 단계가 되면 초진동을 무효화한다.</p>
+</div></td></tr>
+<tr id="zenith-5" data-skill="support" data-jp="耐毒強化"><th scope="row" class="skill">내독 강화</th><td class="rank">+2</td><td>
+<ul>
+<li><strong>내독 강화+1</strong>: 발동 중인 독 내성 스킬을 1단계 높인다.</li>
+<li><strong>내독 강화+2</strong>: 발동 중인 독 내성 스킬을 2단계 높인다.</li>
+</ul><div class="notes">
+<p>독무효보다 높은 단계가 되면 초독의 지속 피해를 줄인다. 완전히 무효화하지는 않는다.</p>
+<p>상태이상무효[다종] 등 복합 스킬에도 적용된다. 지원·전광석화가 일시적으로 부여한 효과에는 적용되지 않는다.</p>
+</div></td></tr>
+<tr id="zenith-6" data-skill="support" data-jp="耐麻痺強化"><th scope="row" class="skill">내마비 강화</th><td class="rank">+2</td><td>
+<ul>
+<li><strong>내마비 강화+1</strong>: 발동 중인 마비 내성 스킬을 1단계 높인다.</li>
+<li><strong>내마비 강화+2</strong>: 발동 중인 마비 내성 스킬을 2단계 높인다.</li>
+</ul><div class="notes">
+<p>마비무효보다 높은 단계가 되면 초마비를 일반 마비 수준으로 완화한다.</p>
+<p>상태이상무효[다종] 등 복합 스킬에도 적용된다. 지원·전광석화가 일시적으로 부여한 효과에는 적용되지 않는다.</p>
+</div></td></tr>
+<tr id="zenith-7" data-skill="support" data-jp="耐睡眠強化"><th scope="row" class="skill">내수면 강화</th><td class="rank">+2</td><td>
+<ul>
+<li><strong>내수면 강화+1</strong>: 발동 중인 수면 내성 스킬을 1단계 높인다.</li>
+<li><strong>내수면 강화+2</strong>: 발동 중인 수면 내성 스킬을 2단계 높인다.</li>
+</ul><div class="notes">
+<p>수면무효보다 높은 단계가 되면 초수면을 일반 수면 수준으로 완화한다.</p>
+<p>상태이상무효[다종] 등 복합 스킬에도 적용된다. 지원·전광석화가 일시적으로 부여한 효과에는 적용되지 않는다.</p>
+</div></td></tr>
+<tr id="zenith-8" data-skill="support" data-jp="吸血強化"><th scope="row" class="skill">흡혈 강화</th><td class="rank">+2</td><td>
+<ul>
+<li><strong>흡혈 강화+1</strong>: 발동 중인 흡혈을 1단계 높인다.</li>
+<li><strong>흡혈 강화+2</strong>: 발동 중인 흡혈을 2단계 높인다.</li>
+</ul><div class="notes">
+<p>흡혈+2보다 높은 단계가 되면 흡혈의 회복 효과 발동률이 100%가 된다. 회복량은 흡혈+2 기준이다.</p>
+<p>흡혈+1과 흡혈 강화+1을 함께 쓰면 흡혈+2가 되고, 흡혈+1과 흡혈 강화+2를 함께 쓰면 상위 효과가 적용된다.</p>
+</div></td></tr>
+<tr id="zenith-9" data-skill="support" data-jp="支援強化"><th scope="row" class="skill">지원 강화</th><td class="rank">단일</td><td>
+<ul>
+<li><strong>지원 강화</strong>: 지원의 범위 안에 있는 아군에게 상태이상무효[다종]을 추가로 부여한다.</li>
+</ul><div class="notes">
+<p>추가 효과는 스킬 발동자 자신에게 적용되지 않는다.</p>
+</div></td></tr>
+<tr id="zenith-10" data-skill="support" data-jp="弾丸節約術強化"><th scope="row" class="skill">탄환절약술 강화</th><td class="rank">+2</td><td>
+<ul>
+<li><strong>탄환절약술 강화+1</strong>: 발동 중인 탄환절약술 스킬을 1단계 높인다.</li>
+<li><strong>탄환절약술 강화+2</strong>: 발동 중인 탄환절약술 스킬을 2단계 높인다.</li>
+</ul><div class="notes">
+<p>절약달인보다 높은 단계가 되면 탄·병을 소비하지 않을 확률이 더 높아진다.</p>
+</div></td></tr>
+<tr id="zenith-11" data-skill="support" data-jp="ガード性能強化"><th scope="row" class="skill">가드성능 강화</th><td class="rank">+2</td><td>
+<ul>
+<li><strong>가드성능 강화+1</strong>: 발동 중인 가드성능을 1단계 높인다.</li>
+<li><strong>가드성능 강화+2</strong>: 발동 중인 가드성능을 2단계 높인다.</li>
+</ul><div class="notes">
+<p>가드성능+2보다 높은 단계가 되면 가드 범위가 넓어지고, 가드 시 체력·스태미나 소모와 밀림이 줄어든다.</p>
+<p>랜스·건랜스는 전 방향 가드가 가능해진다. 뒤에서 맞으면 비틀거리며, 강가드·범위가드로 막을 수 있는 공격도 늘어난다.</p>
+<p>랜스의 가드 스톡 게이지 충전량이 늘고, 건랜스의 용격포 계열 냉각 시간이 10초 줄어든다. 비전 스킬 병용 시에는 줄어든 냉각 시간에 절반 보정을 적용한다. 히트 블레이드 계열은 대상이 아니다.</p>
+</div></td></tr>
+<tr id="zenith-12" data-skill="support" data-jp="鼓舞強化"><th scope="row" class="skill">격려 강화</th><td class="rank">+2</td><td>
+<ul>
+<li><strong>격려 강화+1</strong>: 발동 중인 격려를 1단계 높인다.</li>
+<li><strong>격려 강화+2</strong>: 발동 중인 격려를 2단계 높인다.</li>
+</ul><div class="notes">
+<p>격려+2보다 높은 단계가 되면 자신과 아군에게 부여하는 효과에 절륜과 스태미나 급속 회복[대]가 추가된다.</p>
+</div></td></tr>
+<tr class="category" data-category="offense" id="offense"><th colspan="3">공격·특수<a class="top" href="#top">맨 위로</a></th></tr>
+<tr id="zenith-13" data-skill="offense" data-jp="閃転強化"><th scope="row" class="skill">회심전환 강화</th><td class="rank">+2</td><td>
+<ul>
+<li><strong>회심전환 강화+1</strong>: 무기 자체의 기본 회심률을 기준으로, 5 × √(기본 회심률)만큼 무기 배율이 추가로 오른다.</li>
+<li><strong>회심전환 강화+2</strong>: 무기 자체의 기본 회심률을 기준으로, 10 × √(기본 회심률)만큼 무기 배율이 추가로 오른다.</li>
+</ul><div class="notes">
+<p>추가량은 소수점 이하를 버린다. 예를 들어 기본 회심률 25% 무기는 +1에서 +25, +2에서 +50이다.</p>
+<p>시질·다른 스킬·비전서·예리도로 얻은 회심률은 계산에서 제외한다. 회심전환이 발동 중이면 전체 회심률이 100% 이하여도 적용된다.</p>
+</div></td></tr>
+<tr id="zenith-14" data-skill="offense" data-jp="巧撃強化"><th scope="row" class="skill">교격 강화</th><td class="rank">+2</td><td>
+<ul>
+<li><strong>교격 강화+1</strong>: 교격의 효과가 유지되는 동안 다시 회피에 성공할 때마다 무기 배율이 추가로 20 오른다.</li>
+<li><strong>교격 강화+2</strong>: 교격의 효과가 유지되는 동안 다시 회피에 성공할 때마다 무기 배율이 추가로 40 오른다.</li>
+</ul><div class="notes">
+<p>첫 회피의 교격 효과 +100에 추가량이 누적되어 최대 +220이 된다. +1과 +2의 상한은 같으며, 상한에 도달하면 오라가 금색으로 변한다.</p>
+</div></td></tr>
+<tr id="zenith-15" data-skill="offense" data-jp="属撃強化"><th scope="row" class="skill">속성특효 강화</th><td class="rank">단일</td><td>
+<ul>
+<li><strong>속성특효 강화</strong>: 속성특효가 적용되는 속성 육질의 기준을 20 이상에서 15 이상으로 낮춘다.</li>
+</ul><div class="notes">
+</div></td></tr>
+<tr id="zenith-16" data-skill="offense" data-jp="纏雷強化"><th scope="row" class="skill">전광석화 강화</th><td class="rank">+2</td><td>
+<ul>
+<li><strong>전광석화 강화+1</strong>: 전광석화의 최대 충전 상태 지속 시간이 60초에서 80초로 늘어난다.</li>
+<li><strong>전광석화 강화+2</strong>: 전광석화의 최대 충전 상태 지속 시간이 60초에서 120초로 늘어난다.</li>
+</ul><div class="notes">
+</div></td></tr>
+<tr id="zenith-17" data-skill="offense" data-jp="氷界創生強化"><th scope="row" class="skill">절대영도 강화</th><td class="rank">단일</td><td>
+<ul>
+<li><strong>절대영도 강화</strong>: 절대영도 필드의 최종 단계 유지 시간을 늘려 단계가 내려가기까지의 여유가 길어진다.</li>
+</ul><div class="notes">
+</div></td></tr>
+<tr id="zenith-18" data-skill="offense" data-jp="劇物強化"><th scope="row" class="skill">극물취급달인 강화</th><td class="rank">단일</td><td>
+<ul>
+<li><strong>극물취급달인 강화</strong>: 극물취급달인에 의한 상태이상 수치 보정이 원래 값의 38%에서 42%로 완화된다.</li>
+</ul><div class="notes">
+<p>기괴 등 극물취급달인을 포함하는 복합 스킬에도 적용된다.</p>
+</div></td></tr>
+<tr id="zenith-19" data-skill="offense" data-jp="適応撃強化"><th scope="row" class="skill">적응격 강화</th><td class="rank">+2</td><td>
+<ul>
+<li><strong>적응격 강화+1</strong>: 발동 중인 적응격을 1단계 높인다.</li>
+<li><strong>적응격 강화+2</strong>: 발동 중인 적응격을 2단계 높인다.</li>
+</ul><div class="notes">
+<p>적응격+2보다 높은 단계가 되면 적응 공격의 육질 보정이 검사는 0.81에서 0.90으로, 거너는 0.72에서 0.81로 완화된다.</p>
+</div></td></tr>
+<tr id="zenith-20" data-skill="offense" data-jp="反射強化"><th scope="row" class="skill">반사 강화</th><td class="rank">+3</td><td>
+<ul>
+<li><strong>반사 강화+1</strong>: 발동 중인 반사를 1단계 높인다.</li>
+<li><strong>반사 강화+2</strong>: 발동 중인 반사를 2단계 높인다.</li>
+<li><strong>반사 강화+3</strong>: 발동 중인 반사를 3단계 높인다.</li>
+</ul><div class="notes">
+<p>반사+3보다 높은 단계가 되면 반사의 공격 범위가 넓어지고 모션 배율이 48에서 68로 오른다. 저스트 가드의 반사 모션 배율은 72에서 92로 오른다.</p>
+</div></td></tr>
+<tr id="zenith-21" data-skill="offense" data-jp="巧流強化"><th scope="row" class="skill">칼날회피 강화</th><td class="rank">단일</td><td>
+<ul>
+<li><strong>칼날회피 강화</strong>: 칼날회피로 회피에 성공하면 주변에 모션 배율 30의 타격 판정이 발생하고, 일정 횟수 동안 예리도를 소비하지 않는다.</li>
+</ul><div class="notes">
+<p>예리도 소비 무효 횟수: 쌍검 5회, 한손검·천룡곤 4회, 태도·랜스·슬래시액스F·마그넷스파이크 3회, 대검·해머·수렵피리·건랜스 2회.</p>
+<p>혹사의 소비특효와 함께 쓰면 한손검·쌍검은 2회, 나머지는 1회가 된다.</p>
+</div></td></tr>
+<tr id="zenith-22" data-skill="offense" data-jp="血気活性強化"><th scope="row" class="skill">혈기활성 강화</th><td class="rank">단일</td><td>
+<ul>
+<li><strong>혈기활성 강화</strong>: 혈기활성이 발동하고 체력이 최대치이면서 100 이상일 때, 기존 효과에 더해 검사 무기 배율 +100·거너 무기 배율 +50이 적용된다.</li>
+</ul><div class="notes">
+</div></td></tr>
+<tr id="zenith-23" data-skill="offense" data-jp="雌伏強化"><th scope="row" class="skill">인내 강화</th><td class="rank">단일</td><td>
+<ul>
+<li><strong>인내 강화</strong>: 인내의 공격력 상승이 최대 단계에 도달하기까지 필요한 가드 횟수가 줄고, 최대 단계에서 가드에 성공하면 예리도가 회복된다.</li>
+</ul><div class="notes">
+<p>공격을 맞기 직전에 가드하면 단계가 더 빠르게 오르고, 최대 단계에서 예리도 회복량도 늘어난다. 공격력 상승 상한 자체는 바뀌지 않는다.</p>
+<p>건랜스의 히트 블레이드·속성 블레이드 중에는 종료 시 예리도 소모를 줄이는 데도 적용된다.</p>
+</div></td></tr>
+<tr id="zenith-24" data-skill="offense" data-jp="喝強化"><th scope="row" class="skill">갈! 강화</th><td class="rank">단일</td><td>
+<ul>
+<li>붉은 혼: 자신과 효과를 받은 아군의 무기 배율 상승량이 +100이 되고, 아군에게 발도 대시의 스태미나 소비 무효를 부여한다.</li>
+<li>푸른 혼: 자신과 효과를 받은 아군의 방어력 상승량이 +200이 되고, 아군에게 체력 지속 회복과 상태이상 해제 효과를 부여한다.</li>
+</ul><div class="notes">
+<p>공격이 아군·지원 헌터에게 맞아도 경직시키지 않는다. 효과를 받은 아군 주변으로도 강화 효과가 퍼지며, 음폭탄으로도 효과를 부여할 수 있다.</p>
+<p>푸른 혼의 해제 대상에는 독·마비·방어력 저하·자력 상태 외에 악취·성대 마비·숙면·빙속성 피해[특대] 등이 포함된다.</p>
+</div></td></tr>
+<tr id="zenith-25" data-skill="offense" data-jp="幕無強化"><th scope="row" class="skill">난타 강화</th><td class="rank">단일</td><td>
+<ul>
+<li><strong>난타 강화</strong>: 난타의 단계 상승에 필요한 공격 횟수가 줄고, 3단계가 추가된다. 일정 시간 공격하지 못해도 효과가 전부 사라지는 대신 한 단계만 내려간다.</li>
+</ul><div class="notes">
+<p>1단계: 회심률 +35%, 회심 대미지 배율 +0.10.</p>
+<p>2단계: 회심률 +50%, 회심 대미지 배율 +0.15.</p>
+<p>3단계: 회심률 +60%, 회심 대미지 배율 +0.20. 수치는 각 단계의 합계이며 서로 더하지 않는다.</p>
+<p>반사·칼날회피 강화의 공격 판정도 횟수에 포함되지만, 검술+2의 추가 타격은 포함되지 않는다.</p>
+</div></td></tr>
+<tr id="zenith-26" data-skill="offense" data-jp="猛進強化"><th scope="row" class="skill">돌진 강화</th><td class="rank">단일</td><td>
+<ul>
+<li><strong>돌진 강화</strong>: 돌진에 3단계가 추가되어 무기 배율이 2단계보다 70 더 오른 합계 +200이 되고, 스태미나 감소가 무효화된다.</li>
+</ul><div class="notes">
+<p>3단계는 30초 동안 지속된 뒤 2단계로 돌아간다. 이후 다시 조건을 충족하면 3단계로 올릴 수 있다.</p>
+</div></td></tr>
+</tbody></table>
+<footer><p><a href="skill.htm">일반 스킬 설명으로</a> · <a href="#top">맨 위로</a></p>
+</footer>
+<script>(function(){
+  var input=document.getElementById('skill-search');
+  var rows=document.querySelectorAll('tr[data-skill]');
+  var headers=document.querySelectorAll('tr[data-category]');
+  function normalize(value){return value.toLowerCase().replace(/\s+/g,'');}
+  function filter(){
+    var query=normalize(input.value),visible=0,groups={};
+    for(var i=0;i<rows.length;i++){
+      var show=normalize(rows[i].textContent+' '+rows[i].getAttribute('data-jp')).indexOf(query)!==-1;
+      rows[i].style.display=show?'':'none';
+      if(show){visible++;groups[rows[i].getAttribute('data-skill')]=true;}
+    }
+    for(var j=0;j<headers.length;j++)headers[j].style.display=groups[headers[j].getAttribute('data-category')]?'':'none';
+    document.getElementById('count').textContent=visible+' / '+rows.length+'개';
+    document.getElementById('empty').style.display=visible?'none':'';
+  }
+  input.addEventListener('input',filter);
+  document.getElementById('reset-search').addEventListener('click',function(){input.value='';filter();input.focus();});
+  filter();
+})();
+</script>
+</body></html>

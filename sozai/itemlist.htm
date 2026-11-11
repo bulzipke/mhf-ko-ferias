@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<!-- KR-EN: tools/ferias_english_search.py 가 생성. 한글·일본어·영어 이름 동시 검색 -->
+<style type="text/css">
+<!--
+#res {white-space:nowrap;}
+ul {margin:0;padding:0;list-style-type:none;display:inline-block;vertical-align:top;}
+li {margin:0;padding:1px;border:1px solid silver;font-size:80%;white-space:nowrap;}
+li, x:-moz-any-link, x:default {padding:0 1px;} /*FF用*/
+li {_padding:0 1px;} /*IE6用*/
+a:hover {background-color:lightgrey;}
+.en {color:gray;margin-left:.4em;}
+-->
+</style>
+<script type="text/javascript" src="item.js?audit2=f86135b6ef12&review4=6eaa4acd6428"></script>
+<script type="text/javascript" src="item_en.js?kr=315da1778b60"></script>
+<script type="text/javascript">
+<!--
+// 검색어에 가나·한자가 있을 때만 일본판 이름을 받는다
+(function () {
+	var q = location.search.substring(1);
+	try { q = decodeURIComponent(q); } catch (e) {}
+	if (/[\u3005\u3041-\u30ff\u3400-\u9fff\uf900-\ufaff\uff66-\uff9f]/.test(q)) {
+		document.write('<script type="text/javascript" src="item_jp.js?kr=89b7d081cd70"><\/script>');
+	}
+})();
+//-->
+</script>
+<title>소재목록</title>
+</head>
+<body>
+<form name="ls" action="" onsubmit="location.href = 'itemlist.htm?' + encodeURIComponent(document.ls.i_item.value);return false;" style="margin-bottom:1em;">
+<div>
+검색：<input type="text" value="" name="i_item" id="i_item" autocomplete=off placeholder="한글·일본어·영어 이름" style="ime-mode: active;">
+<input type="submit" value="검색"></div></form>
+<script type="text/javascript">
+<!--
+(function(document){
+/*@cc_on if (@_jscript_version < 9) {_d=document;eval('var document=_d');}@*/
+var MST_Item = setItem(),
+	MST_En = (typeof setItemEN === "function") ? setItemEN() : {},
+	MST_Jp = (typeof setItemJP === "function") ? setItemJP() : null,
+	i_item = document.getElementById("i_item"),
+	raw = location.search.substring(1),
+	searchMei;
+try { searchMei = decodeURIComponent(raw); } catch (e) { searchMei = raw; }
+setItem = null;
+if (typeof setItemEN === "function") { setItemEN = null; }
+if (typeof setItemJP === "function") { setItemJP = null; }
+i_item.focus();
+i_item.value = searchMei;
+
+// 공백·문장부호는 낱말 경계로 본다. 대소문자·전각/반각은 무시한다(NFKC)
+var SEP = /[\s\u3000.,'"`\u00b7\u30fb\-_\/\\()\[\]{}<>\u3010\u3011\u300c\u300d\u300e\u300f:;!?~\u2026]+/g;
+function words(s) {
+	if (s.normalize) { s = s.normalize("NFKC"); }
+	// 히라가나는 가타카나로 접는다(れうす = レウス). 한글·영어에는 영향이 없다
+	s = s.replace(/[\u3041-\u3096]/g, function (c) { return String.fromCharCode(c.charCodeAt(0) + 0x60); });
+	return s.toLowerCase().replace(SEP, " ").replace(/^ +| +$/g, "");
+}
+// 로마숫자(Ⅱ)는 II 와 2 둘 다로 찾히게 숫자 표기도 함께 색인한다
+function roman(s, f) {
+	var h = f(s);
+	if (/[\u2160-\u216b]/.test(s)) {
+		h += "\u0001" + f(s.replace(/[\u2160-\u216b]/g, function (c) { return " " + (c.charCodeAt(0) - 0x215f); }));
+	}
+	return h;
+}
+// 한글·일본어 이름: 띄어쓰기가 달라도 찾히게 공백을 지우고 부분 일치
+function hayKo(s) { return roman(s, function (x) { return words(x).replace(/ /g, ""); }); }
+// 영어 이름: 낱말 앞부분 일치. 낱말 경계를 넘는 일치(Peach Coral 의 "hc")는 막는다
+function hayEn(s) { return roman(s, function (x) { return " " + words(x) + " "; }); }
+function esc(s) {
+	return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+// 띄어 쓴 낱말은 모두 들어 있어야 한다(AND). 한 낱말 안의 문장부호(S.Rath, 돌·황)는 이어진 구로 본다
+var parts = searchMei.split(/\s+/), toks = [], solid = [], longest = 0;
+for (var k = 0; k < parts.length; k++) {
+	var w = words(parts[k]);
+	if (!w) { continue; }
+	toks[toks.length] = w;
+	solid[solid.length] = w.replace(/ /g, "");
+	if (solid[solid.length - 1].length > longest) { longest = solid[solid.length - 1].length; }
+}
+// G·SP·HC 처럼 두 글자 이하만 치면 한글 이름의 영문 접미어를 찾는 것으로 보고 영어 이름은 보지 않는다.
+// 가나·한자가 든 검색어도 일본어 이름 검색으로 보고 영어 이름은 보지 않는다("レウス G" 가 Azure *G*linsword 에 걸리지 않게)
+var useEn = longest >= 3 && !/[々ぁ-ヿ㐀-鿿豈-﫿ｦ-ﾟ]/.test(searchMei);
+function hitKo(h) {
+	for (var k = 0; k < solid.length; k++) {
+		if (h.indexOf(solid[k]) === -1) { return false; }
+	}
+	return true;
+}
+// 낱말마다 한글·일본어·영어 이름 중 하나에 들어 있으면 된다. 돌려주는 값: 1 영어로 걸림, 2 일본어로 걸림
+function hitAlt(hk, he, hj) {
+	var used = 0;
+	for (var k = 0; k < toks.length; k++) {
+		if (hk.indexOf(solid[k]) !== -1) { continue; }
+		if (hj && hj.indexOf(solid[k]) !== -1) { used |= 2; continue; }
+		if (he && he.indexOf(" " + toks[k]) !== -1) { used |= 1; continue; }
+		return 0;
+	}
+	return used;
+}
+
+var n = 0, cnt = 0, list = [], via = {};
+for (var i in MST_Item) {
+	if (MST_Item[i][1] === "-") { continue; }
+	if (toks.length === 0) { list[n++] = MST_Item[i][5] + i; continue; }
+	var hk = hayKo(MST_Item[i][0]);
+	if (hitKo(hk)) { list[n++] = MST_Item[i][5] + i; continue; }
+	var he = useEn && MST_En[i] ? hayEn(MST_En[i]) : "",
+		hj = MST_Jp && MST_Jp[i] ? hayKo(MST_Jp[i]) : "";
+	if (!he && !hj) { continue; }
+	var used = hitAlt(hk, he, hj);
+	if (used) {
+		list[n++] = MST_Item[i][5] + i;
+		via[i] = used;
+	}
+}
+list.sort();
+var out = ['<div id="res">'];
+if (n === 0 && toks.length) {
+	out[out.length] = '<p>검색 결과가 없습니다.<\/p>';
+} else {
+	out[out.length] = "<ul>";
+	for (var j = 0, t = ""; j < n; j++) {
+		if (cnt === 150) {
+			out[out.length] = "<\/ul><ul>";
+			cnt = 0;
+		}
+		t = list[j].substring(4);
+		out[out.length] = "<li><a href=\"sozai.htm?" + t + "\">" + MST_Item[t][0]
+			+ (via[t] & 2 ? "<span class=\"en\">" + esc(MST_Jp[t]) + "<\/span>" : "")
+			+ (via[t] & 1 ? "<span class=\"en\">" + esc(MST_En[t]) + "<\/span>" : "") + "<\/a>";
+		cnt++;
+	}
+	out[out.length] = "<\/ul>";
+}
+out[out.length] = "<\/div>";
+document.write(out.join(""));
+})(document);
+//-->
+</script>
+</body>
+</html>

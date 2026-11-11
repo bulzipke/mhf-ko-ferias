@@ -1,0 +1,13 @@
+.ferias-plaza { clear: both; padding-top: 18px; max-width: 980px; }
+.ferias-plaza h2 { font-size: 1em; margin: 0 0 6px; }
+.ferias-plaza-scroll { overflow-x: auto; }
+.ferias-plaza-table { border-collapse: collapse; font-size: 85%; white-space: nowrap; }
+.ferias-plaza-table th, .ferias-plaza-table td { border: 1px solid #999; padding: 7px 12px; text-align: left; }
+.ferias-plaza-table thead th { background: #e1e1e1; font-weight: normal; }
+.ferias-plaza-table tbody th { background: #f5f5f5; }
+.ferias-plaza-overview td { min-width: 105px; }
+.ferias-plaza-current { background: #eef7ef; color: #176839; font-weight: bold; }
+.ferias-plaza details { margin-top: 8px; }
+.ferias-plaza summary { cursor: pointer; font-size: 85%; }
+.ferias-plaza-annual { margin-top: 7px; }
+.ferias-plaza-note { font-size: 80%; color: #555; margin: 8px 0 0; }

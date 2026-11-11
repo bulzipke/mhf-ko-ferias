@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>사이즈</title>
+<style type="text/css">
+<!--
+th {font-weight:normal;background-color:silver;}
+td {white-space:nowrap;}
+td.n {text-align:right;}
+p {margin-bottom:0;}
+-->
+</style>
+</head>
+<body>
+<div>몬스터의사이즈</div>
+<p>몬스터의 사이즈는, 퀘스트마다 설정되어 있는 기본 사이즈와 변동 제한폭에 의해 결정된다.<br>
+<strong>기본사이즈％×변동치％（변동제한폭이내）</strong><br>
+<br>
+기본 사이즈는, 퀘스트마다 설정되어 있으며, 내부에서는 %로 표시되어 있다.<br>
+여기에, 랜덤으로 구한 변동치%(100을 중심으로 상하로 변동)를 곱하고, 결과의 %와 몬스터의 100% 시의 크기를 곱해서, 사이즈가 결정된다.<br>
+<br>
+변동폭은 우선 아래 7종류 중 하나의 변동 테이블을 선택한다.</p>
+<table border=1 cellspacing=0 cellpadding=2>
+<tr><th><br></th><th>변동폭</th><th style="width:4.5em">확률</th></tr>
+<tr><td>테이블1</td><td>75％～79％</td><td>1/32</td></tr>
+<tr><td>테이블2</td><td>80％～84％</td><td>1/32</td></tr>
+<tr><td>테이블3</td><td>85％～94％</td><td>2/32</td></tr>
+<tr><td>테이블4</td><td>95％～105％</td><td>19/32</td></tr>
+<tr><td>테이블5</td><td>106％～115％</td><td>6/32 </td></tr>
+<tr><td>테이블6</td><td>116％～120％</td><td>2/32</td></tr>
+<tr><td>테이블7</td><td>121％～125％</td><td>1/32</td></tr>
+</table>
+<p>변동 테이블이 선택되면, 그 테이블 내의 변동치를 랜덤으로 결정한다.
+<br>단, 퀘스트 데이터에는 변동 제한폭이 설정되어 있어, 이하의 범위에 들어가도록 수정된다.
+<br>(하기 5종류 중 하나. 어느 제한폭인지는 퀘스트에 따라 다르다)</p>
+<table border=1 cellspacing=0 cellpadding=2>
+<tr><th>패턴</th><th>제한폭</th></tr>
+<tr><td>0</td><td>100％변경 불가</td></tr>
+<tr><td>1</td><td>100％～105％</td></tr>
+<tr><td>2</td><td>95％～110％</td></tr>
+<tr><td>3</td><td>87％～118％</td></tr>
+<tr><td>4</td><td>80％～125％</td></tr>
+</table>
+<p>어떠한 조건에 의해, +10% 또는 -10%되는 경우가 있다. 그 조건은 불명. (연속 수렵, 특기 시간대? '대물아 와라'?)</p>
+<p>사이즈표</p>
+<table border=1 cellspacing=0 cellpadding=2>
+<tr><th></th><th style="width:4.5em">기본</th><th style="width:4.5em">빅</th><th style="width:4.5em">킹</th><th style="width:4.5em">스몰</th><th>킹사이즈가 나오는 주요 퀘스트</th></tr>
+<tr><td>도스람포스</td><td class=n>738.4 </td><td class=n>841.8 </td><td class=n>908.2 </td><td class=n>664.6 </td><td>★５번식기 ≪밀림 탐색≫푸른 두 개의 그림자</td></tr>
+<tr><td>도스게네포스</td><td class=n>732.1 </td><td class=n>827.3 </td><td class=n>900.5 </td><td class=n>658.9 </td><td>★５한랭기 ≪사막 탐색≫사막에서 뛰노는 사냥꾼</td></tr>
+<tr><td>도스이오스</td><td class=n>774.6 </td><td class=n>875.3 </td><td class=n>1053.5 </td><td class=n>697.1 </td><td>★５온난기 ≪늪지 탐색≫붉은 독의 통솔자</td></tr>
+<tr><td>얀쿡크</td><td class=n>919.8 </td><td class=n>1048.6 </td><td class=n>1122.2 </td><td class=n>827.8 </td><td>★５온난기 ≪늪지 탐색≫괴조의 쌍격</td></tr>
+<tr><td>게리오스</td><td class=n>1013.7 </td><td class=n>1196.2 </td><td class=n>1267.1 </td><td class=n>942.7 </td><td>★５온난기 ≪밀림 탐색≫독의 폭풍</td></tr>
+<tr><td>리오레이아</td><td class=n>1645.6 </td><td class=n>1941.8 </td><td class=n>2122.8 </td><td class=n>1530.4 </td><td>★６한랭기 ≪밀림 탐색≫백화요란</td></tr>
+<tr><td>리오레우스</td><td class=n>1629.4 </td><td class=n>1857.5 </td><td class=n>2069.3 </td><td class=n>1466.5 </td><td>★７번식기 ≪고탑 탐색≫용들의 둥지</td></tr>
+<tr><td>푸루푸루</td><td class=n>873.2 </td><td class=n>1030.4 </td><td class=n>1178.8 </td><td class=n>812.1 </td><td>★６한랭기 ≪늪지 탐색≫빨강과 하양</td></tr>
+<tr><td>바살모스</td><td class=n>1297.6 </td><td class=n>1531.2 </td><td class=n>1673.9 </td><td class=n>1206.8 </td><td>★５온난기 ≪화산 탐색≫바위지대에 숨은 함정</td></tr>
+<tr><td>그라비모스</td><td class=n>2099.9 </td><td class=n>2582.9 </td><td class=n>2834.9 </td><td class=n>2036.9 </td><td>★７번식기 ≪늪지 탐색≫위협의 쌍벽</td></tr>
+<tr><td>모노블로스</td><td class=n>2004.2 </td><td class=n>2324.9 </td><td class=n>2545.3 </td><td class=n>1984.2 </td><td>☆３한랭기 ≪헌터즈 퀘스트: 사막≫하얀 일각룡의 분노</td></tr>
+<tr><td>디아블로스</td><td class=n>1993.4 </td><td class=n>2451.9 </td><td class=n>2770.8 </td><td class=n>1933.6 </td><td>★７번식기 ≪사막 탐색≫네 개의 뿔</td></tr>
+<tr><td>도스가레오스</td><td class=n>1538.3 </td><td class=n>1815.2 </td><td class=n>1876.7 </td><td class=n>1430.6 </td><td>★６한랭기 ≪사막 탐색≫모래 속을 헤엄치는 용</td></tr>
+<tr><td>가노토토스</td><td class=n>2315.2 </td><td class=n>2847.7 </td><td class=n>3102.4 </td><td class=n>2245.7 </td><td>★７온난기 ≪밀림 탐색≫대어</td></tr>
+<tr><td>다이묘자자미</td><td class=n>1044.0 </td><td class=n>1148.4 </td><td class=n>1284.1 </td><td class=n>918.7 </td><td>★６번식기 ≪사막 탐색≫모래바람의 요새</td></tr>
+<tr><td>쇼군기자미</td><td class=n>863.0 </td><td class=n>983.8 </td><td class=n>1035.6 </td><td class=n>811.2 </td><td>★７한랭기 ≪화산 탐색≫네 자루의 대낫</td></tr>
+<tr><td>도스팽고</td><td class=n>566.0 </td><td class=n>735.8 </td><td class=n>1188.6 </td><td class=n>554.7 </td><td>★５온난기 ≪설산 탐색≫극한의 땅에서 수렵</td></tr>
+<tr><td>바바콩가</td><td class=n>984.0 </td><td class=n>1131.6 </td><td class=n>1230.0 </td><td class=n>954.5 </td><td>★６한랭기 ≪밀림 탐색≫도모수의 세력권</td></tr>
+<tr><td>도도블랑고</td><td class=n>860.0 </td><td class=n>1075.0 </td><td class=n>1186.8 </td><td class=n>851.4 </td><td>★７번식기 ≪설산 탐색≫설산의 대가족</td></tr>
+<tr><td>라잔</td><td class=n>960.0 </td><td class=n>1200.0 </td><td class=n>1344.4 </td><td class=n>1008.4 </td><td>★８ ≪화산 탐색≫금사자</td></tr>
+<tr><td>얀가루루가</td><td class=n>1290.0</td><td class=n>1483.5</td><td class=n>1560.9</td><td class=n>1173.9</td><td>？</td></tr>
+<tr><td>키린</td><td class=n>464.3 </td><td class=n>603.6 </td><td class=n>821.8 </td><td class=n>450.4 </td><td>★８ ≪고룡 퀘스트: 고탑≫고탑을 내리치는 낙뢰</td></tr>
+<tr><td>크샬다오라</td><td class=n>1577.0 </td><td class=n>1734.7 </td><td class=n>1892.4 </td><td class=n>1435.1 </td><td>★８ ≪돈도르마 방위전≫풍상룡을 토벌하라!</td></tr>
+<tr><td>오나즈치</td><td class=n>1744.0 </td><td class=n>2092.8 </td><td class=n>2459.0 </td><td class=n>1674.2 </td><td>★８ ≪고룡 퀘스트: 숲과 언덕≫정적을 연주하는 용 </td></tr>
+<tr><td>테오·테스카토르</td><td class=n>1740.0 </td><td class=n>2001.0 </td><td class=n>2105.4 </td><td class=n>1583.4 </td><td>★８ ≪고룡 퀘스트: 화산≫불꽃 나라의 왕</td></tr>
+<tr><td>나나·테스카토리</td><td class=n>1740.0 </td><td class=n>1914.0 </td><td class=n>2175.0 </td><td class=n>1531.2 </td><td>☆４ ≪헌터즈 고룡: 고탑≫염비룡이 깃든 탑</td></tr>
+<tr><td>히프노크</td><td class=n>1208.0</td><td class=n>1389.2</td><td class=n>1461.7</td><td class=n>1099.3</td><td>？</td></tr>
+<tr><td>히프노크 희소종</td><td class=n>1308.0</td><td class=n>1504.2</td><td class=n>1582.7</td><td class=n>1190.3</td><td>？</td></tr>
+<tr><td>티가렉스</td><td class=n>1735.3</td><td class=n>2065.0</td><td class=n>2134.4</td><td class=n>1561.8</td><td>？</td></tr>
+<tr><td>볼가노스</td><td class=n>2431.2</td><td class=n>2968.2</td><td class=n>3233.7</td><td class=n>2340.8</td><td>？</td></tr>
+<tr><td>에스피나스</td><td class=n>1673.8</td><td class=n>1908.1</td><td class=n>2125.7</td><td class=n>1506.4</td><td>？</td></tr>
+<tr><td>아크라·바심</td><td class=n>2008.7</td><td class=n>2310.0</td><td class=n>2490.8</td><td class=n>1807.8</td><td>？</td></tr>
+<tr><td>아크라·제비아</td><td class=n>2008.7</td><td class=n>2540.0</td><td class=n>2738.8</td><td class=n>1987.8</td><td>？</td></tr>
+<tr><td>파리아푸리아</td><td class=n>2009.4</td><td class=n>2310.8</td><td class=n>2491.7</td><td class=n>1808.5</td><td>？</td></tr>
+<tr><td>벨큐로스</td><td class=n>1543.0</td><td class=n>1774.5</td><td class=n>1913.3</td><td class=n>1388.7</td><td>★７≪프론티어 퀘스트≫하늘을 나는 번개</td></tr>
+<tr><td>카무·올가론</td><td class=n>980.0</td><td class=n>1078.8</td><td class=n>1176.0</td><td class=n>891.8</td><td>？</td></tr>
+<tr><td>노노·올가론</td><td class=n>920.0</td><td class=n>1012.0</td><td class=n>1104.0</td><td class=n>837.2</td><td>？</td></tr>
+<tr><td>듀라가우아</td><td class=n>1388.0</td><td class=n></td><td class=n></td><td class=n></td><td>？</td></tr>
+<tr><td>드라규로스</td><td class=n>1467.0</td><td class=n></td><td class=n></td><td class=n></td><td>？</td></tr>
+<tr><td>그렌제블</td><td class=n>1858.0</td><td class=n></td><td class=n></td><td class=n></td><td>？</td></tr>
+<tr><td>루코디오라</td><td class=n>1687.0</td><td class=n></td><td class=n></td><td class=n></td><td>？</td></tr>
+<tr><td>ＵＮＫＮＯＷＮ</td><td class=n>1974.20</td><td class=n></td><td class=n></td><td class=n></td><td>？</td></tr>
+<tr><td>고고모아</td><td class=n>1072.00</td><td class=n></td><td class=n></td><td class=n></td><td>？</td></tr>
+<tr><td>코코모아</td><td class=n>327.00</td><td class=n></td><td class=n></td><td class=n></td><td>？</td></tr>
+<tr><td>아비올그</td><td class=n>1645.60</td><td class=n></td><td class=n></td><td class=n></td><td>？</td></tr>
+</table>
+</body>
+</html>

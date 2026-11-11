@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 게임 안 번역 문제
+    url: https://github.com/bulzipke/mhf-ko-localization/issues
+    about: 게임 화면에 나오는 한국어 번역 문제는 한국어 패치 저장소로 보내 주세요.
+  - name: 원본 사이트 (ferias)
+    url: http://ferias.life.coocan.jp/
+    about: 일본어 원본 데이터 자체의 오류는 원본 사이트에서 확인해 주세요.

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+th {white-space:nowrap;font-weight:normal;background-color:silver;}
+td {white-space:nowrap;}
+p {margin-bottom:0}
+-->
+</style>
+<title>라스터의 스킬</title>
+</head><body>
+<h4>라스터의 스킬</h4>
+<p>○…유효, △…미묘, ×…무효</p>
+<table border=1 cellspacing=0 cellpadding=1>
+<tr><th colspan=3>체력·스태미나 계열</th></tr>
+<tr><td>체력</td><td>△</td><td></td></tr>
+<tr><td>회복속도</td><td>△</td><td></td></tr>
+<tr><td>배고픔</td><td>×</td><td>스킬이 발동해도 고기는 먹는다</td></tr>
+<tr><td>회복</td><td>○</td><td></td></tr>
+<tr><td>스태미나</td><td>×</td><td>스태미나는 영향받지 않는다</td></tr>
+<tr><td>기력회복</td><td>×</td><td>스태미나는 영향받지 않는다</td></tr>
+<tr><td>식사</td><td>○</td><td></td></tr>
+<tr><td>먹보</td><td>×</td><td>스태미나는 영향받지 않는다</td></tr>
+<tr><th colspan=3>공격 계열</th></tr>
+<tr><td>공격</td><td>○</td><td></td></tr>
+<tr><td>특수공격</td><td>○</td><td></td></tr>
+<tr><td>폭탄강화</td><td>×</td><td>폭탄을 사용하지 않는다</td></tr>
+<tr><td>포술사</td><td>○</td><td></td></tr>
+<tr><td>저력</td><td>△</td><td>스킬、식사효과에에서발동<br>이탈 후, 귀환해도 화재현장 상태는 유지<br>체력이 낮을수록 이탈하기 쉽다</td></tr>
+<tr><td>달인</td><td>○</td><td></td></tr>
+<tr><td>체술</td><td>×</td><td>때리지 않는다</td></tr>
+<tr><td>※속성 공격력</td><td>○</td><td></td></tr>
+<tr><td>속성 공격력</td><td>○</td><td></td></tr>
+<tr><td>단식</td><td>×</td><td>배고픔 상태가 되지 않는다</td></tr>
+<tr><td>차지단축</td><td>○</td><td></td></tr>
+<tr><td>무기다루기</td><td>○</td><td></td></tr>
+<tr><th colspan=3>방어 계열</th></tr>
+<tr><td>방어</td><td>△</td><td></td></tr>
+<tr><td>가드성능</td><td>○</td><td></td></tr>
+<tr><td>자동방어</td><td>×</td><td>기본값으로 발동</td></tr>
+<tr><th colspan=3>검사 계열</th></tr>
+<tr><td>연마도사</td><td>△</td><td>가는 속도가 빨라진다</td></tr>
+<tr><td>예리도</td><td>×</td><td>예리도는 떨어지지 않는다</td></tr>
+<tr><td>장인</td><td>○</td><td></td></tr>
+<tr><td>○○검（검정）</td><td>×</td><td>장착하지 않는다</td></tr>
+<tr><td>○○기(무기마다)</td><td>○</td><td></td></tr>
+<tr><td>검술</td><td>○</td><td></td></tr>
+<tr><th colspan=3>거너 계열</th></tr>
+<tr><td>일반탄강화</td><td>○</td><td></td></tr>
+<tr><td>관통탄강화</td><td>○</td><td></td></tr>
+<tr><td>산탄강화</td><td>○</td><td></td></tr>
+<tr><td>일반탄추가</td><td>△</td><td></td></tr>
+<tr><td>관통탄추가</td><td>△</td><td></td></tr>
+<tr><td>산탄추가</td><td>△</td><td></td></tr>
+<tr><td>유탄추가</td><td>△</td><td></td></tr>
+<tr><td>확산탄추가</td><td>△</td><td></td></tr>
+<tr><td>장전수</td><td>○</td><td></td></tr>
+<tr><td>장전</td><td>○</td><td></td></tr>
+<tr><td>반동</td><td>○</td><td></td></tr>
+<tr><td>연사</td><td>○</td><td></td></tr>
+<tr><td>탄조합</td><td>×</td><td>조합하지 않는다</td></tr>
+<tr><td>정밀사격</td><td>○</td><td></td></tr>
+<tr><td>독병추가</td><td>×</td><td>병을 사용하지 않는다</td></tr>
+<tr><td>마비병추가</td><td>×</td><td>병을 사용하지 않는다</td></tr>
+<tr><td>수면병추가</td><td>×</td><td>병을 사용하지 않는다</td></tr>
+<tr><td>○○기(무기마다)</td><td>○</td><td></td></tr>
+<tr><th colspan=3>내성 계열</th></tr>
+<tr><td>모든내성UP</td><td>△</td><td></td></tr>
+<tr><td>화내성</td><td>△</td><td></td></tr>
+<tr><td>수내성</td><td>△</td><td></td></tr>
+<tr><td>빙내성</td><td>△</td><td></td></tr>
+<tr><td>뇌내성</td><td>△</td><td></td></tr>
+<tr><td>용내성</td><td>△</td><td></td></tr>
+<tr><th colspan=3>상태이상계</th></tr>
+<tr><td>독</td><td>△</td><td>자동으로 해독약을 사용한다.</td></tr>
+<tr><td>마비</td><td>○</td><td></td></tr>
+<tr><td>수면</td><td>○</td><td></td></tr>
+<tr><td>내상태이상</td><td>○</td><td></td></tr>
+<tr><td>기절</td><td>○</td><td></td></tr>
+<tr><td>탈취</td><td>△</td><td>자동으로 소취옥을 사용한다</td></tr>
+<tr><td>눈사람방지</td><td>○</td><td></td></tr>
+<tr><td>성대</td><td>△</td><td>말하지 않는다</td></tr>
+<tr><td>대방어DOWN</td><td>△</td><td></td></tr>
+<tr><th colspan=3>기타 데미지 보호</th></tr>
+<tr><td>청각보호</td><td>△</td><td>드물게 가드한다</td></tr>
+<tr><td>풍압</td><td>△</td><td>드물게 가드한다</td></tr>
+<tr><td>흔들림방지</td><td>△</td><td>드물게 가드한다</td></tr>
+<tr><td>회피성능</td><td>○</td><td></td></tr>
+<tr><td>더위방지</td><td>△</td><td>자동으로 쿨러 드링크를 마신다</td></tr>
+<tr><td>추위방지</td><td>△</td><td>자동으로 핫 드링크를 마신다</td></tr>
+<tr><td>훔치기무효</td><td>×</td><td>도둑맞지 않는다</td></tr>
+<tr><td>지형</td><td>×</td><td>지형 데미지를 받지 않는다</td></tr>
+<tr><td>심판</td><td>○</td><td></td></tr>
+<tr><td>낙법</td><td>○</td><td></td></tr>
+<tr><td>줄행랑</td><td>×</td><td>도주하지 않는다</td></tr>
+<tr><td>근성</td><td>△</td><td></td></tr>
+<tr><th colspan=3>아이템 사용·조합 계열</th></tr>
+<tr><td>광역</td><td>○</td><td>회복약, 해독약을 사용</td></tr>
+<tr><td>효과지속</td><td>△</td><td>마음대로 마신다</td></tr>
+<tr><td>변덕</td><td>×</td><td>채집도구를 사용하지 않는다</td></tr>
+<tr><td>강철어깨</td><td>○</td><td></td></tr>
+<tr><td>투척</td><td>△</td><td>페인트 볼만</td></tr>
+<tr><td>고기굽기</td><td>×</td><td>굽지 않는다</td></tr>
+<tr><td>낚시</td><td>×</td><td>낚시하지 않는다</td></tr>
+<tr><td>조합성공률</td><td>×</td><td>조합하지 않는다</td></tr>
+<tr><td>연금술</td><td>×</td><td>조합하지 않는다</td></tr>
+<tr><td>피리명인</td><td>○</td><td></td></tr>
+<tr><td>고속설치</td><td>○</td><td></td></tr>
+<tr><td>나이프술</td><td>○</td><td>나이프 대여 시에는 유효</td></tr>
+<tr><th colspan=3>맵·탐지 계열</th></tr>
+<tr><td>지도</td><td>×</td><td></td></tr>
+<tr><td>천리안</td><td>△</td><td>자동마킹의 경우 페인트 볼을 던지지 않는다.</td></tr>
+<tr><td>기척</td><td>×</td><td></td></tr>
+<tr><th colspan=3>채집·운반 계열</th></tr>
+<tr><td>고속채집</td><td>△</td><td>갈무리가 빨라질 뿐</td></tr>
+<tr><td>갈무리</td><td>△</td><td>2회 벗기는 것은 아무도 득이 없다</td></tr>
+<tr><td>운반</td><td>×</td><td>운반하지 않는다</td></tr>
+<tr><td>채집</td><td>×</td><td>채집하지 않는다</td></tr>
+<tr><th colspan=3>보수 계열</th></tr>
+<tr><td>운기</td><td>×</td><td></td></tr>
+<tr><td>몬스터</td><td>×</td><td></td></tr>
+<tr><td>압력</td><td>×</td><td></td></tr>
+<tr><th colspan=3>기타 계열</th></tr>
+<tr><td>인연</td><td>△</td><td></td></tr>
+<tr><td>번뜩임</td><td>△</td><td></td></tr>
+<tr><td>포획고수</td><td>×</td><td></td></tr>
+<tr><td>보살핌</td><td>○</td><td></td></tr>
+</table>
+</body></html>

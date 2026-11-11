@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+table,table td,table th {border-collapse:collapse;border:1px ridge #777777;padding:2px;margin-bottom:1em;}
+th {white-space:nowrap;font-weight:normal;background-color:silver;}
+td {white-space:nowrap;}
+tr.top td {vertical-align:top}
+td.n {text-align:right}
+td.c {text-align:center}
+table,p {font-size:85%}
+li {font-size:80%}
+h4 {clear:both;margin-top:1em;background-color:silver;}
+.hosoku {float:left;margin-right:3em;}
+.ex {font-size:70%}
+ul {margin:0 0 0 1em}
+
+ul.ttop {margin:0;padding:1px 0;width:60em;list-style-type:none;}
+ul.ttop li {font-size:100%;float:left;padding:2px 5px 2px 5px;border:1px solid silver;}
+ul#top {padding-top:0;}
+
+td.gl {background-color:lightskyblue;}
+td.gla {background-color:darksalmon;}
+caption {white-space:nowrap;text-align:left}
+-->
+</style>
+<title>무기성능</title>
+</head>
+<body>
+<ul class=ttop>
+<li>몬스터로의 공격　<a href="doc-sword.htm">【근접무기 편】</a>
+／<a href="doc-gun.htm">【보우건 편】</a>
+／<a href="doc-yumi.htm">【활 편】</a>
+<li><a href="doc-spec.htm">무기성능</a>
+<li><a href="doc-kensyo.htm">검정스킬</a>
+<li><a href="doc-buki.htm">무기의 종류</a>
+<li><a href="doc-bougu.htm">방어구의 종류</a>
+<li><a href="doc-feature.htm">피처</a>
+</ul>
+<hr style="clear:both">
+<h3 id=TOP>무기성능</h3>
+<ul class=ttop>
+<li><a href="#TAIKEN">대검</a>
+<li><a href="#TACHI">태도</a>
+<li><a href="#KATATE">한손검</a>
+<li><a href="#SOUKEN">쌍검</a>
+<li><a href="#HAMMER">해머</a>
+<li><a href="#HORN">수렵피리</a>
+<li><a href="#LANCE">랜스</a>
+<li><a href="#GUNLANCE">건랜스</a>
+<li><a href="#TONFA">천룡곤</a>
+<li><a href="#RIGHT">라이트보우건</a>
+<li><a href="#HEAVY">헤비보우건..</a>
+<li><a href="#YUMI">활</a>
+</ul>
+<h4 id=TAIKEN>대검　　　<a href="#TOP">위로</a></h4>
+<div>참속성　보정 100%</div>
+<table border=1 cellspacing=0 cellpadding=2>
+<tr><th colspan=4>지의 형</th><th colspan=4>천의 형</th><th colspan=4>람의 형</th></tr>
+<tr><th>공격액션</th><th>위력</th><th>SA</th><th>보충</th><th>공격액션</th><th>위력</th><th>SA</th><th>보충</th><th>공격액션</th><th>위력</th><th>SA</th><th>보충</th></tr>
+<tr><td>세로 베기(무기 꺼내기)</td><td class=c>58</td><td>○</td><td></td><td>세로 베기(무기 꺼내기)</td><td class=c>58</td><td>○</td><td></td><td>세로 베기(무기 꺼내기)</td><td class=c>58</td><td>○</td><td></td></tr>
+<tr><td>　피니시Ａ</td><td class=c>43·63</td><td>○</td><td>튕김 무효</td><td>　피니시Ａ</td><td class=c>43·63</td><td>○</td><td>튕김 무효</td><td>　피니시Ａ</td><td class=c>43·63</td><td>○</td><td>튕김 무효</td></tr>
+<tr><td>수평 베기(무기 꺼내기)</td><td class=c>44<br>57[시질]</td><td>○</td><td></td><td>수평 베기(무기 꺼내기)</td><td class=c>44<br>57[시질]</td><td>○</td><td></td><td>수평 베기(무기 꺼내기)</td><td class=c>44<br>57[시질]</td><td>○</td><td></td></tr>
+<tr><td>　피니시Ｂ</td><td class=c>96</td><td>○</td><td>튕김 무효</td><td>　피니시Ｂ</td><td class=c>96</td><td>○</td><td>튕김 무효</td><td>　피니시Ｂ</td><td class=c>96</td><td>○</td><td>튕김 무효</td></tr>
+<tr><td>올려 베기(무기 꺼내기)</td><td class=c>56<br>72[시질]</td><td>○</td><td>대인：띄우기</td><td>올려 베기(무기 꺼내기)</td><td class=c>56<br>72[시질]</td><td>○</td><td>대인：띄우기</td><td>올려 베기(무기 꺼내기)</td><td class=c>56<br>72[시질]</td><td>○</td><td>대인：띄우기</td></tr>
+<tr><td>　피니시Ｃ</td><td class=c>96</td><td>○</td><td>튕김 무효</td><td>　피니시Ｃ</td><td class=c>96</td><td>○</td><td>튕김 무효</td><td>　피니시Ｃ</td><td class=c>96</td><td>○</td><td>튕김 무효</td></tr>
+<tr><td>모아 베기(단계 1)</td><td class=c>78<br>81[차지+1]<br>83.5[차지+2]</td><td>○</td><td>보정 110%</td><td>가드 베기(0회)</td><td class=c>46</td><td>○</td><td rowspan=4>가드상태<br>몬스터의<br>공격이나 폭탄을<br>카운트<br>튕김 무효</td><td>가드 베기(0회)</td><td class=c>46</td><td>○</td><td rowspan=4>가드상태<br>몬스터의<br>공격이나 폭탄을<br>카운트<br>튕김 무효</td></tr>
+<tr><td>모아 베기(단계 2)</td><td class=c>96<br>99[차지+1]<br>101.5[차지+2]</td><td>○</td><td>보정 120%</td><td>가드 베기(1회)</td><td class=c>102</td><td>○</td><td>가드 베기(1회)</td><td class=c>102</td><td>○</td></tr>
+<tr><td>모아 베기(단계 3)</td><td class=c>133<br>136[차지+1]<br>138.5[차지+2]</td><td>○</td><td>보정 130%</td><td>가드 베기(2회)</td><td class=c>149</td><td>○</td><td>가드 베기(2회)</td><td class=c>149</td><td>○</td></tr>
+<tr><td></td><td class=c></td><td></td><td></td><td>가드 베기(3회)</td><td class=c>204</td><td>○</td><td>가드 베기(3회)</td><td class=c>204</td><td>○</td></tr>
+<tr><td>가드</td><td class=c>-</td><td></td><td></td><td>가드</td><td class=c>-</td><td></td><td></td><td>모아 올려 베기(단계 1)</td><td class=c>84<br>87[차지+1]<br>89.5[차지+2]</td><td>○</td><td>튕김 무효</td></tr>
+<tr><td>강가드</td><td class=c>22</td><td></td><td></td><td>강가드</td><td class=c>22</td><td></td><td></td><td>모아 올려 베기(단계 2)</td><td class=c>102<br>105[차지+1]<br>107.5[차지+2]</td><td>○</td><td>튕김 무효<br>보정 110%</td></tr>
+<tr><td>차기</td><td class=c>2</td><td></td><td>변경 불가</td><td></td><td class=c></td><td></td><td></td><td>모아 올려 베기(단계 3)</td><td class=c>142<br>145[차지+1]<br>147.5[차지+2]</td><td>○</td><td>튕김 무효<br>보정 120%</td></tr>
+<tr><td></td><td class=c></td><td></td><td></td><td></td><td class=c></td><td></td><td></td><td>모아 올려 베기(단계 4)</td><td class=c>180<br>183.5[차지+1]<br>187[차지+2]</td><td>○</td><td>튕김 무효<br>보정 130%</td></tr>
+</table>
+<div>특징<ul>
+<li>가드가 가능하며, 범위는 전방180°. 가드한 경우, 예리도를 소비합니다, [적의 위력에서 감소치는 변화]</li>
+<li>강가드는 가드성능+1과 동등. 가드성능+1이 발동하고 있는 경우는 +2와 동등해집니다.</li>
+<li>대검의 중배 부분에서 히트했을 경우는, 베기방식 수정치 1.0배 부분이 1.05배가 됩니다</li>
+<li>공격모션 중에 추가 입력함으로써, 날려버리기 공격 등을 무효화하는 '부동'이 발동합니다.</li>
+<li>·발동 중은 스태미나를 소비합니다. 또한, 데미지는 받으므로 직선 브레스계는 모든 공격판정을 받습니다.</li>
+<li>·띄우기 공격은 막을 수 없습니다.</li>
+<li>차지 중에는 좌우 위치를 어느 정도 변경할 수 있습니다.</li>
+</ul></div>
+<table border=1 cellspacing=0 cellpadding=2 style="margin-bottom:0;">
+<caption style="font-size:80%">가드 시의 예리도 감소<caption>
+<tr><th>가드＼위력</th><th>～14</th><th>15～39</th><th>40～49</th><th>50～59</th><th>60～</th><th>가드불가</th></tr>
+<tr><td>통상</td><td>1（1）</td><td>2（1）</td><td>20（10）</td><td>20（10）</td><td>20（10）</td><td>가드불가</td></tr>
+<tr><td>가드성능+1</td><td>1（1）</td><td>2（1）</td><td>2（1）</td><td>20（10）</td><td>20（10）</td><td>가드불가</td></tr>
+<tr><td>가드성능+2</td><td>1（1）</td><td>2（1）</td><td>2（1）</td><td>2（1）</td><td>20（10）</td><td>4（2）</td></tr>
+</table>
+<div style="font-size:80%">주: () 안은 명검+1 시의 예리도 감소</div>
+<div style="margin-top:1em;">천의 형<ul>
+<li>가드베기는, 가드에 성공한 횟수로 위력이 업 됩니다.</li>
+<li>가드베기로 가드한 경우, 일부 공격은 예리도가 떨어지지 않습니다(이하 참조). 또한 일부 공격의 깎임 데미지도 받지 않습니다.</li>
+</ul></div>
+<table border=1 cellspacing=0 cellpadding=2 style="margin-bottom:0;">
+<caption style="font-size:80%">가드 베기 시의 예리도 감소<caption>
+<tr><th>가드성능＼위력</th><th>～39</th><th>40～49</th><th>50～59</th><th>60～</th><th>가드불가</th></tr>
+<tr><td>통상</td><td>0（0）</td><td>10（5）</td><td>10（5）</td><td>10（5）</td><td>가드불가</td></tr>
+<tr><td>가드성능+1</td><td>0（0）</td><td>0（0）</td><td>10（5）</td><td>10（5）</td><td>가드불가</td></tr>
+<tr><td>가드성능+2</td><td>0（0）</td><td>0（0）</td><td>0（0）</td><td>10（5）</td><td>2（0）</td></tr>
+</table>
+<div style="font-size:80%">주1: () 안은 명검+1 시의 예리도 감소
+<br>주2: 가드 시의 절반이지만 감소가 1인 경우 0이 된다(명검+2의 효과?)</div>
+
+<div style="margin-top:1em;margin-bottom:1em;">람의 형<ul>
+<li>모아 올려 베기는 차지4까지 가능합니다만, 너무 차지하면 차지2 상태가 됩니다.</li>
+<li>차지 접수의 차지, 통상 올려베기의 발동이 늦어집니다.</li>
+</ul></div>
+<h4 id=KATATE>한손검　　　<a href="#TOP">위로</a></h4>
+<div>참속성　보정 125％</div>
+<table border=1 cellspacing=0 cellpadding=2>
+<tr><th colspan=4>지의 형</th><th colspan=4>천의 형</th><th colspan=5>람의 형</th></tr>
+<tr><th>공격액션</th><th>위력</th><th>SA</th><th>보충</th><th>공격액션</th><th>위력</th><th>SA</th><th>보충</th><th>공격액션</th><th>위력</th><th>기절치</th><th>SA</th><th>보충</th></tr>
+<tr><td>점프 베기(무기 꺼내기)</td><td class=c>13·21</td><td>○</td><td>SA2초<br>지속</td><td>점프 베기(무기 꺼내기)</td><td class=c>13·21</td><td>○</td><td>SA2초<br>지속</td><td>점프 베기(무기 꺼내기)</td><td class=c>13·21</td><td class=c>5·0</td><td>○</td><td>SA2초<br>지속</td></tr>
+<tr><td>내려 베기</td><td class=c>17</td><td></td><td></td><td>내려 베기</td><td class=c>17</td><td></td><td></td><td>찌르기A</td><td class=c>14</td><td class=c></td><td></td><td rowspan=3>속성1.4배<br>검술HS경감</td></tr>
+<tr><td>　가로 베기</td><td class=c>14</td><td></td><td></td><td>　가로 베기</td><td class=c>14</td><td></td><td></td><td>　찌르기B</td><td class=c>10</td><td class=c></td><td></td></tr>
+<tr><td>　　방패와 검의 콤보</td><td class=c>10·16</td><td></td><td>1타째는 타속성<br>튕김 무효</td><td>　　방패와 검의 콤보</td><td class=c>10·16</td><td></td><td>1타째는 타속성<br>튕김 무효</td><td>　　찌르기C</td><td class=c>10</td><td class=c></td><td></td></tr>
+<tr><td></td><td class=c></td><td></td><td></td><td></td><td class=c></td><td></td><td></td><td>　　　상하베기</td><td class=c>13·16</td><td class=c></td><td></td><td>속성1.4배</td></tr>
+<tr><td>회전 베기</td><td class=c>31</td><td></td><td></td><td>점프 2단 베기</td><td class=c>23·20</td><td>○</td><td>튕김 무효<br>SA는 2초 지속</td><td>점프 2단 베기</td><td class=c>23·20</td><td class=c></td><td>○</td><td>튕김 무효<br>SA는 2초 지속</td></tr>
+<tr><td>진공회전참[시질]</td><td class=c>31·16</td><td></td><td>충격파에 회심 없음</td><td></td><td class=c></td><td></td><td></td><td></td><td class=c></td><td class=c></td><td></td><td></td></tr>
+<tr><td>올려 베기</td><td class=c>20</td><td></td><td></td><td>올려 베기</td><td class=c>20</td><td></td><td></td><td>올려 베기</td><td class=c>20</td><td class=c></td><td></td><td></td></tr>
+<tr><td>슬라이딩</td><td class=c>21<br>31[시질]</td><td>○</td><td>튕김 무효<br>개시 시 무적 시간</td><td>슬라이딩</td><td class=c>21<br>31[시질]</td><td>○</td><td>튕김 무효<br>개시 시 무적 시간</td><td>슬라이딩</td><td class=c>21<br>31[시질]</td><td class=c></td><td>○</td><td>튕김 무효<br>개시 시 무적 시간</td></tr>
+<tr><td>실드 어택</td><td class=c>13<br>19[시질]</td><td>○</td><td>타속성</td><td>실드 어택</td><td class=c>13<br>19[시질]</td><td>○</td><td>타속성</td><td>실드 어택</td><td class=c>13<br>19[시질]</td><td class=c>7</td><td>○</td><td>타속성</td></tr>
+<tr><td>　실드 배시</td><td class=c>18<br>27[시질]</td><td>○</td><td>타속성<br>대인：날려보내기</td><td>　실드 배시</td><td class=c>18<br>27[시질]</td><td>○</td><td>타속성<br>대인：날려보내기</td><td>　실드 배시</td><td class=c>18<br>27[시질]</td><td class=c>8</td><td>○</td><td>타속성<br>대인：날려보내기</td></tr>
+<tr><td>가드 베기</td><td class=c>18</td><td></td><td></td><td>가드 베기</td><td class=c>18</td><td></td><td></td><td>가드 베기</td><td class=c>18</td><td class=c></td><td></td><td></td></tr>
+<tr><td>무한·찌르기</td><td class=c>25<br>28[시질]</td><td>○</td><td></td><td>무한·찌르기</td><td class=c>25<br>28[시질]</td><td>○</td><td></td><td>무한·찌르기</td><td class=c>25<br>28[시질]</td><td class=c></td><td>○</td><td></td></tr>
+<tr><td>　무한·가로 베기</td><td class=c>25<br>28[시질]</td><td>○</td><td></td><td>　무한·가로 베기</td><td class=c>25<br>28[시질]</td><td>○</td><td></td><td>　무한·가로 베기</td><td class=c>25<br>28[시질]</td><td class=c></td><td>○</td><td></td></tr>
+<tr><td>　　무한·내려베기</td><td class=c>25<br>35[시질]</td><td>○</td><td></td><td>　　무한·내려베기</td><td class=c>25<br>35[시질]</td><td>○</td><td></td><td>　　무한·내려베기</td><td class=c>25<br>35[시질]</td><td class=c></td><td>○</td><td></td></tr>
+</table>
+<div>특징<ul>
+<li>가드가 가능하며, 범위는 전방 180°. 무기를 든 채로 아이템 사용이 가능합니다.</li>
+<li>점프베기, 방패와 검의 콤보 1단째(방패 공격), 실드배시는 타속성(백게이지 상당)입니다. 또한 예리도·베기방식의 보정은 받지 않습니다.</li>
+</ul></div>
+<div style="margin-top:1em;margin-bottom:1em;">천의 형·람의 형<ul>
+<li>공격 후의 회피 행동이, 스텝으로 변화합니다. 또한, 스텝은 공격으로 취소 가능합니다.</li>
+</ul></div>
+<h4 id=LANCE>랜스　　　<a href="#TOP">위로</a></h4>
+<div>참속성　보정 참100％타72％</div>
+<table border=1 cellspacing=0 cellpadding=2>
+<tr><th colspan=4>지의 형</th><th colspan=4>천의 형</th><th colspan=5>람의 형</th></tr>
+<tr><th>공격액션</th><th>위력</th><th>SA</th><th>보충</th><th>공격액션</th><th>위력</th><th>SA</th><th>보충</th><th>공격액션</th><th>위력</th><th>기절치</th><th>SA</th><th>보충</th></tr>
+<tr>	<td>무기 꺼내기공격</td>	<td class=c>36<br>54[시질]</td>		<td>○</td>	<td>SA2초<br>지속</td>	<td>무기 꺼내기공격</td>	<td class=c>36<br>54[시질]</td>		<td>○</td>	<td>SA2초<br>지속</td>	<td>무기 꺼내기공격</td>	<td class=c>36<br>54[시질]</td>	<td class=c></td>	<td>○</td>	<td>SA2초<br>지속</td>	</tr>
+<tr><td>중단 찌르기１</td><td class=c>29</td><td>○</td><td>SA2초<br>지속</td><td>중단 찌르기１</td><td class=c>29</td><td>○</td><td>SA2초<br>지속</td><td>중단 찌르기１</td><td class=c>29</td><td class=c></td><td>○</td><td>SA2초<br>지속</td></tr>
+<tr><td>　중단 찌르기２</td><td class=c>29</td><td></td><td></td><td>　중단 찌르기２</td><td class=c>29</td><td></td><td></td><td>　중단 찌르기２</td><td class=c>29</td><td class=c></td><td></td><td></td></tr>
+<tr><td>　　중단 찌르기３</td><td class=c>38</td><td></td><td></td><td>　　중단 찌르기３</td><td class=c>29</td><td></td><td></td><td>　　중단 찌르기３</td><td class=c>29</td><td class=c></td><td></td><td></td></tr>
+<tr><td></td><td class=c></td><td></td><td></td><td>　　　중단 찌르기４</td><td class=c>38</td><td></td><td></td><td>중단 찌르기４</td><td class=c>38</td><td class=c></td><td></td><td></td></tr>
+<tr><td>상단 찌르기１</td><td class=c>35</td><td>○</td><td>SA2초<br>지속</td><td>상단 찌르기１</td><td class=c>35</td><td>○</td><td>SA2초<br>지속</td><td>상단 찌르기１</td><td class=c>35</td><td class=c></td><td>○</td><td>SA2초<br>지속</td></tr>
+<tr><td>　상단 찌르기２</td><td class=c>35</td><td></td><td></td><td>　상단 찌르기２</td><td class=c>35</td><td></td><td></td><td>　상단 찌르기２</td><td class=c>35</td><td class=c></td><td></td><td></td></tr>
+<tr><td>　　상단 찌르기３</td><td class=c>38</td><td></td><td></td><td>　　상단 찌르기３</td><td class=c>35</td><td></td><td></td><td>　　상단 찌르기３</td><td class=c>35</td><td class=c></td><td></td><td></td></tr>
+<tr><td></td><td class=c></td><td></td><td></td><td>　　　상단 찌르기４</td><td class=c>38</td><td></td><td></td><td>상단 찌르기４</td><td class=c>38</td><td class=c></td><td></td><td></td></tr>
+<tr><td>돌진/차기</td><td class=c>25×히트수</td><td>○</td><td>튕김 무효<br>대인：날려보내기<br>스태미나 소비</td><td></td><td class=c></td><td></td><td></td><td></td><td class=c></td><td class=c></td><td></td><td></td></tr>
+<tr><td>드릴돌진/차기[시질]</td><td class=c>31·16×히트수</td><td>○</td><td>튕김 무효<br>대인：날려보내기<br>스태미나 소비</td><td>천장찌르기１</td><td class=c>38</td><td>○</td><td>SA2초<br>지속</td><td>천장찌르기１</td><td class=c>38</td><td class=c></td><td>○</td><td>SA2초<br>지속</td></tr>
+<tr><td>　피니시 찌르기</td><td class=c>50<br>75[시질]</td><td>○</td><td>튕김 무효<br>대인：날려보내기</td><td>천장찌르기２</td><td class=c>38</td><td></td><td></td><td>천장찌르기２</td><td class=c>38</td><td class=c></td><td></td><td></td></tr>
+<tr><td></td><td class=c></td><td></td><td></td><td>천장찌르기３</td><td class=c>38</td><td></td><td></td><td>천장찌르기３</td><td class=c>38</td><td class=c></td><td></td><td></td></tr>
+<tr><td></td><td class=c></td><td></td><td></td><td>천장찌르기４</td><td class=c>43</td><td></td><td></td><td>천장찌르기４</td><td class=c>43</td><td class=c></td><td></td><td></td></tr>
+<tr><td>버티기 상단 찌르기</td><td class=c>50<br>53[차지+1]<br>56[차지+2]</td><td>○</td><td>튕김 무효<br>스태미나 소비<br>SA2초<br>지속</td><td>버티기 상단 찌르기</td><td class=c>50<br>53[차지+1]<br>56[차지+2]</td><td>○</td><td>튕김 무효<br>스태미나 소비<br>SA2초<br>지속</td><td>버티기 상단 찌르기</td><td class=c>50<br>53[차지+1]<br>56[차지+2]</td><td class=c></td><td>○</td><td>튕김 무효<br>스태미나 소비<br>SA2초<br>지속</td></tr>
+<tr><td>　〃（차지）</td><td class=c>78<br>81[차지+1]<br>84[차지+2]</td><td>○</td><td>〃</td><td>　〃（차지）</td><td class=c>78<br>81[차지+1]<br>84[차지+2]</td><td>○</td><td>〃</td><td>　〃（차지）</td><td class=c>78<br>81[차지+1]<br>84[차지+2]</td><td class=c></td><td>○</td><td>〃</td></tr>
+<tr><td>가드찌르기</td><td class=c>25</td><td></td><td></td><td>가드찌르기</td><td class=c>25</td><td></td><td></td><td>가드 차지</td><td class=c>3·25<br>4·37[시질]</td><td class=c>5·10</td><td>○</td><td>타속성<br>가드상태<br>2단째에<br>대인：날려보내기</td></tr>
+</table>
+<div>특징<ul>
+<li>가드가 가능하며, 범위는 전방220°. 가드 상태로 이동이 가능합니다. 스텝회피는 3회까지 연속으로 가능합니다.</li>
+<li>강가드는 주위 360°가드가 가능하지만, 스태미나를 소비합니다. 후방으로부터의 공격을 받으면 비틀거립니다.</li>
+<li>범위가드는 주위 360° 범위 내의 헌터를 포함해 가드할 수 있습니다. 차지는 90초.</li>
+<li>·보호받는 쪽은 대미지를 받지 않음</li>
+<li>·지키는 쪽은 통상 2회까지 공격을 가드할 수 있다. (가드성능+1로 4회, +2로 6회)</li>
+<li>데미지·튕김 계산은, 참(베기)과 타(타격) 각각에서 육질×무기보정 계산을 실시하며, 그 중 높은 수치의 육질을 사용합니다.</li>
+<li>단, 어디까지나 참속성이며, 타로 파괴 가능한 부위를 부술 수는 없습니다.</li>
+</ul></div>
+<div style="margin-top:1em;margin-bottom:1em;">지의 형<ul>
+<li>돌진/차기는 21/30초마다 공격판정이 있으며, 예리도 레벨 2(황) 이하인 경우, 튕겨서 멈춥니다.</li>
+<li>또한, 데미지는, 돌진/차기 후 63/30초 후에 1.012배, 84/30초 후에 1.0625배, 105/30초 후에 1.0875배, 126/30초 후 이후는 1.125배가 됩니다</li>
+</ul></div>
+<div style="margin-top:1em;margin-bottom:1em;">람의 형<ul>
+<li>차지어택만 타속성(보정 100%)입니다. 또한 예리도·베기방식의 보정은 받지 않습니다.</li>
+</ul></div>
+<h4 id=HAMMER>해머　　　<a href="#TOP">위로</a></h4>
+<div>타속성　보정 100%</div>
+<table border=1 cellspacing=0 cellpadding=2>
+<tr><th colspan=5>지의 형</th><th colspan=5>천의 형</th><th colspan=5>람의 형</th></tr>
+<tr><th>공격액션</th><th>위력</th><th>기절치</th><th>SA</th><th>보충</th><th>공격액션</th><th>위력</th><th>기절치</th><th>SA</th><th>보충</th><th>공격액션</th><th>위력</th><th>기절치</th><th>SA</th><th>보충</th></tr>
+<tr><td>치켜들기(무기 꺼내기)</td><td class=c>32<br>48[시질]</td><td class=c>24</td><td>○</td><td>대인：띄우기</td><td>치켜들기(무기 꺼내기)</td><td class=c>32<br>48[시질]</td><td class=c>24</td><td>○</td><td>대인：띄우기</td><td>치켜들기(무기 꺼내기)</td><td class=c>32<br>48[시질]</td><td class=c>24</td><td>○</td><td>대인：띄우기</td></tr>
+<tr><td>　한손 스탬프</td><td class=c>60</td><td class=c>50</td><td>○</td><td rowspan=2>튕김 무효<br>대인：날려보내기<br>검술HS경감</td><td>　한손 스탬프</td><td class=c>60</td><td class=c>50</td><td>○</td><td rowspan=2>튕김 무효<br>대인：날려보내기<br>검술HS경감</td><td>　한손 스탬프</td><td class=c>60</td><td class=c>50</td><td>○</td><td rowspan=2>튕김 무효<br>대인：날려보내기<br>검술HS경감</td></tr>
+<tr><td>　휘둘러치기</td><td class=c>100<br>130[시질]</td><td class=c>50</td><td>○</td><td>　휘둘러치기</td><td class=c>100<br>130[시질]</td><td class=c>50</td><td>○</td><td>　휘둘러치기</td><td class=c>100<br>130[시질]</td><td class=c>50</td><td>○</td></tr>
+<tr><td>세로 휘두르기１</td><td class=c>52</td><td class=c>25</td><td>○</td><td></td><td>세로 휘두르기１</td><td class=c>52</td><td class=c>25</td><td>○</td><td></td><td>세로 휘두르기１</td><td class=c>52</td><td class=c>25</td><td>○</td><td></td></tr>
+<tr><td>세로 휘두르기２</td><td class=c>38</td><td class=c>25</td><td>○</td><td></td><td>세로 휘두르기２</td><td class=c>38</td><td class=c>25</td><td>○</td><td></td><td>세로 휘두르기２</td><td class=c>38</td><td class=c>25</td><td>○</td><td></td></tr>
+<tr><td>치켜들기</td><td class=c>100</td><td class=c>80</td><td>○</td><td>튕김 무효<br>대인：띄우기</td><td>치켜들기</td><td class=c>100</td><td class=c>80</td><td>○</td><td>튕김 무효<br>대인：띄우기</td><td>치켜들기</td><td class=c>100</td><td class=c>80</td><td>○</td><td>튕김 무효<br>대인：띄우기</td></tr>
+<tr><td>가로 휘두르기</td><td class=c>30</td><td class=c>35</td><td>○</td><td></td><td>가로 휘두르기</td><td class=c>30</td><td class=c>35</td><td>○</td><td></td><td>가로 휘두르기</td><td class=c>30</td><td class=c>35</td><td>○</td><td></td></tr>
+<tr><td>차지 치켜들기</td><td class=c>45</td><td class=c>30</td><td>○</td><td></td><td>차지 치켜들기</td><td class=c>45</td><td class=c>30</td><td>○</td><td></td><td>차지 치켜들기</td><td class=c>45</td><td class=c>30</td><td>○</td><td></td></tr>
+<tr><td>모으기 공격１</td><td class=c>52<br>55[차지+1]<br>58[차지+2]</td><td class=c>20</td><td>○</td><td></td><td>모으기 공격１</td><td class=c>52<br>55[차지+1]<br>58[차지+2]</td><td class=c>20</td><td>○</td><td></td><td>모으기 공격１</td><td class=c>52<br>55[차지+1]<br>58[차지+2]</td><td class=c>20</td><td>○</td><td></td></tr>
+<tr><td>모으기 공격２</td><td class=c>52·35<br>55·36[차지+1]<br>58·36.5[차지+2]</td><td class=c>20·20</td><td>○</td><td>튕김 무효<br>2단째에<br>대인：띄우기</td><td>모으기 공격２</td><td class=c>52·35<br>55·36[차지+1]<br>58·36.5[차지+2]</td><td class=c>20·20</td><td>○</td><td>튕김 무효<br>2단째에<br>대인：띄우기</td><td>모으기 공격２</td><td class=c>52·35<br>55·36[차지+1]<br>58·36.5[차지+2]</td><td class=c>20·20</td><td>○</td><td>튕김 무효<br>2단째에<br>대인：띄우기</td></tr>
+<tr><td>모으기 공격３</td><td class=c>40·100<br>41·103[차지+1]<br>42·107[차지+2]</td><td class=c>20·60</td><td>○</td><td>튕김 무효<br>검술HS경감</td><td>모으기 공격３</td><td class=c>40·100<br>41·103[차지+1]<br>42·107[차지+2]</td><td class=c>20·60</td><td>○</td><td>튕김 무효<br>검술HS경감</td><td>모으기 공격３</td><td class=c>40·100<br>41·103[차지+1]<br>42·107[차지+2]</td><td class=c>20·60</td><td>○</td><td>튕김 무효<br>검술HS경감</td></tr>
+<tr><td></td><td class=c></td><td class=c></td><td></td><td></td><td></td><td class=c></td><td class=c></td><td></td><td></td><td>점프 스탬프</td><td class=c>40·30·120<br>41·31·123[차지+1]<br>42·31·127[차지+2]</td><td class=c>30·30·80</td><td></td><td>튕김 무효<br>3단째:<br>검술HS경감</td></tr>
+<tr><td>회전공격（개시）</td><td class=c>20<br>21[차지+1]<br>21.5[차지+2]</td><td class=c>2</td><td>○</td><td>튕김 무효<br>검술HS경감</td><td>난타(개시)</td><td class=c>60<br>62[차지+1]<br>64[차지+2]</td><td class=c>15</td><td>○</td><td>튕김 무효</td><td>난타(개시)</td><td class=c>60<br>62[차지+1]<br>64[차지+2]</td><td class=c>15</td><td>○</td><td>튕김 무효</td></tr>
+<tr><td>회전공격</td><td class=c>10 ×5<br>11 ×5[차지+1]<br>11×5[차지+2]</td><td class=c>2</td><td>○</td><td>튕김 무효<br>모으기 공격으로 파생</td><td>난타</td><td class=c>45×히트수<br>46[차지+1]<br>47[차지+2]</td><td class=c>15</td><td>○</td><td>튕김 무효</td><td>난타</td><td class=c>45×히트수<br>46[차지+1]<br>47[차지+2]</td><td class=c>15</td><td>○</td><td>튕김 무효</td></tr>
+<tr><td>회전공격（종료）</td><td class=c>40<br>41[차지+1]<br>42[차지+2]</td><td class=c>2</td><td>○</td><td>튕김 무효<br>대인：날려보내기<br>검술HS경감</td><td></td><td class=c></td><td class=c></td><td></td><td></td><td></td><td class=c></td><td class=c></td><td></td><td></td></tr>
+</table>
+<div>특징<ul>
+<li>모으기 공격을 하는 차지의, 차지 중에는 스태미나를 소비한다.</li>
+<li>공격에 기절치가 있으며, 몬스터의 머리를 공격함으로써, 기절시킬 수 있다</li>
+<li>차지3까지 채운 상태로, 이동 중에 개방하면 회전공격이 된다. 2~3회전 → 차지(중) 공격 / 4~5회전 → 차지(대) 공격</li>
+</ul></div>
+<div style="margin-top:1em;margin-bottom:1em;">천의 형<ul>
+<li>난타는 차지3에서 이동 중에 개방한 경우에만 낼 수 있다</li>
+</ul></div>
+<div style="margin-top:1em;margin-bottom:1em;">람의 형<ul>
+<li>점프 스탬프는 차지4에서만 낼 수 있습니다만, 차지를 너무 오래 하면 차지2 상태가 되어 낼 수 없게 됩니다.</li>
+</ul></div>
+<h4 id=SOUKEN>쌍검　　　<a href="#TOP">위로</a></h4>
+<div>참속성　보정 100%</div>
+<table border=1 cellspacing=0 cellpadding=2>
+<tr><th colspan=5>지의 형</th><th colspan=5>천의 형</th><th colspan=5>람의 형</th></tr>
+<tr><th>공격액션</th><th>위력</th><th>칼등치기</th><th>SA</th><th>보충</th><th>공격액션</th><th>위력</th><th>칼등치기</th><th>SA</th><th>보충</th><th>공격액션</th><th>위력</th><th>칼등치기</th><th>SA</th><th>보충</th></tr>
+<tr><td>베어 쳐내기(무기 꺼내기)</td><td class=c>11·5<br>16·7[시질]</td><td>가능</td><td>○</td><td></td><td>베어 쳐내기(무기 꺼내기)</td><td class=c>11·5<br>16·7[시질]</td><td>가능</td><td>○</td><td></td><td>점프 세로회전베기(무기 꺼내기)</td><td class=c>11·15<br>16·22[시질]</td><td>가능</td><td>○</td><td>SA는 2초 지속</td></tr>
+<tr><td>내려 베기１</td><td class=c>10·13</td><td>가능</td><td></td><td></td><td>내려 베기１</td><td class=c>10·13</td><td>가능</td><td></td><td></td><td>내려 베기１</td><td class=c>10·13</td><td>가능</td><td></td><td></td></tr>
+<tr><td>내려 베기２</td><td class=c>9·7</td><td>가능</td><td></td><td></td><td>내려 베기２</td><td class=c>9·7</td><td>가능</td><td></td><td></td><td>내려 베기２</td><td class=c>9·7</td><td>가능</td><td></td><td></td></tr>
+<tr><td>내려 베기３</td><td class=c>7·5·11·16</td><td>가능</td><td></td><td>2단째:<br>검술HS경감</td><td>내려 베기３</td><td class=c>7·5·11·16</td><td>가능</td><td></td><td>2단째:<br>검술HS경감</td><td>내려 베기３</td><td class=c>7·5·11·16</td><td>가능</td><td></td><td>2단째:<br>검술HS경감</td></tr>
+<tr><td>좌회전 베기</td><td class=c>14·9·5</td><td>가능</td><td></td><td></td><td>좌회전 베기</td><td class=c>14·9·5</td><td>가능</td><td></td><td></td><td>좌회전 베기</td><td class=c>14·9·5</td><td>가능</td><td></td><td></td></tr>
+<tr><td>우회전 베기</td><td class=c>14·9·5</td><td>가능</td><td></td><td></td><td>우회전 베기</td><td class=c>14·9·5</td><td>가능</td><td></td><td></td><td>우회전 베기</td><td class=c>14·9·5</td><td>가능</td><td></td><td></td></tr>
+<tr><td>올려 베기</td><td class=c>17</td><td>가능</td><td></td><td></td><td>올려 베기</td><td class=c>17</td><td>가능</td><td></td><td></td><td>올려 베기</td><td class=c>17</td><td>가능</td><td></td><td></td></tr>
+<tr><th colspan=5>지의 형（귀인화/진귀인 해방）</th><th colspan=5>천의 형（귀인화/진귀인 해방）</th><th colspan=5>람의 형（귀인화/진귀인 해방）</th></tr>
+<tr><th>공격액션</th><th>위력</th><th>칼등치기</th><th>SA</th><th>보충</th><th>공격액션</th><th>위력</th><th>칼등치기</th><th>SA</th><th>보충</th><th>공격액션</th><th>위력</th><th>칼등치기</th><th>SA</th><th>보충</th></tr>
+<tr><td>베어 쳐내기</td><td class=c>14·6<br>21·9[시질]</td><td>가능</td><td>○</td><td></td><td>베어 쳐내기</td><td class=c>14·6<br>21·9[시질]</td><td>가능</td><td>○</td><td></td><td>점프 세로회전베기</td><td class=c>14·20<br>21·29[시질]</td><td>가능</td><td>○</td><td>SA는 2초 지속</td></tr>
+<tr><td>내려 베기１</td><td class=c>13·17</td><td>가능</td><td>○</td><td></td><td>내려 베기１</td><td class=c>13·17</td><td>가능</td><td>○</td><td></td><td>내려 베기１</td><td class=c>13·17</td><td>가능</td><td>○</td><td></td></tr>
+<tr><td>내려 베기２</td><td class=c>12·9</td><td>가능</td><td>○</td><td></td><td>내려 베기２</td><td class=c>12·9</td><td>가능</td><td>○</td><td></td><td>내려 베기２</td><td class=c>12·9</td><td>가능</td><td>○</td><td></td></tr>
+<tr><td>내려 베기３</td><td class=c>9·6·14·21</td><td>가능</td><td>○</td><td></td><td>내려 베기３</td><td class=c>9·6·14·21</td><td>가능</td><td>○</td><td></td><td>내려 베기３</td><td class=c>9·6·14·21</td><td>가능</td><td>○</td><td></td></tr>
+<tr><td>좌회전 베기</td><td class=c>18·12·6 ×2회</td><td>가능</td><td>○</td><td>도중에 정지 가능</td><td>좌회전 베기</td><td class=c>18·12·6 ×2회</td><td>가능</td><td>○</td><td>도중에 정지 가능</td><td>좌회전 베기</td><td class=c>18·12·6 ×2회</td><td>가능</td><td>○</td><td>도중에 정지 가능</td></tr>
+<tr><td>우회전 베기</td><td class=c>18·12·6 ×2회</td><td>가능</td><td>○</td><td>도중에 정지 가능</td><td>우회전 베기</td><td class=c>18·12·6 ×2회</td><td>가능</td><td>○</td><td>도중에 정지 가능</td><td>우회전 베기</td><td class=c>18·12·6 ×2회</td><td>가능</td><td>○</td><td>도중에 정지 가능</td></tr>
+<tr><td>올려 베기</td><td class=c>22</td><td>가능</td><td>○</td><td></td><td>올려 베기</td><td class=c>22</td><td>가능</td><td>○</td><td></td><td>올려 베기</td><td class=c>22</td><td>가능</td><td>○</td><td></td></tr>
+<tr><td>난무</td><td class=c>31·6×8회·37</td><td></td><td>○</td><td>튕김 무효</td><td>난무改（3연속 찌르기）</td><td class=c>13 ×3회</td><td></td><td>○</td><td>튕김 무효</td><td>난무改（3연속 찌르기）</td><td class=c>13 ×3회</td><td></td><td>○</td><td>튕김 무효</td></tr>
+<tr><td></td><td class=c></td><td></td><td></td><td></td><td>난무改（회전 베기）</td><td class=c>21·33·51</td><td></td><td>○</td><td>튕김 무효</td><td>난무改（회전 베기）</td><td class=c>21·33·51</td><td></td><td>○</td><td>튕김 무효</td></tr>
+<tr><th colspan=5>지의 형（진귀인 해방）</th><th colspan=5>천의 형（진귀인 해방）</th><th colspan=5>람의 형（진귀인 해방）</th></tr>
+<tr><td>난무선풍(회전 베기)</td><td class=c>14 ×6회</td><td></td><td>○</td><td>튕김 무효</td><td>난무선풍(회전 베기)</td><td class=c>14 ×6회</td><td></td><td>○</td><td>튕김 무효</td><td>난무선풍(회전 베기)</td><td class=c>14 ×6회</td><td></td><td>○</td><td>튕김 무효</td></tr>
+<tr><td>난무선풍(내려베기)</td><td class=c>36·54</td><td></td><td>○</td><td>튕김 무효</td><td>난무선풍(내려베기)</td><td class=c>36·54</td><td></td><td>○</td><td>튕김 무효</td><td>난무선풍(내려베기)</td><td class=c>36·54</td><td></td><td>○</td><td>튕김 무효</td></tr>
+<tr><td>회피공격</td><td class=c>12·12</td><td>가능</td><td>○</td><td></td><td>회피공격</td><td class=c>12·12</td><td>가능</td><td>○</td><td></td><td>회피공격</td><td class=c>12·12</td><td>가능</td><td>○</td><td></td></tr>
+<tr><th colspan=5>지의 형（진귀인 해방/적게이지소비）</th><th colspan=5>천의 형（진귀인 해방/적게이지소비）</th><th colspan=5>람의 형（진귀인 해방/적게이지소비）</th></tr>
+<tr><td>베어 쳐내기</td><td class=c>15·7<br>23·10[시질]</td><td>가능</td><td>○</td><td></td><td>베어 쳐내기</td><td class=c>15·7<br>23·10[시질]</td><td>가능</td><td>○</td><td></td><td>점프 세로회전베기</td><td class=c>15·21<br>23·31[시질]</td><td>가능</td><td>○</td><td>SA는 2초 지속<br>2단째:<br>검술HS경감</td></tr>
+<tr><td>내려 베기１</td><td class=c>14·18</td><td>가능</td><td>○</td><td></td><td>내려 베기１</td><td class=c>14·18</td><td>가능</td><td>○</td><td></td><td>내려 베기１</td><td class=c>14·18</td><td>가능</td><td>○</td><td></td></tr>
+<tr><td>내려 베기２</td><td class=c>13·10</td><td>가능</td><td>○</td><td></td><td>내려 베기２</td><td class=c>13·10</td><td>가능</td><td>○</td><td></td><td>내려 베기２</td><td class=c>13·10</td><td>가능</td><td>○</td><td></td></tr>
+<tr><td>내려 베기３</td><td class=c>10·7·15·23</td><td>가능</td><td>○</td><td></td><td>내려 베기３</td><td class=c>10·7·15·23</td><td>가능</td><td>○</td><td></td><td>내려 베기３</td><td class=c>10·7·15·23</td><td>가능</td><td>○</td><td></td></tr>
+<tr><td>좌회전 베기</td><td class=c>20·13·7 ×2회</td><td>가능</td><td>○</td><td>도중에 정지 가능</td><td>좌회전 베기</td><td class=c>20·13·7 ×2회</td><td>가능</td><td>○</td><td>도중에 정지 가능</td><td>좌회전 베기</td><td class=c>20·13·7 ×2회</td><td>가능</td><td>○</td><td>도중에 정지 가능</td></tr>
+<tr><td>우회전 베기</td><td class=c>20·13·7 ×2회</td><td>가능</td><td>○</td><td>도중에 정지 가능</td><td>우회전 베기</td><td class=c>20·13·7 ×2회</td><td>가능</td><td>○</td><td>도중에 정지 가능</td><td>우회전 베기</td><td class=c>20·13·7 ×2회</td><td>가능</td><td>○</td><td>도중에 정지 가능</td></tr>
+<tr><td>올려 베기</td><td class=c>24</td><td>가능</td><td>○</td><td></td><td>올려 베기</td><td class=c>24</td><td>가능</td><td>○</td><td></td><td>올려 베기</td><td class=c>24</td><td>가능</td><td>○</td><td></td></tr>
+<tr><td>난무</td><td class=c>33·7×8회·40</td><td></td><td>○</td><td>튕김 무효</td><td>난무改（3연속 찌르기）</td><td class=c>14 ×3회</td><td></td><td>○</td><td>튕김 무효</td><td>난무改（3연속 찌르기）</td><td class=c>14 ×3회</td><td></td><td>○</td><td>튕김 무효</td></tr>
+<tr><td></td><td class=c></td><td></td><td></td><td></td><td>난무改（회전 베기）</td><td class=c>23·36·56</td><td></td><td>○</td><td>튕김 무효</td><td>난무改（회전 베기）</td><td class=c>23·36·56</td><td></td><td>○</td><td>튕김 무효</td></tr>
+<tr><td>난무선풍(회전 베기)</td><td class=c>15 ×6회</td><td></td><td>○</td><td>튕김 무효</td><td>난무선풍(회전 베기)</td><td class=c>15 ×6회</td><td></td><td>○</td><td>튕김 무효</td><td>난무선풍(회전 베기)</td><td class=c>15 ×6회</td><td></td><td>○</td><td>튕김 무효</td></tr>
+<tr><td>난무선풍(내려베기)</td><td class=c>39·58</td><td></td><td>○</td><td>튕김 무효</td><td>난무선풍(내려베기)</td><td class=c>39·58</td><td></td><td>○</td><td>튕김 무효</td><td>난무선풍(내려베기)</td><td class=c>39·58</td><td></td><td>○</td><td>튕김 무효</td></tr>
+<tr><td>회피공격</td><td class=c>13·13</td><td>가능</td><td>○</td><td></td><td>회피공격</td><td class=c>13·13</td><td>가능</td><td>○</td><td></td><td>회피공격</td><td class=c>13·13</td><td>가능</td><td>○</td><td></td></tr>
+</table>
+<div>특징：귀인화/진귀인 해방<ul>
+<li>칼등치기는, 무기의 예리도가 2 회복(콤보 중은 1 회복)하고, 5초간(손 부분이 발광하고 있는 동안) 공격이 튕기지 않게 됩니다.</li>
+<li>칼등치기를 콤보에 넣은 경우만, 1회당 공격력이 1.05배가 되어, 최대 4회 상승해 1.2배가 됩니다</li>
+<li>귀인화 중에는, 스태미나를 소비합니다.</li>
+<li>·난무 중의 속성은 70%로 컷되어 계산됩니다.</li>
+<li>진귀인 해방 중은, 체력을 소비합니다. 감소한 게이지는 빨간색이 되고, 체력 1까지 줄어들면 빨간 게이지가 깎입니다.</li>
+<li>·모든 공격에 SA가 붙고, 공격 속도가 1.1배가 됩니다.</li>
+<li>·다른 헌터로부터의 분진 등의 체력회복이 무효화됩니다</li>
+</ul></div>
+<div style="margin-top:1em;margin-bottom:1em;">천의 형·람의 형<ul>
+<li>난무改는 G급퀘스트 이외에서는 속성 감산이 없습니다. 난무改(3연 찌르기)에서 난무改(회전 베기)로는 취소 가능합니다.</li>
+<li>스태미나가 떨어진 경우, 난무改(3연 찌르기)에서 다른 공격으로 이행하는 것이 불가능합니다.</li>
+</ul></div>
+<h4 id=TACHI>태도　　　<a href="#TOP">위로</a></h4>
+<div>참속성　보정 100%</div>
+<table border=1 cellspacing=0 cellpadding=2>
+<th colspan=5>지의 형</th><th colspan=5>천의 형</th><th colspan=6>람의 형</th></tr>
+<tr><th>공격액션</th><th>위력</th><th>연기</th><th>SA</th><th>보충</th><th>공격액션</th><th>위력</th><th>연기</th><th>SA</th><th>보충</th><th>공격액션</th><th>위력</th><th>검술</th><th>연기</th><th>SA</th><th>보충</th></tr>
+<tr><td>전진 베기(무기 꺼내기)</td><td class=c>33</td><td class=c>30</td><td>○</td><td></td><td>전진 베기(무기 꺼내기)</td><td class=c>33</td><td class=c>30</td><td>○</td><td></td><td>전진 베기(무기 꺼내기)</td><td class=c>33</td><td class=c></td><td class=c>30</td><td>○</td><td></td></tr>
+<tr><td>세로 베기</td><td class=c>28</td><td class=c>25</td><td>○</td><td></td><td>세로 베기</td><td class=c>28</td><td class=c>25</td><td>○</td><td></td><td>세로 베기</td><td class=c>28</td><td class=c></td><td class=c>25</td><td>○</td><td></td></tr>
+<tr><td>베고 빠지기</td><td class=c>30<br>36[시질]</td><td class=c>26</td><td>○</td><td></td><td>회피베기</td><td class=c>28</td><td class=c>26</td><td>○</td><td>스태미나소비<br>4/30초간이<br>무적 시간</td><td>회피베기</td><td class=c>28</td><td class=c></td><td class=c>26</td><td>○</td><td>스태미나소비<br>4/30초간이<br>무적 시간</td></tr>
+<tr><td>찌르기 내리기</td><td class=c>24<br>28[시질]</td><td class=c>20</td><td>○</td><td></td><td></td><td class=c></td><td class=c></td><td></td><td></td><td></td><td class=c></td><td class=c></td><td class=c></td><td></td><td></td></tr>
+<tr><td>찌르기</td><td class=c>20</td><td class=c>15</td><td>○</td><td></td><td>찌르기</td><td class=c>20</td><td class=c>15</td><td>○</td><td></td><td>관통찌르기</td><td class=c>24·12×2<br>25·12.5×2[차지+1]<br>26.5·13.5×2[차지+2]</td><td class=c>28.5·14×2<br>30·14.5×2[차지+1]<br>31.5·15.5×2[차지+2]</td><td class=c>6×3</td><td>○</td><td></td></tr>
+<tr><td></td><td class=c></td><td class=c></td><td></td><td></td><td></td><td class=c></td><td class=c></td><td></td><td></td><td>〃[시질]</td><td class=c>32·16×2<br>33·16.5×2[차지+1]<br>34·17.5×2[차지+2]</td><td class=c>38·18.5×2<br>39·19×2[차지+1]<br>41·21×2[차지+2]</td><td class=c>6×3</td><td>○</td><td></td></tr>
+<tr><td></td><td class=c></td><td class=c></td><td></td><td></td><td></td><td class=c></td><td class=c></td><td></td><td></td><td>기인관통찌르기</td><td class=c>24·12×5·30<br>24.5·12.5×2·30.5[차지+1]<br>25·13×2·31[차지+2]</td><td class=c>28.5·14×5·36<br>29·14.5×2·37[차지+1]<br>30.5·15×2·37.5[차지+2]</td><td class=c>-25</td><td>○</td><td>튕김 무효</td></tr>
+<tr><td></td><td class=c></td><td class=c></td><td></td><td></td><td></td><td class=c></td><td class=c></td><td></td><td></td><td>〃[시질]</td><td class=c>32·16×5·40<br>32.5·16.5×2·41[차지+1]<br>33·17×2·41.5[차지+2]</td><td class=c>38·18.5×5·48<br>38.5·19×2·48.5[차지+1]<br>39·20×2·49[차지+2]</td><td class=c>-25</td><td>○</td><td>튕김 무효</td></tr>
+<tr><td>올려 베기</td><td class=c>23<br>34[시질]</td><td class=c>19</td><td>○</td><td></td><td>올려 베기</td><td class=c>23<br>34[시질]</td><td class=c>19</td><td>○</td><td></td><td>올려 베기</td><td class=c>23<br>34[시질]</td><td class=c></td><td class=c>19</td><td>○</td><td></td></tr>
+<tr><td>기인베기<br>(연기 부족)</td><td class=c>16</td><td class=c>16</td><td>○</td><td></td><td>기인베기<br>(연기 부족)</td><td class=c>16</td><td class=c>16</td><td>○</td><td></td><td>기인베기<br>(연기 부족)</td><td class=c>16</td><td class=c></td><td class=c>16</td><td>○</td><td></td></tr>
+<tr><td>기인베기１</td><td class=c>35</td><td class=c>-15</td><td>○</td><td>튕김 무효</td><td>기인베기１</td><td class=c>35</td><td class=c>-15</td><td>○</td><td>튕김 무효</td><td>기인베기１</td><td class=c>35</td><td class=c></td><td class=c>-15</td><td>○</td><td>튕김 무효</td></tr>
+<tr><td>기인베기２</td><td class=c>36</td><td class=c>-20</td><td>○</td><td>튕김 무효<br>검술HS경감</td><td>기인베기２</td><td class=c>36</td><td class=c>-20</td><td>○</td><td>튕김 무효<br>검술HS경감</td><td>기인베기２</td><td class=c>36</td><td class=c></td><td class=c>-20</td><td>○</td><td>튕김 무효<br>검술HS경감</td></tr>
+<tr><td>기인베기３</td><td class=c>18·18·40</td><td class=c>-25</td><td>○</td><td>튕김 무효<br>3단째:<br>검술HS경감</td><td>기인베기３</td><td class=c>18·18·40</td><td class=c>-25</td><td>○</td><td>튕김 무효<br>3단째:<br>검술HS경감</td><td>기인베기３</td><td class=c>18·18·40</td><td class=c></td><td class=c>-25</td><td>○</td><td>튕김 무효<br>3단째:<br>검술HS경감</td></tr>
+<tr><td>기인방출베기[콤보 없음]</td><td class=c>40·①·①</td><td class=c></td><td></td><td>튕김 무효</td><td>기인방출베기[콤보 없음]</td><td class=c>40·①·①</td><td class=c></td><td></td><td>튕김 무효</td><td>기인방출베기[콤보 없음]</td><td class=c>40·①·①</td><td class=c></td><td class=c></td><td></td><td>튕김 무효</td></tr>
+<tr><td>기인방출베기[기인베기１후]</td><td class=c>60·①·①</td><td class=c></td><td></td><td>튕김 무효</td><td>기인방출베기[기인베기１후]</td><td class=c>60·①·①</td><td class=c></td><td></td><td>튕김 무효</td><td>기인방출베기[기인베기１후]</td><td class=c>60·①·①</td><td class=c></td><td class=c></td><td></td><td>튕김 무효</td></tr>
+<tr><td>기인방출베기[기인베기２후]</td><td class=c>70·①·①</td><td class=c></td><td></td><td>튕김 무효</td><td>기인방출베기[기인베기２후]</td><td class=c>70·①·①</td><td class=c></td><td></td><td>튕김 무효</td><td>기인방출베기[기인베기２후]</td><td class=c>70·①·①</td><td class=c></td><td class=c></td><td></td><td>튕김 무효</td></tr>
+<tr><td>기인방출베기[기인베기３후]</td><td class=c>90·①·①</td><td class=c></td><td></td><td>튕김 무효</td><td>기인방출베기[기인베기３후]</td><td class=c>90·①·①</td><td class=c></td><td></td><td>튕김 무효</td><td>기인방출베기[기인베기３후]</td><td class=c>90·①·①</td><td class=c></td><td class=c></td><td></td><td>튕김 무효</td></tr>
+<tr><td>①[연기 100]</td><td class=c>35</td><td class=c></td><td></td><td></td><td>①[연기 100]</td><td class=c>35</td><td class=c></td><td></td><td></td><td>①[연기 100]</td><td class=c>35</td><td class=c></td><td class=c></td><td></td><td></td></tr>
+<tr><td>①[연기 80 이상]</td><td class=c>26</td><td class=c></td><td></td><td></td><td>①[연기 80 이상]</td><td class=c>26</td><td class=c></td><td></td><td></td><td>①[연기 80 이상]</td><td class=c>26</td><td class=c></td><td class=c></td><td></td><td></td></tr>
+<tr><td>①[연기 50 이상]</td><td class=c>20</td><td class=c></td><td></td><td></td><td>①[연기 50 이상]</td><td class=c>20</td><td class=c></td><td></td><td></td><td>①[연기 50 이상]</td><td class=c>20</td><td class=c></td><td class=c></td><td></td><td></td></tr>
+<tr><td>스텝 베기</td><td class=c>24</td><td class=c>14</td><td>○</td><td></td><td>스텝 베기</td><td class=c>24</td><td class=c>14</td><td>○</td><td>콤보 중만</td><td>스텝 베기</td><td class=c>24</td><td class=c></td><td class=c>14</td><td>○</td><td>콤보 중만</td></tr>
+</table>
+<div>특징：연기 게이지<ul>
+<li>연기의 축적치는, 히트모션의 영향을 받습니다. [튕김·통상: 70%, 슬로우모션: 95%, 히트스톱: 100%] 폭격검정 중은 25 변경 불가</li>
+<li>연기 게이지는 기인상태가 될 때까지는 16/30초에 1감소합니다.</li>
+<li>연기 게이지를 100까지 채우면 기인상태가 되고, 무기 배율 +10, 무기 배율×1.125, 튕김 판정 시의 게이지는 1랭크 위의 게이지로 계산됩니다.</li>
+<li>기인상태의 무기 배율 +10은, 아이템에 의한 시한효과와 같은 분류가 되어, 동시에 사용한 경우 강한 쪽 효과가 우선(괴력의 환약 등)됩니다.</li>
+<li>기인상태는, 발동 후 30초간 유지할 수 있습니다.<br>연기 게이지가 100인 상태로 공격을 몬스터 등에 맞히거나, 소비한 게이지를 100으로 되돌림으로써 감소개시를 리셋할 수 있습니다.</li>
+<li>기인베기 사용으로 연기 게이지가 0이 되거나,<br>발동시간을 경과한 경우, 기인상태는 해제됩니다.</li>
+<li>기인방출베기는 연기 게이지가 50 이상에서 발동 가능하며 3히트 공격. 초단은 콤보 수 의존. 2-3단은 연기 게이지 의존입니다.</li>
+<li>　또한, 검정은, 기인방출베기가 발동한 시점에서 소비합니다.</li>
+</ul></div>
+<div style="margin-top:1em;margin-bottom:1em;">천의 형<ul>
+<li>회피베기는, 회피성능+1에서 6/30초간이 무적 시간. 회피성능+2에서 8/30초간이 무적 시간이 됩니다.</li>
+</ul></div>
+<div style="margin-top:1em;margin-bottom:1em;">람의 형<ul>
+<li>기인상태의 관통찌르기는, 연기가 100인 상태가 아니면 발동할 수 없습니다.</li>
+<li>관통찌르기·기인관통찌르기는, 속성이 통상의 2/3, 상태이상은 1/2가 됩니다.</li>
+</ul></div>
+<h4 id=GUNLANCE>건랜스　　　<a href="#TOP">위로</a></h4>
+<div>참속성　보정 100%</div>
+<table border=1 cellspacing=0 cellpadding=2>
+<tr><th colspan=4>지의 형</th><th colspan=4>천의 형</th><th colspan=4>람의 형</th></tr>
+<tr><th>공격액션</th><th>위력</th><th>SA</th><th>보충</th><th>공격액션</th><th>위력</th><th>SA</th><th>보충</th><th>공격액션</th><th>위력</th><th>SA</th><th>보충</th></tr>
+<tr><td>전진 찔러올리기</td><td class=c>38<br>57[시질]</td><td>○</td><td></td><td>전진 찔러올리기</td><td class=c>38<br>57[시질]</td><td>○</td><td></td><td>전진 찔러올리기</td><td class=c>38<br>57[시질]</td><td>○</td><td></td></tr>
+<tr><td>횡베기</td><td class=c>34<br>51[시질]</td><td></td><td>튕김 무효</td><td>횡베기</td><td class=c>34<br>51[시질]</td><td></td><td>튕김 무효</td><td>횡베기</td><td class=c>34<br>51[시질]</td><td></td><td>튕김 무효</td></tr>
+<tr><td>　연격포</td><td class=c>18+포격</td><td></td><td>튕김 무효</td><td>　연격포</td><td class=c>18+포격</td><td></td><td>튕김 무효</td><td>　연격포</td><td class=c>18+포격</td><td></td><td>튕김 무효</td></tr>
+<tr><td>　　정면 연격</td><td class=c>통상형</td><td></td><td>폭발·화력×0.9배</td><td>　　정면 연격</td><td class=c>통상형</td><td></td><td>폭발·화력×0.9배</td><td>　　정면 연격</td><td class=c>통상형</td><td></td><td>폭발·화력×0.9배</td></tr>
+<tr><td>　　횡 연격</td><td class=c>방사형</td><td></td><td>폭발·화력×0.7배</td><td>　　횡 연격</td><td class=c>방사형</td><td></td><td>폭발·화력×0.7배</td><td>　　횡 연격</td><td class=c>방사형</td><td></td><td>폭발·화력×0.7배</td></tr>
+<tr><td>　　종 연격</td><td class=c>확산형</td><td></td><td>폭발·화력×0.8배</td><td>　　종 연격</td><td class=c>확산형</td><td></td><td>폭발·화력×0.8배</td><td>　　종 연격</td><td class=c>확산형</td><td></td><td>폭발·화력×0.8배</td></tr>
+<tr><td>전방 찌르기１</td><td class=c>33</td><td></td><td></td><td>전방 찌르기１</td><td class=c>33</td><td></td><td></td><td>전방 찌르기１</td><td class=c>33</td><td></td><td></td></tr>
+<tr><td>전방 찌르기２</td><td class=c>33</td><td></td><td></td><td>전방 찌르기２</td><td class=c>33</td><td></td><td></td><td>전방 찌르기２</td><td class=c>33</td><td></td><td></td></tr>
+<tr><td>전방 찌르기３</td><td class=c>34</td><td></td><td></td><td>전방 찌르기３</td><td class=c>34</td><td></td><td></td><td>전방 찌르기３</td><td class=c>34</td><td></td><td></td></tr>
+<tr><td>올려 베기</td><td class=c>42</td><td>○</td><td></td><td>올려 베기</td><td class=c>42</td><td>○</td><td></td><td>올려 베기</td><td class=c>42</td><td>○</td><td></td></tr>
+<tr><td>상방찌르기１</td><td class=c>30</td><td></td><td></td><td>상방찌르기１</td><td class=c>30</td><td></td><td></td><td>상방찌르기１</td><td class=c>30</td><td></td><td></td></tr>
+<tr><td>상방찌르기２</td><td class=c>30</td><td></td><td></td><td>상방찌르기２</td><td class=c>30</td><td></td><td></td><td>상방찌르기２</td><td class=c>30</td><td></td><td></td></tr>
+<tr><td>상방찌르기３</td><td class=c>30</td><td></td><td></td><td>상방찌르기３</td><td class=c>30</td><td></td><td></td><td>상방찌르기３</td><td class=c>30</td><td></td><td></td></tr>
+<tr><td>포격</td><td class=c>하기</td><td>○</td><td>포격후<br>무적시간 있음<br>대인：날려보내기</td><td>포격</td><td class=c>하기</td><td>○</td><td>포격후<br>무적시간 있음<br>대인：날려보내기</td><td>속성포</td><td class=c>하기</td><td>○</td><td>포격후<br>무적시간 있음<br>대인：날려보내기</td></tr>
+<tr><td></td><td class=c></td><td></td><td></td><td></td><td class=c></td><td></td><td></td><td>속성포내려찍기</td><td class=c>21</td><td></td><td>선 상태</td></tr>
+<tr><td>용격포</td><td class=c>하기</td><td>○</td><td>포격후<br>무적시간 있음<br>대인：날려보내기</td><td>히트블레이드</td><td class=c>5+화</td><td></td><td>용격포의 화속성 0.85배</td><td>히트블레이드</td><td class=c>5+화</td><td></td><td>용격포의 화속성 0.85배</td></tr>
+<tr><td>폭룡굉포</td><td class=c>하기</td><td>○</td><td>포격후<br>무적시간 있음<br>대인：날려보내기<br>날려보내기 무효</td><td>ＨＢ내려찍기</td><td class=c>62</td><td>○</td><td></td><td>ＨＢ내려찍기</td><td class=c>62</td><td></td><td></td></tr>
+</table>
+<div><em>G6까지의 수치</em></div>
+<table border=1 cellspacing=0 cellpadding=2 class=hosoku>
+<tr><th colspan=8>포격의 위력</th></tr>
+<tr><th>통상형</th><td>탄수： 5</td><td colspan=4>예리도소비： 3</td><th>폭풍: 속성</th><th>폭풍: 타격</th></tr>
+<tr><th>LV</th><th>폭발</th><th>화속성</th><th colspan=3>공격 범위</th><th>속성포</th><th>기절치</th></tr>
+<tr><td>포격LV1</td><td class=c>16</td><td class=c>50</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td><td class=c>3</td><td class=c>3</td></tr>
+<tr><td>포격LV2</td><td class=c>23</td><td class=c>80</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td><td class=c>3.13</td><td class=c>4</td></tr>
+<tr><td>포격LV3</td><td class=c>30</td><td class=c>100</td><td style="width:1em"></td><td style="width:1em" class=gla></td><td style="width:1em"></td><td class=c>3.26</td><td class=c>5</td></tr>
+<tr><td>포격LV4</td><td class=c>35</td><td class=c>120</td><td style="width:1em"></td><td style="width:1em" class=gl></td><td style="width:1em"></td><td class=c>3.39</td><td class=c>6</td></tr>
+<tr><td>포격LV5</td><td class=c>40</td><td class=c>140</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td><td class=c>3.52</td><td class=c>7</td></tr>
+<tr><td>포격LV6</td><td class=c>65</td><td class=c>160</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td><td class=c>3.65</td><td class=c>8</td></tr>
+<tr><td>포격LV7</td><td class=c>75</td><td class=c>180</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td><td class=c>3.79</td><td class=c>9</td></tr>
+<tr><td>포격LV8</td><td class=c>85</td><td class=c>200</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td><td class=c>3.92</td><td class=c>10</td></tr>
+<tr><td>포격LV9</td><td class=c>99</td><td class=c>220</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td><td class=c>4.05</td><td class=c>11</td></tr>
+<tr><th>확산형</th><td>탄수： 2</td><td colspan=4>예리도소비： 4</td><th>폭풍: 속성</th><th>폭풍: 타격</th></tr>
+<tr><th>LV</th><th>폭발</th><th>화속성</th><th colspan=3>공격 범위</th><th>속성포</th><th>기절치</th></tr>
+<tr><td>포격LV1</td><td class=c>31</td><td class=c>100</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td><td class=c>5.5</td><td class=c>6</td></tr>
+<tr><td>포격LV2</td><td class=c>44</td><td class=c>200</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td><td class=c>5.63</td><td class=c>7</td></tr>
+<tr><td>포격LV3</td><td class=c>57</td><td class=c>240</td><td style="width:1em" class=gla></td><td style="width:1em" class=gla></td><td style="width:1em" class=gla></td><td class=c>5.76</td><td class=c>8</td></tr>
+<tr><td>포격LV4</td><td class=c>63</td><td class=c>290</td><td style="width:1em" class=gla></td><td style="width:1em" class=gl></td><td style="width:1em" class=gla></td><td class=c>5.89</td><td class=c>9</td></tr>
+<tr><td>포격LV5</td><td class=c>68</td><td class=c>340</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td><td class=c>6.02</td><td class=c>10</td></tr>
+<tr><td>포격LV6</td><td class=c>107</td><td class=c>390</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td><td class=c>6.15</td><td class=c>11</td></tr>
+<tr><td>포격LV7</td><td class=c>119</td><td class=c>430</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td><td class=c>6.29</td><td class=c>12</td></tr>
+<tr><td>포격LV8</td><td class=c>133</td><td class=c>470</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td><td class=c>6.42</td><td class=c>13</td></tr>
+<tr><td>포격LV9</td><td class=c>153</td><td class=c>510</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td><td class=c>6.55</td><td class=c>14</td></tr>
+<tr><th>방사형</th><td>탄수： 3</td><td colspan=4>예리도소비： 4</td><th>폭풍: 속성</th><th>폭풍: 타격</th></tr>
+<tr><th>LV</th><th>폭발</th><th>화속성</th><th colspan=3>공격 범위</th><th>속성포</th><th>기절치</th></tr>
+<tr><td>포격LV1</td><td class=c>24</td><td class=c>110</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td><td class=c>5</td><td class=c>5</td></tr>
+<tr><td>포격LV2</td><td class=c>33</td><td class=c>160</td><td style="width:1em"></td><td style="width:1em" class=gla></td><td style="width:1em"></td><td class=c>5.13</td><td class=c>6</td></tr>
+<tr><td>포격LV3</td><td class=c>42</td><td class=c>200</td><td style="width:1em"></td><td style="width:1em" class=gla></td><td style="width:1em"></td><td class=c>5.26</td><td class=c>7</td></tr>
+<tr><td>포격LV4</td><td class=c>48</td><td class=c>220</td><td style="width:1em"></td><td style="width:1em" class=gl></td><td style="width:1em"></td><td class=c>5.39</td><td class=c>8</td></tr>
+<tr><td>포격LV5</td><td class=c>53</td><td class=c>240</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td><td class=c>5.52</td><td class=c>9</td></tr>
+<tr><td>포격LV6</td><td class=c>84</td><td class=c>270</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td><td class=c>5.65</td><td class=c>10</td></tr>
+<tr><td>포격LV7</td><td class=c>95</td><td class=c>300</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td><td class=c>5.79</td><td class=c>11</td></tr>
+<tr><td>포격LV8</td><td class=c>106</td><td class=c>330</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td><td class=c>5.92</td><td class=c>12</td></tr>
+<tr><td>포격LV9</td><td class=c>122</td><td class=c>360</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td><td class=c>6.05</td><td class=c>13</td></tr>
+</table>
+<table border=1 cellspacing=0 cellpadding=2 class=hosoku>
+<tr><th colspan=8>용격포의 위력[최대5히트]</th>
+<tr><th>통상형</th><td>냉각: 40초</td><td colspan=4>예리도소비： 20</td></tr>
+<tr><th>LV</th><th>폭발</th><th>화속성</th><th colspan=3>공격 범위</th></tr>
+<tr><td>포격LV1</td><td class=c>40</td><td class=c>120</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td></tr>
+<tr><td>포격LV2</td><td class=c>50</td><td class=c>160</td><td style="width:1em"></td><td style="width:1em" class=gla></td><td style="width:1em"></td></tr>
+<tr><td>포격LV3</td><td class=c>62</td><td class=c>180</td><td style="width:1em" class=gla></td><td style="width:1em" class=gla></td><td style="width:1em" class=gla></td></tr>
+<tr><td>포격LV4</td><td class=c>69</td><td class=c>210</td><td style="width:1em" class=gla></td><td style="width:1em" class=gl></td><td style="width:1em" class=gla></td></tr>
+<tr><td>포격LV5</td><td class=c>76</td><td class=c>230</td><td style="width:1em" class=gla></td><td style="width:1em" class=gla></td><td style="width:1em" class=gla></td></tr>
+<tr><td>포격LV6</td><td class=c>120</td><td class=c>250</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td></tr>
+<tr><td>포격LV7</td><td class=c>132</td><td class=c>280</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td></tr>
+<tr><td>포격LV8</td><td class=c>153</td><td class=c>300</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td></tr>
+<tr><td>포격LV9</td><td class=c>172</td><td class=c>330</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td></tr>
+<tr><th>확산형</th><td>냉각: 40초</td><td colspan=4>예리도소비： 20</td></tr>
+<tr><th>LV</th><th>폭발</th><th>화속성</th><th colspan=3>공격 범위</th></tr>
+<tr><td>포격LV1</td><td class=c>29</td><td class=c>170</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td></tr>
+<tr><td>포격LV2</td><td class=c>43</td><td class=c>160</td><td style="width:1em"></td><td style="width:1em" class=gla></td><td style="width:1em"></td></tr>
+<tr><td>포격LV3</td><td class=c>55</td><td class=c>180</td><td style="width:1em" class=gla></td><td style="width:1em" class=gla></td><td style="width:1em" class=gla></td></tr>
+<tr><td>포격LV4</td><td class=c>62</td><td class=c>210</td><td style="width:1em" class=gla></td><td style="width:1em" class=gl></td><td style="width:1em" class=gla></td></tr>
+<tr><td>포격LV5</td><td class=c>69</td><td class=c>230</td><td style="width:1em" class=gla></td><td style="width:1em" class=gla></td><td style="width:1em" class=gla></td></tr>
+<tr><td>포격LV6</td><td class=c>109</td><td class=c>250</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td></tr>
+<tr><td>포격LV7</td><td class=c>122</td><td class=c>280</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td></tr>
+<tr><td>포격LV8</td><td class=c>142</td><td class=c>300</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td></tr>
+<tr><td>포격LV9</td><td class=c>159</td><td class=c>330</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td></tr>
+<tr><th>방사형</th><td>냉각: 40초</td><td colspan=4>예리도소비： 20</td></tr>
+<tr><th>LV</th><th>폭발</th><th>화속성</th><th colspan=3>공격 범위</th></tr>
+<tr><td>포격LV1</td><td class=c>45</td><td class=c>150</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td></tr>
+<tr><td>포격LV2</td><td class=c>55</td><td class=c>180</td><td style="width:1em"></td><td style="width:1em" class=gla></td><td style="width:1em"></td></tr>
+<tr><td>포격LV3</td><td class=c>67</td><td class=c>210</td><td style="width:1em" class=gla></td><td style="width:1em" class=gla></td><td style="width:1em" class=gla></td></tr>
+<tr><td>포격LV4</td><td class=c>74</td><td class=c>230</td><td style="width:1em" class=gla></td><td style="width:1em" class=gl></td><td style="width:1em" class=gla></td></tr>
+<tr><td>포격LV5</td><td class=c>81</td><td class=c>250</td><td style="width:1em" class=gla></td><td style="width:1em" class=gla></td><td style="width:1em" class=gla></td></tr>
+<tr><td>포격LV6</td><td class=c>139</td><td class=c>280</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td></tr>
+<tr><td>포격LV7</td><td class=c>153</td><td class=c>300</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td></tr>
+<tr><td>포격LV8</td><td class=c>178</td><td class=c>330</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td></tr>
+<tr><td>포격LV9</td><td class=c>198</td><td class=c>350</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td></tr>
+</table>
+<table border=1 cellspacing=0 cellpadding=2 class=hosoku style="width:30em">
+<tr><th colspan=8>폭룡굉포의 위력[최대2히트]</th>
+<tr><th>통상형</th><td colspan=2>냉각: 50초(가산 2초)</td><td colspan=5>예리도소비: 24(가산2)</td></tr>
+<tr><th>LV</th><th>폭발</th><th>화속성</th><th>폭발(가산)</th><th>화속성(가산)</th><th colspan=3>공격 범위</th></tr>
+<tr><td>포격LV1</td><td class=c>120</td><td class=c>360</td><td class=c>10</td><td class=c>30</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td></tr>
+<tr><td>포격LV2</td><td class=c>150</td><td class=c>480</td><td class=c>12</td><td class=c>40</td><td style="width:1em"></td><td style="width:1em" class=gla></td><td style="width:1em"></td></tr>
+<tr><td>포격LV3</td><td class=c>186</td><td class=c>540</td><td class=c>15</td><td class=c>40</td><td style="width:1em" class=gla></td><td style="width:1em" class=gla></td><td style="width:1em" class=gla></td></tr>
+<tr><td>포격LV4</td><td class=c>207</td><td class=c>630</td><td class=c>17</td><td class=c>50</td><td style="width:1em" class=gla></td><td style="width:1em" class=gl></td><td style="width:1em" class=gla></td></tr>
+<tr><td>포격LV5</td><td class=c>228</td><td class=c>690</td><td class=c>19</td><td class=c>50</td><td style="width:1em" class=gla></td><td style="width:1em" class=gla></td><td style="width:1em" class=gla></td></tr>
+<tr><td>포격LV6</td><td class=c>378</td><td class=c>750</td><td class=c>30</td><td class=c>60</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td></tr>
+<tr><td>포격LV7</td><td class=c>415</td><td class=c>880</td><td class=c>33</td><td class=c>70</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td></tr>
+<tr><td>포격LV8</td><td class=c>481</td><td class=c>940</td><td class=c>39</td><td class=c>80</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td></tr>
+<tr><td>포격LV9</td><td class=c>541</td><td class=c>1030</td><td class=c>43</td><td class=c>90</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td></tr>
+<tr><th>확산형</th><td colspan=2>냉각: 50초(가산 2초)</td><td colspan=5>예리도소비: 24(가산8)</td></tr>
+<tr><th>LV</th><th>폭발</th><th>화속성</th><th>폭발(가산)</th><th>화속성(가산)</th><th colspan=3>공격 범위</th></tr>
+<tr><td>포격LV1</td><td class=c>99</td><td class=c>360</td><td class=c>33</td><td class=c>120</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td></tr>
+<tr><td>포격LV2</td><td class=c>129</td><td class=c>480</td><td class=c>43</td><td class=c>160</td><td style="width:1em"></td><td style="width:1em" class=gla></td><td style="width:1em"></td></tr>
+<tr><td>포격LV3</td><td class=c>165</td><td class=c>540</td><td class=c>55</td><td class=c>180</td><td style="width:1em" class=gla></td><td style="width:1em" class=gla></td><td style="width:1em" class=gla></td></tr>
+<tr><td>포격LV4</td><td class=c>186</td><td class=c>630</td><td class=c>62</td><td class=c>210</td><td style="width:1em" class=gla></td><td style="width:1em" class=gl></td><td style="width:1em" class=gla></td></tr>
+<tr><td>포격LV5</td><td class=c>207</td><td class=c>690</td><td class=c>69</td><td class=c>230</td><td style="width:1em" class=gla></td><td style="width:1em" class=gla></td><td style="width:1em" class=gla></td></tr>
+<tr><td>포격LV6</td><td class=c>343</td><td class=c>750</td><td class=c>109</td><td class=c>250</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td></tr>
+<tr><td>포격LV7</td><td class=c>384</td><td class=c>880</td><td class=c>122</td><td class=c>280</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td></tr>
+<tr><td>포격LV8</td><td class=c>447</td><td class=c>940</td><td class=c>142</td><td class=c>300</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td></tr>
+<tr><td>포격LV9</td><td class=c>500</td><td class=c>1030</td><td class=c>159</td><td class=c>330</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td></tr>
+<tr><th>방사형</th><td colspan=2>냉각: 50초(가산 2초)</td><td colspan=5>예리도소비: 24(가산4)</td></tr>
+<tr><th>LV</th><th>폭발</th><th>화속성</th><th>폭발(가산)</th><th>화속성(가산)</th><th colspan=3>공격 범위</th></tr>
+<tr><td>포격LV1</td><td class=c>150</td><td class=c>300</td><td class=c>22</td><td class=c>70</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td></tr>
+<tr><td>포격LV2</td><td class=c>165</td><td class=c>540</td><td class=c>27</td><td class=c>90</td><td style="width:1em"></td><td style="width:1em" class=gla></td><td style="width:1em"></td></tr>
+<tr><td>포격LV3</td><td class=c>201</td><td class=c>630</td><td class=c>33</td><td class=c>100</td><td style="width:1em" class=gla></td><td style="width:1em" class=gla></td><td style="width:1em" class=gla></td></tr>
+<tr><td>포격LV4</td><td class=c>222</td><td class=c>690</td><td class=c>37</td><td class=c>110</td><td style="width:1em" class=gla></td><td style="width:1em" class=gl></td><td style="width:1em" class=gla></td></tr>
+<tr><td>포격LV5</td><td class=c>243</td><td class=c>750</td><td class=c>40</td><td class=c>120</td><td style="width:1em" class=gla></td><td style="width:1em" class=gla></td><td style="width:1em" class=gla></td></tr>
+<tr><td>포격LV6</td><td class=c>444</td><td class=c>840</td><td class=c>70</td><td class=c>140</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td></tr>
+<tr><td>포격LV7</td><td class=c>489</td><td class=c>960</td><td class=c>77</td><td class=c>150</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td></tr>
+<tr><td>포격LV8</td><td class=c>569</td><td class=c>1050</td><td class=c>89</td><td class=c>170</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td></tr>
+<tr><td>포격LV9</td><td class=c>633</td><td class=c>1120</td><td class=c>99</td><td class=c>170</td><td style="width:1em"></td><td style="width:1em"></td><td style="width:1em"></td></tr>
+</table>
+<table border=1 cellspacing=0 cellpadding=2 class=hosoku style="width:20em">
+<tr><th colspan=2>속성포</th></tr>
+<tr><td>무속성</td><td>원래 폭발의 0.9배(타격)</td></tr>
+<tr><td>폭격 검정</td><td>원래 폭발의 1.2배</td></tr>
+<tr><td>속성</td><td>무기의 속성×속성포의 배율</td></tr>
+<tr><td>·</td><td></td></tr>
+<tr><td>폭발</td><td>원래 폭발의 0.6배</td></tr>
+</table>
+<div style="clear:both">특징：포격·용격포·폭룡굉포<ul>
+<li>·이들의 위력은, 무기의 공격력에는 의존하지 않습니다.</li>
+<li>·폭발은 몬스터의 육질에 따라 경감되지 않습니다만, 화속성 부분은 경감됩니다.</li>
+<li>·예리도 레벨이 1(주황) 이하면, 폭발위력·화속성치 모두 0.75배로 떨어져 버립니다.</li>
+<li>　또한, 예리도 레벨이 0(빨강) 이하면, 사용 불가가 됩니다.</li>
+<li>·포격 후에 퀵리로드함으로써, 데미지가 1.5배가 된 포격이 가능해집니다. (연격포에는 무효)</li>
+<li>·폭룡굉포는 최초의 탄 추가는 포격 기능의 전환으로 가산으로 보지 않습니다.</li>
+<li>·폭룡굉포를 사용하여, 기본탄수 이상을 장전하는 경우(장전수UP/총창기[포황]), 다음 제한이 있습니다.</li>
+<li>　1: 기본탄수 이상의 추가분은, 무속성·화속성 모두, 통상형: 0.6배 방사형: 0.5배 확산형: 0.25배</li>
+<li>　2: 기본탄수 이상의 추가분은, 예리도소비는 일률 +2</li>
+<li>가드가 가능하며, 범위는 전방220°. 스텝회피를 1회 한 후에, 배열 스텝이 가능합니다.</li>
+<li>강가드는 주위 360°가드가 가능하지만, 스태미나를 소비합니다. 후방으로부터의 공격을 받으면 비틀거립니다.</li>
+</ul></div>
+<div style="margin-top:1em;margin-bottom:1em;">천의 형<ul>
+<li>히트블레이드는 발동할 때까지 5초 SA가 붙고, 모든 공격의 선단 부분에 히트블레이드가 붙습니다.</li>
+<li>히트블레이드 발동 시에, 예리도가 최대까지 회복합니다.</li>
+<li>히트블레이드 자체의 위력은, 참5+용격포의 화속성의 0.85배가 됩니다.</li>
+<li>발동 중은, 회심 100%, 모든 공격에서 튕김 무효, 예리도의 감소/회복 무효, 포격의 화속성이 3배가 됩니다.</li>
+<li>또한 백 게이지 이하의 경우, 예리도배율은 1랭크 위의 예리도로 대미지를 계산합니다.</li>
+<li>히트블레이드는 120초 지속됩니다. 히트블레이드 종료 시에, 예리도가 -250 됩니다.</li>
+</ul></div>
+<div style="margin-top:1em;margin-bottom:1em;">람의 형<ul>
+<li>포격이 속성포로 바뀝니다.</li>
+<li>통상 용격포와 다르게, 무기의 속성데미지, 육질무시 데미지 순의 2히트 공격이 됩니다.</li>
+<li>무속성무기의 경우는, 속성 데미지 대신 타격 데미지를 줍니다. 이 타격 데미지는 육질의 영향을 받지 않습니다.</li>
+<li>검정을 장전한 상태에서 속성포를 사용한 경우, 검정을 1 소비합니다.</li>
+</ul></div>
+<h4 id=HORN>수렵피리　　　<a href="#TOP">위로</a></h4>
+<div>타속성　보정 100%</div>
+<table border=1 cellspacing=0 cellpadding=2>
+<tr><th colspan=5>지의 형</th><th colspan=5>천의 형</th><th colspan=5>람의 형</th></tr>
+<tr><th>공격액션</th><th>위력</th><th>기절치</th><th>SA</th><th>보충</th><th>공격액션</th><th>위력</th><th>기절치</th><th>SA</th><th>보충</th><th>공격액션</th><th>위력</th><th>기절치</th><th>SA</th><th>보충</th></tr>
+<tr><td>무기 꺼내기공격</td><td class=c>40</td><td class=c>20</td><td>○</td><td>검술HS경감</td><td>무기 꺼내기공격</td><td class=c>40</td><td class=c>20</td><td>○</td><td>검술HS경감</td><td>무기 꺼내기공격</td><td class=c>40</td><td class=c>20</td><td>○</td><td>검술HS경감</td></tr>
+<tr><td>내려찍기</td><td class=c>18·57</td><td class=c>8·30</td><td>○</td><td>튕김 무효<br>검술HS경감</td><td>치켜들기</td><td class=c>60</td><td class=c>24</td><td>○</td><td></td><td>치켜들기</td><td class=c>60</td><td class=c>24</td><td>○</td><td></td></tr>
+<tr><td></td><td class=c></td><td class=c></td><td></td><td></td><td>　찌르기 올려치기</td><td class=c>30×n</td><td class=c>24×n</td><td>○</td><td></td><td>　찌르기 올려치기</td><td class=c>30×n</td><td class=c>24×n</td><td>○</td><td>검술HS경감</td></tr>
+<tr><td></td><td class=c></td><td class=c></td><td></td><td></td><td>　차올리기</td><td class=c>38</td><td class=c>30</td><td>○</td><td></td><td>　차올리기</td><td class=c>38</td><td class=c>30</td><td>○</td><td></td></tr>
+<tr><td>왼쪽휘두르기</td><td class=c>40</td><td class=c>20</td><td>○</td><td>검술HS경감</td><td>왼쪽휘두르기</td><td class=c>40</td><td class=c>20</td><td>○</td><td>검술HS경감</td><td>왼쪽휘두르기</td><td class=c>40</td><td class=c>20</td><td>○</td><td>검술HS경감</td></tr>
+<tr><td>오른쪽휘두르기</td><td class=c>40</td><td class=c>20</td><td>○</td><td>검술HS경감</td><td>오른쪽휘두르기</td><td class=c>40</td><td class=c>20</td><td>○</td><td>검술HS경감</td><td>오른쪽휘두르기</td><td class=c>40</td><td class=c>20</td><td>○</td><td>검술HS경감</td></tr>
+<tr><td>손잡이 치기</td><td class=c>16×3<br>27×3[시질]</td><td class=c>0</td><td>○</td><td>검술HS경감</td><td>손잡이 치기</td><td class=c>16×3<br>27×3[시질]</td><td class=c>0</td><td>○</td><td>검술HS경감</td><td>손잡이 치기</td><td class=c>16×3<br>27×3[시질]</td><td class=c>0</td><td>○</td><td>검술HS경감</td></tr>
+<tr><td>연주 시작</td><td class=c>26<br>39[시질]</td><td class=c>26</td><td></td><td>튕김 무효</td><td>연주 시작</td><td class=c>26<br>39[시질]</td><td class=c>26</td><td></td><td>튕김 무효</td><td>연주 시작</td><td class=c>26<br>39[시질]</td><td class=c>26</td><td></td><td>튕김 무효</td></tr>
+<tr><td>연주1</td><td class=c>50<br>75[시질]</td><td class=c>26</td><td>○</td><td></td><td>연주1</td><td class=c>50<br>75[시질]</td><td class=c>26</td><td>○</td><td></td><td>연주1</td><td class=c>50<br>75[시질]</td><td class=c>26</td><td>○</td><td></td></tr>
+<tr><td>연주2</td><td class=c>43<br>64[시질]</td><td class=c>26</td><td>○</td><td></td><td>연주2</td><td class=c>43<br>64[시질]</td><td class=c>26</td><td>○</td><td></td><td>연주2</td><td class=c>43<br>64[시질]</td><td class=c>26</td><td>○</td><td></td></tr>
+<tr><td>연주3</td><td class=c>49<br>73[시질]</td><td class=c>26</td><td>○</td><td></td><td>연주3</td><td class=c>49<br>73[시질]</td><td class=c>26</td><td>○</td><td></td><td>연주3</td><td class=c>49<br>73[시질]</td><td class=c>26</td><td>○</td><td></td></tr>
+<tr><td>연주 종료</td><td class=c>31<br>46[시질]</td><td class=c>30</td><td></td><td>튕김 무효</td><td>연주 종료</td><td class=c>31<br>46[시질]</td><td class=c>30</td><td></td><td>튕김 무효</td><td>연주 종료</td><td class=c>31<br>46[시질]</td><td class=c>30</td><td></td><td>튕김 무효</td></tr>
+<tr><td>음폭 연주</td><td class=c>-</td><td class=c></td><td></td><td>소리 폭탄효과<br>예리도-10</td><td>음폭 연주</td><td class=c>-</td><td class=c></td><td></td><td>소리 폭탄효과<br>예리도-10</td><td>음색변환</td><td class=c>-</td><td class=c></td><td></td><td>벚꽃음색</td></tr>
+</table>
+<div>특징：연주<ul>
+<li>공격에 기절치가 있으며, 몬스터의 머리를 공격함으로써, 기절시킬 수 있습니다.</li>
+<li>연주함으로써, 다양한 효과를 발동할 수 있습니다. 선율은 회피 행동을 해도 사라지지 않습니다.</li>
+</ul></div>
+<h4 id=RIGHT>라이트보우건　　　<a href="#TOP">위로</a></h4>
+<div>탄속성　보정 100%</div>
+<table border=1 cellspacing=0 cellpadding=2 class=hosoku>
+<caption>공방에서의 강화</caption>
+<tr><th>강화</th><th>강화 비용</th><th>내용</th></tr>
+<tr><td>LV2 강화</td><td>작성 금액의 0.4배</td><td>무기 배율+10</td></tr>
+<tr><td>LV3 강화</td><td>작성 금액의 0.6배</td><td>무기 배율+10</td></tr>
+<tr><td>LV4 강화</td><td>작성 금액의 1.6배</td><td>무기 배율+10</td></tr>
+<tr><td>LV5 강화</td><td>작성 금액의 3.0배</td><td>무기 배율+20</td></tr>
+<tr><td>소음기</td><td>작성 금액의 0.4배</td><td>공격 시 적개심 상승량이 줄어든다</td></tr>
+<tr><td>롱배럴</td><td>작성 금액의 0.6배</td><td>탄속 상승과 흔들림 폭 감소</td></tr>
+<tr><td>가변 배율 스코프</td><td>작성 금액의 0.6배</td><td>표시배율이 가변이 된다</td></tr>
+</table>
+<table border=1 cellspacing=0 cellpadding=2>
+<tr><th>속사대응탄</th><th>발사수</th></tr>
+<tr><td>일반탄</td><td>5</td></tr>
+<tr><td>관통탄</td><td>3</td></tr>
+<tr><td>산탄</td><td>3</td></tr>
+<tr><td>철갑유탄</td><td>2</td></tr>
+<tr><td>화염탄</td><td>5</td></tr>
+<tr><td>수냉탄</td><td>3</td></tr>
+<tr><td>전격탄</td><td>3</td></tr>
+<tr><td>빙결탄</td><td>3</td></tr>
+</table>
+<div style="clear:both">특징<ul>
+<li>보우건 후려치기는 3연속 공격이 가능하며, 변경 불가 5·5·10 데미지입니다. 참속성을 가집니다</li>
+<li>속사에 대응하고 있는 탄을 발사한 경우, 1발분의 소비로 여러 발을 쏠 수 있습니다.</li>
+<li>속사의 경우, 탄의 위력은 0.5배가 됩니다. (폭파 데미지 등은 제외)</li>
+<li>발사 후, 타이밍 좋게 재차 발사함으로써, '저스트 샷'이 되어, 데미지가 1.3배가 됩니다.</li>
+<li>　※총걸의 퍼펙트샷은 1.4배가 됩니다</li>
+<li>마찬가지로 타이밍 좋게 리로드함으로써, '저스트 리로드'가 되어, 반동을 날리고 리로드할 수 있습니다.</li>
+<li>초속사는 별도 기재</li>
+</ul></div>
+<div style="margin-top:1em;margin-bottom:1em;">천의 형<ul>
+<li>리로드가 퀵리로드가 되어, 재빠르게 리로드할 수 있게 되지만, 장전 수는 절반(끝수 올림)이 됩니다.</li>
+<li>크리티컬 시의 배율이 1.5배에서 1.6배로 변화합니다만, 크리티컬 거리가 짧아집니다.</li>
+<li>거리로 위력이 변하지 않는 탄에 대해서는 영향은 없습니다.</li>
+</ul></div>
+<div style="margin-top:1em;margin-bottom:1em;">람의 형<ul>
+<li>회피가 전방 스텝으로 변화합니다. 전방 스텝 중에 탄을 발사함으로써, 근접 사격이 가능해집니다.</li>
+<li>근접 사격의 사거리는 통상의 절반 이하가 됩니다. 크리티컬 시의 배율이 1.5배에서 2.0배가 되고, 상태이상의 축적치가 1.3배가 됩니다.</li>
+<li>속성탄은 위력이 1.5배가 됩니다.</li>
+<li>사거리 감소의 영향으로, 관통탄L3는 MAX4히트 산탄은 MAX 2히트 멸룡탄은 MAX 3히트</li>
+<li>근접 사격을 한 경우, 발사의 폭풍데미지 변경 불가 30+화12가 있습니다. 탄 자체의 히트와는 별개의 판정입니다.</li>
+<li>(속사대응 탄의 경우, 변경 불가 3+화1)</li>
+</ul></div>
+<h4 id=HEAVY>헤비보우건..　　　<a href="#TOP">위로</a></h4>
+<div>탄속성　보정 100%</div>
+<table border=1 cellspacing=0 cellpadding=2 class=hosoku>
+<caption>공방에서의 강화</caption>
+<tr><th>강화</th><th>강화 비용</th><th>내용</th></tr>
+<tr><td>LV2 강화</td><td>작성 금액의 0.4배</td><td>무기 배율+10</td></tr>
+<tr><td>LV3 강화</td><td>작성 금액의 0.6배</td><td>무기 배율+10</td></tr>
+<tr><td>LV4 강화</td><td>작성 금액의 1.6배</td><td>무기 배율+10</td></tr>
+<tr><td>LV5 강화</td><td>작성 금액의 3.0배</td><td>무기 배율+20</td></tr>
+<tr><td>실드</td><td>작성 금액의 0.6배</td><td>가드가 가능해진다</td></tr>
+<tr><td>파워배럴<br><small>통상무기</small></td><td>작성 금액의 0.6배</td><td>탄속 상승과 흔들림 폭 감소<br>무기 배율+20</td></tr>
+<tr><td>헤비배럴<br><small>강종무기</small></td><td>작성 금액의 0.6배</td><td>탄속 상승과 흔들림 폭 감소<br>무기 배율+40</td></tr>
+<tr><td>배열분사기구<br><small>강종무기</small></td><td>작성 금액의 0.6배</td><td>배열탄의 발사가 가능해진다</td></tr>
+<tr><td>가변 배율 스코프</td><td>작성 금액의 0.6배</td><td>표시배율이 가변이 된다</td></tr>
+</table>
+<table border=1 cellspacing=0 cellpadding=2>
+<tr><th colspan=3>람의 형</th></tr>
+<tr><th>차지 사격</th><th>탄위력</th><th>배열축적</th></tr>
+<tr><td>차지0</td><td>0.95배</td><td>±０</td></tr>
+<tr><td>차지１</td><td>1.15배</td><td>＋１</td></tr>
+<tr><td>차지２</td><td>1.3배</td><td>＋３</td></tr>
+<tr><td>차지３</td><td>1.5배</td><td>＋５</td></tr>
+</table>
+<div style="clear:both">특징<ul>
+<li>보우건 후려치기는 3연속 공격이 가능하며, 변경 불가 15·15·30 데미지입니다. 참속성을 가집니다</li>
+<li>실드는 자동가드가 되어 있습니다. 단, 가드성능 스킬의 영향은 받지 않습니다.</li>
+<li>위력 40 이하의 공격은 대미지를 받지 않고 가드할 수 있습니다.</li>
+<li>일부 탄은 '압축 리로드'로 묶어서 쏠 수 있습니다</li>
+<li>배열분사기구는 별도 기재</li>
+</ul></div>
+<div style="margin-top:1em;margin-bottom:1em;">천의 형<ul>
+<li>발사 후, 레버를 좌우 어느 쪽으로든 기울여서 스텝했을 경우에, 통상보다 빠르게 반동을 취소할 수 있습니다.</li>
+<li>또한 다시, 옆스텝으로 이을 수 있습니다.</li>
+<li>회피보다 이동거리가 짧습니다만, 스텝은 발사 또는 리로드로 취소 가능합니다.</li>
+<li>발사 시에 레버를 조작함으로써, 최대 30도까지 옆방향의 각도를 수정할 수 있습니다.</li>
+</ul></div>
+<div style="margin-top:1em;margin-bottom:1em;">람의 형<ul>
+<li>차지 사격이 가능해집니다. 차지는 3단계까지 가능합니다. 차지를 너무 오래 하면 차지2까지 돌아갑니다.</li>
+<li>차지 사격의 경우, 탄의 발사 간격이 1프레임 단축됩니다.</li>
+<li>차지하는 시간에 따라, 탄환의 위력이 상승합니다. 또한, 배열게이지가 쌓이는 양이 늘어갑니다</li>
+</ul></div>
+<h4 id=YUMI>활　　　<a href="#TOP">위로</a></h4>
+<div>근접 공격　참속성　보정 참100％타100％</div>
+<div>화살　　　　　탄속성　보정 100%</div>
+<table border=1 cellspacing=0 cellpadding=2>
+<tr><th colspan=4>지의 형</th><th colspan=4>천의 형/람의 형</th></tr>
+<tr><th>공격액션</th><th>위력</th><th>SA</th><th>보충</th><th>공격액션</th><th>위력</th><th>SA</th><th>보충</th></tr>
+<tr><td>수평 베기</td><td class=c>10</td><td></td><td></td><td>승룡궁</td><td class=c>12×2<br>17×2[시질]</td><td>○</td><td></td></tr>
+<tr><td>세로 베기</td><td class=c>18</td><td></td><td></td><td>〃상승</td><td class=c>10×2<br>15×2[시질]</td><td></td><td></td></tr>
+<tr><td></td><td class=c></td><td></td><td></td><td>〃 정점</td><td class=c>31·10<br>41·15[시질]</td><td></td><td></td></tr>
+</table>
+<div style="margin-top:1em;margin-bottom:1em;">특징：근접 공격<ul>
+<li>데미지·튕김 계산은, 참(베기)과 타(타격) 각각에서 육질×무기보정 계산을 실시하며, 그 중 높은 수치의 육질을 사용합니다.</li>
+<li>활에 일반 속성이 부가되어 있으면, 속성 데미지도 추가됩니다만, 속성 데미지는 표시속성값÷10×0.5 가 됩니다.</li>
+<li>상태이상 속성병을 장착한 경우는, 화살과 마찬가지로, 일반 속성은 무효가 되고, 대신에 상태이상 속성이 부가됩니다.</li>
+<li>상태이상병을 장착한 경우, 상태이상 속성치는 겨우 2밖에 안 되지만, 다른 근접무기와 달리 매회 발동합니다.</li>
+<li>강격병을 장착하면, 근접 공격의 위력도 1.5배가 됩니다.</li>
+<li>폭격병의 경우, 데미지는 1히트 2 변경 불가입니다. 승룡궁은 1히트 10 변경 불가입니다.</li>
+</ul></div>
+<div style="margin-top:1em;margin-bottom:1em;">특징：화살공격<ul>
+<li>LV4의 화살은, 장전수UP 스킬이 없으면 사용할 수 없습니다.</li>
+</ul></div>
+<div style="margin-top:1em;margin-bottom:1em;">천의 형<ul>
+<li>승룡궁은 육질에 관계없이, 최초의 2단은 큰 히트스톱이 발생합니다.</li>
+<li>지의 형의 경우, 근접 공격으로 병은 소비하지 않습니다만, 천의 형의 경우는 1히트마다 소비합니다.</li>
+</ul></div>
+<div style="margin-top:1em;margin-bottom:1em;">람의 형<ul>
+<li>앉아 조준 사격이 사용 가능해집니다. 그 상태로 화살을 쏘면 물리/속성 데미지, 상태이상병의 속성값이 오릅니다.</li>
+<li>　　차지１：1.2배 차지２：1.3배　차지３：1.4배　차지４：1.4배</li>
+<li>일정 시간 이상 차지를 지속하면, 김거리까지 닿는 「오라 애로우」가 됩니다.</li>
+<li>단, 폭격병 장착 시의 오라 애로우는, 통상의 6할의 사거리입니다.</li>
+<li>오라 애로우는, 튕겨 돌아오지 않습니다.</li>
+<li>땅·천의 형에 비해, 차지 속도가 3/30초(1단마다) 늦어집니다.</li>
+</ul></div>
+<h4 id=TONFA>천룡곤　　　<a href="#TOP">위로</a></h4>
+<div>타속성　보정 100%</div>
+<table border=1 cellspacing=0 cellpadding=2>
+<tr><th colspan=5>지의 형(리치김)</th><th colspan=5>천의 형(리치김)</th><th colspan=5>람의 형(리치김)</th></tr>
+<tr><td>공격액션</td><td class=c>위력</td><td class=c>기절치</td><td>SA</td><td>보충</td><td>공격액션</td><td class=c>위력</td><td class=c>기절치</td><td>SA</td><td>보충</td><td>공격액션</td><td class=c>위력</td><td class=c>기절치</td><td>SA</td><td>보충</td></tr>
+<tr><td>발도공격</td><td class=c>28</td><td class=c>12</td><td>○</td><td></td><td>발도공격</td><td class=c>35</td><td class=c>12</td><td>○</td><td></td><td>발도공격</td><td class=c>35</td><td class=c>12</td><td>○</td><td></td></tr>
+<tr><td>기본 연계1</td><td class=c>14</td><td class=c>6</td><td>○</td><td></td><td>기본 연계1</td><td class=c>17</td><td class=c>6</td><td>○</td><td></td><td>기본 연계1</td><td class=c>17</td><td class=c>6</td><td>○</td><td></td></tr>
+<tr><td>기본 연계2</td><td class=c>11</td><td class=c>8</td><td>○</td><td></td><td>기본 연계2</td><td class=c>13</td><td class=c>8</td><td>○</td><td></td><td>기본 연계2</td><td class=c>13</td><td class=c>8</td><td>○</td><td></td></tr>
+<tr><td>기본 연계3</td><td class=c>18</td><td class=c>6</td><td>○</td><td></td><td>기본 연계3</td><td class=c>22</td><td class=c>6</td><td>○</td><td></td><td>기본 연계3</td><td class=c>22</td><td class=c>6</td><td>○</td><td></td></tr>
+<tr><td>기본 연계4</td><td class=c>9·9</td><td class=c>7·7</td><td>○</td><td></td><td>기본 연계4</td><td class=c>11·11</td><td class=c>7·7</td><td>○</td><td></td><td>기본 연계4</td><td class=c>11·11</td><td class=c>7·7</td><td>○</td><td></td></tr>
+<tr><td>기본 연계5（차지1）</td><td class=c>16<br>18[차지+1]<br>20[차지+2]</td><td class=c>변경 불가20</td><td>○</td><td></td><td>기본 연계5（차지1）</td><td class=c>20<br>22[차지+1]<br>25[차지+2]</td><td class=c>변경 불가20</td><td>○</td><td></td><td>기본 연계5（차지1）</td><td class=c>20<br>22[차지+1]<br>25[차지+2]</td><td class=c>변경 불가20</td><td>○</td><td></td></tr>
+<tr><td>기본 연계5（차지2）</td><td class=c>50<br>55[차지+1]<br>61[차지+2]</td><td class=c>30·변경 불가30</td><td>○</td><td></td><td>기본 연계5（차지2）</td><td class=c>62<br>68[차지+1]<br>77[차지+2]</td><td class=c>30·변경 불가30</td><td>○</td><td></td><td>기본 연계5（차지2）</td><td class=c>62<br>68[차지+1]<br>77[차지+2]</td><td class=c>30·변경 불가30</td><td>○</td><td></td></tr>
+<tr><td>기본 연계5（차지3）</td><td class=c>110<br>119[차지+1]<br>131[차지+2]</td><td class=c>70·변경 불가40</td><td>○</td><td></td><td>기본 연계5（차지3）</td><td class=c>137<br>150[차지+1]<br>165[차지+2]</td><td class=c>70·변경 불가40</td><td>○</td><td></td><td>기본 연계5（차지3）</td><td class=c>137<br>150[차지+1]<br>165[차지+2]</td><td class=c>70·변경 불가40</td><td>○</td><td></td></tr>
+<tr><td>대시찌르기</td><td class=c>12·20</td><td class=c>10·15</td><td>○</td><td></td><td>대시찌르기</td><td class=c>15·25</td><td class=c>10·15</td><td>○</td><td></td><td>대시찌르기</td><td class=c>15·25</td><td class=c>10·15</td><td>○</td><td></td></tr>
+<tr><td>대시연계(차기)</td><td class=c>7·7<br>9·9[체술]<br>11·11[격투]</td><td class=c>2·2</td><td>○</td><td>차기</td><td>대시연계(차기)</td><td class=c>8·8<br>11·11[체술]<br>15·15[격투]</td><td class=c>2·2</td><td>○</td><td>차기</td><td>대시연계(차기)</td><td class=c>8·8<br>11·11[체술]<br>15·15[격투]</td><td class=c>2·2</td><td>○</td><td>차기</td></tr>
+<tr><td>대시연계(찌르기)</td><td class=c>12·20</td><td class=c>4·4</td><td>○</td><td></td><td>대시연계(찌르기)</td><td class=c>15·25</td><td class=c>4·4</td><td>○</td><td></td><td>대시연계(찌르기)</td><td class=c>15·25</td><td class=c>4·4</td><td>○</td><td></td></tr>
+<tr><td>특수 연계1</td><td class=c>11·11<br>13·13[체술]<br>15·15[격투]</td><td class=c>2·2</td><td>○</td><td>차기</td><td>특수 연계1</td><td class=c>13·13<br>16·16[체술]<br>18·18[격투]</td><td class=c>2·2</td><td>○</td><td>차기</td><td>특수 연계1</td><td class=c>13·13<br>16·16[체술]<br>18·18[격투]</td><td class=c>2·2</td><td>○</td><td>차기</td></tr>
+<tr><td>특수 연계2</td><td class=c>10</td><td class=c>10</td><td>○</td><td></td><td>특수 연계2</td><td class=c>12</td><td class=c>10</td><td>○</td><td></td><td>특수 연계2</td><td class=c>12</td><td class=c>10</td><td>○</td><td></td></tr>
+<tr><td>특수 연계3</td><td class=c>9·12</td><td class=c>6·8</td><td>○</td><td></td><td>특수 연계3</td><td class=c>11·15</td><td class=c>6·8</td><td>○</td><td></td><td>특수 연계3</td><td class=c>11·15</td><td class=c>6·8</td><td>○</td><td></td></tr>
+<tr><td>특수 연계4</td><td class=c>26</td><td class=c>24</td><td>○</td><td></td><td>특수 연계4</td><td class=c>32</td><td class=c>24</td><td>○</td><td></td><td>특수 연계4</td><td class=c>32</td><td class=c>24</td><td>○</td><td></td></tr>
+<tr><td>특수 연계5</td><td class=c>16·11x4·24</td><td class=c>15·13x4·20</td><td>○</td><td></td><td>특수 연계5</td><td class=c>20·13x4·30</td><td class=c>15·13x4·20</td><td>○</td><td></td><td>특수 연계5</td><td class=c>20·13x4·30</td><td class=c>15·13x4·20</td><td>○</td><td></td></tr>
+<tr><td>특수 연계6</td><td class=c>19·19<br>23·23[체술]<br>27·27[격투]</td><td class=c>2·2</td><td>○</td><td>차기</td><td>특수 연계6</td><td class=c>23·23<br>28·28[체술]<br>33·33[격투]</td><td class=c>2·2</td><td>○</td><td>차기</td><td>특수 연계6</td><td class=c>23·23<br>28·28[체술]<br>33·33[격투]</td><td class=c>2·2</td><td>○</td><td>차기</td></tr>
+<tr><td>점프 회피</td><td class=c>5·5<br>6·6[체술]<br>7·7[격투]</td><td class=c>2·2</td><td>○</td><td>차기</td><td>점프 회피</td><td class=c>5·5<br>6·6[체술]<br>7·7[격투]</td><td class=c>2·2</td><td>○</td><td>차기</td><td>점프 회피</td><td class=c>5·5<br>6·6[체술]<br>7·7[격투]</td><td class=c>2·2</td><td>○</td><td>차기</td></tr>
+<tr><td>체공연계1</td><td class=c>22</td><td class=c>14</td><td>○</td><td></td><td>체공연계1</td><td class=c>22</td><td class=c>14</td><td>○</td><td></td><td>체공연계1</td><td class=c>22</td><td class=c>14</td><td>○</td><td></td></tr>
+<tr><td>체공연계2</td><td class=c>15·15</td><td class=c>13·13</td><td>○</td><td></td><td>체공연계2</td><td class=c>15·15</td><td class=c>13·13</td><td>○</td><td></td><td>체공연계2</td><td class=c>15·15</td><td class=c>13·13</td><td>○</td><td></td></tr>
+<tr><td>체공연계3</td><td class=c>23·25<br>27·29[체술]<br>31·33[격투]</td><td class=c>11·11</td><td>○</td><td>차기</td><td>체공연계3</td><td class=c>23·25<br>27·29[체술]<br>31·33[격투]</td><td class=c>11·11</td><td>○</td><td>차기</td><td>체공연계3</td><td class=c>23·25<br>27·29[체술]<br>31·33[격투]</td><td class=c>11·11</td><td>○</td><td>차기</td></tr>
+<tr><td>세로 회전공격</td><td class=c>12·12</td><td class=c>12·12</td><td>○</td><td></td><td>세로 회전공격</td><td class=c>12·12</td><td class=c>12·12</td><td>○</td><td></td><td>세로 회전공격</td><td class=c>12·12</td><td class=c>12·12</td><td>○</td><td></td></tr>
+<tr><td></td><td class=c></td><td class=c></td><td></td><td></td><td>EX회피(전)</td><td class=c>42</td><td class=c>20</td><td>○</td><td></td><td>차지 찌르기1</td><td class=c>13<br>14[차지+1]<br>16[차지+2]</td><td class=c>8</td><td>○</td><td></td></tr>
+<tr><td></td><td class=c></td><td class=c></td><td></td><td></td><td>EX회피(횡)</td><td class=c>31·31</td><td class=c>20·10</td><td>○</td><td></td><td>차지 찌르기2</td><td class=c>47<br>49[차지+1]<br>52[차지+2]</td><td class=c>22</td><td>○</td><td></td></tr>
+<tr><td></td><td class=c></td><td class=c></td><td></td><td></td><td>EX회피(후)</td><td class=c>24</td><td class=c>15</td><td>○</td><td></td><td>차지 찌르기3</td><td class=c>72<br>76[차지+1]<br>81[차지+2]</td><td class=c>32</td><td>○</td><td></td></tr>
+<tr><td></td><td class=c></td><td class=c></td><td></td><td></td><td></td><td class=c></td><td class=c></td><td></td><td></td><td>EX추격1</td><td class=c>10<br>11[포술사]<br>12[포술왕]<br>13[포술신]</td><td class=c>7</td><td>○</td><td></td></tr>
+<tr><td></td><td class=c></td><td class=c></td><td></td><td></td><td></td><td class=c></td><td class=c></td><td></td><td></td><td>EX추격2</td><td class=c>28<br>31[포술사]<br>35[포술왕]<br>40[포술신]</td><td class=c>20</td><td>○</td><td></td></tr>
+<tr><td></td><td class=c></td><td class=c></td><td></td><td></td><td></td><td class=c></td><td class=c></td><td></td><td></td><td>EX추격3</td><td class=c>41<br>47[포술사]<br>53[포술왕]<br>60[포술신]</td><td class=c>30</td><td>○</td><td></td></tr>
+<tr><td>용기천격</td><td class=c>1x2<br>8x2[포술사]<br>10x2[포술왕]<br>15x2[포술신]</td><td class=c></td><td>○</td><td>튕김 무효<br>회심무효<br>대인：날려보내기</td><td>용기천격</td><td class=c>1x2<br>8x2[포술사]<br>10x2[포술왕]<br>15x2[포술신]</td><td class=c></td><td>○</td><td>튕김 무효<br>회심무효<br>대인：날려보내기</td><td>용기천격</td><td class=c>1x2<br>8x2[포술사]<br>10x2[포술왕]<br>15x2[포술신]</td><td class=c></td><td>○</td><td>튕김 무효<br>회심무효<br>대인：날려보내기</td></tr>
+<tr><td>용기천격</td><td class=c>40</td><td class=c>2<br>18[포술사]<br>26[포술왕]<br>32[포술신]</td><td>○</td><td>검술/회심무효</td><td>용기천격</td><td class=c>40</td><td class=c>2<br>18[포술사]<br>26[포술왕]<br>32[포술신]</td><td>○</td><td>검술/회심무효</td><td>용기천격</td><td class=c>40</td><td class=c>2<br>18[포술사]<br>26[포술왕]<br>32[포술신]</td><td>○</td><td>검술/회심무효</td></tr>
+<tr><td>하늘중용기천격</td><td class=c>1x2<br>7x2[포술사]<br>9x2[포술왕]<br>12x2[포술신]</td><td class=c></td><td>○</td><td>튕김 무효<br>회심무효<br>대인：날려보내기</td><td>하늘중용기천격</td><td class=c>1x2<br>7x2[포술사]<br>9x2[포술왕]<br>12x2[포술신]</td><td class=c></td><td>○</td><td>튕김 무효<br>회심무효<br>대인：날려보내기</td><td>하늘중용기천격</td><td class=c>1x2<br>7x2[포술사]<br>9x2[포술왕]<br>12x2[포술신]</td><td class=c></td><td>○</td><td>튕김 무효<br>회심무효<br>대인：날려보내기</td></tr>
+<tr><td>하늘중용기천격</td><td class=c>30</td><td class=c>2<br>18[포술사]<br>26[포술왕]<br>32[포술신]</td><td>○</td><td>검술/회심무효</td><td>하늘중용기천격</td><td class=c>30</td><td class=c>2<br>18[포술사]<br>26[포술왕]<br>32[포술신]</td><td>○</td><td>검술/회심무효</td><td>하늘중용기천격</td><td class=c>30</td><td class=c>2<br>18[포술사]<br>26[포술왕]<br>32[포술신]</td><td>○</td><td>검술/회심무효</td></tr>
+<tr><td></td><td class=c></td><td class=c></td><td></td><td></td><td></td><td class=c></td><td class=c></td><td></td><td></td><td>천극권무(1-4hit)</td><td class=c>15</td><td class=c>2</td><td>○</td><td>속성10%</td></tr>
+<tr><td></td><td class=c></td><td class=c></td><td></td><td></td><td></td><td class=c></td><td class=c></td><td></td><td></td><td>천극권무(5-8hit)</td><td class=c>17</td><td class=c>2</td><td>○</td><td>속성10%</td></tr>
+<tr><td></td><td class=c></td><td class=c></td><td></td><td></td><td></td><td class=c></td><td class=c></td><td></td><td></td><td>천극권무(9-12hit)</td><td class=c>20</td><td class=c>2</td><td>○</td><td>속성10%</td></tr>
+<tr><td></td><td class=c></td><td class=c></td><td></td><td></td><td></td><td class=c></td><td class=c></td><td></td><td></td><td>천극권무(13-hit)</td><td class=c>28</td><td class=c>2</td><td>○</td><td>속성10%</td></tr>
+<tr><td></td><td class=c></td><td class=c></td><td></td><td></td><td></td><td class=c></td><td class=c></td><td></td><td></td><td>천극개방</td><td class=c>37</td><td class=c>10</td><td>○</td><td></td></tr>
+<tr><td></td><td class=c></td><td class=c></td><td></td><td></td><td></td><td class=c></td><td class=c></td><td></td><td></td><td>폭발(1-3hit)</td><td class=c>50</td><td class=c>5</td><td></td><td></td></tr>
+<tr><td></td><td class=c></td><td class=c></td><td></td><td></td><td></td><td class=c></td><td class=c></td><td></td><td></td><td>폭발(4-11hit)</td><td class=c>100</td><td class=c>5</td><td></td><td></td></tr>
+<tr><td></td><td class=c></td><td class=c></td><td></td><td></td><td></td><td class=c></td><td class=c></td><td></td><td></td><td>폭발(12-hit)</td><td class=c>200</td><td class=c>5</td><td></td><td></td></tr>
+<tr><th colspan=5>지의 형(리치단)</th><th colspan=5>천의 형(리치단)</th><th colspan=5>람의 형(리치단)</th></tr>
+<tr><th>공격액션</th><th>위력</th><th>기절치</th><th>SA</th><th>보충</th><th>공격액션</th><th>위력</th><th>기절치</th><th>SA</th><th>보충</th><th>공격액션</th><th>위력</th><th>기절치</th><th>SA</th><th>보충</th></tr>
+<tr><td>발도공격</td><td class=c>28</td><td class=c>12</td><td>○</td><td></td><td>발도공격</td><td class=c>35</td><td class=c>12</td><td>○</td><td></td><td>발도공격</td><td class=c>35</td><td class=c>12</td><td>○</td><td></td></tr>
+<tr><td>기본 연계1</td><td class=c>14</td><td class=c>6</td><td>○</td><td></td><td>기본 연계1</td><td class=c>17</td><td class=c>6</td><td>○</td><td></td><td>기본 연계1</td><td class=c>17</td><td class=c>6</td><td>○</td><td></td></tr>
+<tr><td>기본 연계2</td><td class=c>11</td><td class=c>8</td><td>○</td><td></td><td>기본 연계2</td><td class=c>13</td><td class=c>8</td><td>○</td><td></td><td>기본 연계2</td><td class=c>13</td><td class=c>8</td><td>○</td><td></td></tr>
+<tr><td>기본 연계3</td><td class=c>18</td><td class=c>6</td><td>○</td><td></td><td>기본 연계3</td><td class=c>22</td><td class=c>6</td><td>○</td><td></td><td>기본 연계3</td><td class=c>22</td><td class=c>6</td><td>○</td><td></td></tr>
+<tr><td>기본 연계4</td><td class=c>9·9</td><td class=c>7·7</td><td>○</td><td></td><td>기본 연계4</td><td class=c>11·11</td><td class=c>7·7</td><td>○</td><td></td><td>기본 연계4</td><td class=c>11·11</td><td class=c>7·7</td><td>○</td><td></td></tr>
+<tr><td>연속 찌르기1</td><td class=c>11·12</td><td class=c>3·3</td><td>○</td><td></td><td>연속 찌르기1</td><td class=c>13·14</td><td class=c>3·3</td><td>○</td><td></td><td>연속 찌르기1</td><td class=c>13·14</td><td class=c>3·3</td><td>○</td><td></td></tr>
+<tr><td>연속 찌르기2</td><td class=c>10x4</td><td class=c>3ｘ4</td><td>○</td><td></td><td>연속 찌르기2</td><td class=c>12x4</td><td class=c>3ｘ4</td><td>○</td><td></td><td>연속 찌르기2</td><td class=c>12x4</td><td class=c>3ｘ4</td><td>○</td><td></td></tr>
+<tr><td>연속 찌르기3</td><td class=c>40</td><td class=c>12</td><td>○</td><td></td><td>연속 찌르기3</td><td class=c>50</td><td class=c>12</td><td>○</td><td></td><td>연속 찌르기3</td><td class=c>50</td><td class=c>12</td><td>○</td><td></td></tr>
+<tr><td>대시 선회</td><td class=c>3x4·10x2</td><td class=c>2x4·3x2</td><td>○</td><td></td><td>대시 선회</td><td class=c>3x4·12x2</td><td class=c>2x4·3x2</td><td>○</td><td></td><td>대시 선회</td><td class=c>3x4·10x2</td><td class=c>2x4·3x2</td><td>○</td><td></td></tr>
+<tr><td>대시연계(차기)</td><td class=c>7·7<br>9·9[체술]<br>11·11[격투]</td><td class=c>2·2</td><td>○</td><td>차기</td><td>대시연계(차기)</td><td class=c>8·8<br>11·11[체술]<br>15·15[격투]</td><td class=c>2·2</td><td>○</td><td>차기</td><td>대시연계(차기)</td><td class=c>8·8<br>11·11[체술]<br>15·15[격투]</td><td class=c>2·2</td><td>○</td><td>차기</td></tr>
+<tr><td>대시연계(찌르기)</td><td class=c>12·20</td><td class=c>4·4</td><td>○</td><td></td><td>대시연계(찌르기)</td><td class=c>15·25</td><td class=c>4·4</td><td>○</td><td></td><td>대시연계(찌르기)</td><td class=c>15·25</td><td class=c>4·4</td><td>○</td><td></td></tr>
+<tr><td>특수 연계1</td><td class=c>11·11<br>13·13[체술]<br>15·15[격투]</td><td class=c>2·2</td><td>○</td><td>차기</td><td>특수 연계1</td><td class=c>13·13<br>16·16[체술]<br>18·18[격투]</td><td class=c>2·2</td><td>○</td><td>차기</td><td>특수 연계1</td><td class=c>13·13<br>16·16[체술]<br>18·18[격투]</td><td class=c>2·2</td><td>○</td><td>차기</td></tr>
+<tr><td>특수 연계2</td><td class=c>10</td><td class=c>10</td><td>○</td><td></td><td>특수 연계2</td><td class=c>12</td><td class=c>10</td><td>○</td><td></td><td>특수 연계2</td><td class=c>12</td><td class=c>10</td><td>○</td><td></td></tr>
+<tr><td>특수 연계3</td><td class=c>9·12</td><td class=c>6·8</td><td>○</td><td></td><td>특수 연계3</td><td class=c>11·15</td><td class=c>6·8</td><td>○</td><td></td><td>특수 연계3</td><td class=c>11·15</td><td class=c>6·8</td><td>○</td><td></td></tr>
+<tr><td>특수 연계4</td><td class=c>26</td><td class=c>24</td><td>○</td><td></td><td>특수 연계4</td><td class=c>32</td><td class=c>24</td><td>○</td><td></td><td>특수 연계4</td><td class=c>32</td><td class=c>24</td><td>○</td><td></td></tr>
+<tr><td>특수 연계5</td><td class=c>16·11x4·24</td><td class=c>15·13x4·20</td><td>○</td><td></td><td>특수 연계5</td><td class=c>20·13x4·30</td><td class=c>15·13x4·20</td><td>○</td><td></td><td>특수 연계5</td><td class=c>20·13x4·30</td><td class=c>15·13x4·20</td><td>○</td><td></td></tr>
+<tr><td>특수 연계6</td><td class=c>19·19<br>23·23[체술]<br>27·27[격투]</td><td class=c>2·2</td><td>○</td><td>차기</td><td>특수 연계6</td><td class=c>23·23<br>28·28[체술]<br>33·33[격투]</td><td class=c>2·2</td><td>○</td><td>차기</td><td>특수 연계6</td><td class=c>23·23<br>28·28[체술]<br>33·33[격투]</td><td class=c>2·2</td><td>○</td><td>차기</td></tr>
+<tr><td>점프 회피</td><td class=c>5·5<br>6·6[체술]<br>7·7[격투]</td><td class=c>2·2</td><td>○</td><td>차기</td><td>점프 회피</td><td class=c>5·5<br>6·6[체술]<br>7·7[격투]</td><td class=c>2·2</td><td>○</td><td>차기</td><td>점프 회피</td><td class=c>5·5<br>6·6[체술]<br>7·7[격투]</td><td class=c>2·2</td><td>○</td><td>차기</td></tr>
+<tr><td>체공연계1</td><td class=c>22</td><td class=c>14</td><td>○</td><td></td><td>체공연계1</td><td class=c>22</td><td class=c>14</td><td>○</td><td></td><td>체공연계1</td><td class=c>22</td><td class=c>14</td><td>○</td><td></td></tr>
+<tr><td>체공연계2</td><td class=c>15·15</td><td class=c>13·13</td><td>○</td><td></td><td>체공연계2</td><td class=c>15·15</td><td class=c>13·13</td><td>○</td><td></td><td>체공연계2</td><td class=c>15·15</td><td class=c>13·13</td><td>○</td><td></td></tr>
+<tr><td>체공연계3</td><td class=c>23·25<br>27·29[체술]<br>31·33[격투]</td><td class=c>11·11</td><td>○</td><td>차기</td><td>체공연계3</td><td class=c>23·25<br>27·29[체술]<br>31·33[격투]</td><td class=c>11·11</td><td>○</td><td>차기</td><td>체공연계3</td><td class=c>23·25<br>27·29[체술]<br>31·33[격투]</td><td class=c>11·11</td><td>○</td><td>차기</td></tr>
+<tr><td>활하늘차기</td><td class=c>14<br>17[체술]<br>19[격투]</td><td class=c>14</td><td>○</td><td>차기</td><td>세로 회전공격</td><td class=c>12·12</td><td class=c>12·12</td><td>○</td><td></td><td>세로 회전공격</td><td class=c>12·12</td><td class=c>12·12</td><td>○</td><td></td></tr>
+<tr><td></td><td class=c></td><td class=c></td><td></td><td></td><td>EX회피(전)</td><td class=c>42</td><td class=c>20</td><td>○</td><td></td><td>차지 찌르기1</td><td class=c>13<br>14[차지+1]<br>16[차지+2]</td><td class=c>8</td><td>○</td><td></td></tr>
+<tr><td></td><td class=c></td><td class=c></td><td></td><td></td><td>EX회피(횡)</td><td class=c>31·31</td><td class=c>20·10</td><td>○</td><td></td><td>차지 찌르기2</td><td class=c>47<br>49[차지+1]<br>52[차지+2]</td><td class=c>22</td><td>○</td><td></td></tr>
+<tr><td></td><td class=c></td><td class=c></td><td></td><td></td><td>EX회피(후)</td><td class=c>24</td><td class=c>15</td><td>○</td><td></td><td>차지 찌르기3</td><td class=c>72<br>76[차지+1]<br>81[차지+2]</td><td class=c>32</td><td>○</td><td></td></tr>
+<tr><td></td><td class=c></td><td class=c></td><td></td><td></td><td></td><td class=c></td><td class=c></td><td></td><td></td><td>EX추격1</td><td class=c>10<br>11[포술사]<br>12[포술왕]<br>13[포술신]</td><td class=c>7</td><td>○</td><td></td></tr>
+<tr><td></td><td class=c></td><td class=c></td><td></td><td></td><td></td><td class=c></td><td class=c></td><td></td><td></td><td>EX추격2</td><td class=c>28<br>31[포술사]<br>35[포술왕]<br>40[포술신]</td><td class=c>20</td><td>○</td><td></td></tr>
+<tr><td></td><td class=c></td><td class=c></td><td></td><td></td><td></td><td class=c></td><td class=c></td><td></td><td></td><td>EX추격3</td><td class=c>41<br>47[포술사]<br>53[포술왕]<br>60[포술신]</td><td class=c>30</td><td>○</td><td></td></tr>
+<tr><td>용기천격</td><td class=c>1x2<br>8x2[포술사]<br>10x2[포술왕]<br>15x2[포술신]</td><td class=c>0</td><td>○</td><td>튕김 무효<br>회심무효<br>대인：날려보내기</td><td>용기천격</td><td class=c>1x2<br>8x2[포술사]<br>10x2[포술왕]<br>15x2[포술신]</td><td class=c>0</td><td>○</td><td>튕김 무효<br>회심무효<br>대인：날려보내기</td><td>용기천격</td><td class=c>1x2<br>8x2[포술사]<br>10x2[포술왕]<br>15x2[포술신]</td><td class=c>0</td><td>○</td><td>튕김 무효<br>회심무효<br>대인：날려보내기</td></tr>
+<tr><td>용기천격</td><td class=c>40</td><td class=c>2<br>18[포술사]<br>26[포술왕]<br>32[포술신]</td><td>○</td><td>검술/회심무효</td><td>용기천격</td><td class=c>40</td><td class=c>2<br>18[포술사]<br>26[포술왕]<br>32[포술신]</td><td>○</td><td>검술/회심무효</td><td>용기천격</td><td class=c>40</td><td class=c>2<br>18[포술사]<br>26[포술왕]<br>32[포술신]</td><td>○</td><td>검술/회심무효</td></tr>
+<tr><td>하늘중용기천격</td><td class=c>1x2<br>7x2[포술사]<br>9x2[포술왕]<br>12x2[포술신]</td><td class=c>0</td><td>○</td><td>튕김 무효<br>회심무효<br>대인：날려보내기</td><td>하늘중용기천격</td><td class=c>1x2<br>7x2[포술사]<br>9x2[포술왕]<br>12x2[포술신]</td><td class=c>0</td><td>○</td><td>튕김 무효<br>회심무효<br>대인：날려보내기</td><td>하늘중용기천격</td><td class=c>1x2<br>7x2[포술사]<br>9x2[포술왕]<br>12x2[포술신]</td><td class=c>0</td><td>○</td><td>튕김 무효<br>회심무효<br>대인：날려보내기</td></tr>
+<tr><td>하늘중용기천격</td><td class=c>30</td><td class=c>2<br>18[포술사]<br>26[포술왕]<br>32[포술신]</td><td>○</td><td>검술/회심무효</td><td>하늘중용기천격</td><td class=c>30</td><td class=c>2<br>18[포술사]<br>26[포술왕]<br>32[포술신]</td><td>○</td><td>검술/회심무효</td><td>하늘중용기천격</td><td class=c>30</td><td class=c>2<br>18[포술사]<br>26[포술왕]<br>32[포술신]</td><td>○</td><td>검술/회심무효</td></tr>
+<tr><td></td><td class=c></td><td class=c></td><td></td><td></td><td></td><td class=c></td><td class=c></td><td></td><td></td><td>천극권무(1-4hit)</td><td class=c>15</td><td class=c>2</td><td>○</td><td>속성10%</td></tr>
+<tr><td></td><td class=c></td><td class=c></td><td></td><td></td><td></td><td class=c></td><td class=c></td><td></td><td></td><td>천극권무(5-8hit)</td><td class=c>17</td><td class=c>2</td><td>○</td><td>속성10%</td></tr>
+<tr><td></td><td class=c></td><td class=c></td><td></td><td></td><td></td><td class=c></td><td class=c></td><td></td><td></td><td>천극권무(9-12hit)</td><td class=c>20</td><td class=c>2</td><td>○</td><td>속성10%</td></tr>
+<tr><td></td><td class=c></td><td class=c></td><td></td><td></td><td></td><td class=c></td><td class=c></td><td></td><td></td><td>천극권무(13-hit)</td><td class=c>28</td><td class=c>2</td><td>○</td><td>속성10%</td></tr>
+<tr><td></td><td class=c></td><td class=c></td><td></td><td></td><td></td><td class=c></td><td class=c></td><td></td><td></td><td>천극개방</td><td class=c>37</td><td class=c>10</td><td>○</td><td></td></tr>
+<tr><td></td><td class=c></td><td class=c></td><td></td><td></td><td></td><td class=c></td><td class=c></td><td></td><td></td><td>폭발(1-3hit)</td><td class=c>50</td><td class=c>5</td><td></td><td></td></tr>
+<tr><td></td><td class=c></td><td class=c></td><td></td><td></td><td></td><td class=c></td><td class=c></td><td></td><td></td><td>폭발(4-11hit)</td><td class=c>100</td><td class=c>5</td><td></td><td></td></tr>
+<tr><td></td><td class=c></td><td class=c></td><td></td><td></td><td></td><td class=c></td><td class=c></td><td></td><td></td><td>폭발(12-hit)</td><td class=c>200</td><td class=c>5</td><td></td><td></td></tr>
+</table>
+<div>특징<ul>
+<li>리치단의 경우, 육질은 (최고육질+최저육질-HIT한 부위의 육질)(가)</li>
+<li>콤보 게이지를 차지함으로써, 1게이지당 5% 공격력이 업된다</li>
+<li>차기공격은 검정의 영향을 받지 않고, 예리도의 영향을 받는다</li>
+<li>리치김의 기본 연계5의 차지는 3~자동발동까지 차지해도 위력은 3인 채로 변하지 않는다</li>
+<li>　또한, 변경 불가의 수치는 스킬·개체치·부위에 의한 증감의 영향을 받지 않는다 (검술의 영향은 받는다)</li>
+</ul></div>
+<div style="margin-top:1em;margin-bottom:1em;">용기천격<ul>
+<li>몬스터의 부위에 공격을 맞힘으로써, 용기를 채우고, 개방함으로써 다양한 효과를 발휘한다</li>
+<li>축적 상태는 공격했을 때의 색으로 판별할 수 있으며, 초록→황→빨강이 되고, 빨강이 되면 축적은 완료</li>
+<li>용기천격은 예리도-12</li>
+<li>일부 몬스터의 머리에 용기천격을 맞혔을 때, 갈무리로 입수할 수 있는 소재를 떨어뜨린다</li>
+<li>용기천격 시의 폭발 대미지는 상황에 따라 변화한다</li>
+<li>·머리(기절내성 약화)</li>
+<li>　20초간, 머리 이외, 또한 타 이외의 무기로도 공격이 명중했을 때 기절치가 1 축적된다</li>
+<li>　퓨처 시는 30초간</li>
+<li>·꼬리(출혈)</li>
+<li>　15초간 출혈 데미지, 데미지는 꼬리의 내구치에서 변화(전체방어의 영향을 받는다)</li>
+<li>　퓨처 시는 대미지가 1.5배</li>
+<li>·기타（용기방출）</li>
+<li>　30초간 무기 배율+25, 예리도의 회복+15</li>
+<li>　퓨처 시는 30초간 무기 배율+50, 예리도의 회복+30</li>
+</ul></div>
+<div style="margin-top:1em;margin-bottom:1em;">천의 형<ul>
+<li>하늘중공격이 리치가 짧아도 차기부터 종회전공격이 된다</li>
+<li>지상공격의 모션치가 1.25배가 된다</li>
+<li>게이지가 3개까지가 되고, 공격력상승이 없어지지만, EX회피용 게이지가 쌓이기 쉬워진다</li>
+<li>EX회피 성공 시, 모션치가 조금 오른다</li>
+</ul></div>
+<div style="margin-top:1em;margin-bottom:1em;">람의 형<ul>
+<li>하늘중공격이 리치가 짧아도 차기부터 종회전공격이 된다</li>
+<li>게이지가, 천극권무용의 게이지만이 된다</li>
+<li>포술스킬이 있으면 천극개방의 폭발 데미지에 +4의 추가데미지가 있다</li>
+</ul></div>
+</body></html>
