@@ -7,6 +7,14 @@
 #s {width:auto;table-layout:auto;}
 #s li {display:flex;justify-content:space-between;gap:.65em;}
 #s em {float:none;}
+.sigil-roll-button {display:block;margin:.35em 0 .1em;font:inherit;white-space:nowrap;cursor:pointer;}
+#sigil-roll-dialog {box-sizing:border-box;width:min(34rem,calc(100% - 2rem));max-height:calc(100% - 2rem);overflow:auto;padding:1rem 1.25rem;border:1px solid #747474;border-radius:6px;background:#fff;color:#202020;font:inherit;}
+#sigil-roll-dialog::backdrop {background:rgba(0,0,0,.42);}
+#sigil-roll-title {margin:0;font-size:1.15em;}
+#sigil-roll-results {padding-left:2em;line-height:1.5;}
+#sigil-roll-results li {padding:.25em 0;}
+#sigil-roll-dialog form {text-align:right;}
+#sigil-roll-dialog button {font:inherit;cursor:pointer;}
 </style>
 <title>시질</title>
 </head><body>
@@ -397,4 +405,12 @@
 <tr><td id="l017C">이동속도 레시피[전이]</td><td><ul><li><em>효과 시간</em>12～15</li><li><em>효과 시간</em>16～18</li><li><em>효과 시간</em>19～20</li><li><em>재사용대기시간</em>14～17</li><li><em>재사용대기시간</em>18～20</li><li><em>[전이]이동속도</em>1～3</li><li><em>[전이]이동속도</em><i>4</i></li><li><em>[전이]이동속도</em><i>5</i></li></ul></td><td>80%<br>15%<br>5%<br>85%<br>15%<br>50%<br>35%<br>15%</td><td>GR200</td><td>0</td><td><ul><li><em><a href="../sozai/sozai.htm?3BB8">위협의 인장</a></em>25P</li></ul></td><td><ul></ul></td></tr>
 <tr><td id="l017D">범용범위 레시피[전이]</td><td><ul><li><em>[범위]공격력</em>1～3</li><li><em>[범위]공격력</em>4～7</li><li><em>[범위]공격력</em>8～10</li><li><em>[범위]공격력</em>11～12</li><li><em>[범위]공격력</em>13～15</li></ul></td><td>55%<br>32%<br>6%<br>4%<br>3%</td><td>GR200</td><td>0</td><td><ul><li><em><a href="../sozai/sozai.htm?3BB8">위협의 인장</a></em>25P</li></ul></td><td><ul></ul></td></tr>
 </tbody></table>
-<script type="text/javascript" src="_sort_s.js?v=sigil-20191130"></script></body></html>
+<dialog id="sigil-roll-dialog" aria-labelledby="sigil-roll-title">
+<h2 id="sigil-roll-title"></h2>
+<ol id="sigil-roll-results"></ol>
+<form method="dialog"><button autofocus>닫기</button></form>
+</dialog>
+<script type="text/javascript" src="_sort_s.js?v=sigil-20191130"></script>
+<script src="sigil-roll-data.js?v=1"></script>
+<script src="sigil-roll.js?v=1"></script>
+</body></html>
