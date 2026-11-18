@@ -6,8 +6,52 @@
   'use strict';
   var names = {festa: '헌터축제', tower: '천랑원정록', diva: '가희수위전'};
   var labels = {registration: '등록', souls: '입혼', tally: '집계', rewards: '보수', exploration: '진행', prayer: '기도의 장', battle: '전가의 장', welcome: '가영의 장'};
+  // Matches Erupe server/channelserver/festa_trials.go, festaSecrets.
+  // Links use the existing Korean Ferias quest definitions where available.
+  var secretQuests = [
+    {name: '히프노크 번식기', hr: 26229, gr: 23369, bonus: 94, hrLink: 'hn_zy.htm#l6675', grLink: 'hn_gr.htm#l5B49'},
+    {name: '카무·올가론', hr: 26460, gr: 23311, bonus: 91, hrLink: 'hn_zy.htm#l675C', grLink: 'hn_gr.htm#l5B0F'},
+    {name: '디오렉스', hr: 21709, gr: 23490, bonus: 88, hrLink: 'od_go.htm#l54CD'},
+    {name: '에스피나스', hr: 26253, gr: 23480, bonus: 90, hrLink: 'hn_zy.htm#l668D', grLink: 'tn.htm#l5BB8'},
+    {name: '볼가노스', hr: 26022, gr: 23238, bonus: 91, grLink: 'hn_gr.htm#l5AC6'},
+    {name: '가스라바즈라', hr: 21929, gr: 23380, bonus: 88, hrLink: 'od_go.htm#l55A9', grLink: 'hn_gr.htm#l5B54'},
+    {name: '하루도메르그', hr: 21914, gr: 55929, bonus: 88, hrLink: 'od_go.htm#l559A', grLink: 'tn.htm#lDA79'},
+    {name: '고고모아', hr: 26675, gr: 0, bonus: 94, hrLink: 'hn_ka.htm#l6833'}
+  ];
+  var hour = 3600000, day = 24 * hour, kst = 9 * hour;
+  function secretSchedule(e) {
+    if (!e || e.kind !== 'festa' || e.mode !== 'automatic') return [];
+    var gathering = e.phases.filter(function (p) { return p.key === 'souls'; })[0];
+    if (!gathering) return [];
+    var start = Date.parse(gathering.starts_at), end = Date.parse(gathering.ends_at), result = [];
+    if (!isFinite(start) || !isFinite(end) || end <= start || end - start > 8 * day) return result;
+    var midnight = Math.floor((start + kst) / day) * day - kst;
+    for (var date = midnight; date < end; date += day) {
+      var weekday = new Date(date + kst).getUTCDay();
+      [6, 14, 22].forEach(function (h, period) {
+        var at = date + h * hour;
+        // The game starts secrets eight hours after gathering begins.
+        if (at < start + 8 * hour || at >= end) return;
+        var slot = ((weekday + 6) % 7) * 3 + period;
+        var index = slot === 18 ? 7 : (slot + e.round % 7) % 7;
+        var both = (weekday === 6 && h >= 14) || weekday === 0 || (weekday === 1 && h === 6);
+        result.push({starts_at: at, ends_at: Math.min(at + 2 * hour, end), quest: secretQuests[index], both: both});
+      });
+    }
+    return result;
+  }
+  function secretState(e, now) {
+    var gathering = e && e.phases.filter(function (p) { return p.key === 'souls'; })[0];
+    if (!gathering || now < Date.parse(gathering.starts_at) || now >= Date.parse(gathering.ends_at)) return null;
+    var rows = secretSchedule(e), current = null, next = null;
+    rows.forEach(function (row) {
+      if (row.starts_at <= now && now < row.ends_at) current = row;
+      else if (!next && now < row.starts_at) next = row;
+    });
+    return rows.length ? {rows: rows, current: current, next: next} : null;
+  }
   function format(value) {
-    var d = new Date(Date.parse(value) + 9 * 3600000);
+    var d = new Date((typeof value === 'number' ? value : Date.parse(value)) + kst);
     function pad(n) { return n < 10 ? '0' + n : String(n); }
     return (d.getUTCMonth() + 1) + '/' + d.getUTCDate() + '(' + '일월화수목금토'.charAt(d.getUTCDay()) + ') ' + pad(d.getUTCHours()) + ':' + pad(d.getUTCMinutes());
   }
@@ -43,11 +87,66 @@
     var message = el('p', '서버 일정을 불러오는 중입니다.', 'erupe-events-message');
     var content = el('div', undefined, 'erupe-events-content');
     container.appendChild(message); container.appendChild(content);
+    function secretTeam(row) { return row.both ? '양 팀' : '열세팀 · 동률 시 양 팀'; }
+    function secretBonus(row) { return '추가 ' + row.quest.bonus + '혼' + (row.both ? ' · 열세팀 +20혼' : ''); }
+    function secretRange(row) { return format(row.starts_at) + ' ~ ' + format(row.ends_at); }
+    function appendSecretSchedule(e, secrets, now) {
+      if (!secrets) return;
+      var block = el('div', undefined, 'erupe-events-secrets');
+      var active = secrets.current || secrets.next;
+      var lead = el('p', undefined, 'erupe-events-secret-current');
+      if (active) {
+        lead.appendChild(el('strong', secrets.current ? '진행 중 시크릿' : '다음 시크릿'));
+        lead.appendChild(el('span', secretRange(active)));
+        lead.appendChild(el('span', active.quest.name + ' · ' + secretTeam(active) + ' · ' + secretBonus(active)));
+      } else {
+        lead.textContent = '이번 회차의 시크릿은 모두 종료됐습니다.';
+      }
+      block.appendChild(lead);
+      var details = el('details', undefined, 'erupe-events-secret-details');
+      details.setAttribute('data-schedule-details', 'secrets');
+      details.appendChild(el('summary', '이번 ' + e.round + '회차 시크릿 전체 일정 (' + secrets.rows.length + '회)'));
+      var scroll = el('div', undefined, 'erupe-events-secret-scroll');
+      var table = el('table', undefined, 'erupe-events-table erupe-events-secret-table');
+      var thead = el('thead'), head = el('tr'), body = el('tbody');
+      ['상태', '진행 시간', '대상', '퀘스트 번호', '참여 팀', '추가 입혼수'].forEach(function (name) { head.appendChild(el('th', name)); });
+      thead.appendChild(head); table.appendChild(thead); table.appendChild(body);
+      secrets.rows.forEach(function (row) {
+        var running = row.starts_at <= now && now < row.ends_at;
+        var past = now >= row.ends_at;
+        var tr = el('tr', undefined, running ? 'erupe-events-secret-live' : past ? 'erupe-events-secret-past' : '');
+        tr.appendChild(el('td', running ? '진행 중' : past ? '종료' : '예정'));
+        tr.appendChild(el('td', secretRange(row)));
+        tr.appendChild(el('td', row.quest.name));
+        var quests = el('td');
+        ['hr', 'gr'].forEach(function (rank) {
+          if (!row.quest[rank]) return;
+          var text = rank.toUpperCase() + ' ' + row.quest[rank], item = el(row.quest[rank + 'Link'] ? 'a' : 'span', text);
+          if (row.quest[rank + 'Link']) item.setAttribute('href', 'quest/' + row.quest[rank + 'Link']);
+          quests.appendChild(item);
+        });
+        tr.appendChild(quests);
+        tr.appendChild(el('td', secretTeam(row)));
+        tr.appendChild(el('td', secretBonus(row)));
+        body.appendChild(tr);
+      });
+      scroll.appendChild(table); details.appendChild(scroll);
+      details.appendChild(el('p', '한국 시간 기준입니다. 기본 입혼수는 별도로 더해집니다. 열세팀은 시작 2시간 전 집계로 결정되며, 동률이면 양 팀이 참여합니다.', 'erupe-events-secret-note'));
+      block.appendChild(details); content.appendChild(block);
+    }
     function render() {
       if (!model || destroyed) return;
-      var signature = JSON.stringify(model.events) + model.events.map(function (e) { return state(e, Date.now() + offset).label; }).join('|');
+      var now = Date.now() + offset;
+      var festa = model.events.filter(function (e) { return e.kind === 'festa'; })[0];
+      var secrets = secretState(festa, now);
+      var signature = JSON.stringify(model.events) + model.events.map(function (e) { return state(e, now).label; }).join('|');
+      if (secrets) signature += secrets.rows.map(function (row) { return now < row.starts_at ? 'next' : now < row.ends_at ? 'live' : 'past'; }).join('|');
       if (signature === rendered) return;
       rendered = signature;
+      var openDetails = {};
+      Array.prototype.forEach.call(content.querySelectorAll('details[data-schedule-details]'), function (details) {
+        openDetails[details.getAttribute('data-schedule-details')] = details.open;
+      });
       while (content.firstChild) content.removeChild(content.firstChild);
       var table = el('table', undefined, 'erupe-events-table'), head = el('tr'), body = el('tbody');
       ['콘텐츠', '현재 단계', '진행 기간', '다음 전환'].forEach(function (t) { head.appendChild(el('th', t)); });
@@ -60,7 +159,9 @@
         tr.appendChild(el('td', s.next ? format(s.next) + ' ' + s.nextLabel : '-')); body.appendChild(tr);
       });
       content.appendChild(table);
+      appendSecretSchedule(festa, secrets, now);
       var details = el('details'), summary = el('summary', '단계별 전체 일정'); details.appendChild(summary);
+      details.setAttribute('data-schedule-details', 'phases');
       model.events.forEach(function (e) {
         if (!e.phases.length) return;
         var block = el('div', undefined, 'erupe-events-detail');
@@ -69,6 +170,9 @@
         details.appendChild(block);
       });
       content.appendChild(details);
+      Array.prototype.forEach.call(content.querySelectorAll('details[data-schedule-details]'), function (details) {
+        details.open = !!openDetails[details.getAttribute('data-schedule-details')];
+      });
     }
     function refresh() {
       if (destroyed || request) return;
@@ -97,5 +201,5 @@
     window.addEventListener('pagehide', destroy);
     return {destroy: destroy};
   }
-  return {validate: validate, state: state, format: format, mount: mount};
+  return {validate: validate, state: state, format: format, secretSchedule: secretSchedule, secretState: secretState, mount: mount};
 }));

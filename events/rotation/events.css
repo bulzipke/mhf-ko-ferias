@@ -10,3 +10,17 @@
 .erupe-events details { font-size: 85%; margin-top: 8px; }
 .erupe-events summary { cursor: pointer; }
 .erupe-events-detail { line-height: 1.6; margin: 8px 0; }
+.erupe-events-secrets { border: 1px solid #bbb; padding: 10px 12px; margin-top: 10px; }
+.erupe-events-secret-current { margin: 0; font-size: 85%; line-height: 1.65; }
+.erupe-events-secret-current strong { color: #176839; }
+.erupe-events-secret-current span { display: block; }
+.erupe-events-secret-scroll { overflow-x: auto; margin-top: 8px; }
+.erupe-events-secret-table { font-size: 100%; }
+.erupe-events-secret-table td:nth-child(4) > * { display: block; }
+.erupe-events-secret-live td { background: #e7f4e9; font-weight: bold; }
+.erupe-events-secret-past td { color: #666; }
+.erupe-events-secret-note { margin: 8px 0 0; line-height: 1.6; color: #555; }
+@media (max-width: 600px) {
+  .erupe-events-secrets { padding: 8px; }
+  .erupe-events-secret-current { font-size: 80%; }
+}
