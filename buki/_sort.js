@@ -684,7 +684,38 @@ function (evt) {
 
 //ツリー
 
-addEvent(document.getElementById("tree"),"click",
+var partnya = /_partnya\.htm$/.test(location.pathname);
+var tree = document.getElementById("tree"),
+	categories = tree.querySelectorAll("span[id]"),
+	panels = tree.querySelectorAll("#tree > div[id]");
+if (partnya) {
+	for (var index = 0; index < categories.length; index++) {
+		var category = categories[index],
+			panel = document.getElementById(category.id + "L");
+		if (!panel || !panel.getElementsByTagName("a").length) {
+			category.setAttribute("aria-disabled", "true");
+			category.style.color = "#666";
+			category.style.cursor = "default";
+			if (panel) panel.style.display = "none";
+		}
+	}
+	showCategory(document.getElementById("t1"));
+}
+function showCategory(category) {
+	if (!category || category.getAttribute("aria-disabled") === "true") return;
+	var panel = document.getElementById(category.id + "L");
+	if (!panel) return;
+	for (var index = 0; index < panels.length; index++) {
+		panels[index].style.display = panels[index] === panel ? "block" : "none";
+	}
+	for (var index = 0; index < categories.length; index++) {
+		if (categories[index].getAttribute("aria-disabled") !== "true") {
+			categories[index].style.color = categories[index] === category ? "red" : "";
+		}
+	}
+}
+
+addEvent(tree,"click",
 
 function (evt) {
 
@@ -700,7 +731,9 @@ function (evt) {
 
 	if (t.tagName === "SPAN" && t.id !== ""){
 
-		if (location.pathname.indexOf("_partnya.") === -1) {
+		if (t.getAttribute("aria-disabled") === "true") return;
+
+		if (!partnya) {
 
 			switch (t.id) {
 
@@ -770,13 +803,7 @@ function (evt) {
 
 		}
 
-		var cre = document.getElementById("tree").getElementsByTagName("span"),creB = document.getElementById("tree").getElementsByTagName("div");
-
-		for (var i=0,m=cre.length; i<m; cre[i].style.color = "",creB[i++].style.display = "none");
-
-		document.getElementById(t.id).style.color = "red";
-
-		document.getElementById(t.id+"L").style.display = "block";
+		showCategory(t);
 
 	}
 
@@ -2496,7 +2523,7 @@ function (evt) {
 
 //G級リンク改善
 
-if (!ckG) {
+if (!ckG && !partnya) {
 
 	addEvent(document.getElementById("tree"),"click",
 
@@ -2542,7 +2569,7 @@ if (treeCK){ //剣士弓
 
 	for (var i = 0,m = cre.length; i < m; i++) {
 
-		if (cre[i].style.color !== "") {
+		if (cre[i].style.color === "red") {
 
 			dispflg = cre[i].id.substring(1);
 
@@ -2566,7 +2593,7 @@ if (treeCK){ //剣士弓
 
 	for (var i = 0,m = cre.length; i < m; i++) {
 
-		if (cre[i].style.color !== "") {
+		if (cre[i].style.color === "red") {
 
 			dispflg = cre[i].id.substring(1);
 
@@ -2580,6 +2607,23 @@ if (treeCK){ //剣士弓
 
 	});
 
+}
+
+function restoreCategory(category) {
+	if (!category) return;
+
+	if (partnya) {
+		showCategory(category);
+		return;
+	}
+
+	/*@if (@_jscript_version < 9)
+	category.fireEvent("onclick");
+	@else@*/
+	var evt = document.createEvent("MouseEvents");
+	evt.initEvent("click", true, true);
+	category.dispatchEvent(evt);
+	/*@end@*/
 }
 
 //オンロード
@@ -2700,22 +2744,10 @@ if (w.indexOf("buki=" + location.pathname+location.hash) !== -1) {
 
 	//作成種別
 
-	if (s2 !== "") {
+	var savedCategory = s2 && document.getElementById("t"+s2);
 
-		/*@if (@_jscript_version < 9) 
-
-		document.getElementById("t"+s2).fireEvent( "onclick" );
-
-		@else@*/
-
-		var evt = document.createEvent("MouseEvents");
-
-		evt.initEvent("click", true, true);
-
-		document.getElementById("t"+s2).dispatchEvent(evt);
-
-		/*@end@*/
-
+	if (savedCategory) {
+		restoreCategory(savedCategory);
 	}
 
 	document.getElementById("tree").scrollTop = parseInt(w[8]);
@@ -2736,19 +2768,7 @@ if (w.indexOf("buki=" + location.pathname+location.hash) !== -1) {
 
 				var treeId = creB[i].id.substring(0,creB[i].id.length-1);
 
-				/*@if (@_jscript_version < 9) 
-
-				document.getElementById(treeId).fireEvent( "onclick" );
-
-				@else@*/
-
-				var evt = document.createEvent("MouseEvents");
-
-				evt.initEvent("click", true, true);
-
-				document.getElementById(treeId).dispatchEvent(evt);
-
-				/*@end@*/
+				restoreCategory(document.getElementById(treeId));
 
 				//
 
@@ -2776,13 +2796,7 @@ if (w.indexOf("buki=" + location.pathname+location.hash) !== -1) {
 
 } else if (location.hash.length > 0) {
 
-		var cre = document.getElementById("tree").getElementsByTagName("span"),creB = document.getElementById("tree").getElementsByTagName("div");
-
-		for (var i = 0,m = cre.length; i < m; cre[i].style.color = "",creB[i++].style.display = "none");
-
-		document.getElementById(location.hash.substring(1)).style.color = "red";
-
-		document.getElementById(location.hash.substring(1)+"L").style.display = "block";
+	showCategory(document.getElementById(location.hash.substring(1)));
 
 };
 

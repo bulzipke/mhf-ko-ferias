@@ -54,7 +54,36 @@ var LIST_ID = "",LIST_TYPE = true,  //true=シリーズ,false=부위
 	CK_NEKO = location.pathname.indexOf("_partnya") !== -1,
 	MST_Item = setItem(),MST_Equip = SkillForm.MST_Equip;
 setItem = SkillForm = null;
-addEvent(document.getElementById("tree"),"click",
+var tree = document.getElementById("tree"),
+	categories = tree.querySelectorAll("span[id]"),
+	panels = tree.querySelectorAll("#tree > div[id]");
+if (CK_NEKO) {
+	for (var index = 0; index < categories.length; index++) {
+		var category = categories[index],
+			panel = document.getElementById(category.id + "L");
+		if (!panel || !panel.getElementsByTagName("a").length) {
+			category.setAttribute("aria-disabled", "true");
+			category.style.color = "#666";
+			category.style.cursor = "default";
+			if (panel) panel.style.display = "none";
+		}
+	}
+	showCategory(document.getElementById("t1"));
+}
+function showCategory(category) {
+	if (!category || category.getAttribute("aria-disabled") === "true") return;
+	var panel = document.getElementById(category.id + "L");
+	if (!panel) return;
+	for (var index = 0; index < panels.length; index++) {
+		panels[index].style.display = panels[index] === panel ? "block" : "none";
+	}
+	for (var index = 0; index < categories.length; index++) {
+		if (categories[index].getAttribute("aria-disabled") !== "true") {
+			categories[index].style.color = categories[index] === category ? "red" : "";
+		}
+	}
+}
+addEvent(tree,"click",
 function (evt) {
 	/*@if (@_jscript_version < 9)
 	var t = evt.srcElement;
@@ -63,10 +92,7 @@ function (evt) {
 	/*@end@*/
 	
 	if (t.tagName === "SPAN" && t.id !== ""){
-		var cre = document.getElementById("tree").getElementsByTagName("span"),creB = document.getElementById("tree").getElementsByTagName("div");
-		for (var i = 0,m = cre.length; i < m; cre[i].style.color = "",creB[i++].style.display = "none");
-		document.getElementById(t.id).style.color = "red";
-		document.getElementById(t.id+"L").style.display = "block";
+		showCategory(t);
 	} else if (!CK_NEKO && t.tagName === "A"){
 
 		var id_list = t.parentNode.getElementsByTagName("a");
@@ -351,7 +377,7 @@ addEvent(window,"pagehide",function () {
 	var cre = document.getElementById("tree").getElementsByTagName("span"),
 		dispflg = "";
 	for (var i=0,m=cre.length; i<m; i++) {
-		if (cre[i].style.color !== "") {
+		if (cre[i].style.color === "red") {
 			dispflg = cre[i].id.substring(1);
 			break;
 		}
@@ -363,17 +389,13 @@ var t = document.cookie;
 if (t.indexOf("bougu=" + location.pathname+location.hash) !== -1) {
 	t = t.split("bougu=")[1].split("!");
 	//作成種別
-	if (t[1] !== "") {
-		/*@if (@_jscript_version < 9) 
-		document.getElementById("t"+t[1]).fireEvent( "onclick" );
-		@else@*/
-		var evt = document.createEvent("MouseEvents");
-		evt.initEvent("click", true, true);
-		document.getElementById("t"+t[1]).dispatchEvent(evt);
-		/*@end@*/
+	var savedCategory = document.getElementById("t"+t[1]),
+		savedPanel = document.getElementById("t"+t[1]+"L");
+	if (savedCategory && savedPanel) {
+		showCategory(savedCategory);
 		if (location.hash.length > 0) {
 			//データ部生成
-			var treehref = document.getElementById("t"+t[1]+"L").getElementsByTagName("a");
+			var treehref = savedPanel.getElementsByTagName("a");
 			for (var j=0,l=treehref.length; j<l; j++){
 				if (treehref[j].href.lastIndexOf(location.hash) !== -1) {
 					treehref[j].focus();
