@@ -19,7 +19,7 @@ function words(s) {
     return s.toLowerCase().replace(SEP, ' ').replace(/^ +| +$/g, '');
 }
 // Japanese names are fetched only once a query contains kana or kanji.
-var JP_QUERY = /[\u3005\u3041-\u30ff\u3400-\u9fff\uf900-\ufaff\uff66-\uff9f]/, JP_SRC = 'equip_jp.js?kr=bb59b4cf6361',
+var JP_QUERY = /[\u3005\u3041-\u30ff\u3400-\u9fff\uf900-\ufaff\uff66-\uff9f]/, JP_SRC = 'equip_jp.js?kr=bb59b4cf6361&partnya=2',
     jpState = 0, jpWait = null;
 function loadJapanese(callback) {
     if (jpState === 2) { return true; }
