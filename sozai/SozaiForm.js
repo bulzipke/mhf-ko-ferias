@@ -252,7 +252,7 @@ MST_Item = MST_Quest = MST_Saisyu = MST_Mos = MST_Other =null;
 //武器防具
 addEvent(document.getElementById("b_yt"),"click",function () {
 var BouguName = {"h":"머리 방어구","b":"몸통 방어구","a":"팔 방어구","w":"허리 방어구","l":"다리 방어구","d":"장식품","p":"장식품","c":"커프","t":"천랑석","f":"장식품","k":"천각인","z":"커프Ｚ","s":"시질","n":"네코","H":"Ｐ머리","B":"Ｐ몸통"},
-	BouguId = {"h":"head","b":"body","a":"arm","w":"wst","l":"leg","d":"deco","c":"decocf","p":"decosp","n":"deconk","t":"decotr","f":"decotf","k":"decotk","z":"decocz","s":"sigil","H":"head_pertnya","B":"body_pertnya"},
+	BouguId = {"h":"head","b":"body","a":"arm","w":"wst","l":"leg","d":"deco","c":"decocf","p":"decosp","n":"deconk","t":"decotr","f":"decotf","k":"decotk","z":"decocz","s":"sigil","H":"head_partnya","B":"body_partnya"},
 	BukiName = {0:"대검",1:"헤비보우건..",2:"해머",3:"랜스",4:"한손검",5:"라이트보우건",6:"쌍검",7:"태도",8:"수렵피리",9:"건랜스","A":"활","B":"천룡곤","C":"슬래시액스","D":"마그넷스파이크","a":"Ｐ대검","c":"Ｐ해머"},
 	BukiId = {0:"taiken",1:"heavy",2:"hammer",3:"lance",4:"katate",5:"right",6:"souken",7:"tachi",8:"horn",9:"gunlance","A":"yumi","B":"tonfa","C":"slaxe","D":"magspike","a":"taiken_partnya","c":"hammer_partnya"},
 	Craft = {0:"생산",1:"강화",2:"G생산",3:"G강화",4:"G확정"},
@@ -301,11 +301,15 @@ if (MST_Equip.Sozai[item_id]) {
 			txts += "<tr><td>" + BouguName[eq_rui] + "</td><td><a href='../bougu/" + BouguId[eq_rui] + ".htm#l" + eq_id + "'>" + eq_name + "</a></td><td style=\"text-align:right;\">" + su + "</td></tr>";
 		} else {
 			//防具
-			if (eq_name.lastIndexOf("SP") !== -1) {
-				txt += "<tr><td>" + BouguName[eq_rui] + "</td><td><a href='../bougu/" + BouguId[eq_rui] + "sp.htm#l" + eq_id + "'>" + eq_name + "</a></td><td style=\"text-align:center;\">" + lv.replace("0","생") + "</td><td style=\"text-align:right;\">" + su + "</td></tr>";
+			var href;
+			if (eq_rui === "H" || eq_rui === "B") {
+				href = "../bougu/" + BouguId[eq_rui] + ".htm#l" + eq_id;
+			} else if (eq_name.lastIndexOf("SP") !== -1) {
+				href = "../bougu/" + BouguId[eq_rui] + "sp.htm#l" + eq_id;
 			} else {
-				txt += "<tr><td>" + BouguName[eq_rui] + "</td><td><a href='../bougu/_tree.htm#" + BouguId[eq_rui].charAt(0) + eq_id + "'>" + eq_name + "</a></td><td style=\"text-align:center;\">" + lv.replace("0","생") + "</td><td style=\"text-align:right;\">" + su + "</td></tr>";
+				href = "../bougu/_tree.htm#" + BouguId[eq_rui].charAt(0) + eq_id;
 			}
+			txt += "<tr><td>" + BouguName[eq_rui] + "</td><td><a href='" + href + "'>" + eq_name + "</a></td><td style=\"text-align:center;\">" + lv.replace("0","생") + "</td><td style=\"text-align:right;\">" + su + "</td></tr>";
 		su_sum += +su;
 		}
 	}
