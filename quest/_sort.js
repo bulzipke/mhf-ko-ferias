@@ -109,27 +109,6 @@ tH.cells[5].appendChild(i.cloneNode(false));
 
 tH=i=s=null;
 
-//イベントのみソートしてみる
-if (location.pathname.indexOf("ev_") !== -1) {
-	var marker = document.createElement("tbody"),
-		tB = document.getElementsByTagName("tbody")[0],
-		tr = tB.rows,
-		N = tr.length,
-		x = [],
-		date = new Date(),
-		dateTxt = (date.getFullYear() + "/" + ("00" + (date.getMonth() + 1)).slice(-2) + "/" + ("00" + date.getDate()).slice(-2));
-
-	for (var i = 0,w = ""; i<N;) {
-		w = tr[i].cells[1].lastChild.firstChild.nodeValue.split("～")[1];
-		if (tr[i].className !== "h" && w < dateTxt) tr[i].className = "h";	//期間を過ぎたら非表示
-		x[i] = [w + ("000" + i).slice(-3)],
-		x[i].row = tr[i++];
-	}
-	//x.sort(function(a, b){return b < a});
-	x.sort();
-	for (var i = 0; i<N; marker.appendChild(x[i++].row));
-	tB.parentNode.replaceChild( marker,tB );
-}
 //フィルター
 var filter = function () {
 	var s = document.getElementsByTagName("thead")[0].getElementsByTagName("select"),
@@ -274,7 +253,7 @@ if (w.indexOf("quest=" + location.pathname) !== -1) {
 		/*@end@*/
 	}
 	//今週分のみなど
-	if (w[6] !== "") {
+	if (w[6] !== "" && document.getElementById("top")) {
 		/*@if (@_jscript_version < 9) 
 		document.getElementById("top").getElementsByTagName("span")[+w[6]].fireEvent( "onclick" );
 		@else@*/
